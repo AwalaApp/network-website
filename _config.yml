@@ -1,0 +1,15 @@
+title: "Relaynet"
+description: >
+  Relaynet: Disruption-Tolerant Networking for Consumer and Enterprise Software
+
+google_analytics: UA-22641273-3
+twitter_username: relaynet_
+github_username: relaynet
+
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
