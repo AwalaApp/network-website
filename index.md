@@ -1,4 +1,5 @@
 ---
+title: About Relaynet
 layout: page
 ---
 
@@ -12,7 +13,7 @@ _Relaynet_ is a technology that will enable computers to exchange information re
 
 This technology can be useful in times or places where the Internet is unavailable, as opposed to when it's restricted and technologies like VPNs or Tor can be used. It's meant to support scenarios such as:
 
-- Bypassing censorship in oppressive regimes by allowing dissidents and the general public to communicate securely, and even broadcast information from opposition leaders.
+- Working around Internet blackouts in oppressive regimes by allowing dissidents and the general public to communicate securely, and even broadcast information from opposition leaders.
 - In the immediate aftermath of a disaster, survivors could communicate with their family and friends if disaster relief services could relay the information.
 - People in remote settlements with no access to the Internet could have their information relayed periodically.
 
@@ -24,3 +25,9 @@ Computer networks around the world and beyond are susceptible to loss of connect
 Establishing communication in such circumstances is the concern of the [_Delay-Tolerant Networking_](https://en.wikipedia.org/wiki/Delay-tolerant_networking) field, also known as _Disruption-Tolerant Networking_ or _DTN_ for short, which for decades has been led by space agencies, the military, and the academia.
 
 The purpose of this project is to complement the DTN ecosystem with a new protocol suite, _Relaynet_, to extend DTN to consumer and enterprise software such as web, desktop and mobile applications.
+
+Relaynet is also the name of the [overlay](https://en.wikipedia.org/wiki/Overlay_network), [store-and-forward](https://en.wikipedia.org/wiki/Store_and_forward), [onion](https://en.wikipedia.org/wiki/Onion_routing) network resulting from the protocol suite, which will offer asynchronous [message passing](https://en.wikipedia.org/wiki/Message_passing) in client-server and P2P architectures.
+
+# Status
+
+Relaynet is in very early stages of design by [Gustavo Narea](https://gustavonarea.net/about/) as part of his dissertation project at Oxford. The primary purpose of this web site and related, public materials is to progressively share deliverables with the DTN and security communities in order to gather feedback.
