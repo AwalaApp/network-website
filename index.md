@@ -5,7 +5,7 @@ layout: page
 
 # Technically inaccurate overview
 
-If your phone, tablet or laptop isn't connected to the Internet, you can't talk to your friends on WhatsApp, read an article on the Wikipedia or post something on Facebook. Even if you urgently needed to send or receive some information, there would be nothing you could do until you get the device connected to the Internet.
+If your phone, tablet or laptop isn't connected to the Internet, you can't talk to your friends on WhatsApp, read an article on Wikipedia or post something on Facebook. Even if you urgently needed to send or receive some information, there would be nothing you could do until you get the device connected to the Internet.
 
 But what if someone else could **physically transport the information** on a pen drive, for example? They could then plug it into a computer with access to the Internet in order to send or receive the information (e.g., a friend's WhatsApp message, your Facebook post).
 
