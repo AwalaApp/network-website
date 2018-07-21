@@ -20,7 +20,7 @@ If your phone, tablet or laptop isn't connected to the Internet, you can't talk 
 
 But what if someone else could **physically transport the information** on a pen drive, for example? They could then plug it into a computer with access to the Internet in order to send or receive the information (e.g., a friend's WhatsApp message, your Facebook post).
 
-_Relaynet_ is a technology that will enable computers to exchange information relayed outside the Internet in a secure manner. It's meant to help WhatsApp, Google Chrome, Facebook and others support this type of communication without sharing your password, whilst making it impossible for the information to be read or changed if intercepted.
+_Relaynet_ is a technology that will enable computers to exchange information relayed outside the Internet in a secure manner. It's meant to help Internet-dependent software (e.g., WhatsApp, Google Chrome, Facebook) support this type of communication without sharing your password, whilst making it impossible for the information to be read or changed if intercepted.
 
 This technology can be useful in times or places where the Internet is unavailable, as opposed to when it's restricted and technologies like VPNs can be used. It's meant to support scenarios such as:
 
