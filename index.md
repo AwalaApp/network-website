@@ -16,7 +16,7 @@ Relaynet is also the name of the [overlay](https://en.wikipedia.org/wiki/Overlay
 
 # English translation
 
-If your phone, tablet or laptop isn't connected to the Internet, you can't talk to your friends on WhatsApp, read an article on Wikipedia or post something on Facebook. Even if you urgently needed to send or receive some information, there would be nothing you could do until you get the device connected to the Internet.
+If your phone, tablet or laptop isn't connected to the Internet, you can't talk to your friends on WhatsApp, read an article on Wikipedia or post something on Facebook. Even if you really needed to send or receive some information, there would be nothing you could do until you get the device connected to the Internet.
 
 But what if someone else could **physically transport the information** on a pen drive, for example? They could then plug it into a computer with access to the Internet in order to send or receive the information (e.g., a friend's WhatsApp message, your Facebook post).
 
@@ -30,4 +30,4 @@ This technology can be useful in times or places where the Internet is unavailab
 
 # Current status
 
-Relaynet is at an early stage of design by [Gustavo Narea](https://gustavonarea.net/about/) as part of his dissertation project at Oxford. The primary purpose of this web site and related, public materials is to progressively share deliverables with the DTN and security communities in order to gather feedback.
+Relaynet is at an early stage of design by [Gustavo Narea](https://gustavo.engineer/) as part of his dissertation project at Oxford.
