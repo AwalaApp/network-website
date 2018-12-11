@@ -10,7 +10,7 @@ Computer networks around the world and beyond are susceptible to loss of connect
 
 Establishing communication in such circumstances is the concern of the [_Delay-Tolerant Networking_](https://en.wikipedia.org/wiki/Delay-tolerant_networking) field, also known as _Disruption-Tolerant Networking_ or _DTN_ for short, which for decades has been led by space agencies, the military, and the academia.
 
-The purpose of this project is to complement the DTN ecosystem with a new protocol suite, _Relaynet_, to extend DTN to consumer and enterprise software such as web, desktop and mobile applications.
+The purpose of this project is to complement the DTN ecosystem with a new protocol suite, _Relaynet_, to extend DTN to consumer and enterprise systems with user interfaces.
 
 Relaynet is also the name of the [overlay](https://en.wikipedia.org/wiki/Overlay_network), [store-and-forward](https://en.wikipedia.org/wiki/Store_and_forward), [onion](https://en.wikipedia.org/wiki/Onion_routing) network resulting from the protocol suite, which will offer asynchronous [message passing](https://en.wikipedia.org/wiki/Message_passing) in client-server and P2P architectures.
 
