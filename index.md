@@ -30,4 +30,4 @@ This technology can be useful in times or places where the Internet is unavailab
 
 # Current status
 
-Relaynet is at an early stage of design by [Gustavo Narea](https://gustavo.engineer/) as part of his dissertation project at Oxford.
+Relaynet was designed by [Gustavo Narea](https://gustavo.engineer/) as part of his dissertation project at Oxford. A [proof of concept](https://github.com/relaynet/poc) is available, and more information about the protocol suite and the project will be made available throughout Q1 2019.
