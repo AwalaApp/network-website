@@ -8,7 +8,7 @@ layout: page
 
 Computer networks around the world and beyond are susceptible to loss of connectivity that may last anywhere from a few milliseconds to a number of days. In some cases, there may be no connection at all between two nodes that require communication due to a lack of network infrastructure.
 
-Establishing communication in such circumstances is the concern of the [_Delay-Tolerant Networking_](https://en.wikipedia.org/wiki/Delay-tolerant_networking) field, also known as _Disruption-Tolerant Networking_ or _DTN_ for short, which for decades has been led by space agencies, the military, and the academia.
+Establishing communication in such circumstances is the concern of the [_Delay-Tolerant Networking_](https://en.wikipedia.org/wiki/Delay-tolerant_networking) field, also known as _Disruption-Tolerant Networking_ or _DTN_ for short, which for decades has been led by space agencies, the defense industry, and the academia.
 
 The purpose of this project is to complement the DTN ecosystem with a new protocol suite, _Relaynet_, to extend DTN to consumer and enterprise systems with user interfaces.
 
