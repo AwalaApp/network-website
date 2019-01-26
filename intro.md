@@ -22,7 +22,7 @@ Relaynet is also the name of the [overlay](https://en.wikipedia.org/wiki/Overlay
 - A **parcel** encapsulates a message by encrypting it with the target endpoint's certificate and signing it with the origin endpoint's key.
 - A **gateway** receives parcels from endpoints and puts them into cargo for another gateway, using a _relayer_ as a broker. When a gateway receives cargo from a relayer, it decrypts the parcels and delivers them to their corresponding target endpoints.
 - A **cargo** encapsulates one or more parcels
-- A **relayer** collects cargo from one gateway to another.
+- A **relayer** _relays_ cargo from one gateway to one or more gateways.
 
 For example, if Twitter supported Relaynet, Twitter would be the _service_, the Twitter mobile apps would be _applications_, the Twitter API would also be an _application_. The _endpoints_ in the mobile apps could simply be Java (Android) or Swift (iOS) libraries, whilst the _endpoint_ in the Twitter API could be a new API endpoint (e.g., `https://api.twitter.com/relaynet`).
 
