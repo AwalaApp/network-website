@@ -1,33 +1,23 @@
 ---
-title: About Relaynet
-layout: page
+layout: home
 ---
 
+<img src="./custom-assets/logo.png" style="float:right; margin: 0.5em;"/>
 
-# Technically accurate overview
+# Relaynet
 
-Computer networks around the world and beyond are susceptible to loss of connectivity that may last anywhere from a few milliseconds to a number of days. In some cases, there may be no connection at all between two nodes that require communication due to a lack of network infrastructure.
+Relaynet is a technology that will bring the Internet to places where it isn't available. It can be used to circumvent [Internet blackouts](https://www.accessnow.org/keepiton/) or communicate with friends and family in the aftermath of a disaster, for example.
 
-Establishing communication in such circumstances is the concern of the [_Delay-Tolerant Networking_](https://en.wikipedia.org/wiki/Delay-tolerant_networking) field, also known as _Disruption-Tolerant Networking_ or _DTN_ for short, which for decades has been led by space agencies, the defense industry, and the academia.
+## How it works
 
-The purpose of this project is to complement the DTN ecosystem with a new protocol suite, _Relaynet_, to extend DTN to consumer and enterprise systems with user interfaces.
+Imagine you have a phone and want to use your social media accounts, but there's no access to the Internet in the region where you live. You could use Relaynet to send and receive data from the Internet if someone else could physically transport the information between your phone and a computer connected to the Internet in another region.
 
-Relaynet is also the name of the [overlay](https://en.wikipedia.org/wiki/Overlay_network), [store-and-forward](https://en.wikipedia.org/wiki/Store_and_forward), [onion](https://en.wikipedia.org/wiki/Onion_routing) network resulting from the protocol suite, which will offer asynchronous [message passing](https://en.wikipedia.org/wiki/Message_passing) in client-server and P2P architectures.
+Let's also say that Twitter supports Relaynet. When you create a tweet, the Twitter app sends the data to a _Relaynet gateway_ installed on your phone. A _relayer_ will eventually collect the data from your gateway and take it to another gateway connected to the Internet in order to relay the data to Twitter. Twitter can also send data to you via the relayer's gateway and the relayer will eventually deliver it to your gateway.
 
-# English translation
+Your information is also secure despite being transported by a third party. Thanks to end-to-end encryption, gateways can't see or change the data they get from the Twitter app or Twitter servers (the _parcel_), and relayers can't see or change the data they get from gateways (the _cargo_).
 
-If your phone, tablet or laptop isn't connected to the Internet, you can't talk to your friends on WhatsApp, read an article on Wikipedia or post something on Facebook. Even if you really needed to send or receive some information, there would be nothing you could do until you get the device connected to the Internet.
+Simply put, Relaynet turns a [sneakernet](https://en.wikipedia.org/wiki/Sneakernet) into an [Internet Service Provider](https://en.wikipedia.org/wiki/Internet_service_provider), and provides the basis for making software tolerant to delays lasting anywhere from minutes to months. You can [read the technical introduction](intro.html) if you're interested in the details.
 
-But what if someone else could **physically transport the information** on a pen drive, for example? They could then plug it into a computer with access to the Internet in order to send or receive the information (e.g., a friend's WhatsApp message, your Facebook post).
-
-_Relaynet_ is a technology that will enable computers to exchange information relayed outside the Internet in a secure manner. It's meant to help Internet-dependent software (e.g., WhatsApp, Google Chrome, Facebook) support this type of communication without sharing your password, whilst making it impossible for the information to be read or changed if intercepted.
-
-This technology can be useful in times or places where the Internet is unavailable, as opposed to when it's restricted and technologies like VPNs can be used. It's meant to support scenarios such as:
-
-- Working around Internet blackouts in oppressive regimes by allowing dissidents and the general public to communicate securely, and even broadcast information from opposition leaders.
-- In the immediate aftermath of a disaster, survivors could communicate with their family and friends if disaster relief services could relay the information.
-- People in remote settlements with no access to the Internet could have their information relayed periodically.
-
-# Current status
+## Current status
 
 Relaynet was designed by [Gustavo Narea](https://gustavo.engineer/) as part of his dissertation project at Oxford. A [proof of concept](https://github.com/relaynet/poc) is available, and more information about the protocol suite and the project will be made available throughout Q1 2019.
