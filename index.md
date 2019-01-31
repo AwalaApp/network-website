@@ -14,7 +14,7 @@ Imagine you have a phone and want to use your social media accounts, but there's
 
 Let's also say that Twitter supports Relaynet. When you create a tweet, the Twitter app sends the data to a _Relaynet gateway_ installed on your phone. A _relayer_ will eventually collect the data from your gateway and take it to another gateway connected to the Internet in order to relay the data to Twitter. Twitter can also send data to you via the relayer's gateway and the relayer will eventually deliver it to your gateway.
 
-Your information is also secure despite being transported by a third party. Thanks to end-to-end encryption, gateways can't see or change the data they get from the Twitter app or Twitter servers (the _parcel_), and relayers can't see or change the data they get from gateways (the _cargo_).
+Your information is also secure despite being transported by a third party. Thanks to end-to-end encryption, gateways can't see or change the data they get from Twitter apps or Twitter servers (the _parcel_), and relayers can't see or change the data they get from gateways (the _cargo_).
 
 Simply put, Relaynet turns a [sneakernet](https://en.wikipedia.org/wiki/Sneakernet) into an [Internet Service Provider](https://en.wikipedia.org/wiki/Internet_service_provider), and provides the basis for making software tolerant to delays lasting anywhere from milliseconds to months. You can [read the Relaynet Core specification](https://github.com/relaynet/specs/blob/master/rs000-core.md) if you're interested in the technical details.
 
