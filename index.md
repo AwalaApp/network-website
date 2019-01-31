@@ -12,7 +12,7 @@ Relaynet is a technology that will bring the Internet to places where it isn't a
 
 Imagine you have a phone and want to use your social media accounts, but there's no access to the Internet in the region where you live. You could use Relaynet to send and receive data from the Internet if someone else could physically transport the information between your phone and a computer connected to the Internet in another region.
 
-Let's also say that Twitter supports Relaynet. When you create a tweet, the Twitter app sends the data to a _Relaynet gateway_ installed on your phone. A _relayer_ will eventually collect the data from your gateway and take it to another gateway connected to the Internet in order to relay the data to Twitter. Twitter can also send data to you via the relayer's gateway and the relayer will eventually deliver it to your gateway.
+Let's also say that Twitter supports Relaynet. When you create a tweet, the app sends it to a _Relaynet gateway_ installed on your phone. Another person (the _relayer_) will periodically collect the data from your gateway and take it to a _relaying gateway_ that will relay the data to Twitter. Twitter can also send data to you via the relaying gateway.
 
 Your information is also secure despite being transported by a third party. Thanks to end-to-end encryption, gateways can't see or change the data they get from Twitter apps or Twitter servers (the _parcel_), and relayers can't see or change the data they get from gateways (the _cargo_).
 
