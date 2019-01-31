@@ -5,6 +5,9 @@ description: >
 google_analytics: UA-22641273-3
 twitter_username: relaynet_
 github_username: relaynet
+mastodon:
+    - username: relaynet
+      instance: mastodon.xyz
 
 markdown: kramdown
 theme: minima
