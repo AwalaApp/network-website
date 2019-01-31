@@ -16,7 +16,7 @@ Let's also say that Twitter supports Relaynet. When you create a tweet, the Twit
 
 Your information is also secure despite being transported by a third party. Thanks to end-to-end encryption, gateways can't see or change the data they get from the Twitter app or Twitter servers (the _parcel_), and relayers can't see or change the data they get from gateways (the _cargo_).
 
-Simply put, Relaynet turns a [sneakernet](https://en.wikipedia.org/wiki/Sneakernet) into an [Internet Service Provider](https://en.wikipedia.org/wiki/Internet_service_provider), and provides the basis for making software tolerant to delays lasting anywhere from minutes to months. You can [read the technical introduction](intro.html) if you're interested in the details.
+Simply put, Relaynet turns a [sneakernet](https://en.wikipedia.org/wiki/Sneakernet) into an [Internet Service Provider](https://en.wikipedia.org/wiki/Internet_service_provider), and provides the basis for making software tolerant to delays lasting anywhere from minutes to months. You can [read the specifications](https://github.com/relaynet/specs/blob/master/README.md) if you're interested in the details.
 
 ## Current status
 
