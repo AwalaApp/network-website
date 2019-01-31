@@ -20,4 +20,4 @@ Simply put, Relaynet turns a [sneakernet](https://en.wikipedia.org/wiki/Sneakern
 
 ## Current status
 
-Relaynet was designed by [Gustavo Narea](https://gustavo.engineer/) as part of his dissertation project at Oxford. A [proof of concept](https://github.com/relaynet/poc) is available, and more information about the protocol suite and the project will be made available throughout Q1 2019.
+Relaynet was designed by [Gustavo Narea](https://gustavo.engineer/) as part of his dissertation project at Oxford. There is a fully functional [proof of concept integrating Twitter](https://github.com/relaynet/poc), and [working drafts of the specifications](https://github.com/relaynet/specs/blob/master/README.md) are now available.
