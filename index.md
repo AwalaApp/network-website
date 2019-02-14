@@ -18,6 +18,6 @@ Your information is also secure despite being transported by a third party. Than
 
 Simply put, Relaynet turns a [sneakernet](https://en.wikipedia.org/wiki/Sneakernet) into an [Internet Service Provider](https://en.wikipedia.org/wiki/Internet_service_provider), and provides the basis for making software tolerant to delays lasting anywhere from milliseconds to months. You can [read the Relaynet Core specification](https://github.com/relaynet/specs/blob/master/rs000-core.md) if you're interested in the technical details.
 
-## Current status
+## Current status (as of February 2019)
 
-Relaynet was designed by [Gustavo Narea](https://gustavo.engineer/) as part of his dissertation project at Oxford. There is a working [proof of concept integrating Twitter](https://github.com/relaynet/poc), and [working drafts of the specifications](https://github.com/relaynet/specs/blob/master/README.md) are now available.
+Relaynet was designed by [Gustavo Narea](https://gustavo.engineer/) at the University of Oxford and its development is now led by [Relaycorp](https://relaycorp.tech/), which was founded to support and scale the project whilst keeping it as open and inclusive as possible. There is a working [proof of concept integrating Twitter](https://github.com/relaynet/poc), and [working drafts of the specifications](https://github.com/relaynet/specs/blob/master/README.md) are also available.
