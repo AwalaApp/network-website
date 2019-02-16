@@ -6,7 +6,7 @@ layout: home
 
 # Relaynet
 
-Relaynet is a technology that will bring the Internet to places where it isn't available. It can be used to circumvent [Internet blackouts](https://www.accessnow.org/keepiton/) or communicate with friends and family in the aftermath of a disaster, for example.
+Relaynet is a computer network that will allow people to circumvent Internet blackouts caused by [repressive regimes](https://www.accessnow.org/keepiton/) or natural disasters.
 
 ## How it works
 
