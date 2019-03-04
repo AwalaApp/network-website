@@ -16,8 +16,16 @@ Let's also say that Twitter supports Relaynet. When you create a tweet, the app 
 
 Your information is also secure despite being transported by a third party. Thanks to end-to-end encryption, gateways can't see or change the data they get from Twitter apps or Twitter servers (the _parcel_), and relayers can't see or change the data they get from gateways (the _cargo_).
 
-Simply put, Relaynet turns a [sneakernet](https://en.wikipedia.org/wiki/Sneakernet) into an [Internet Service Provider](https://en.wikipedia.org/wiki/Internet_service_provider), and provides the basis for making software tolerant to delays lasting anywhere from milliseconds to months. You can [read the Relaynet Core specification](https://github.com/relaynet/specs/blob/master/rs000-core.md) if you're interested in the technical details.
+Simply put, Relaynet turns a [sneakernet](https://en.wikipedia.org/wiki/Sneakernet) into an [Internet Service Provider](https://en.wikipedia.org/wiki/Internet_service_provider), and provides the basis for making software tolerant to delays lasting anywhere from milliseconds to months. You can see Relaynet in action in the [proof of concept with Twitter](https://github.com/relaynet/poc).
 
-## Current status (as of February 2019)
+## How you can help
 
-Relaynet was designed by [Gustavo Narea](https://gustavo.engineer/) at the University of Oxford and its development is now led by [Relaycorp](https://relaycorp.tech/), which was founded to support and scale the project whilst keeping it as open and inclusive as possible. There is a working [proof of concept integrating Twitter](https://github.com/relaynet/poc), and [working drafts of the specifications](https://github.com/relaynet/specs/blob/master/README.md) are also available.
+Anyone can help by following the project on [Twitter](https://twitter.com/relaynet_) and [Facebook](https://www.facebook.com/Relaynet-2584770964871347/), and spreading the word on social media.
+
+If you have a background in cryptography, networking and/or software engineering, **please** provide feedback on the [main specifications](https://github.com/relaynet/specs).
+
+Want to discuss other ways of contributing to the project? Join the [Gitter community](https://gitter.im/relaynet/community)!
+
+## The backstory
+
+Relaynet was designed by [Gustavo Narea](https://gustavo.engineer/) at the University of Oxford and its development is now led by [Relaycorp](https://relaycorp.tech/), which was founded to support and scale the project whilst keeping it as open and inclusive as possible.
