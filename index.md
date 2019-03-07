@@ -6,9 +6,11 @@ layout: home
 
 # Relaynet
 
-Relaynet is a computer network that will allow people to circumvent Internet blackouts caused by [repressive regimes](https://www.accessnow.org/keepiton/) or natural disasters.
+Relaynet is a computer network that was originally designed to circumvent complete Internet blackouts caused by [repressive regimes](https://www.accessnow.org/keepiton/) -- Those where VPNs or Tor can't help. But it can be used in any blackout, such as one caused by a natural disaster.
 
-## How it works
+The network can even be used on top of the Internet to build software that would be unthinkable with existing technologies. Can you imagine an alternative to email that is spam-free, uses end-to-end encryption and requires zero servers? It will be possible with Relaynet.
+
+## How it works without the Internet
 
 Imagine you have a phone and want to use your social media accounts, but there's no access to the Internet in the region where you live. You could use Relaynet to send and receive data from the Internet if someone else could physically transport the information between your phone and a computer connected to the Internet in another region.
 
@@ -17,6 +19,12 @@ Let's also say that Twitter supports Relaynet. When you create a tweet, the app 
 Your information is also secure despite being transported by a third party. Thanks to end-to-end encryption, gateways can't see or change the data they get from Twitter apps or Twitter servers (the _parcel_), and relayers can't see or change the data they get from gateways (the _cargo_).
 
 Simply put, Relaynet turns a [sneakernet](https://en.wikipedia.org/wiki/Sneakernet) into an [Internet Service Provider](https://en.wikipedia.org/wiki/Internet_service_provider), and provides the basis for making software tolerant to delays lasting anywhere from milliseconds to months. You can see Relaynet in action in the [proof of concept with Twitter](https://github.com/relaynet/poc).
+
+## How it works with the Internet
+
+As far as the user is concerned, there will be no difference whatsoever. Except that their apps will be [Offline First](http://offlinefirst.org/) -- Meaning that they'll finally be able to cope properly with those small yet frequent disruptions that affect every Internet user, even in developed nations.
+
+And just about any software will benefit from using Relaynet, with the exception of those that stream data in real time (for example, Voice-over-IP, videoconferencing and many online games).
 
 ## How you can help
 
