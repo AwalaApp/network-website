@@ -24,7 +24,13 @@ Simply put, Relaynet turns a [sneakernet](https://en.wikipedia.org/wiki/Sneakern
 
 As far as the user is concerned, there will be no difference whatsoever. Except that their apps will be [Offline First](http://offlinefirst.org/) -- Meaning that they'll finally be able to cope properly with those small yet frequent disruptions that affect every Internet user, even in developed nations.
 
-And just about any software will benefit from using Relaynet, with the exception of those that stream data in real time (for example, Voice-over-IP, videoconferencing and many online games).
+Individual and organizations building and running distributed systems will benefit the most from using Relaynet on top of the Internet. They could, for example:
+
+- Do [server push](https://en.wikipedia.org/wiki/Push_technology) without long-lived connections or workarounds like polling.
+- Build peer-to-peer applications without having to run a server to store messages when one of the peers is offline.
+- Broadcast messages that are fired once and are then propagated to all the relevant apps in the network.
+
+Just about any software will benefit from using Relaynet, with the exception of those that stream data in real time (for example, Voice-over-IP, videoconferencing and many online games).
 
 ## How you can help
 
