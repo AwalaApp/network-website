@@ -2,13 +2,13 @@
 layout: home
 ---
 
-<img src="./custom-assets/logo.png" style="float:right; margin: 0.5em;"/>
+<img src="./custom-assets/logo.png" style="float:right; margin: 0.5em; max-width: 40%"/>
 
 # Relaynet
 
-Relaynet is a computer network that was originally designed to circumvent complete Internet blackouts caused by [repressive regimes](https://www.accessnow.org/keepiton/), where VPNs or Tor can't help. But it can be used in any blackout, such as one caused by a natural disaster.
+Relaynet is a technology designed to circumvent complete Internet blackouts caused by repressive regimes -- Those where VPNs can't help. But it can be used in any blackout, such as one caused by a natural disaster.
 
-The network can even be used on top of the Internet to build software that would be unthinkable with existing technologies. Can you imagine an alternative to email that is spam-free, uses end-to-end encryption and requires zero servers? It will be possible with Relaynet.
+It can also be used on top of the Internet to build software that would be unthinkable with existing technologies. Like an alternative to email that is spam-free, uses end-to-end encryption and requires zero servers.
 
 ## How it works without the Internet
 
