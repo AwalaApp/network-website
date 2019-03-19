@@ -26,11 +26,11 @@ Simply put, Relaynet turns a [sneakernet](https://en.wikipedia.org/wiki/Sneakern
 
 As far as the user is concerned, there will be no difference whatsoever. Except that their apps will be [Offline First](http://offlinefirst.org/) -- Meaning that they'll finally be able to cope properly with those small yet frequent disruptions that affect every Internet user, even in developed nations.
 
-Individual and organizations building and running distributed systems will benefit the most from using Relaynet when the Internet is available. They could, for example:
+Individual and organizations building and running distributed systems will benefit the most from using Relaynet when the Internet is available. Thanks to the underlying architectural pattern (_asynchronous messaging_), the following will be possible:
 
 - Do [server push](https://en.wikipedia.org/wiki/Push_technology) without long-lived connections or workarounds like polling. A bit like the [Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API), except that you won't have to run or pay for a push service.
 - Build peer-to-peer applications without having to run a server to store messages when one of the peers is offline.
-- Broadcast messages that are fired once and are then propagated to all the relevant apps in the network. Broadcasting this way is more scalable than using blockchain: Messages will be deleted as soon as they expire and they're verified instantly.
+- Broadcast messages that are fired once and are then propagated to all the relevant apps in the network. Broadcasting this way is more scalable than using blockchain: Messages are deleted as soon as they expire and they're verified instantly.
 
 Just about any software will benefit from using Relaynet, with the exception of those that stream data in real time (for example, Voice-over-IP, videoconferencing and many online games).
 
