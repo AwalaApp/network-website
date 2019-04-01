@@ -12,8 +12,14 @@ It can also be used on top of the Internet to build software that would be unthi
 
 ## How Relaynet works
 
-<div style="text-align: center;">
-    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_4zP0CfcTj4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="embedded_video">
+    <iframe
+        src="https://www.youtube-nocookie.com/embed/_4zP0CfcTj4"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        >
+    </iframe>
 </div>
 
 When the Internet is unavailable, Relaynet turns a [sneakernet](https://en.wikipedia.org/wiki/Sneakernet) into an [Internet Service Provider](https://en.wikipedia.org/wiki/Internet_service_provider), and provides the basis for making software tolerant to delays lasting anywhere from milliseconds to months. [A proof of concept simulating this scenario with Twitter](https://github.com/relaynet/poc) was built to put Relaynet to the test.
