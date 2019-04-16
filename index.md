@@ -38,7 +38,7 @@ Just about any software will benefit from using Relaynet, with the exception of 
 
 Anyone can help by following the project on [Twitter](https://twitter.com/relaynet_) and [Facebook](https://www.facebook.com/Relaynet-2584770964871347/), and spreading the word on social media.
 
-If you have a background in cryptography, networking and/or software engineering, **please** provide feedback on the [main specifications](https://github.com/relaynet/specs).
+If you have a background in cryptography, networking and/or software engineering, **please** provide feedback on the [specifications](https://specs.relaynet.link/).
 
 Want to discuss other ways of contributing to the project? Join the [Gitter community](https://gitter.im/relaynet/community)!
 
