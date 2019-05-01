@@ -22,7 +22,7 @@ It can also be used on top of the Internet to build software that would be unthi
     </iframe>
 </div>
 
-When the Internet is unavailable, Relaynet turns a [sneakernet](https://en.wikipedia.org/wiki/Sneakernet) into an [Internet Service Provider](https://en.wikipedia.org/wiki/Internet_service_provider), and provides the basis for making software tolerant to delays lasting anywhere from milliseconds to months. [A proof of concept simulating this scenario with Twitter](https://github.com/relaynet/poc) was built to put Relaynet to the test.
+When the Internet is unavailable, Relaynet continues to run on alternative networks (such as [sneakernets](https://en.wikipedia.org/wiki/Sneakernet) or [meshnets](https://en.wikipedia.org/wiki/Mesh_networking)) which will eventually connect users to the Internet, and it also provides the basis for making software tolerant to delays lasting anywhere from milliseconds to months. [A proof of concept simulating this scenario with Twitter](https://github.com/relaynet/poc) was built to put Relaynet to the test.
 
 When the Internet is available, the use of Relaynet will be absolutely transparent to end users. Except that their apps will be [Offline First](http://offlinefirst.org/) -- Meaning that they'll finally be able to cope properly with those small yet frequent disruptions that affect every Internet user, even in developed nations.
 
