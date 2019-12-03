@@ -42,6 +42,10 @@ If you have a background in cryptography, networking and/or software engineering
 
 Want to discuss other ways of contributing to the project? Join the [Gitter community](https://gitter.im/relaynet/community)!
 
+## Current status
+
+As of December 2019, the implementation of Relaynet is being funded by the [Open Technology Fund](https://www.opentech.fund/). The goal of this project is to build the foundation to support Relaynet on desktop and Android.
+
 ## The backstory
 
 Relaynet was designed by [Gustavo Narea](https://gustavo.engineer/) at the University of Oxford and its development is now led by [Relaycorp](https://relaycorp.tech/), which was founded to support and scale the project whilst keeping it as open and inclusive as possible.
