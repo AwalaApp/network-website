@@ -6,9 +6,9 @@ layout: home
 
 # Relaynet
 
-Relaynet is a technology originally designed to circumvent complete Internet blackouts caused by repressive regimes, but it can also be used to restore connectivity in the immediate aftermath of a disaster or even connect isolated communities where a traditional Internet infrastructure isn't cost-effective.
+Relaynet is a computer network where apps can remain connected when the Internet is completely cut off. It was designed to circumvent Internet blackouts caused by repressive regimes, but it can also be used to restore connectivity in the immediate aftermath of a disaster or even connect isolated communities where a traditional Internet infrastructure isn't cost-effective.
 
-It can also be used on top of the Internet to build software that would be unthinkable with existing technologies. Like an alternative to email that is spam-free, uses end-to-end encryption and requires zero servers.
+A new generation of networked software will be made possible by Relaynet -- Like an alternative to email that is spam-free, phishing-free, uses end-to-end encryption and requires zero servers.
 
 ## How Relaynet works
 
@@ -28,7 +28,7 @@ When the Internet is available, the use of Relaynet will be absolutely transpare
 
 Organizations building and running distributed systems will benefit the most from using Relaynet. Thanks to the underlying architectural pattern (_asynchronous messaging_), the following will be possible:
 
-- Doing [server push](https://en.wikipedia.org/wiki/Push_technology) without long-lived connections or workarounds like polling. A bit like the [Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API), except that they won't have to run or pay for a push service.
+- Doing [server push](https://en.wikipedia.org/wiki/Push_technology) without long-lived connections or workarounds like polling. Similar to the [Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API), without the need to run or pay for a push service.
 - Building peer-to-peer applications without having to run a server to store messages when one of the peers is offline.
 - Broadcasting messages that are fired once and are then propagated to all the relevant apps in the network. Broadcasting this way is more scalable than using blockchain: Messages are deleted as soon as they expire and they're verified instantly.
 
