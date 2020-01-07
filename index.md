@@ -44,7 +44,7 @@ Want to discuss other ways of contributing to the project? Join the [Gitter comm
 
 ## Current status
 
-As of December 2019, the implementation of Relaynet is being funded by the [Open Technology Fund](https://www.opentech.fund/). The goal of this project is to build the foundation to support Relaynet on desktop and Android.
+As of December 2019, the implementation of Relaynet is being funded by the [Open Technology Fund](https://www.opentech.fund/). The goal of this project is to build the foundation to support Relaynet on desktop and Android. The implementations can be found under the [@relaycorp organization on GitHub](https://github.com/relaycorp).
 
 ## The backstory
 
