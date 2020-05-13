@@ -7,9 +7,7 @@ twitter_username: relaynet_
 github_username: relaycorp
 
 markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
+remote_theme: "poole/lanyon@v1.1.0"
 exclude:
   - Gemfile
   - Gemfile.lock

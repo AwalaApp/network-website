@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 ---
 
 <img src="./custom-assets/logo.png" style="float:right; margin: 0.5em; max-width: 40%"/>
