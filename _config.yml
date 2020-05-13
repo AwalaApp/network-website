@@ -6,6 +6,9 @@ google_analytics: UA-22641273-3
 twitter_username: relaynet_
 github_username: relaycorp
 
+# TODO: REMOVE BEFORE MERGE!!
+url: https://docs.relaycorp.tech/relaynet-website-tmp/
+
 markdown: kramdown
 remote_theme: "poole/lanyon@v1.1.0"
 exclude:
