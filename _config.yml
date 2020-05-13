@@ -8,6 +8,7 @@ github_username: relaycorp
 
 # TODO: REMOVE BEFORE MERGE!!
 url: https://docs.relaycorp.tech/relaynet-website-tmp/
+baseurl: ""
 
 markdown: kramdown
 remote_theme: "poole/lanyon@v1.1.0"
