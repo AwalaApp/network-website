@@ -7,10 +7,16 @@ twitter_username: relaynet_
 github_username: relaycorp
 
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+
+theme: minima
+header_pages:
+  - users.md
+  - service-providers.md
+  - couriers.md
+  - about.md
