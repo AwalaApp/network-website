@@ -1,7 +1,7 @@
 ---
-title: Service providers
+title: Software vendors
 layout: page
-permalink: /service-providers
+permalink: /software-vendors
 ---
 
 # Make your software resilient to Internet blackouts
