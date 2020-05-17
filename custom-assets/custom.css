@@ -18,3 +18,15 @@
 .post-content h1 {
     font-size: 2em;
 }
+.post-content h2 {
+    font-size: 1.8em;
+}
+
+/* Mailchimp signup form */
+
+#mergeRow-gdpr {
+    font-size: 0.8em;
+}
+#mc_embed_signup .input-group ul {
+    list-style-type: none;
+}
