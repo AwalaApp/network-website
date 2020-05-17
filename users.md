@@ -6,9 +6,9 @@ permalink: /users
 
 # Stay connected with or without the Internet
 
-As amazing and ubiquitous as the Internet is, we can't count on it when we need it most -- It just wasn't built to withstand repressive regimes, natural disasters, terrorist attacks or wars. By contrast, **Relaynet is designed to be unbreakable without requiring new hardware**.
+As amazing and ubiquitous as the Internet is, we can't count on it when we need it most -- it just wasn't built to withstand repressive regimes, natural disasters, terrorist attacks or wars. By contrast, **Relaynet is designed to be unbreakable without requiring new hardware**.
 
-When you're connected to the Internet, Relaynet-compatible apps will simply use it and you won't notice a difference. But when you're disconnected from the Internet, you can get [couriers](./couriers) to securely transport your apps' data to and from the Internet.
+When you're connected to the Internet, Relaynet-compatible apps will simply use it and you won't notice a difference. But when you're disconnected from the Internet, you can get [couriers](./couriers) to securely transport your apps' data to and from the Internet -- without ever handing over your device to anyone.
 
 You don't need to know or trust couriers at all! It's impossible for couriers -- or anyone who intercepts them -- to see or change your apps' data. They can't even see which apps you're using or link that data to you. The worst damage that a courier can cause is to drop your data along the way, and even then Relaynet will seamlessly detect it and correct it.
 
@@ -18,7 +18,7 @@ We plan to be ready for some early testing by Q4 2020, so stay tuned!
 
 ## Help us help you
 
-If you like what Relaynet can do for you and want to help, the best way to do so is by getting the software that you use to add support for Relaynet. For example, tell [Facebook][cta_facebook], [Twitter][cta_twitter] or [WhatsApp][cta_whatsapp] that you wish they supported Relaynet.
+If you like the sound of this and want to help, the best way to do so is by getting the software that you use to add support for Relaynet. For example, tell [Facebook][cta_facebook], [Twitter][cta_twitter] or [WhatsApp][cta_whatsapp] that you wish they supported Relaynet.
 
 Also, don't be a stranger! Say hi on [Facebook](https://www.facebook.com/relaynet/) or [Twitter](https://twitter.com/relaynet_), and tell us why you're excited about Relaynet. Questions and requests are also welcomed. We prefer public discussions but we understand if you'd rather chat in private.
 
