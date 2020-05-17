@@ -33,19 +33,3 @@ Organizations building and running distributed systems will benefit the most fro
 - Broadcasting messages that are fired once and are then propagated to all the relevant apps in the network. Broadcasting this way is more scalable than using blockchain: Messages are deleted as soon as they expire and they're verified instantly.
 
 Just about any software will benefit from using Relaynet, with the exception of those that stream data in real time (for example, Voice-over-IP, videoconferencing and many online games).
-
-## How you can help
-
-Anyone can help by following the project on [Twitter](https://twitter.com/relaynet_) and [Facebook](https://www.facebook.com/Relaynet-2584770964871347/), and spreading the word on social media.
-
-If you have a background in cryptography, networking and/or software engineering, **please** provide feedback on the [specifications](https://specs.relaynet.network/).
-
-Want to discuss other ways of contributing to the project? Join the [Gitter community](https://gitter.im/relaynet/community)!
-
-## Current status
-
-As of December 2019, the implementation of Relaynet is being funded by the [Open Technology Fund](https://www.opentech.fund/). The goal of this project is to build the foundation to support Relaynet on desktop and Android. The implementations can be found under the [@relaycorp organization on GitHub](https://github.com/relaycorp).
-
-## The backstory
-
-Relaynet was designed by [Gus Narea](https://gustavo.engineer/) at the University of Oxford and its development is now led by [Relaycorp](https://relaycorp.tech/), which was founded to support and scale the project whilst keeping it as open and inclusive as possible.
