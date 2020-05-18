@@ -12,6 +12,8 @@ Your job is to transport data from Relaynet users' devices to the Internet and v
 
 You may collaborate with other couriers to make the process more efficient and collectively reach every corner of the region disconnected from the Internet. For example, like real-world couriers, most of you may do short-distance routes to connect small areas to a nearby regional hub, and others would be responsible for transporting the data between the regional hub and the Internet.
 
+You may charge Relaynet users for your services to offset costs or even make a profit. However, the software we're currently building won't support payments, and any trade will be strictly between you and the user. [We may facilitate such transactions in the future depending on the feedback we get](https://github.com/relaynet/specs/issues/34).
+
 Naturally, you have the most important job in restoring connectivity in the event of a blackout, and we understand you may be putting yourself under significant risk. For this reason, your safety has been a critical consideration throughout the design and implementation of Relaynet.
 
 It's impossible for you -- or anyone who intercepts you -- to view or change the data you transport. Only the sender can change it and only the recipient can view it. That means you can't be coerced into revealing or changing anything. All you can do is delete the data, if you so wish.
