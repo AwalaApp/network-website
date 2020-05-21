@@ -6,7 +6,7 @@ permalink: /users
 
 # Stay connected with or without the Internet
 
-As amazing and ubiquitous as the Internet is, we can't count on it when we need it most -- it just wasn't built to withstand repressive regimes, natural disasters, terrorist attacks or wars. By contrast, **Relaynet is designed to be unbreakable without requiring new hardware**.
+As amazing and ubiquitous as the Internet is, we can't count on it when we need it most -- it just wasn't built to withstand repressive regimes, natural disasters, terrorist attacks or wars. By contrast, Relaynet was expressly conceived for those scenarios.
 
 When you're connected to the Internet, Relaynet-compatible apps will simply use it and you won't notice a difference. But when you're disconnected from the Internet, you can get [couriers](./couriers) to securely transport your apps' data to and from the Internet -- without ever handing over your device to anyone.
 
