@@ -6,11 +6,11 @@ layout: home
 
 # Relaynet
 
-Relaynet will be the computer network on which humankind can truly rely, and the first order of business is to restore connectivity in regions where the Internet has been cut off due to natural or human causes. No new hardware required.
+Relaynet will be the computer network on which humankind can truly rely, and the first order of business is to restore connectivity in regions where the Internet has been cut off due to natural or human causes.
 
-There will also be benefits to using Relaynet apps when the Internet is available. For instance, such apps can be free of spam and phishing -- with no artificial intelligence or human intervention. [Learn more about how Relaynet will solve real problems](./users).
+Once you install Relaynet on your device, any compatible app running there will use it. No setup needed. Those apps will use the Internet when it's available, and they'll switch to a fallback network when the Internet is unavailable. [Learn more about using Relaynet](./users).
 
-If you're a software vendor, Relaynet can do more than making your apps resilient: You could reduce costs while building innovative products that offer better security and privacy to your users. [Learn more](./software-vendors).
+If you already offer a service over the Internet, you will be able to integrate Relaynet gradually so that you can prioritize the functionality that should also work without the Internet. You can also add Relaynet support to any third-party service that offers an API. [Learn more about integrating Relaynet](./service-providers).
 
 If you're interested in restoring connectivity when the Internet is cut off, [become a courier](./couriers). Do it for profit, the greater good or both.
 
