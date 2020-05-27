@@ -8,9 +8,11 @@ layout: home
 
 Relaynet will be the computer network on which humankind can truly rely, and the first order of business is to restore connectivity in regions where the Internet has been cut off due to natural or human causes.
 
-Once you install Relaynet on your device, any compatible app running there will use it. No setup needed. Those apps will use the Internet when it's available, and they'll switch to a fallback network when the Internet is unavailable. [Learn more about using Relaynet](./users).
+Any Internet-based service that doesn't intrinsically require real-time communication can use Relaynet. For example, videoconferencing won't work, but social media, money remittance and telehealth applications can use Relaynet.
 
-If you already offer a service over the Internet, you will be able to integrate Relaynet gradually so that you can prioritize the functionality that should also work without the Internet. You can also add Relaynet support to any third-party service that offers an API. [Learn more about integrating Relaynet](./service-providers).
+Once you install Relaynet, any compatible app running on your device will use it. No upfront configuration is needed. Those apps will use the Internet when it's available, and they'll switch to a fallback network when the Internet is unavailable. [Learn more about using Relaynet](./users).
+
+If you provide an Internet-based service, you will be able to integrate Relaynet gradually in your software so that you can prioritize the functionality that should work without the Internet. You can also add Relaynet support to any third-party service that offers an API. [Learn more about integrating Relaynet](./service-providers).
 
 If you're interested in restoring connectivity when the Internet is cut off, [become a courier](./couriers). Do it for profit, the greater good or both.
 
