@@ -26,21 +26,30 @@ Watch this video to get a better idea of how Relaynet will work:
 
 ## Technical overview
 
-As revolutionary as this may sound, Relaynet is fundamentally the realization of two well-established architectural techniques: [Asynchronous messaging](https://www.enterpriseintegrationpatterns.com/patterns/messaging/Messaging.html) and [delay-tolerant networking](https://en.wikipedia.org/wiki/Delay-tolerant_networking) (or more precisely, the [store-and-forward](https://en.wikipedia.org/wiki/Store_and_forward) technique).
+As revolutionary as this may sound, Relaynet is fundamentally the realization of two well-established architectures: [Delay-tolerant networking](https://en.wikipedia.org/wiki/Delay-tolerant_networking) and [asynchronous messaging](https://www.enterpriseintegrationpatterns.com/patterns/messaging/Messaging.html). Messaging is an alternative to _Remote Procedure Calls_ (RPCs) like RESTful APIs -- the de facto architecture of Internet services.
 
 While Internet apps communicate directly via _clients_ and _servers_, Relaynet apps communicate via _endpoints_ whose data is transported by _gateways_. Endpoints can talk to each other as long they have the appropriate permissions to do so -- Gateways will enforce authentication and authorization with zero knowledge about the apps or the data being relayed.
 
-Relaynet will connect endpoints across networks (e.g., between a sneakernet and the Internet) and within the same network. In fact, all Relaynet apps natively support [NAT traversal](https://en.wikipedia.org/wiki/NAT_traversal), so it'd be trivial for an endpoint in an Internet host to initiate communication with an endpoint behind a NAT router -- In Internet speak, that means you get server-push for free.
+Relaynet will connect endpoints across networks (e.g., between a sneakernet and the Internet) and within the same network. In fact, all Relaynet apps can do [NAT traversal](https://en.wikipedia.org/wiki/NAT_traversal) seamlessly, so it'd be trivial for an endpoint in an Internet host to initiate communication with an endpoint behind a NAT router -- In Internet speak, that means you get server-push for free.
+
+[Read the introduction to Relaynet](https://specs.relaynet.network/RS-000#introduction) in the core specification to learn more about the technical rationale and to get a more accurate overview of the technology.
 
 ## Integration approaches
 
-First party, centralized
+Many of the assumptions and techniques you employ while designing and building Internet-based software won't apply when you build delay-tolerant software. To be effective, you need to embrace the new constraints and opportunities. In particular:
 
-Third party, centralized
+- Product managers and designers should adopt an [offline-first](http://offlinefirst.org/) mindset: The user being offline when performing an action or when an event takes place shouldn't be regarded an edge case.
+- Software developers should embrace asynchronous messaging without trying to replicate a request-response pattern. That pattern can still be replicated, but should be used sparingly.
 
-Native Relaynet service
+Integrating Relaynet in a pre-existing product involves replacing RPCs (e.g., HTTP requests) with an asynchronous interface provided by the Relaynet library, and such changes can be limited to the functionality you want to offer on Relaynet.
 
-Relaynet will support desktop, Android, CLI and server-side apps from day one, thanks to the [Node.js](https://docs.relaycorp.tech/relaynet-core-js/) and [JVM](https://github.com/relaycorp/relaynet-jvm) libraries.
+On the other hand, if you wish to make a third-party service work on Relaynet, you're likely to need to create a new desktop/mobile app and a server-side app that would communicate with each other via Relaynet. Additionally, the server-side app will be responsible for the communication with the API of the third-party service.
+
+TODO: Native Relaynet service
+
+Refer to the [service integrations scale](https://specs.relaynet.network/RS-012) for a more detailed analysis of the different integration approaches.
+
+Relaynet will support desktop, Android, CLI and server-side apps from day one, thanks to the [Node.js](https://docs.relaycorp.tech/relaynet-core-js/) and [JVM](https://github.com/relaycorp/relaynet-jvm) libraries. Those libraries will undergo a security audit once we're done building the foundation of the network, so we expect them to be ready for beta testing by Q3 2020. Stay tuned!
 
 ## We want to hear from you
 
