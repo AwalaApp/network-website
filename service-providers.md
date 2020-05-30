@@ -34,7 +34,7 @@ While Internet apps communicate directly via _clients_ and _servers_, Relaynet a
 
 Relaynet will connect endpoints across networks (e.g., between a sneakernet and the Internet) and within the same network. In fact, all Relaynet apps can do [NAT traversal](https://en.wikipedia.org/wiki/NAT_traversal) seamlessly, so it'd be trivial for an endpoint in an Internet host to initiate communication with an endpoint behind a NAT router -- In Internet speak, that means you get server-push for free.
 
-[Read the introduction to Relaynet](https://specs.relaynet.network/RS-000#introduction) in the core specification to learn more about the technical rationale and to get a more accurate overview of the technology.
+[Read the introduction to Relaynet](https://specs.relaynet.network/RS-000#introduction) in the core specification if you want to learn more about the technical rationale and to get a more accurate overview of the technology.
 
 ## Integration approaches
 

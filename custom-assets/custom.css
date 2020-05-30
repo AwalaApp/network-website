@@ -5,6 +5,7 @@
     overflow: hidden;
     max-width: 100%;
     text-align: center;
+    margin-bottom: 0.5em;
 }
 
 .embedded_video iframe {
