@@ -10,7 +10,7 @@ Relaynet will be the computer network on which humankind can truly rely, and the
 
 Any Internet-based service that doesn't require real-time communication can use Relaynet. For example, videoconferencing won't work, but social media, money remittance and telehealth applications could use Relaynet.
 
-Once you install Relaynet, any compatible app running on your device will use it. No upfront configuration is needed. Those apps will use the Internet when it's available, and they'll fall back to a different medium when the Internet is unavailable. [Learn more about using Relaynet](./users).
+You'd simply install Relaynet and any compatible app running on your device will use it -- No upfront configuration or hardware purchase is required. Those apps will use the Internet when it's available, and they'll switch to a fallback medium when the Internet is unavailable. [Learn more about using Relaynet](./users).
 
 If you provide an Internet-based service, you will be able to integrate Relaynet gradually in your software so that you can prioritize the functionality that should work without the Internet. You can also add Relaynet support to any third-party service that offers an API. [Learn more about integrating Relaynet](./service-providers).
 
