@@ -14,7 +14,7 @@ You don't need to know or trust couriers at all! It's impossible for couriers --
 
 Relaynet will be the network on which humankind can truly rely and providing resilient communication is simply the beginning. Additional benefits include powering a new generation of apps that will be 100% free of spam and phishing, as well as levelling the playing field to support new products that won't have to compromise your privacy to be profitable.
 
-We plan to be ready for some early testing by Q4 2020, so stay tuned!
+We plan to have the first Relaynet app by Q4 2020, so stay tuned!
 
 ## Help us help you
 

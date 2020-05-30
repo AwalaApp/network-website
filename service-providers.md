@@ -8,7 +8,9 @@ permalink: /service-providers
 
 Add Relaynet support to your Internet-based service and make it tolerant to delays lasting anywhere from minutes to months. You can also integrate any third-party service that offers an API, or build a native Relaynet service from scratch to get additional benefits.
 
-Internet apps are responsible for producing, consuming and transporting their data, and that's precisely what makes them brittle: Everything hinges on the sender and the recipient being able to communicate at the same time and with an adequate throughput.
+Internet technologies are constantly evolving to provide richer functionality and better security, but Internet-based services are built in such a way that they require real-time access to the Internet and addressing this limitation requires a radical shift from traditional Internet technologies.
+
+The crux of the problem is that Internet apps are responsible for transporting their own data, and everything hinges on the sender and the recipient being able to communicate at the same time and with an adequate throughput.
 
 By contrast, Relaynet apps delegate the transport of their data to a _Relaynet gateway_ running on the [user](/users)'s device. The gateway will use the best available network (typically the Internet) and will queue outgoing data when no network is available. The user's gateway will be paired to a remote gateway on the Internet, which will also queue incoming data when the user is offline.
 
@@ -43,18 +45,14 @@ Many of the assumptions and techniques you employ while designing and building I
 
 Integrating Relaynet in a pre-existing product involves replacing RPCs (e.g., HTTP requests) with an asynchronous interface provided by the Relaynet library, and such changes can be limited to the functionality you want to offer on Relaynet.
 
-On the other hand, if you wish to make a third-party service work on Relaynet, you're likely to need to create a new desktop/mobile app and a server-side app that would communicate with each other via Relaynet. Additionally, the server-side app will be responsible for the communication with the API of the third-party service.
+On the other hand, if you wish to make a third-party service work on Relaynet, you're likely to need a new desktop/mobile app and a new server-side app that would communicate with each other via Relaynet. Additionally, the server-side app will be responsible for the communication with the API of the third-party service. The [Relaynet proof of concept with Twitter](https://github.com/relaynet/poc) is an example of this type of integration.
 
-TODO: Native Relaynet service
-
-Refer to the [service integrations scale](https://specs.relaynet.network/RS-012) for a more detailed analysis of the different integration approaches.
+If you're building a new service and are not constrained to traditional Internet technologies, you may want to build a native Relaynet service instead to unlock additional benefits. Say you're building a decentralized service like email, but unlike email you'd want it to be spam- and phishing-free, use end-to-end encryption and need zero servers -- That'd be fairly easy with Relaynet!
 
 Relaynet will support desktop, Android, CLI and server-side apps from day one, thanks to the [Node.js](https://docs.relaycorp.tech/relaynet-core-js/) and [JVM](https://github.com/relaycorp/relaynet-jvm) libraries. Those libraries will undergo a security audit once we're done building the foundation of the network, so we expect them to be ready for beta testing by Q3 2020. Stay tuned!
 
 ## We want to hear from you
 
-Social media.
-
-Commercial? Contact Relaycorp.
+Come say hi on [Facebook](https://www.facebook.com/relaynet/) or [Twitter](https://twitter.com/relaynet_), and ask us any questions you may have about making your software compatible with Relaynet. You can also [email us](https://relaycorp.tech/) if you'd prefer that!
 
 {% include subscription-cta.html group="service_providers" %}
