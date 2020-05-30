@@ -31,7 +31,8 @@
                         <label for="mce-group[7424]-7424-2">I'm interested in becoming a courier.</label>
                     </li>
                     <li>
-                        <input id="mce-group[7424]-7424-3" name="group[7424][8]" type="checkbox" value="8">
+                        <input id="mce-group[7424]-7424-3" name="group[7424][8]" type="checkbox" value="8"
+                               {% if include.group == "contributors" %}checked="checked"{% endif %}>
                         <label for="mce-group[7424]-7424-3">I'm interested in contributing to the Relaynet project.</label>
                     </li>
                 </ul>
