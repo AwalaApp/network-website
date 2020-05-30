@@ -16,4 +16,4 @@ If you provide an Internet-based service, you will be able to integrate Relaynet
 
 If you're interested in restoring connectivity when the Internet is cut off, [become a courier](./couriers). Do it for profit, the greater good or both.
 
-Relaynet is a decentralized technology with [technical specifications](https://specs.relaynet.network/) publicly available and [open source implementations](https://github.com/relaycorp). It was invented at Oxford and its development is led by [Relaycorp](https://relaycorp.tech/). The initial implementation will be completed by Q3 2020 with funding from the [Open Technology Fund](https://www.opentech.fund/). [Learn more about Relaynet](./about).
+Relaynet is a decentralized technology with [technical specifications](https://specs.relaynet.network/) publicly available and [open source implementations](https://github.com/relaycorp). It was designed at Oxford and its development is led by [Relaycorp](https://relaycorp.tech/). The initial implementation will be completed by Q3 2020 with funding from the [Open Technology Fund](https://www.opentech.fund/). [Learn more about Relaynet](./about).

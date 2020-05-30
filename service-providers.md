@@ -8,7 +8,7 @@ permalink: /service-providers
 
 Add Relaynet support to your Internet-based service and make it tolerant to delays lasting anywhere from minutes to months. You can also integrate any third-party service that offers an API, or build a native Relaynet service from scratch to get additional benefits.
 
-Internet technologies are constantly evolving to provide richer functionality and better security, but Internet-based services are built in such a way that they require real-time access to the Internet and addressing this limitation requires a radical shift from traditional Internet technologies.
+Internet technologies are constantly evolving to provide richer functionality and better security, but Internet-based services must be built in such a way that they require real-time access to the Internet and addressing this limitation requires a radical shift from traditional Internet technologies.
 
 The crux of the problem is that Internet apps are responsible for transporting their own data, and everything hinges on the sender and the recipient being able to communicate at the same time and with an adequate throughput.
 
