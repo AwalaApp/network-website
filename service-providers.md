@@ -53,6 +53,6 @@ Relaynet will support desktop, Android, CLI and server-side apps from day one, t
 
 ## We want to hear from you
 
-Come say hi on [Facebook](https://www.facebook.com/relaynet/) or [Twitter](https://twitter.com/relaynet_), and ask us any questions you may have about making your software compatible with Relaynet. You can also [email us](https://relaycorp.tech/) if you'd prefer that!
+Come say hi on [Facebook](https://www.facebook.com/relaynet/) or [Twitter](https://twitter.com/relaynet_), and ask us any questions you may have about making your software compatible with Relaynet! You can also [email us](https://relaycorp.tech/) if you'd prefer that.
 
 {% include subscription-cta.html group="service_providers" %}
