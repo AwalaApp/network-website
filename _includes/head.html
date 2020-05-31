@@ -18,4 +18,19 @@
   <link rel="mask-icon" href="/custom-assets/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+
+  <script>
+    <!-- Highlight the current navigation item -->
+    document.addEventListener('DOMContentLoaded', () => {
+      (function () {
+        const currentUrl = location.pathname;
+        const menuItems = document.querySelectorAll('nav a');
+        for (let i = 0, len = menuItems.length; i < len; i++) {
+          if (menuItems[i].getAttribute("href") === currentUrl) {
+            menuItems[i].classList.add("is-active");
+          }
+        }
+      })();
+    })
+  </script>
 </head>

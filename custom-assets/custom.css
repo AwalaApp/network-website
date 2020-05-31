@@ -1,3 +1,7 @@
+nav a.is-active:link {
+    text-decoration: underline;
+}
+
 .embedded_video {
     position: relative;
     padding-bottom: 56.25%;
