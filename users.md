@@ -24,9 +24,9 @@ Watch this video to get a better idea of how Relaynet will work with and without
     </iframe>
 </div>
 
-Relaynet will be the network on which humankind can truly rely and providing resilient communication is simply the beginning. Additional benefits include powering a new generation of apps that will be 100% free of spam and phishing, as well as levelling the playing field to support new products that won't have to compromise your privacy to be profitable.
+Relaynet will be the network on which humankind can truly rely and providing resilient communication is simply the beginning. Additional benefits include powering a new generation of apps that will be 100% free of spam and phishing, while offering better privacy and security.
 
-We plan to have the first Relaynet app by Q4 2020, so stay tuned!
+We aim to have the first Relaynet app by Q4 2020, so stay tuned!
 
 ## Help us help you
 

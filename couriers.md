@@ -10,9 +10,21 @@ When the Internet is unavailable, restore connectivity around you by becoming a 
 
 Your job is to _relay_ data between Relaynet users' devices and the Internet during an Internet blackout. You'd have a route, and at each stop you'd deliver and collect data. When you stop at a location with no access to the Internet, you'd be able to exchange data with people around you by having them connect to your device. When you stop at a location with access to the Internet, you'd send all the data you collected and you'd then collect new data that should be delivered to people on your route.
 
+This video is a good introduction to the job of a courier and it includes a demo of the Android app that couriers will use:
+
+<div class="embedded_video">
+    <iframe
+        src="https://www.youtube-nocookie.com/embed/UXuLz3q_6bo"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        >
+    </iframe>
+</div>
+
 You may collaborate with other couriers to streamline the process and collectively reach every corner of the affected region. For example, like real-world couriers, most of you may do short-distance routes to connect small areas to a nearby regional hub, and others would be responsible for transporting the data between the regional hub and an area with access to the Internet.
 
-You may charge Relaynet users for your services to offset costs or even make a profit. However, the software we're currently building won't support payments, and any trade will be strictly between you and the user. [We may facilitate such transactions in the future](https://github.com/relaynet/specs/issues/34).
+You may charge Relaynet users for your services to offset costs or even make a profit. However, the software we're currently building won't support payments, and any trade will be strictly between you and the user. [Relaynet may facilitate such transactions in the future](https://github.com/relaynet/specs/issues/34).
 
 Naturally, you have the most important job in restoring connectivity in the event of a blackout, and we understand you may be putting yourself under significant risk. For this reason, your safety has been a critical consideration throughout the design and implementation of Relaynet.
 
