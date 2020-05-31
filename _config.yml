@@ -4,13 +4,19 @@ author: "Relaycorp, Inc."
 
 google_analytics: UA-22641273-3
 twitter_username: relaynet_
-github_username: relaycorp
+facebook_username: relaynet
 
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+
+theme: minima
+header_pages:
+  - users.md
+  - service-providers.md
+  - couriers.md
+  - about.md
