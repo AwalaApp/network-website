@@ -2,9 +2,9 @@
 layout: default
 ---
 
-# Relaynet
+<img src="./custom-assets/logo.png" style="float:right; margin: 0.5em; max-width: 33%"/>
 
-<img src="./custom-assets/logo.png" style="float:right; margin: 0.5em; max-width: 30%"/>
+# Relaynet
 
 Relaynet will help restore connectivity in regions where the Internet has been cut off due to natural or human causes.
 
