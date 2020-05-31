@@ -6,7 +6,7 @@ layout: default
 
 <img src="./custom-assets/logo.png" style="float:right; margin: 0.5em; max-width: 30%"/>
 
-Relaynet will restore connectivity in regions where the Internet has been cut off due to natural or human causes.
+Relaynet will help restore connectivity in regions where the Internet has been cut off due to natural or human causes.
 
 Any Internet-based service that doesn't require real-time communication can use Relaynet. For example, videoconferencing won't work, but social media, money remittance and telehealth applications could use Relaynet.
 
