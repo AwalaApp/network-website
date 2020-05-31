@@ -6,7 +6,7 @@ permalink: /about
 
 # About Relaynet
 
-Relaynet will be the computer network on which humankind can truly rely, and the first order of business is to restore connectivity in regions where the Internet has been cut off due to natural or human causes.
+Relaynet will be the computer network on which humankind can truly rely, and the first order of business is to establish or restore connectivity in regions where the Internet is unavailable due to natural or human causes.
 
 Cheap satellite-based services like [Starlink](https://en.wikipedia.org/wiki/Starlink) and hot-air balloons like [Loon](https://en.wikipedia.org/wiki/Loon_LLC)'s will fortunately solve this problem to a large extent, but they won't always be viable options. While cheaper, Starlink still won't be affordable enough at [$80/month and $100-$300 to set up](https://www.inverse.com/innovation/spacex-starlink-price-launch-date-how-to-see-elon-musks-constellation). On the other hand, Loon needs almost two days to deploy balloons in a disaster zone, and they require authorization from the local government. 
 
