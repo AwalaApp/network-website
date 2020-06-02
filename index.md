@@ -8,7 +8,7 @@ layout: default
 
 Relaynet will help restore connectivity in regions where the Internet has been cut off due to natural or human causes.
 
-Any Internet-based service that doesn't require real-time communication can use Relaynet. For example, videoconferencing won't work, but social media, money remittance, educational and telehealth applications could use Relaynet.
+Any Internet-based service that doesn't require real-time communication can use Relaynet. For example, videoconferencing won't work, but social media, money remittance and telehealth applications could use Relaynet.
 
 As a user, you'd just install Relaynet and any compatible app on your device will use it -- No upfront configuration or hardware purchase is required. Those apps will use the Internet when it's available, and they'll switch to a fallback medium when the Internet is unavailable. [Learn more about using Relaynet](./users).
 
