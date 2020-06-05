@@ -10,7 +10,7 @@ When the Internet is unavailable, restore connectivity around you by becoming a 
 
 Your job is to _relay_ data between Relaynet users' devices and the Internet during an Internet blackout. You'd have a route, and at each stop you'd deliver and collect data. When you stop at a location with no access to the Internet, you'd be able to exchange data with people around you by having them connect to your device. When you stop at a location with access to the Internet, you'd send all the data you collected and you'd then collect new data that should be delivered to people on your route.
 
-This video is a good introduction to the job of a courier and it includes a demo of the Android app that couriers will use:
+This video is a good introduction to the job of a courier and it ends with a demo of [the Android app that couriers will use](https://play.google.com/store/apps/details?id=tech.relaycorp.courier):
 
 <div class="embedded_video">
     <iframe
