@@ -32,7 +32,7 @@ It's impossible for you -- or anyone who intercepts you -- to view or change the
 
 We're also working on ways to conceal the fact you're a courier in the first place, in case you were intercepted. Such measures may not be ready by the time we start running some early testing by Q4 2020, but they'd certainly be implemented before we make the software generally available.
 
-## Help us serve you best
+## Help us serve you well
 
 We want to make sure Relaynet will serve you well as a courier, so please reach out to us if you have any questions, concerns or suggestions. We're particularly keen to hear about your motivation to become a courier, so we can adapt our roadmap accordingly. Feel free to send us a private message on [Facebook](https://www.facebook.com/relaynet/) or [Twitter](https://twitter.com/relaynet_).
 
