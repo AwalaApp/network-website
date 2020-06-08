@@ -22,7 +22,7 @@ This video is a good introduction to the job of a courier and it ends with a dem
     </iframe>
 </div>
 
-You may collaborate with other couriers to streamline the process and collectively reach every corner of the affected region. For example, like real-world couriers, most of you may do short-distance routes to connect small areas to a nearby regional hub, and others would be responsible for transporting the data between the regional hub and an area with access to the Internet.
+You may collaborate with other couriers to streamline the process and collectively reach every corner of the affected region. For example, like real-world couriers, most of you may do short-distance routes to connect small areas to a sorting facility, and others would be responsible for transporting the data between the sorting facility and an area with access to the Internet.
 
 You may charge Relaynet users for your services to offset costs or even make a profit. However, the software we're currently building won't support payments, and any trade will be strictly between you and the user. [Relaynet may facilitate such transactions in the future](https://github.com/relaynet/specs/issues/34).
 
