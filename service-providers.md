@@ -14,11 +14,11 @@ The crux of the problem is that Internet apps are responsible for transporting t
 
 By contrast, Relaynet apps delegate the transport of their data to a _Relaynet gateway_ running on the [user](/users)'s device. The gateway will use the best available network (typically the Internet) and will queue outgoing data when no network is available. The user's gateway will be paired to a remote gateway on the Internet, which will also queue incoming data when the user is offline.
 
-Watch this video to get a better idea of how Relaynet will work:
+Watch this technical introduction to Relaynet for service providers to learn more:
 
 <div class="embedded_video">
     <iframe
-        src="https://www.youtube-nocookie.com/embed/_4zP0CfcTj4"
+        src="https://www.youtube-nocookie.com/embed/pe86eZKfdPM"
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
