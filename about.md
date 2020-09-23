@@ -16,7 +16,7 @@ Relaynet was designed by [Gus Narea](https://gustavo.engineer/) at the Universit
 
 The [security of the design has been independently assessed](https://relaynet.network/archives/security-audit-2019-03.pdf) and Relaycorp are currently building the foundation of the technology thanks to a contract with the [Open Technology Fund](https://opentech.fund/).
 
-We expect Relaynet to be functional on desktop and Android by Q3 2020, after the security and UX of the implementations have been independently assessed. The implementations can be found under the [@relaycorp organization on GitHub](https://github.com/relaycorp).
+We expect Relaynet to be functional on desktop and Android by Q4 2020, after the security and UX of the implementations have been independently assessed. The implementations can be found under the [@relaycorp organization on GitHub](https://github.com/relaycorp).
 
 ## How to contribute
 
@@ -24,7 +24,7 @@ As soon as the foundation of Relaynet is available, our top priorities will be: 
 
 We're always keen to get feedback on the privacy and security of Relaynet, so if you're an expert in cryptography and/or networking, we'd very much welcome your feedback on [the specs](https://specs.relaynet.network/) and the apps we've built so far ([Relaynet Pong](https://github.com/relaycorp/relaynet-pong), the [public gateway](https://github.com/relaycorp/relaynet-internet-gateway) and the [Android Courier](https://github.com/relaycorp/relaynet-courier-android)). Please feel free to open an issue or create a PR in the corresponding GitHub project!
 
-Other than the above, a great way to help is to follow us on [Facebook](https://www.facebook.com/relaynet)/[Twitter](https://www.twitter.com/relaynet_) and spread the word about Relaynet! Once the applications we're writing stabilize by Q3 2020, we'll also be welcoming code contributions and translations, so please bear with us.
+Other than the above, a great way to help is to follow us on [Facebook](https://www.facebook.com/relaynet)/[Twitter](https://www.twitter.com/relaynet_) and spread the word about Relaynet! Once the applications we're writing stabilize by Q4 2020, we'll also be welcoming code contributions and translations, so please bear with us.
 
 Finally, prospective contributors are highly encouraged to familiarize themselves with the [Zen of Relaynet](https://specs.relaynet.network/RS-020) as it describes the guiding principles behind all the major decisions we've made.
 
