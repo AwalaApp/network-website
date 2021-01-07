@@ -49,7 +49,7 @@ On the other hand, if you wish to make a third-party service work on Relaynet, y
 
 If you're building a new service and are not constrained to traditional Internet technologies, you may want to build a native Relaynet service instead to unlock additional benefits. Say you want to build a decentralized service like email, but unlike email you'd want it to be spam- and phishing-free, use end-to-end encryption and need zero servers -- That'd be fairly easy with Relaynet!
 
-Relaynet will support desktop, Android, CLI and server-side apps from day one, thanks to the [Node.js](https://docs.relaycorp.tech/relaynet-core-js/) and [JVM](https://github.com/relaycorp/relaynet-jvm) libraries. Those libraries will undergo a security audit once we're done building the foundation of the network, so we expect them to be ready for beta testing by Q4 2020. Stay tuned!
+Relaynet will support desktop, Android, CLI and server-side apps from day one, thanks to the [Node.js](https://docs.relaycorp.tech/relaynet-core-js/) and [JVM](https://github.com/relaycorp/relaynet-jvm) libraries. Those libraries will undergo a security audit once we're done building the foundation of the network, so we expect them to be ready for beta testing by January 2021. Stay tuned!
 
 ## We want to hear from you
 
