@@ -16,7 +16,7 @@ Relaynet was designed by [Gus Narea](https://gustavo.engineer/) at the Universit
 
 The [security of the design has been independently assessed](https://relaynet.network/archives/security-audit-2019-03.pdf) and Relaycorp are currently building the foundation of the technology thanks to a contract with the [Open Technology Fund](https://opentech.fund/).
 
-We expect Relaynet to be functional on Android by January 2021 and desktop by April 2021, and we plan to commission independent security and UX assessments afterwards. The implementations can be found under the [@relaycorp organization on GitHub](https://github.com/relaycorp).
+We expect Relaynet to be functional on Android by February 2021 and desktop by April 2021, and we plan to commission independent security and UX assessments afterwards. The implementations can be found under the [@relaycorp organization on GitHub](https://github.com/relaycorp).
 
 ## How to contribute
 
