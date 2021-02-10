@@ -1,0 +1,56 @@
+---
+layout: default
+---
+<section class="hero is-info is-small">
+    <div class="hero-head">
+        {%- include navigation.html -%}
+    </div>
+
+    <div class="hero-body">
+        <img src="./custom-assets/logo.png" style="float:right; margin: 0.5em; max-width: 33%"/>
+
+        <div class="container">
+            <p class="title">
+                Relaynet is the computer network that can't be shut down
+            </p>
+            <p class="subtitle">
+                Not by repressive regimes.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <p>
+        Any Internet-based service that doesn't require real-time communication can use Relaynet. For example, videoconferencing won't work, but social media, money remittance and telehealth applications could use Relaynet.
+    </p>
+</section>
+
+<section class="content">
+    <div class="columns">
+        <div class="column">
+            <h2>Users</h2>
+            <p>As a user, you'd just install Relaynet and any compatible app on your device will use it -- No upfront configuration or hardware purchase is required. Those apps will use the Internet when it's available, and they'll switch to a fallback medium when the Internet is unavailable.</p>
+            <a href="{% link users.md %}" class="button is-primary is-outlined">Use Relaynet</a>
+        </div>
+
+        <div class="column">
+            <h2>Service providers</h2>
+            <p>If you provide an Internet-based service, you will be able to integrate Relaynet gradually in your software so that you can prioritize the functionality that should work without the Internet. You can also add Relaynet support to any third-party service that offers an API.</p>
+            <a href="{% link service-providers.md %}" class="button is-primary is-outlined">Make your software resilient</a>
+        </div>
+
+        <div class="column">
+            <h2>Couriers</h2>
+            <p>Restore connectivity when the Internet has been cut off. Do it for profit, the greater good or both.</p>
+            <a href="{% link couriers.md %}" class="button is-primary is-outlined">Become a courier</a>
+        </div>
+    </div>
+    {{ content }}
+</section>
+
+<section class="section">
+    <p>
+        Relaynet is a decentralized technology with <a href="https://specs.relaynet.network/">technical specifications</a> publicly available and <a href="https://github.com/relaycorp">open source implementations</a>. The project won the first place at the <a href="https://builders.mozilla.community/">Mozilla Builders</a> Open Lab (summer 2020 cohort) and its alpha testing on Android is due to start in February 2021 thanks to funding from the <a href="https://opentech.fund">Open Technology Fund</a> and the <a href="https://www.iri.org">International Republican Institute</a>. <a href="{% link about.md %}">Learn more about Relaynet</a>.
+    </p>
+</section>

@@ -1,22 +1,8 @@
 title: "Relaynet"
 description: "The network on which humankind can truly rely"
-author: "Relaycorp, Inc."
-
-google_analytics: UA-22641273-3
-twitter_username: relaynet_
-facebook_username: relaynet
 
 markdown: kramdown
-plugins:
-  - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
-
-theme: minima
-header_pages:
-  - users.md
-  - service-providers.md
-  - couriers.md
-  - about.md
