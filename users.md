@@ -14,15 +14,15 @@ You don't need to know or trust couriers at all! It's impossible for couriers --
 
 Watch this video to get a better idea of how Relaynet will work with and without the Internet:
 
-<div class="embedded_video">
+<figure class="image is-16by9">
     <iframe
+        class="has-ratio"
         src="https://www.youtube-nocookie.com/embed/FfmG24bZJTU"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
         >
     </iframe>
-</div>
+</figure>
 
 Relaynet will be the network on which humankind can truly rely and providing resilient communication is just the beginning. Other short-term benefits include powering a new generation of apps that will be 100% free of spam and phishing, while offering better privacy and security. In the future, Relaynet apps will circumvent online censorship without you having to install Tor or VPNs.
 

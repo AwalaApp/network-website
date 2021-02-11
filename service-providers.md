@@ -16,15 +16,15 @@ By contrast, Relaynet apps delegate the transport of their data to a _Relaynet g
 
 Watch this technical introduction to Relaynet for service providers to learn more:
 
-<div class="embedded_video">
+<figure class="image is-16by9">
     <iframe
+        class="has-ratio"
         src="https://www.youtube-nocookie.com/embed/pe86eZKfdPM"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
         >
     </iframe>
-</div>
+</figure>
 
 ## Technical overview
 
