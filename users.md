@@ -26,7 +26,7 @@ Watch this video to get a better idea of how Relaynet will work with and without
 
 Relaynet will be the network on which humankind can truly rely and providing resilient communication is just the beginning. Other short-term benefits include powering a new generation of apps that will be 100% free of spam and phishing, while offering better privacy and security. In the future, Relaynet apps will circumvent online censorship without you having to install Tor or VPNs.
 
-We aim to start testing the first Relaynet app in Q1 2021, so stay tuned!
+We aim to start testing the first Relaynet apps in Q2 2021, so stay tuned!
 
 ## Help us help you
 
