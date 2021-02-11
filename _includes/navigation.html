@@ -1,19 +1,19 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar is-spaced is-light" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item" href="{{ '/' | relative_url }}">
             <img src="{{ '/custom-assets/logo.png' | relative_url }}" alt="Relaynet logo">
             Relaynet
         </a>
 
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
         </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-end">
+    <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-start">
             <a class="navbar-item" href="{% link users.md %}">
                 Users
             </a>
@@ -24,6 +24,16 @@
 
             <a class="navbar-item" href="{% link couriers.md %}">
                 Couriers
+            </a>
+        </div>
+
+        <div class="navbar-end">
+            <a class="navbar-item" href="{% link blog/index.html %}">
+                Blog
+            </a>
+
+            <a class="navbar-item" href="{% link about.md %}">
+                About
             </a>
         </div>
     </div>
