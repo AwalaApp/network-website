@@ -8,9 +8,9 @@ permalink: /about
 
 Relaynet will be the computer network on which humankind can truly rely, and the first order of business is to establish or restore connectivity in regions where the Internet is unavailable due to natural or human causes.
 
-Cheap satellite-based services like [Starlink](https://en.wikipedia.org/wiki/Starlink) and hot-air balloons like [Loon](https://en.wikipedia.org/wiki/Loon_LLC)'s will fortunately solve this problem to a large extent, but they won't always be viable options. While cheaper, Starlink still won't be affordable enough at [$80/month and $100-$300 to set up](https://www.inverse.com/innovation/spacex-starlink-price-launch-date-how-to-see-elon-musks-constellation). On the other hand, Loon needs almost two days to deploy balloons in a disaster zone, and they require authorization from the local government. 
+Cheap satellite-based services like [Starlink](https://en.wikipedia.org/wiki/Starlink) will fortunately solve this problem to a large extent, but they won't always be viable options. While cheaper, Starlink still won't be affordable enough at [$80/month and $100-$300 to set up](https://www.inverse.com/innovation/spacex-starlink-price-launch-date-how-to-see-elon-musks-constellation), or discreet enough to use at scale under a repressive regime. 
 
-Relaynet will be significantly slower than either solution when the Internet is unavailable, but it will be instantly available to anyone in the world when they need it. That includes survivors in the immediate aftermath of a disaster, and people living under a repressive regime that cut off the Internet.
+Relaynet will evidently be significantly slower than satellite-based services, but it will be instantly available to anyone in the world when they need it. That includes survivors in the immediate aftermath of a disaster, and people living under a repressive regime that cut off the Internet.
 
 Relaynet was designed by [Gus Narea](https://gustavo.engineer/) at the University of Oxford with the initial goal of circumventing censorship by repressive governments, and he later founded [Relaycorp](https://relaycorp.tech/) to support and scale the Relaynet project while keeping it as open and inclusive as possible.
 
