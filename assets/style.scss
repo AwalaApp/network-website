@@ -5,3 +5,10 @@
 // Brand colours
 
 @import "node_modules/bulma/bulma.sass";
+
+nav.breadcrumb ul {
+  @extend .my-0
+}
+nav.breadcrumb li {
+  @extend .mt-0
+}

@@ -1,6 +1,24 @@
 ---
 layout: skeleton
+breadcrumbs: null
 ---
+
 <section class="section content container is-max-desktop is-size-5">
+    {% if layout.breadcrumbs %}
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            {% for path in layout.breadcrumbs %}
+            <li>
+                {%- assign parent_page = site.pages | where: "path", path | first -%}
+                <a href="{{ parent_page.url | relative_url }}">{{ parent_page.title | escape }}</a>
+            </li>
+            {% endfor %}
+
+            <!-- Add a trailing, empty item to get Bulma to add a separator at the end -->
+            <li class="is-active"></li>
+        </ul>
+    </nav>
+    {% endif %}
+
     {{ content }}
 </section>

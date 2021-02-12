@@ -1,9 +1,14 @@
 title: "Relaynet"
 description: "The network on which humankind can truly rely"
+permalink: /blog/posts/:slug
 
 markdown: kramdown
+liquid:
+  strict_variables: true
+  strict_filters: true
 exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
   - node_modules
+  - .idea
