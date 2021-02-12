@@ -2,13 +2,38 @@
 ---
 @charset "utf-8";
 
-// Brand colours
+// TODO: Brand colours
 
 @import "node_modules/bulma/bulma.sass";
 
+nav.breadcrumb {
+  @extend .ml-0;
+  @extend .mb-0;
+}
 nav.breadcrumb ul {
-  @extend .my-0
+  @extend .my-0;
 }
 nav.breadcrumb li {
-  @extend .mt-0
+  @extend .mt-0;
+}
+
+// Blog
+
+article .blog-post-header {
+  @extend .mb-6
+}
+.blog-post-header .date {
+  @extend .is-size-7;
+  @extend .has-text-weight-light;
+  @extend .mb-2;
+}
+.blog-post-header .title {
+  @extend .is-size-2;
+  @extend .mt-0;
+  @extend .mb-2;
+}
+.blog-post-header .authorship {
+  @extend .is-size-6;
+  @extend .has-text-weight-light;
+  @extend .mb-6;
 }
