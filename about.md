@@ -1,5 +1,5 @@
 ---
-title: About
+title: About Relaynet
 layout: page
 permalink: /about
 ---

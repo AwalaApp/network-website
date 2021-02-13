@@ -16,3 +16,4 @@ exclude:
   - vendor
   - node_modules
   - .idea
+  - README.md
