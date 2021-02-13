@@ -31,6 +31,16 @@ nav.breadcrumb li {
   @extend .px-0;
 }
 
+// Footer
+
+.rn-footer {
+  @extend .footer;
+}
+.rn-footer-container {
+  @extend .container;
+  @extend .is-max-desktop;
+}
+
 // Blog
 
 .rn-blog-post {
