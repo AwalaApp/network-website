@@ -1,7 +1,7 @@
 ---
 title: Service providers
 layout: page
-permalink: /service-providers
+description: Make your apps resilient to Internet blackouts
 ---
 
 # Make your software resilient to Internet blackouts

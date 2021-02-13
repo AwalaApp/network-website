@@ -1,6 +1,10 @@
 title: "Relaynet"
 description: "The network on which humankind can truly rely"
-permalink: /blog/posts/:slug
+permalink: /blog/:slug
+
+defaults:
+  - values:
+      description: null
 
 markdown: kramdown
 liquid:

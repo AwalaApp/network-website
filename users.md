@@ -1,7 +1,7 @@
 ---
 title: Users
 layout: page
-permalink: /users
+description: Use Relaynet apps to remain connected when the Internet is unavailable for days at a time
 ---
 
 # Stay connected with or without the Internet

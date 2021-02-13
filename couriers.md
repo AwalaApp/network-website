@@ -1,7 +1,7 @@
 ---
 title: Couriers
 layout: page
-permalink: /couriers
+description: Restore connectivity when the Internet has been cut off. Do it for profit, the greater good or both.
 ---
 
 # Keep yourself and those around you connected
