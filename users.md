@@ -1,6 +1,5 @@
 ---
 title: Users
-layout: page
 description: Use Relaynet apps to remain connected when the Internet is unavailable for days at a time
 ---
 

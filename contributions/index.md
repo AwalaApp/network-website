@@ -1,6 +1,5 @@
 ---
 title: Contributing to the Relaynet project
-layout: page
 ---
 
 # Contributing to the project

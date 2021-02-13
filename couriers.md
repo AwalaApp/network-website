@@ -1,6 +1,5 @@
 ---
 title: Couriers
-layout: page
 description: Restore connectivity when the Internet has been cut off. Do it for profit, the greater good or both.
 ---
 

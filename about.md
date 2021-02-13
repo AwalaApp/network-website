@@ -1,7 +1,5 @@
 ---
 title: About Relaynet
-layout: page
-permalink: /about
 ---
 
 # About Relaynet

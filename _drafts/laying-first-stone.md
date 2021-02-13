@@ -1,6 +1,5 @@
 ---
 title: "The laying of the first stone"
-layout: post
 author: gnarea
 ---
 

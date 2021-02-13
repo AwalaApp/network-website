@@ -65,6 +65,9 @@ nav.breadcrumb li {
 article.rn-blog-post .authorship {
   @extend .mb-6
 }
+section.rn-blog-post {
+  @extend .px-0;
+}
 
 // Other widgets
 

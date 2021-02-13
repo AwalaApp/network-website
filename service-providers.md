@@ -1,6 +1,5 @@
 ---
 title: Service providers
-layout: page
 description: Make your apps resilient to Internet blackouts
 ---
 

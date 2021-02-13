@@ -5,6 +5,21 @@ permalink: /blog/:slug
 defaults:
   - values:
       description: null
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: drafts
+    values:
+      layout: post
 
 markdown: kramdown
 liquid:
