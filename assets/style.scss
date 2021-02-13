@@ -59,9 +59,50 @@ nav.breadcrumb li {
 
 // Homepage
 
-.rn-homepage {
-  @extend .rn-main;
-  @extend .is-max-widescreen;
+.rn-homepage-hero {
+  @extend .section;
+  @extend .content;
+  @extend .mb-0;
+
+  .icon {
+    @extend .has-text-success;
+  }
+}
+
+.rn-homepage-stakeholders {
+  @extend .section;
+  @extend .content;
+  @extend .columns;
+  @extend .is-variable;
+  @extend .is-8;
+  @extend .mb-0;
+
+  .rn-stakeholder {
+    @extend .column;
+
+    h2 {
+      @extend .title;
+      @extend .has-text-centered;
+      @extend .is-size-3;
+    }
+
+    p {
+      @extend .has-text-justified;
+    }
+
+    .buttons {
+      @extend .is-centered;
+
+      a {
+        @extend .button;
+        @extend .is-link;
+
+        .fas {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
 }
 
 // Blog
