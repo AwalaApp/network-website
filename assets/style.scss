@@ -2,9 +2,26 @@
 ---
 @charset "utf-8";
 
-// TODO: Brand colours
+// Bulma overrides
+
+$light: hsl(0, 0%, 21%);
+
+$navbar-item-hover-color: $light;
+
+$footer-padding: 3rem 1.5rem;
 
 @import "node_modules/bulma/bulma.sass";
+
+// Top navigation
+
+.navbar-brand .navbar-item {
+  @extend .pl-0;
+}
+.navbar a.is-active:link, .navbar a.is-active:visited {
+  font-weight: 500;
+}
+
+// Breadcrumbs
 
 nav.breadcrumb {
   @extend .mb-0;
@@ -22,7 +39,6 @@ nav.breadcrumb li {
   @extend .section;
   @extend .content;
   @extend .container;
-  @extend .is-max-desktop;
   @extend .is-size-5;
   @extend .px-5;
 }
@@ -39,6 +55,13 @@ nav.breadcrumb li {
 .rn-footer-container {
   @extend .container;
   @extend .is-max-desktop;
+}
+
+// Homepage
+
+.rn-homepage {
+  @extend .rn-main;
+  @extend .is-max-widescreen;
 }
 
 // Blog
