@@ -7,33 +7,61 @@
 @import "node_modules/bulma/bulma.sass";
 
 nav.breadcrumb {
-  @extend .ml-0;
   @extend .mb-0;
 }
 nav.breadcrumb ul {
-  @extend .my-0;
+  @extend .m-0;
 }
 nav.breadcrumb li {
   @extend .mt-0;
 }
 
+// Main content of page
+
+.rn-main {
+  @extend .section;
+  @extend .content;
+  @extend .container;
+  @extend .is-max-desktop;
+  @extend .is-size-5;
+  @extend .px-5;
+}
+.rn-main > * {
+  @extend .mx-0;
+  @extend .px-0;
+}
+
 // Blog
 
-article .blog-post-header {
-  @extend .mb-6
+.rn-blog-post {
+  @extend .section;
+  @extend .content;
 }
-.blog-post-header .date {
+.rn-blog-post .date {
   @extend .is-size-7;
   @extend .has-text-weight-light;
   @extend .mb-2;
 }
-.blog-post-header .title {
+.rn-blog-post .title {
   @extend .is-size-2;
   @extend .mt-0;
   @extend .mb-2;
 }
-.blog-post-header .authorship {
+.rn-blog-post .authorship {
   @extend .is-size-6;
   @extend .has-text-weight-light;
   @extend .mb-6;
+}
+article.rn-blog-post .authorship {
+  @extend .mb-6
+}
+
+// Other widgets
+
+.rl-youtube-video {
+  @extend .image;
+  @extend .is-16by9;
+}
+.rl-youtube-video iframe {
+  @extend .has-ratio;
 }

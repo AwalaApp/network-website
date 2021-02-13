@@ -6,16 +6,14 @@ breadcrumbs:
 
 {% assign author = site.data.authors[page.author] %}
 
-<article class="section content container is-max-desktop is-size-5">
-    <div class="blog-post-header">
-        <p class="date">{{ page.date | date: "%-d %B %Y"}}</p>
+<article class="rn-blog-post">
+    <p class="date">{{ page.date | date: "%-d %B %Y"}}</p>
 
-        <h1 class="title">{{ page.title }}</h1>
+    <h1 class="title">{{ page.title }}</h1>
 
-        <p class="authorship">
-            By <a href="{{ author.url }}">{{ author.name }}</a>, {{ author.title }}.
-        </p>
-    </div>
+    <p class="authorship">
+        By <a href="{{ author.url }}">{{ author.name }}</a>, {{ author.title }}.
+    </p>
 
     {{ content }}
 </article>
