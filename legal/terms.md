@@ -8,7 +8,7 @@ breadcrumbs:
     Last updated: 15th February 2021
 </p>
 
-# TERMS OF USE AND PRIVACY POLICY - Relaynet
+# Terms of Use and Privacy Policy - Relaynet
 
 Relaynet is a decentralized computer network where compatible software can remain connected despite Internet blackouts. The word “Users” refers to end users of Relaynet. We, Relaycorp, provide reference software implementations of the Relaynet protocol suite and the Relaynet-Internet Gateway instances hosted under relaycorp.cloud, such as frankfurt.relaycorp.cloud, to enable you use Relaynet (the “Services”). Other third parties may provide their own servers or applications for use on Relaynet, under their own terms and conditions. Relaycorp does not control those third parties.
 
@@ -20,7 +20,7 @@ We will only operate server-side applications in jurisdictions that uphold freed
 
 We cannot and do not guarantee the availability, bandwidth, performance or reliability of the Service.
 
-## YOUR INFORMATION
+## Your Information
 
 Use of Relaynet is anonymous. We do not collect email addresses, names, phone numbers, or other personal information from users. We will never sell, rent, share, or otherwise distribute user data.
 
@@ -41,7 +41,7 @@ We may use or disclose personal information as we understand to be necessary or 
 
 We do not use your information for marketing or advertising purposes or monetize your information in any way.
 
-## OTHER INFORMATION WE MAY COLLECT
+## Other Information We May Collect
 
 "Other Information" is any information that does not reveal your specific identity or does not directly relate to an individual, such as:
 
@@ -54,24 +54,24 @@ We may collect Other Information in a variety of ways, including:
 - IP Address: Your "IP Address" is a number that is automatically assigned to the device that you are using by your Internet Service Provider (ISP). An IP Address may be identified and logged automatically in our server log files whenever a User accesses the Services, along with the time of the visit and the page(s) that were visited. We use IP Addresses for purposes such as calculating usage levels of the Service, diagnosing server problems, and administering the Services.
 - When you contact us or provide us with information such as your email address, location, or your preferred means of communication, we collect that information solely for the purpose of responding to your communication and only when you voluntarily provide this information.
 
-## INTELLECTUAL PROPERTY
+## Intellectual Property
 
 You own all rights to the information you send, share, or submit through the Services.
 We own all copyrights, trademarks, domains, logos, trade dress, trade secrets, patents, and other intellectual property rights associated with the Services.
 
-## SECURITY
+## Security
 
 We seek to use reasonable organizational, technical and administrative measures to protect data within our organization. Unfortunately, no data transmission or storage system can be guaranteed to be 100% secure. If you have reason to believe that your interaction with us is no longer secure (for example, if you feel that the security of any account you might have with us has been compromised), please immediately notify us of the problem by contacting us in accordance with the "Contacting Us" section below.
 
-## NETWORK NEUTRALITY
+## Network Neutrality
 
 We will treat all Relaynet-compatible applications equally, and will never favor or discriminate against any traffic based on the specific application being used, the sender or the recipient of the data, the content, or for any other reason, with the sole exception being applications intended to harm Relaycorp or Relaynet, or that violate these terms and conditions.
 
-## USE OF SERVICES BY MINORS
+## Use of Services by Minors
 
 The Services are not directed to nor intended for use by any individual under the age of thirteen (13).
 
-## USE AT YOUR OWN RISK  
+## Use at Your Own Risk  
 
 USE OF THE SERVICES IS AT YOUR OWN RISK. THE SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE”, WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, SECURITY, ACCURACY, AND FREEDOM FROM COMPUTER VIRUS OR OTHER HARMFUL CODE. RELAYCORP DOES NOT WARRANT THAT 1) ANY INFORMATION PROVIDED BY US IS RELIABLE, ACCURATE OR COMPLETE; 2) THAT THE SERVICES WILL BE UNINTERRUPTED, OPERATIONAL, ERROR-FREE, SECURE, OR SAFE; 3) THAT DEFECTS WILL BE CORRECTED, OR 4) THAT THE SERVICES OR THE SERVER THAT MAKE THEM AVAILABLE IS FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. RELAYCORP IS NOT RESPONSIBLE FOR THE ACTIONS OR CONTENT OF USERS OR OTHER THIRD PARTIES. YOU RELEASE US, AFFILIATES, DIRECTORS, OFFICERS, EMPLOYEES, PARTNERS, AND AGENTS (TOGETHER, “RELAYCORP PARTIES”) FROM ANY CLAIM, COMPLAINT, CAUSE OF ACTION, CONTROVERSY, OR DISPUTE (TOGETHER, “CLAIM”) AND DAMAGES, KNOWN AND UNKNOWN, RELATING TO, ARISING OUT OF, OR IN ANY WAY CONNECTED WITH ANY SUCH CLAIM YOU HAVE AGAINST ANY THIRD PARTIES.
 
@@ -79,11 +79,11 @@ THE RELAYCORP PARTIES WILL NOT BE LIABLE TO YOU FOR ANY LOST PROFITS OR CONSEQUE
 
 All matters related to the Services shall be governed and constructed in accordance with the laws of the State of Delaware without regard to conflict of laws provisions. You agree to submit to the personal jurisdiction of such courts for the purpose of litigating all such disputes.
 
-## UPDATES TO THESE TERMS
+## Updates to These Terms
 
 We may change these Terms. Please take a look at the "Last Updated" legend at the top of this page to see when these Terms were last revised. Any changes to the Terms will become effective when we post the revised Terms on the Services. When we make material changes to these Terms, we will make an effort to notify Users by posting a notice on social media. Because Relaynet is intended to be anonymous and is designed for use when the Internet is not available, we may not be able to notify you through the Services. Please check our social media for important announcements. You may also sign on to our mailing list for important notices and announcements by submitting an email address to [awala-terms-announcements+subscribe@googlegroups.com](mailto:awala-terms-announcements+subscribe@googlegroups.com). Your use of the Services following these changes means that you accept the revised Terms.
 
-## CONTACTING US
+## Contacting Us
 
 If you have any questions about the Terms or the Services, please contact us by email at support@relaycorp.tech, or please write to the following address:
 
