@@ -41,6 +41,23 @@ nav.breadcrumb li {
   @extend .container;
   @extend .is-size-5;
   @extend .px-5;
+
+  h1:first-of-type, h1.title {
+    @extend .title;
+    @extend .is-size-2;
+  }
+  h1:not(:first-of-type), h1:not(.title) {
+    @extend .is-size-3;
+  }
+  h2 {
+    @extend .is-size-4;
+  }
+  h3 {
+    @extend .is-size-5;
+  }
+  h4 {
+    @extend .is-size-6;
+  }
 }
 .rn-main > * {
   @extend .mx-0;
@@ -64,6 +81,10 @@ nav.breadcrumb li {
   @extend .content;
   @extend .mb-0;
 
+  .title {
+    @extend .is-size-2;
+  }
+
   ul {
     @extend .mx-0;
     @extend .my-0;
@@ -85,16 +106,14 @@ nav.breadcrumb li {
   @extend .content;
   @extend .columns;
   @extend .is-variable;
-  @extend .is-8;
+  @extend .is-6;
   @extend .mb-0;
 
   .rn-stakeholder {
     @extend .column;
 
     h2 {
-      @extend .title;
       @extend .has-text-centered;
-      @extend .is-size-3;
     }
 
     p {
@@ -121,16 +140,17 @@ nav.breadcrumb li {
 .rn-blog-post {
   @extend .section;
   @extend .content;
-}
-.rn-blog-post .date {
-  @extend .is-size-7;
-  @extend .has-text-weight-light;
-  @extend .mb-2;
-}
-.rn-blog-post .title {
-  @extend .is-size-2;
-  @extend .mt-0;
-  @extend .mb-2;
+
+  .date {
+    @extend .is-size-7;
+    @extend .has-text-weight-light;
+    @extend .mb-2;
+  }
+
+  .date + h2, .title {
+    @extend .mt-0;
+    @extend .mb-2;
+  }
 }
 .rn-blog-post .authorship {
   @extend .is-size-6;

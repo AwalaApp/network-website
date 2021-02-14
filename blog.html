@@ -10,7 +10,7 @@ permalink: /blog/  # Trailing slash is needed to highlight nav item
     <section class="rn-blog-post">
         <p class="date">{{ post.date | date: "%-d %B %Y"}}</p>
 
-        <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 
         {{ post.excerpt }}
     </section>
