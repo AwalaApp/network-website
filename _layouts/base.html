@@ -4,10 +4,10 @@ breadcrumbs: null
 ---
 
 <section class="rn-main is-max-desktop">
-    {% if layout.breadcrumbs %}
+    {% if page.breadcrumbs %}
     <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
-            {% for path in layout.breadcrumbs %}
+            {% for path in page.breadcrumbs %}
             <li>
                 {%- assign parent_page = site.pages | where: "path", path | first -%}
                 <a href="{{ parent_page.url | relative_url }}">{{ parent_page.title | escape }}</a>

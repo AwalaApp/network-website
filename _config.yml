@@ -5,6 +5,7 @@ permalink: /blog/:slug
 defaults:
   - values:
       description: null
+      breadcrumbs: null
   - scope:
       path: ""
       type: pages
@@ -15,11 +16,13 @@ defaults:
       type: posts
     values:
       layout: post
+      breadcrumbs: [blog.html]
   - scope:
       path: ""
       type: drafts
     values:
       layout: post
+      breadcrumbs: [blog.html]
 
 markdown: kramdown
 liquid:
