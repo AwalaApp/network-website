@@ -64,8 +64,19 @@ nav.breadcrumb li {
   @extend .content;
   @extend .mb-0;
 
-  .icon {
-    @extend .has-text-success;
+  ul {
+    @extend .mx-0;
+    @extend .my-0;
+
+    li {
+      display: block;
+      @extend .icon-text;
+
+      .icon {
+        @extend .mr-1;
+        @extend .has-text-success;
+      }
+    }
   }
 }
 
