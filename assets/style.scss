@@ -58,6 +58,10 @@ nav.breadcrumb li {
   h4 {
     @extend .is-size-6;
   }
+
+  ul {
+    @extend .my-2;
+  }
 }
 .rn-main > * {
   @extend .mx-0;
