@@ -14,11 +14,14 @@ $footer-padding: 3rem 1.5rem;
 
 // Top navigation
 
-.navbar-brand .navbar-item {
-  @extend .pl-0;
-}
-.navbar a.is-active:link, .navbar a.is-active:visited {
-  font-weight: 500;
+.navbar {
+  a.is-active:link, .navbar a.is-active:visited {
+    font-weight: 500;
+  }
+
+  .navbar-brand .navbar-item {
+    @extend .pl-0;
+  }
 }
 
 // Breadcrumbs
@@ -80,59 +83,62 @@ nav.breadcrumb li {
 
 // Homepage
 
-.rn-homepage-hero {
-  @extend .section;
-  @extend .content;
-  @extend .mb-0;
-
-  .title {
-    @extend .is-size-2;
+.rn-homepage {
+  section {
+    @extend .pt-0;
+    @extend .section;
+    @extend .content;
   }
 
-  ul {
-    @extend .mx-0;
-    @extend .my-0;
+  .rn-homepage-hero {
+    .title {
+      @extend .is-size-2;
+    }
 
-    li {
-      display: block;
-      @extend .icon-text;
+    ul {
+      @extend .mx-0;
+      @extend .my-4;
 
-      .icon {
-        @extend .mr-1;
-        @extend .has-text-success;
+      li {
+        display: block;
+        @extend .icon-text;
+
+        .icon {
+          @extend .mr-1;
+          @extend .has-text-success;
+        }
       }
     }
   }
-}
 
-.rn-homepage-stakeholders {
-  @extend .section;
-  @extend .content;
-  @extend .columns;
-  @extend .is-variable;
-  @extend .is-6;
-  @extend .mb-0;
+  .rn-homepage-stakeholders {
+    @extend .columns;
+    @extend .is-variable;
+    @extend .is-6;
+    @extend .mb-0;
 
-  .rn-stakeholder {
-    @extend .column;
+    .rn-stakeholder {
+      @extend .column;
+      @extend .block;
 
-    h2 {
-      @extend .has-text-centered;
-    }
+      h2 {
+        @extend .has-text-centered;
+      }
 
-    p {
-      @extend .has-text-justified;
-    }
+      p {
+        @extend .has-text-justified;
+      }
 
-    .buttons {
-      @extend .is-centered;
+      .buttons {
+        @extend .is-centered;
 
-      a {
-        @extend .button;
-        @extend .is-link;
+        a {
+          @extend .button;
+          @extend .is-link;
 
-        .fas {
-          margin-right: 0.5rem;
+          .fas {
+            margin-right: 0.5rem;
+          }
         }
       }
     }
