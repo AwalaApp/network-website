@@ -27,7 +27,7 @@ $footer-padding: 3rem 1.5rem;
 // Breadcrumbs
 
 nav.breadcrumb {
-  @extend .mb-0;
+  @extend .mb-3;
 }
 nav.breadcrumb ul {
   @extend .m-0;
@@ -64,6 +64,19 @@ nav.breadcrumb li {
 
   ul {
     @extend .my-2;
+  }
+
+  .buttons {
+    @extend .is-centered;
+
+    a {
+      @extend .button;
+      @extend .is-link;
+
+      .fas {
+        margin-right: 0.5rem;
+      }
+    }
   }
 }
 .rn-main > * {
@@ -127,19 +140,6 @@ nav.breadcrumb li {
 
       p {
         @extend .has-text-justified;
-      }
-
-      .buttons {
-        @extend .is-centered;
-
-        a {
-          @extend .button;
-          @extend .is-link;
-
-          .fas {
-            margin-right: 0.5rem;
-          }
-        }
       }
     }
   }

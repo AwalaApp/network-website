@@ -8,11 +8,14 @@ We need an enormous amount of help to make Relaynet realise its full potential. 
 
 ## Current priority areas
 
-1. If you're an Android developer, consider [building or prototyping a Relaynet-compatible app]({% link service-providers.md %}).
+1. If you're an Android developer, consider [building or prototyping a Relaynet-compatible app]({% link service-providers/index.md %}).
+1. If you're a UX designer and have experience with Offline First / Delay-Tolerant Networking, please give us feedback on our [UX guidelines for service providers]({% link service-providers/ux.md %}).
 1. Spread the word about Relaynet, especially amongst diaspora communities.
 1. Come say hi on [our forum](https://community.relaynet.network/) and share any questions/feedback you may have.
 
 ## Upcoming priority areas
+
+In the short- to medium-term we'll be looking for people to help us with the following:
 
 - Test the [Relaynet](https://play.google.com/store/apps/details?id=tech.relaycorp.gateway) and [courier](https://play.google.com/store/apps/details?id=tech.relaycorp.courier) apps on Android, and give us feedback on [the forum](https://community.relaynet.network/). We're particularly keen to hear whether anything breaks on older phones. This is blocked by the release of the [Relaynet Ping for Android](https://github.com/relaycorp/relaynet-ping-android/) (due by March 2021).
 - Build or prototype Windows/Linux apps once we release the Relaynet app for desktop.
