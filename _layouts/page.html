@@ -1,6 +1,26 @@
 ---
 layout: base
 ---
-<article>
+<article class="rn-page">
     {{ content }}
+
+    {% if page.pagination.previous or page.pagination.next %}
+        <nav class="pagination" role="navigation" aria-label="pagination">
+            {% if page.pagination.previous %}
+                {%- assign previous_page = site.pages | where: "path", page.pagination.previous | first -%}
+                <a class="pagination-previous" href="{{ previous_page.url | relative_url }}">
+                    <span class="icon"><i class="fas fa-arrow-left"></i></span>
+                    {{ previous_page.title | escape }}
+                </a>
+            {% endif %}
+
+            {% if page.pagination.next %}
+                {%- assign next_page = site.pages | where: "path", page.pagination.next | first -%}
+                <a class="pagination-next" href="{{ next_page.url | relative_url }}">
+                    {{ next_page.title | escape }}
+                    <span class="icon"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            {% endif %}
+        </nav>
+    {% endif %}
 </article>

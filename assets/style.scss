@@ -145,7 +145,23 @@ nav.breadcrumb li {
   }
 }
 
-// Blog
+// Pages
+
+.rn-page {
+  p > img:not(.rn-side-image) {
+    display: block;
+    margin: auto;
+  }
+
+  img.rn-side-image {
+    @extend .is-pulled-right;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @extend .is-clearfix;
+  }
+}
+
+// Blog posts
 
 .rn-blog-post {
   @extend .section;

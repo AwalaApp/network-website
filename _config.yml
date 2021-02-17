@@ -6,6 +6,9 @@ defaults:
   - values:
       description: null
       breadcrumbs: null
+      pagination:
+        previous: null
+        next: null
   - scope:
       path: ""
       type: pages
