@@ -145,7 +145,7 @@ Alternatively, if your organisation already operates an Enterprise Service Bus, 
 
 Existing auth protocols like OAuth2 are also problematic in a DTN, since the user could be disconnected from the Internet for months or indefinitely. For example, how do you renew an OAuth2 access token before it expires? You could theoretically make it last a few years, but it wouldn't be advisable. Fortunately, Relaynet offers a DTN-compatible alternative.
 
-Relaynet has built-in authentication and access control for endpoints, but there's no concept of user to protect their privacy. The same person could use the Android and Windows versions of your app, but the two endpoints would be completely independent of each other.
+Relaynet has built-in authentication and access control for endpoints, but there's no concept of user by design (to protect their privacy). The same person could use the Android and Windows versions of your app, but the two endpoints would be completely independent of each other.
 
 If your own software has the concept of users and you want to allow your users to use the service seamlessly across devices, you should consider tracking the private address of their endpoint(s). Building on the examples above:
 
