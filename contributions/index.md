@@ -20,7 +20,7 @@ In the short- to medium-term we'll be looking for people to help us with the fol
 - Test the [Relaynet](https://play.google.com/store/apps/details?id=tech.relaycorp.gateway) and [courier](https://play.google.com/store/apps/details?id=tech.relaycorp.courier) apps on Android, and give us feedback on [the forum](https://community.relaynet.network/). We're particularly keen to hear whether anything breaks on older phones. This is blocked by the release of the [Relaynet Ping for Android](https://github.com/relaycorp/relaynet-ping-android/) (due by March 2021).
 - Build or prototype Windows/Linux apps once we release the Relaynet app for desktop.
 - Translate the Android and desktop apps to your native language(s). This is currently blocked by two things:
-  - We want to wait until the text is a bit more stable.
+  - We want to wait until the text has been finalised.
   - We need to identify and provision the translation service we'll use, and integrate it with our automated release processes.
 
 Please subscribe to our newsletter below to be notified about new ways to contribute to the project.
@@ -44,5 +44,12 @@ Please refer to our [security policy](https://github.com/relaycorp/.github/blob/
 ## Partnerships
 
 If you're an organisation interested in contributing to Relaynet, please [contact Relaycorp](https://relaycorp.tech).
+
+## Ancillary projects
+
+We'd like to start the following projects, but they're not within the scope of Relaynet strictly speaking, so it's unlikely we'll have the resources to do so soon any time soon. However, we'd be willing to participate if someone else were to take the lead:
+
+- [Research and document User Experience best practices in Delay-Tolerant Networking](https://github.com/relaycorp/relayverse/issues/26).
+- [Implement service to alert to potential Internet/telecommunications blackouts](https://github.com/relaycorp/relayverse/issues/9).
 
 {% include subscription-cta.html group="contributors" %}
