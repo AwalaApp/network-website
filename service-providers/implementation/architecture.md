@@ -159,10 +159,8 @@ Finally, Multi-Factor Authentication also requires a special consideration in a 
 
 ## Best practices
 
-Remember the two best practices when using async messaging:
+Using Relaynet effectively boils down to embracing DTN and asynchronous messaging. As mentioned above, this involves designing components with high cohesion (lots of work locally) and low adhesion (selective work remotely). Consider the following examples:
 
-- high cohesion (lots of work locally)
-  - For example, client-side search.
-- low adhesion (selective work remotely)
-  - if you have to retrieve data in response to an event caused by the user, send a single message and let the peer send 1+ messages back with the data you asked for.
-  - Better yet: Proactive is better than reactive.
+- If the app has an option to search for information, try implementing the search locally if possible.
+- If the user is subscribed to a topic or another user, try sending those updates as they happen, regardless of whether the user should not be alerted to them immediately. This way, the information will be readily available when the user opens the app -- Even if the Internet is no longer available.
+- If the app has an option to open a dashboard containing charts whose data need to be retrieved from a public endpoint, consider sending a single message to the endpoint and let it get back to you with 1+ messages in no particular order. (Instead of sending many messages -- one for each piece of data -- as you'd do with RPCs)
