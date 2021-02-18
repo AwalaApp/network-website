@@ -120,36 +120,42 @@ The services above could benefit from using both centralisation and decentralisa
 
 ## Adding Relaynet support to existing Internet-based services
 
-If you're adding Relaynet support to an existing Internet-based service, you have to create a centralised service. You may be able to reuse the existing desktop/mobile apps of the service if you own it, but you'll certainly have to build and operate a public endpoint.
+If you're adding Relaynet support to an existing Internet-based service, you'll have to create a centralised service. You may be able to reuse the existing desktop/mobile apps of the service if you own it, but you'll certainly have to build and operate a public endpoint.
 
 ### End user applications
 
-Even
+In most cases, you will have to build brand-new desktop/mobile apps that are compatible with Relaynet: Putting aside the fact that you have to replace RPCs with asynchronous messaging, the [UX is likely to be different too]({% link service-providers/ux.md %}).
 
-If you own the Internet-based service, you're likely to want to make Relaynet support optional, so that your non-Relaynet users can continue to use it normally.
+If you own the service and could theoretically change the code so that RPCs are used only when the Internet is available, your codebase is likely to become too hard to maintain. However, this may be manageable in simple apps.
 
-Integrating Relaynet in a pre-existing product involves replacing RPCs (e.g., HTTP requests) with an asynchronous interface provided by the Relaynet library, and such changes can be limited to the functionality you want to offer on Relaynet.
-
-(Link to iussue where we'll try to make private gateways optional)
+If you don't own the Internet service but its operator offers an API, you'll definitely have to build new desktop/mobile apps that use Relaynet. In this case, you'll also need to build and operate a public endpoint, with which your desktop/mobile will communicate.
 
 ### Public endpoint adapter
 
-If you wish to make a third-party service work on Relaynet, you're likely to need a new desktop/mobile app and a new server-side app that would communicate with each other via Relaynet. Additionally, the server-side app will be responsible for the communication with the API of the third-party service. The [Relaynet proof of concept with Twitter](https://github.com/relaynet/poc) is an example of this type of integration.
+You will have to build and deploy a server-side app to act as a public endpoint. Its job will be to act as a broker between public gateways and the API of the Internet service, in order to:
 
-Enterprise Service Bus.
+- Receive parcels from public gateways, unwrap them and make API call(s) to the Internet service.
+- Listen/poll for relevant events on the API of the Internet service and send the corresponding parcels to public gateways.
+
+The [Relaynet proof of concept with Twitter](https://github.com/relaynet/poc) is an example of this type of integration.
+
+Alternatively, if your organisation already operates an Enterprise Service Bus, you may be able to configure it to act as a public endpoint adapter. In most cases, however, an Enterprise Service Bus will be a major overkill.
 
 ## User authentication and access control
 
 Existing auth protocols like OAuth2 are also problematic in a DTN, since the user could be disconnected from the Internet for months or indefinitely. For example, how do you renew an OAuth2 access token before it expires? You could theoretically make it last a few years, but it wouldn't be advisable. Fortunately, Relaynet offers a DTN-compatible alternative.
 
-Relaynet has built-in authentication and access control for endpoints, but there's no concept of user to protect their privacy. The same person could use the Android and Windows versions of your app, and each instance would be totally independent from each other: The endpoint key pair, the endpoint address, the private gateway and maybe the public gateway will all be different.
+Relaynet has built-in authentication and access control for endpoints, but there's no concept of user to protect their privacy. The same person could use the Android and Windows versions of your app, but the two endpoints would be completely independent of each other.
 
-If your own software has the concept of users and you want to allow your users to use the service seamlessly across devices, you should consider mapping each user to the private address of their endpoint(s). Building on the examples above:
+If your own software has the concept of users and you want to allow your users to use the service seamlessly across devices, you should consider tracking the private address of their endpoint(s). Building on the examples above:
 
-- Twitter could keep a record that Alice is using the endpoint `0deadbeef` and Bob is using `0deadc0de`.
-- Similarly, Alice' WhatsApp addressbook could have Bob's endpoint as `0deadc0de` and Bob's WhatsApp addressbook could have Alice' endpoint as `0deadbeef`.
+- Twitter could keep a record that Alice is using the endpoint `0deadbeef` on `frankfurt.relaycorp.cloud` and Bob is using `0deadc0de` on `london.relaycorp.cloud`.
+- Similarly, Alice' WhatsApp addressbook could have Bob's endpoint as `0deadc0de`on `london.relaycorp.cloud` and Bob's addressbook could have Alice' endpoint as `0deadbeef` on `frankfurt.relaycorp.cloud`.
 
-Finally, Multi-Factor Authentication also requires a special consideration in a DTN environment: One-time passwords mustn't be time-based (e.g., TOTP) or challenge-response-based (e.g., SMS) because real time connectivity between endpoints is not guaranteed. They can be sequence-based (e.g., HOTP), but you should keep in mind that these tokens never expire and are therefore susceptible to bruteforce attacks.
+Finally, Multi-Factor Authentication also requires a special consideration in a DTN environment: One-time passwords mustn't be time-based (e.g., TOTP) or challenge-response-based (e.g., SMS) because real time connectivity between endpoints is not guaranteed. They can be sequence-based (e.g., HOTP), but you should keep the following in mind:
+
+- Sequence-based tokens never expire and are therefore susceptible to bruteforce attacks.
+- For UX reasons, your desktop/mobile apps should prompt for the token preemptively, before the app at the other end starts refusing incoming messages until a new token is given.
 
 ## Best practices
 
