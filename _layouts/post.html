@@ -14,4 +14,14 @@ layout: base
     </p>
 
     {{ content }}
+
+    <div class="rn-author-bio">
+        <p class="rn-author-bio-header">About the author</p>
+        <div class="rn-author-bio-content">
+            <figure>
+                <img src="{{ page.author | prepend: '/assets/images/authors/' | append: '.png' | relative_url }}">
+            </figure>
+            <p>{{ author.bio | escape }}</p>
+        </div>
+    </div>
 </article>

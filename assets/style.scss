@@ -177,11 +177,36 @@ nav.breadcrumb li {
     @extend .mt-0;
     @extend .mb-2;
   }
-}
-.rn-blog-post .authorship {
-  @extend .is-size-6;
-  @extend .has-text-weight-light;
-  @extend .mb-6;
+
+  .authorship {
+    @extend .is-size-6;
+    @extend .has-text-weight-light;
+    @extend .mb-6;
+  }
+
+  .rn-author-bio {
+    @extend .section;
+    @extend .pb-0;
+
+    @extend .is-size-6;
+
+    .rn-author-bio-header {
+      @extend .has-text-weight-semibold;
+    }
+
+    .rn-author-bio-content {
+      figure {
+        @extend .image;
+        @extend .is-64x64;
+        @extend .is-pulled-left;
+        @extend .is-hidden-mobile;
+
+        img {
+          @extend .is-rounded;
+        }
+      }
+    }
+  }
 }
 article.rn-blog-post .authorship {
   @extend .mb-6
