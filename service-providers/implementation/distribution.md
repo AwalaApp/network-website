@@ -18,4 +18,4 @@ You have two options to distribute Android apps without access to the Internet:
 - [Use app signing by Google Play](https://support.google.com/googleplay/android-developer/answer/9842756?hl=en) and download the signed, universal APK from the [Google Play Console](https://play.google.com/console/). Then distribute the universal APK file (e.g., using a service like [Knapsack for Hope](https://knapsackforhope.org/)).
 - Publish the app on [F-Droid](https://f-droid.org/en/), which supports [offline installs](https://f-droid.org/en/tutorials/swap/).
 
-**It's important not to distribute self-signed APKs** because that'd require the user to disable Android's built-in protection against untrusted sources, which an adversary could exploit to distribute a compromised version of the APK.
+**It's important not to distribute self-signed APKs** because that'd require the user to disable Android's built-in protection against untrusted sources, which an adversary could exploit.
