@@ -33,9 +33,11 @@ Most importantly, RPCs do not work at all with RTTs in the order of days or week
 
 ![](./diagrams/async-messaging.png){:.rn-side-image}
 
-By contrast, Relaynet apps don't communicate with each other directly. They communicate through one or more brokers, which pass the data along and -- when necessary -- keep a copy of the data until the next node becomes reachable. This pattern is called _asynchronous messaging_.
+By contrast, Relaynet apps don't communicate with each other directly. They communicate through one or more brokers, which pass the data along and -- when necessary -- keep a copy of the data until the next node becomes reachable. This pattern is called _store-and-forward_, and it's crucial in delay-tolerant networking.
 
-Consequently, Relaynet apps don't communicate through clients and servers, and instead communicate through _endpoints_. Endpoints send messages to each other and there's no requirement for messages to be responded to.
+RPCs can work on store-and-forward networks, but only in theory: RPCs still require a small round-trip time. For this reason, Relaynet apps use _asynchronous messaging_ instead of RPCs.
+
+In asynchronous messaging, apps don't communicate through clients and servers: They communicate through peers known as _endpoints_. Endpoints send messages to each other and there's no requirement for messages to be responded to.
 
 Relaynet calls the brokers above _gateways_, and each computer/smartphone using Relaynet requires a so-called _private gateway_ (like [this app in the case of Android](https://play.google.com/store/apps/details?id=tech.relaycorp.gateway)). All Relaynet-compatible apps will send and receive data through their local private gateway.
 
@@ -60,7 +62,7 @@ Consider the following JSON-serialised service message:
 }
 ```
 
-That service message will be encapsulated in a parcel, which is made up of the following parts:
+That service message will be encapsulated in a parcel made up of the following parts:
 
 - The recipient's address. If the recipient is a _private endpoint_ (i.e., behind a private gateway), this address will be derived from its public key. If the recipient is a _public endpoint_, it'd be a domain name like `twitter.com`.
 - The parcel id: A unique identifier for the parcel, used to drop duplicates for the same sender/recipient pair.
@@ -128,11 +130,11 @@ In most cases, you will have to build brand-new desktop/mobile apps that are com
 
 If you own the service and could theoretically change the code so that RPCs are used only when the Internet is available, your codebase is likely to become too hard to maintain. However, this may be manageable in simple apps.
 
-If you don't own the Internet service but its operator offers an API, you'll definitely have to build new desktop/mobile apps that use Relaynet. In this case, you'll also need to build and operate a public endpoint, with which your desktop/mobile will communicate.
+If you don't own the Internet service but its operator offers an API, you'll definitely have to build new desktop/mobile apps that use Relaynet.
 
 ### Public endpoint adapter
 
-You will have to build and deploy a server-side app to act as a public endpoint. Its job will be to act as a broker between public gateways and the API of the Internet service, in order to:
+You will have to build and deploy a new server-side app to act as a public endpoint, regardless of whether you own the Internet-based service. Its job will be to act as a broker between public gateways and the API of the Internet service, in order to:
 
 - Receive parcels from public gateways, unwrap them and make API call(s) to the Internet service.
 - Listen/poll for relevant events on the API of the Internet service and send the corresponding parcels to public gateways.

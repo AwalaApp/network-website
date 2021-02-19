@@ -66,6 +66,10 @@ nav.breadcrumb li {
     @extend .my-2;
   }
 
+  pre {
+    @extend .mb-4;
+  }
+
   .buttons {
     @extend .is-centered;
 
@@ -77,6 +81,10 @@ nav.breadcrumb li {
         margin-right: 0.5rem;
       }
     }
+  }
+
+  .pagination {
+    @extend .mt-6;
   }
 }
 .rn-main > * {
