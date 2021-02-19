@@ -43,7 +43,7 @@ Relaynet calls the brokers above _gateways_, and each computer/smartphone using 
 
 Each private gateway is paired to a _public gateway_ on the Internet, and a public gateway may serve many private gateways. By default, all private gateways are paired to [public gateways operated by Relaycorp](https://github.com/relaycorp/cloud-gateway), such as `frankfurt.relaycorp.cloud`.
 
-Apart from routing traffic, gateways are also responsible for refusing malicious traffic: All messages going to an endpoint behind a private gateway must be pre-authorised by the recipient. If a message is not properly authorised, the first gateway to find it will drop it. Indeed, Relaynet has spam protection built-in.
+Apart from routing and deduping traffic, gateways are also responsible for refusing malicious traffic: All messages going to an endpoint behind a private gateway must be pre-authorised by the recipient. If a message is not properly authorised, the first gateway to find it will drop it. Indeed, Relaynet has spam protection built-in.
 
 It's important to embrace asynchronous messaging without trying to replicate a request-response pattern. **RPCs could still be emulated to some extent, but they should be generally regarded a code smell**. As Hohpe and Woolf eloquently summarise in [Enterprise Integration Patterns](https://www.enterpriseintegrationpatterns.com/patterns/messaging/Messaging.html):
 
@@ -154,7 +154,7 @@ If your own software has the concept of users and you want to allow your users t
 - Twitter could keep a record that Alice is using the endpoint `0deadbeef` on `frankfurt.relaycorp.cloud` and Bob is using `0deadc0de` on `london.relaycorp.cloud`.
 - Similarly, Alice' WhatsApp addressbook could have Bob's endpoint as `0deadc0de`on `london.relaycorp.cloud` and Bob's addressbook could have Alice' endpoint as `0deadbeef` on `frankfurt.relaycorp.cloud`.
 
-Finally, Multi-Factor Authentication also requires a special consideration in a DTN environment: One-time passwords mustn't be time-based (e.g., TOTP) or challenge-response-based (e.g., SMS) because real time connectivity between endpoints is not guaranteed. They can be sequence-based (e.g., HOTP), but you should keep the following in mind:
+Finally, Multi-Factor Authentication also requires a special consideration in a DTN environment: One-time passwords can't be time- (e.g., TOTP) or challenge-response-based (e.g., SMS) because real time connectivity between endpoints is not guaranteed. They can be sequence-based (e.g., HOTP), but you should keep the following in mind:
 
 - Sequence-based tokens never expire and are therefore susceptible to bruteforce attacks.
 - For UX reasons, your desktop/mobile apps should prompt for the token preemptively, before the app at the other end starts refusing incoming messages until a new token is given.
