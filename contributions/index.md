@@ -33,7 +33,7 @@ Please refer to [our documentation for contributors on GitHub](https://github.co
 
 An earlier version of the protocol suite was [independently assessed](../archives/security-audit-2019-03.pdf) and we'll arrange for the initial implementation of Relaynet to be independently audited too. However, we want Relaynet to be throughly reviewed before we put it in front of at-risk users, so please:
 
-1. If you have a background in cryptography and/or networking, consider reviewing the [specs](https://specs.relaynet.network/), and the apps and libraries we've built so far -- In particular:
+1. If you have a background in cryptography and/or networking, consider reviewing the [specs](https://specs.relaynet.network/), and the apps and libraries we've built so far -- in particular:
     - The core Relaynet libraries for [Node.js](https://github.com/relaycorp/relaynet-core-js) and the [JVM](https://github.com/relaycorp/relaynet-jvm).
     - [Relaynet Gateway for Android](https://github.com/relaycorp/relaynet-gateway-android).
     - [Relaynet-Internet Gateway](https://github.com/relaycorp/relaynet-internet-gateway) (Node.js, Kubernetes).

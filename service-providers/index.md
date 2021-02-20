@@ -16,7 +16,7 @@ If you're looking for inspiration, you could build apps to help people do the fo
 - Get answers to queries like "coronavirus symptoms" using [DuckDuckGo Instant Answers](https://help.duckduckgo.com/duckduckgo-help-pages/features/instant-answers-and-other-features/).
 - Send and receive money -- including cryptocurrencies.
 
-Whether you're an individual or an organisation, we're here to support you in your journey to adopt Relaynet. Select one of the following options to learn more, and don't hesitate to post any questions/feedback on [our forum](https://community.relaynet.network/) -- We'd even love it if you stopped by to say hi!
+Whether you're an individual or an organisation, we're here to support you in your journey to adopt Relaynet. Select one of the following options to learn more, and don't hesitate to post any questions/feedback on [our forum](https://community.relaynet.network/) -- we'd even love it if you stopped by to say hi!
 
 <div class="buttons is-centered">
   <a class="button is-link" href="{% link service-providers/ux.md %}">

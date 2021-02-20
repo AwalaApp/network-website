@@ -10,7 +10,7 @@ In Relaynet terms, a _service_ is a collection of apps that communicate amongst 
 
 Like traditional apps, Relaynet apps can be server-side, desktop, mobile or CLI. For the most part, building those apps will be just like building traditional apps: You'll continue to use your favourite IDE, UI framework and test framework, for example. Any local Inter-Process Communication would remain unchanged too.
 
-**The biggest difference is that your apps will no longer communicate _directly_ across computers** -- So your desktop/mobile app won't be making HTTP requests to `api.your-company.com`, for example. Instead, you'll be delegating all external communication to Relaynet.
+**The biggest difference is that your apps will no longer communicate _directly_ across computers** -- so your desktop/mobile app won't be making HTTP requests to `api.your-company.com`, for example. Instead, you'll be delegating all external communication to Relaynet.
 
 Select one of the options below to learn more about implementing Relaynet services:
 

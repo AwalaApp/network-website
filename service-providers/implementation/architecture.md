@@ -9,9 +9,9 @@ pagination:
 
 # Architecture of Relaynet services
 
-Relaynet is a _Delay-Tolerant Network_ (DTN), which means that the software running on the network can tolerate latencies lasting anywhere from a few milliseconds to an indefinite amount of time -- Or, in Relaynet's case, up to 6 months. The space industry, for example, has used DTNs for decades.
+Relaynet is a _Delay-Tolerant Network_ (DTN), which means that the software running on the network can tolerate latencies lasting anywhere from a few milliseconds to an indefinite amount of time -- or, in Relaynet's case, up to 6 months. The space industry, for example, has used DTNs for decades.
 
-We need delay tolerance in Relaynet in order to use alternative transport media when the Internet is not available -- Especially in regions where it's never available. That way we get a wide range of transport options at our disposal, including some which may be extremely slow but very robust.
+We need delay tolerance in Relaynet in order to use alternative transport media when the Internet is not available -- especially in regions where it's never available. That way we get a wide range of transport options at our disposal, including some which may be extremely slow but very robust.
 
 Compared to traditional Internet software, DNT software has very different opportunities and constraints, and these have a significant impact on the overall architecture of the system. Let's start by looking at the crux of the problem.
 
@@ -21,7 +21,7 @@ Compared to traditional Internet software, DNT software has very different oppor
 
 _Remote Procedure Call_ (RPC) is the de facto communication pattern of the Internet. It's what underpins RESTful, gRPC and GraphQL APIs, or anything done over HTTP.
 
-As the name implies, RPCs resemble a pattern we developers are familiar with: Function calls. You pass some input and get some output back -- Unless something goes wrong, in which case an exception is thrown.
+As the name implies, RPCs resemble a pattern we developers are familiar with: Function calls. You pass some input and get some output back -- unless something goes wrong, in which case an exception is thrown.
 
 But the thing with unreliable networks like the Internet is that things going wrong is the rule, not the exception.
 
@@ -164,5 +164,5 @@ Finally, Multi-Factor Authentication also requires a special consideration in a 
 Using Relaynet effectively boils down to embracing DTN and asynchronous messaging. As mentioned above, this involves designing components with high cohesion (lots of work locally) and low adhesion (selective work remotely). Consider the following examples:
 
 - If the app has an option to search for information, implement the search locally if possible.
-- If the user is subscribed to a topic or another user, send those updates as they happen, regardless of whether the user should be alerted immediately. This way, the information will be readily available when the user opens the app -- Even if the Internet is no longer available.
+- If the user is subscribed to a topic or another user, send those updates as they happen, regardless of whether the user should be alerted immediately. This way, the information will be readily available when the user opens the app -- even if the Internet is no longer available.
 - If the app has an option to open a dashboard containing data that should be retrieved from a public endpoint, send a single message to the endpoint and let it get back to you with 1+ messages in no particular order (instead of sending many messages -- one for each piece of data -- as you'd do with RPCs).
