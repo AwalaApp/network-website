@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Couriers</title>
+
+    <meta name="description" content="Restore connectivity when the Internet has been cut off. Do it for profit, the greater good or both."/>
+
+    <link rel="stylesheet" href="/assets/style.css"/>
+    <script defer src="https://kit.fontawesome.com/f4f22c795b.js" crossorigin="anonymous"></script>
+
+    <script>
+        <!-- Highlight the current navigation item -->
+        document.addEventListener('DOMContentLoaded', () => {
+            (function () {
+                const currentUrl = location.pathname;
+                const menuItems = document.querySelectorAll('.navbar-menu a');
+                for (let i = 0, len = menuItems.length; i < len; i++) {
+                    if (menuItems[i].getAttribute("href") === currentUrl) {
+                        menuItems[i].classList.add("is-active");
+                    }
+                }
+            })();
+        })
+
+        // Taken from https://bulma.io/documentation/components/navbar/#navbar-menu
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach( el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body><nav class="navbar is-spaced container is-max-widescreen" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item has-text-weight-medium" href="/">
+            <img src="/assets/images/logo.png" alt="Relaynet logo" class="mr-1">
+            Relaynet
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/users">
+                Users
+            </a>
+
+            <a class="navbar-item" href="/service-providers/">
+                Service providers
+            </a>
+
+            <a class="navbar-item" href="/couriers">
+                Couriers
+            </a>
+        </div>
+
+        <div class="navbar-end">
+            <a class="navbar-item" href="/blog/">
+                Blog
+            </a>
+
+            <a class="navbar-item" href="/about">
+                About
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <div class="navbar-link">
+                    <i class="fas fa-language"></i>
+                </div>
+
+                <div class="navbar-dropdown">
+                    <div class="navbar-item">
+                        English
+                    </div>
+                    <a href="https://relaynet.red" class="navbar-item">
+                        Castellano
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<section class="rn-main is-max-desktop">
+    
+
+    <article class="rn-page">
+    <h1 id="keep-yourself-and-those-around-you-connected">Keep yourself and those around you connected</h1>
+
+<p>When the Internet is unavailable, restore connectivity around you by becoming a Relaynet courier. Do it for profit, the greater good or both. The only equipment you need is a phone, a tablet or a computer.</p>
+
+<p>Your job is to <em>relay</em> data between Relaynet users’ devices and the Internet during an Internet blackout. You’d have a route, and at each stop you’d deliver and collect data. When you stop at a location with no access to the Internet, you’d be able to exchange data with people around you by having them connect to your device. When you stop at a location with access to the Internet, you’d send all the data you collected and you’d then collect new data that should be delivered to people on your route.</p>
+
+<p>This video is a good introduction to the job of a courier and it ends with a demo of <a href="https://play.google.com/store/apps/details?id=tech.relaycorp.courier">the Android app that couriers will use</a>:</p>
+
+<figure class="rl-youtube-video">
+    <iframe src="https://www.youtube-nocookie.com/embed/UXuLz3q_6bo?cc_load_policy=1" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+    </iframe>
+</figure>
+
+<p>You may collaborate with other couriers to streamline the process and collectively reach every corner of the affected region. For example, like real-world couriers, most of you may do short-distance routes to connect small areas to a sorting facility, and others would be responsible for transporting the data between the sorting facility and an area with access to the Internet.</p>
+
+<p>You may charge Relaynet users for your services to offset costs or even make a profit. However, the software we’re currently building won’t support payments, and any trade will be strictly between you and the user. <a href="https://github.com/relaynet/specs/issues/34">Relaynet may facilitate such transactions in the future</a>.</p>
+
+<p>Naturally, you have the most important job in restoring connectivity in the event of a blackout, and we understand you may be putting yourself under significant risk. For this reason, your safety has been a critical consideration throughout the design and implementation of Relaynet.</p>
+
+<p>It’s impossible for you – or anyone who intercepts you – to view or change the data you transport. Only the sender can change it and only the recipient can view it. That means you can’t be coerced into revealing or changing anything. All you can do is delete the data, if you so wish.</p>
+
+<p>We’re also working on ways to conceal the fact you’re a courier in the first place, in case you were intercepted. Such measures may not be ready by the time we start running some early testing by Q1 2021, but they’d certainly be implemented before we make the software generally available.</p>
+
+<h2 id="help-us-serve-you-well">Help us serve you well</h2>
+
+<p>We want to make sure Relaynet will serve you well as a courier, so please reach out to us if you have any questions, concerns or suggestions. We’re particularly keen to hear about your motivation to become a courier, so we can adapt our roadmap accordingly. Feel free to send us a private message on <a href="https://www.facebook.com/relaynet/">Facebook</a> or <a href="https://twitter.com/relaynet_">Twitter</a>.</p>
+
+<section class="container box mt-6 mx-6 is-size-6">
+    <h2>Get important updates in your inbox</h2>
+
+    <div>
+        <form action="https://tech.us18.list-manage.com/subscribe/post?u=64c7889aa5e76799fa98a8175&amp;id=1a4de7a050" class="validate" method="post" name="mc-embedded-subscribe-form" target="_blank">
+            <div class="field">
+                <label class="label" for="mce-EMAIL">What's your email address?</label>
+                <div class="control has-icons-left">
+                    <input class="input" id="mce-EMAIL" name="EMAIL" type="email" placeholder="you@example.com" required="" />
+                    <span class="icon is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="field">
+                <p class="label">What do you want to hear about?</p>
+
+                <div class="control columns">
+                    <label class="checkbox column" for="mce-group[7424]-7424-0">
+                        <input id="mce-group[7424]-7424-0" name="group[7424][1]" type="checkbox" value="1" />
+                        Using Relaynet
+                    </label>
+                    <label class="checkbox column" for="mce-group[7424]-7424-1">
+                        <input id="mce-group[7424]-7424-1" name="group[7424][2]" type="checkbox" value="2" />
+                        Building Relaynet-compatible apps
+                    </label>
+                    <label class="checkbox column" for="mce-group[7424]-7424-2">
+                        <input id="mce-group[7424]-7424-2" name="group[7424][4]" type="checkbox" value="4" checked="checked" />
+                        Becoming a courier
+                    </label>
+                    <label class="checkbox column" for="mce-group[7424]-7424-3">
+                        <input id="mce-group[7424]-7424-3" name="group[7424][8]" type="checkbox" value="8" />
+                        Contributing to the project
+                    </label>
+                </div>
+            </div>
+
+            <div class="field">
+                <p class="label">Do you agree to receive emails from Relaycorp?</p>
+
+                <label for="gdpr_88524">
+                    <input class="av-checkbox gdpr" id="gdpr_88524" name="gdpr[88524]" type="checkbox" value="Y" required="" />
+                    I understand <a href="/legal/">Relaycorp's policies</a> and authorize them to send
+                    me emails about Relaynet.
+                </label>
+                <div class="help">
+                    <p>
+                        You can unsubscribe at any time. We won't share your data with third parties other than Mailchimp,
+                        which we use as our marketing platform. By subscribing, you also acknowledge that your information
+                        will be transferred to Mailchimp for processing, where it will be subject to
+                        <a href="https://mailchimp.com/legal/" target="_blank">their policies</a>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="clear" id="mce-responses">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div aria-hidden="true" style="position: absolute; left: -5000px;"><input name="b_64c7889aa5e76799fa98a8175_1a4de7a050" tabindex="-1" type="text" value="" /></div>
+            <div class="buttons is-centered">
+                <input class="button is-primary" name="subscribe" type="submit" value="Subscribe" />
+            </div>
+        </form>
+    </div>
+</section>
+
+
+
+    
+</article>
+
+</section>
+<footer class="rn-footer">
+    <div class="rn-footer-container">
+        <div class="columns">
+            <div class="column">
+                <p class="has-text-weight-semibold">Relaynet</p>
+                <ul>
+                    <li><a href="/users">Users</a></li>
+                    <li><a href="/service-providers/">Service providers</a></li>
+                    <li><a href="/couriers">Couriers</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/legal/">Legal</a></li>
+                    <li>
+                        <a href="https://github.com/relaynet" title="Relaynet on GitHub" class="icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/relaynet_" title="Relaynet on Twitter" class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.facebook.com/relaynet" title="Relaynet on Facebook" class="icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCo-KmDc5Cem1n-6yxYBRmNw" title="Relaynet on YouTube"
+                           class="icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <p class="has-text-weight-semibold">Community</p>
+                <ul>
+                    <li><a href="https://community.relaynet.network/">Forum</a></li>
+                    <li><a href="/contributions/">How to contribute</a></li>
+                    <li><a href="https://github.com/search?q=topic%3Arelaynet+org%3Arelaycorp">Reference implementations</a></li>
+                    <li><a href="https://specs.relaynet.network/">Protocol suite specs</a></li>
+                    <li><a href="https://github.com/relaycorp/.github/blob/master/CODE_OF_CONDUCT.md">Code of
+                        conduct</a></li>
+                    <li><a href="/way">The Relaynet Way</a></li>
+                </ul>
+            </div>
+
+            <div class="column"></div>
+
+            <div class="column">
+                <p class="has-text-weight-semibold">Relaycorp</p>
+                <ul>
+                    <li><a href="https://relaycorp.tech">Contact us</a></li>
+                    <li><a href="https://github.com/relaycorp/cloud-gateway">Gateway infrastructure</a></li>
+                    <li><a href="https://github.com/relaycorp/.github/blob/master/SECURITY.md">Security policy</a></li>
+                    <li>
+                        <a
+                            href="https://letro.app/en/"
+                            title="Like email, but end-to-end encrypted, spam-free, phishing-free and works without the Internet too"
+                        >Letro</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/relaycorp" title="Relaycorp on GitHub" class="icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/RelaycorpHQ" title="Relaycorp on Twitter" class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content has-text-centered">
+            <p>
+                Copyright 2019-2021 by <a href="https://relaycorp.tech">Relaycorp</a>.
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

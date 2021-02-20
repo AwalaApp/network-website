@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Relaynet</title>
+
+    
+
+    <link rel="stylesheet" href="/assets/style.css"/>
+    <script defer src="https://kit.fontawesome.com/f4f22c795b.js" crossorigin="anonymous"></script>
+
+    <script>
+        <!-- Highlight the current navigation item -->
+        document.addEventListener('DOMContentLoaded', () => {
+            (function () {
+                const currentUrl = location.pathname;
+                const menuItems = document.querySelectorAll('.navbar-menu a');
+                for (let i = 0, len = menuItems.length; i < len; i++) {
+                    if (menuItems[i].getAttribute("href") === currentUrl) {
+                        menuItems[i].classList.add("is-active");
+                    }
+                }
+            })();
+        })
+
+        // Taken from https://bulma.io/documentation/components/navbar/#navbar-menu
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach( el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body><nav class="navbar is-spaced container is-max-widescreen" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item has-text-weight-medium" href="/">
+            <img src="/assets/images/logo.png" alt="Relaynet logo" class="mr-1">
+            Relaynet
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/users">
+                Users
+            </a>
+
+            <a class="navbar-item" href="/service-providers/">
+                Service providers
+            </a>
+
+            <a class="navbar-item" href="/couriers">
+                Couriers
+            </a>
+        </div>
+
+        <div class="navbar-end">
+            <a class="navbar-item" href="/blog/">
+                Blog
+            </a>
+
+            <a class="navbar-item" href="/about">
+                About
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <div class="navbar-link">
+                    <i class="fas fa-language"></i>
+                </div>
+
+                <div class="navbar-dropdown">
+                    <div class="navbar-item">
+                        English
+                    </div>
+                    <a href="https://relaynet.red" class="navbar-item">
+                        Castellano
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<section class="rn-main is-max-desktop">
+    
+
+    <article class="rn-page">
+    <h1 id="about-relaynet">About Relaynet</h1>
+
+<p>Relaynet’s long-term goal is to complement the Internet by providing all human beings with uncensored and timely communication anywhere in the universe – without impairing the <a href="https://www.un.org/en/universal-declaration-human-rights/">fundamental rights</a> of other human beings. The first order of business is to establish connectivity in regions where the Internet is unavailable due to natural or human causes.</p>
+
+<p>Relaynet was designed by <a href="https://gustavo.engineer/">Gus Narea</a> at the University of Oxford with the initial goal of circumventing censorship by repressive governments, and he later founded <a href="https://relaycorp.tech/">Relaycorp</a> to support and scale the Relaynet project while keeping it as open and inclusive as possible.</p>
+
+<p>The <a href="https://relaynet.network/archives/security-audit-2019-03.pdf">security of the protocol suite was independently assessed</a> and Relaycorp started to build the foundation of the technology thanks to a contract with the <a href="https://opentech.fund/">Open Technology Fund</a> in late 2019. Our current focus is on helping Android developers integrate Relaynet in their apps.</p>
+
+
+    
+</article>
+
+</section>
+<footer class="rn-footer">
+    <div class="rn-footer-container">
+        <div class="columns">
+            <div class="column">
+                <p class="has-text-weight-semibold">Relaynet</p>
+                <ul>
+                    <li><a href="/users">Users</a></li>
+                    <li><a href="/service-providers/">Service providers</a></li>
+                    <li><a href="/couriers">Couriers</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/legal/">Legal</a></li>
+                    <li>
+                        <a href="https://github.com/relaynet" title="Relaynet on GitHub" class="icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/relaynet_" title="Relaynet on Twitter" class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.facebook.com/relaynet" title="Relaynet on Facebook" class="icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCo-KmDc5Cem1n-6yxYBRmNw" title="Relaynet on YouTube"
+                           class="icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <p class="has-text-weight-semibold">Community</p>
+                <ul>
+                    <li><a href="https://community.relaynet.network/">Forum</a></li>
+                    <li><a href="/contributions/">How to contribute</a></li>
+                    <li><a href="https://github.com/search?q=topic%3Arelaynet+org%3Arelaycorp">Reference implementations</a></li>
+                    <li><a href="https://specs.relaynet.network/">Protocol suite specs</a></li>
+                    <li><a href="https://github.com/relaycorp/.github/blob/master/CODE_OF_CONDUCT.md">Code of
+                        conduct</a></li>
+                    <li><a href="/way">The Relaynet Way</a></li>
+                </ul>
+            </div>
+
+            <div class="column"></div>
+
+            <div class="column">
+                <p class="has-text-weight-semibold">Relaycorp</p>
+                <ul>
+                    <li><a href="https://relaycorp.tech">Contact us</a></li>
+                    <li><a href="https://github.com/relaycorp/cloud-gateway">Gateway infrastructure</a></li>
+                    <li><a href="https://github.com/relaycorp/.github/blob/master/SECURITY.md">Security policy</a></li>
+                    <li>
+                        <a
+                            href="https://letro.app/en/"
+                            title="Like email, but end-to-end encrypted, spam-free, phishing-free and works without the Internet too"
+                        >Letro</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/relaycorp" title="Relaycorp on GitHub" class="icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/RelaycorpHQ" title="Relaycorp on Twitter" class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content has-text-centered">
+            <p>
+                Copyright 2019-2021 by <a href="https://relaycorp.tech">Relaycorp</a>.
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

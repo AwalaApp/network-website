@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Architecture of Relaynet services</title>
+
+    
+
+    <link rel="stylesheet" href="/assets/style.css"/>
+    <script defer src="https://kit.fontawesome.com/f4f22c795b.js" crossorigin="anonymous"></script>
+
+    <script>
+        <!-- Highlight the current navigation item -->
+        document.addEventListener('DOMContentLoaded', () => {
+            (function () {
+                const currentUrl = location.pathname;
+                const menuItems = document.querySelectorAll('.navbar-menu a');
+                for (let i = 0, len = menuItems.length; i < len; i++) {
+                    if (menuItems[i].getAttribute("href") === currentUrl) {
+                        menuItems[i].classList.add("is-active");
+                    }
+                }
+            })();
+        })
+
+        // Taken from https://bulma.io/documentation/components/navbar/#navbar-menu
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach( el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body><nav class="navbar is-spaced container is-max-widescreen" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item has-text-weight-medium" href="/">
+            <img src="/assets/images/logo.png" alt="Relaynet logo" class="mr-1">
+            Relaynet
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/users">
+                Users
+            </a>
+
+            <a class="navbar-item" href="/service-providers/">
+                Service providers
+            </a>
+
+            <a class="navbar-item" href="/couriers">
+                Couriers
+            </a>
+        </div>
+
+        <div class="navbar-end">
+            <a class="navbar-item" href="/blog/">
+                Blog
+            </a>
+
+            <a class="navbar-item" href="/about">
+                About
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <div class="navbar-link">
+                    <i class="fas fa-language"></i>
+                </div>
+
+                <div class="navbar-dropdown">
+                    <div class="navbar-item">
+                        English
+                    </div>
+                    <a href="https://relaynet.red" class="navbar-item">
+                        Castellano
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<section class="rn-main is-max-desktop">
+    
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            
+            <li><a href="/service-providers/">Service providers</a>
+            </li>
+            
+            <li><a href="/service-providers/implementation/">Implement Relaynet services</a>
+            </li>
+            
+
+            <!-- Add a trailing, empty item to get Bulma to add a separator at the end -->
+            <li class="is-active"></li>
+        </ul>
+    </nav>
+    
+
+    <article class="rn-page">
+    <h1 id="architecture-of-relaynet-services">Architecture of Relaynet services</h1>
+
+<p>Relaynet is a <em>Delay-Tolerant Network</em> (DTN), which means that the software running on the network can tolerate latencies lasting anywhere from a few milliseconds to an indefinite amount of time – or, in Relaynet’s case, up to 6 months. The space industry, for example, has used DTNs for decades.</p>
+
+<p>We need delay tolerance in Relaynet in order to use alternative transport media when the Internet is not available – especially in regions where it’s never available. That way we get a wide range of transport options at our disposal, including some which may be extremely slow but very robust.</p>
+
+<p>Compared to traditional Internet software, DNT software has very different opportunities and constraints, and these have a significant impact on the overall architecture of the system. Let’s start by looking at the crux of the problem.</p>
+
+<h2 id="internet-apps-use-remote-procedure-calls">Internet apps use remote procedure calls</h2>
+
+<p><img src="./diagrams/rpc.png" alt="" class="rn-side-image" /></p>
+
+<p><em>Remote Procedure Call</em> (RPC) is the de facto communication pattern of the Internet. It’s what underpins RESTful, gRPC and GraphQL APIs, or anything done over HTTP.</p>
+
+<p>As the name implies, RPCs resemble a pattern we developers are familiar with: Function calls. You pass some input and get some output back – unless something goes wrong, in which case an exception is thrown.</p>
+
+<p>But the thing with unreliable networks like the Internet is that things going wrong is the rule, not the exception.</p>
+
+<p>RPCs work well in a reliable network: One with a low round-trip time (RTT) and an adequate throughput. But clients become more complicated with the need to implement retries, timeouts and <a href="https://martinfowler.com/bliki/CircuitBreaker.html">circuit breakers</a> in order to cope with an unusually high RTT or an unusually low throughput. Additionally, TLS handshakes exacerbate this issue by further delaying the transmission of the actual payload.</p>
+
+<p>Most importantly, RPCs do not work at all with RTTs in the order of days or weeks.</p>
+
+<h2 id="relaynet-apps-use-asynchronous-messaging">Relaynet apps use asynchronous messaging</h2>
+
+<p><img src="./diagrams/async-messaging.png" alt="" class="rn-side-image" /></p>
+
+<p>By contrast, Relaynet apps don’t communicate with each other directly. They communicate through one or more brokers, which pass the data along and – when necessary – keep a copy of the data until the next node becomes reachable. This pattern is called <em>store-and-forward</em>, and it’s crucial in delay-tolerant networking.</p>
+
+<p>RPCs can work on store-and-forward networks, but only in theory: RPCs still require a small round-trip time. For this reason, Relaynet apps use <em>asynchronous messaging</em> instead of RPCs.</p>
+
+<p>In asynchronous messaging, apps don’t communicate through clients and servers: They communicate through peers known as <em>endpoints</em>. Endpoints send messages to each other and there’s no requirement for messages to be responded to.</p>
+
+<p>Relaynet calls the brokers above <em>gateways</em>, and each computer/smartphone using Relaynet requires a so-called <em>private gateway</em> (like <a href="https://play.google.com/store/apps/details?id=tech.relaycorp.gateway">this app in the case of Android</a>). All Relaynet-compatible apps will send and receive data through their local private gateway.</p>
+
+<p>Each private gateway is paired to a <em>public gateway</em> on the Internet, and a public gateway may serve many private gateways. By default, all private gateways are paired to <a href="https://github.com/relaycorp/cloud-gateway">public gateways operated by Relaycorp</a>, such as <code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.cloud</code>.</p>
+
+<p>Apart from routing and deduping traffic, gateways are also responsible for refusing malicious traffic: All messages going to an endpoint behind a private gateway must be pre-authorised by the recipient. If a message is not properly authorised, the first gateway to find it will drop it. Indeed, Relaynet has spam protection built-in.</p>
+
+<p>It’s important to embrace asynchronous messaging without trying to replicate a request-response pattern. <strong>RPCs could still be emulated to some extent, but they should be generally regarded a code smell</strong>. As Hohpe and Woolf eloquently summarise in <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/Messaging.html">Enterprise Integration Patterns</a>:</p>
+
+<blockquote>
+  <p>Asynchronous messaging is fundamentally a pragmatic reaction to the problems of distributed systems. Sending a message does not require both systems to be up and ready at the same time. Furthermore, thinking about the communication in an asynchronous manner forces developers to recognize that working with a remote application is slower, which encourages design of components with high cohesion (lots of work locally) and low adhesion (selective work remotely).</p>
+</blockquote>
+
+<h2 id="anatomy-of-a-message">Anatomy of a message</h2>
+
+<p>Each message sent from one endpoint to the other is wrapped in a <em>parcel</em>, and each parcel encrypts the <em>service message</em> and exposes some minimal metadata to facilitate routing. Fortunately, <strong>you’ll be using libraries that abstract away the encapsulation and decapsulation of service messages</strong>.</p>
+
+<p>Consider the following JSON-serialised service message:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hello world"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-02-19"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>That service message will be encapsulated in a parcel made up of the following parts:</p>
+
+<ul>
+  <li>The recipient’s address. If the recipient is a <em>private endpoint</em> (i.e., behind a private gateway), this address will be derived from its public key. If the recipient is a <em>public endpoint</em>, it’d be a domain name like <code class="language-plaintext highlighter-rouge">twitter.com</code>.</li>
+  <li>The parcel id: A unique identifier for the parcel, used to drop duplicates for the same sender/recipient pair.</li>
+  <li>The creation and expiry dates. Used to purge invalid messages.</li>
+  <li>The ciphertext of the encapsulated service message.</li>
+  <li>The sender’s digital signature of the whole parcel, to ensure its integrity. This signature contains the sender’s certificate, which must’ve been issued by the recipient if the recipient is private.</li>
+</ul>
+
+<p>As you can see, from the outside of the parcel, you can’t attribute messages to a particular user. Additionally, you could only ever attribute a message to particular service if and only if the message is bound for a public endpoint.</p>
+
+<p>If you wish to learn about the cryptographic algorithms used in Relaynet, read <a href="https://specs.relaynet.network/RS-018">RS-018</a>.</p>
+
+<h2 id="relaynet-makes-centralisation-a-spectrum">Relaynet makes centralisation a spectrum</h2>
+
+<p>Relaynet itself is decentralised, but services can be centralised, decentralised or somewhere in between. You get to use the degree of (de)centralisation that makes sense for your service.</p>
+
+<h3 id="centralised-service">Centralised service</h3>
+
+<p>A service is centralised if the sender or the recipient must be an Internet host. Let’s imagine a world where Twitter is a centralised service, and a user called Bob follows a user called Alice.</p>
+
+<p><img src="./diagrams/centralised-service.png" alt="" /></p>
+
+<p>When Alice tweets from her phone, the Twitter app will use its endpoint to wrap the tweet in a parcel and pass it on to Alice’ private gateway. Then, the private gateway will send the parcel to the public gateway (e.g., <code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.cloud</code>) via the Internet or a courier. Finally, the public gateway will send the parcel to <code class="language-plaintext highlighter-rouge">twitter.com</code>, which will unwrap it and process it.</p>
+
+<p><code class="language-plaintext highlighter-rouge">twitter.com</code> now has to notify Bob about Alice’ tweet, so it starts by wrapping the tweet in a new parcel (perhaps with additional metadata, like Alice’ current profile picture) and posting the parcel to Bob’s public gateway (e.g., <code class="language-plaintext highlighter-rouge">london.relaycorp.cloud</code>). Then, the public gateway will send the parcel to his private gateway via the Internet or a courier. Finally, the private gateway receives the parcel and passes it on to the Twitter app, where it’s unwrapped and processed.</p>
+
+<p>The operator of the public endpoint is required to define an SRV record for the public address. For example, if the Relaynet public address of the endpoint is <code class="language-plaintext highlighter-rouge">twitter.com</code> and the actual host receiving parcels is available on <code class="language-plaintext highlighter-rouge">relaynet-endpoint.twitter.com:443</code>, then the following SRV record should be defined:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_rpdc._tcp.twitter.com. 86400 IN SRV 0 5 443 relaynet-endpoint.twitter.com.
+</code></pre></div></div>
+
+<p>Additionally:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">twitter.com</code> is required to use DNSSEC.</li>
+  <li><code class="language-plaintext highlighter-rouge">relaynet-endpoint.twitter.com:443</code> must be a TLS 1.2+ host and use a valid certificate for <code class="language-plaintext highlighter-rouge">relaynet-endpoint.twitter.com</code>.</li>
+</ul>
+
+<h3 id="decentralised-service">Decentralised service</h3>
+
+<p>A service is decentralised when the sender and the recipient are always private (i.e., behind a private gateway). Let’s now consider a scenario where WhatsApp is implemented as a decentralised service, and users Alice and Bob are connected.</p>
+
+<p><img src="./diagrams/decentralised-service.png" alt="" /></p>
+
+<p>When Alice sends a message to Bob, Alice’ WhatsApp app will use its endpoint to wrap the message in a parcel and pass it on to Alice’ private gateway. Then the private gateway will send the parcel to its public gateway (e.g., <code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.cloud</code>) via the Internet or a courier. Finally, Alice’ public gateway will forward the parcel to Bob’s public gateway (e.g., <code class="language-plaintext highlighter-rouge">london.relaycorp.cloud</code>).</p>
+
+<p>Bob’s public gateway will then send the parcel to the private gateway via the Internet or a courier. Finally, the private gateway will pass the parcel on to the WhatsApp app, where it will be unwrapped and processed.</p>
+
+<p>If Alice and Bob shared the same public gateway, the process would be a bit simpler.</p>
+
+<p><img src="./diagrams/decentralised-service-same-gateway.png" alt="" /></p>
+
+<h3 id="hybrid-services">Hybrid services</h3>
+
+<p>The services above could benefit from using both centralisation and decentralisation. For example:</p>
+
+<ul>
+  <li>Twitter could keep tweeting as a centralised service, but direct messages could be implemented as a decentralised service.</li>
+  <li>WhatsApp could keep the exchange of messages as a decentralised service, but implement a centralised “user directory” to facilitate the initial introduction between users. Without a centralised service, users would have to use other means to exchange the initial cryptographic keys they need to communicate on a decentralised service, which would hurt UX.</li>
+</ul>
+
+<h2 id="adding-relaynet-support-to-existing-internet-based-services">Adding Relaynet support to existing Internet-based services</h2>
+
+<p>If you’re adding Relaynet support to an existing Internet-based service, you’ll have to create a centralised service. You may be able to reuse the existing desktop/mobile apps of the service if you own it, but you’ll certainly have to build and operate a public endpoint.</p>
+
+<h3 id="end-user-applications">End user applications</h3>
+
+<p>In most cases, you will have to build brand-new desktop/mobile apps that are compatible with Relaynet: Putting aside the fact that you have to replace RPCs with asynchronous messaging, the <a href="/service-providers/ux">UX is likely to be different too</a>.</p>
+
+<p>If you own the service and could theoretically change the code so that RPCs are used only when the Internet is available, your codebase is likely to become too hard to maintain. However, this may be manageable in simple apps.</p>
+
+<p>If you don’t own the Internet service but its operator offers an API, you’ll definitely have to build new desktop/mobile apps that use Relaynet.</p>
+
+<h3 id="public-endpoint-adapter">Public endpoint adapter</h3>
+
+<p>You will have to build and deploy a new server-side app to act as a public endpoint, regardless of whether you own the Internet-based service. Its job will be to act as a broker between public gateways and the API of the Internet service, in order to:</p>
+
+<ul>
+  <li>Receive parcels from public gateways, unwrap them and make API call(s) to the Internet service.</li>
+  <li>Listen/poll for relevant events on the API of the Internet service and send the corresponding parcels to public gateways.</li>
+</ul>
+
+<p>The <a href="https://github.com/relaynet/poc">Relaynet proof of concept with Twitter</a> is an example of this type of integration.</p>
+
+<p>Alternatively, if your organisation already operates an Enterprise Service Bus, you may be able to configure it to act as a public endpoint adapter. In most cases, however, an Enterprise Service Bus will be a major overkill.</p>
+
+<h2 id="user-authentication-and-access-control">User authentication and access control</h2>
+
+<p>Existing auth protocols like OAuth2 are also problematic in a DTN, since the user could be disconnected from the Internet for months or indefinitely. For example, how do you renew an OAuth2 access token before it expires? You could theoretically make it last a few years, but it wouldn’t be advisable. Fortunately, Relaynet offers a DTN-compatible alternative.</p>
+
+<p>Relaynet has built-in authentication and access control for endpoints, but there’s no concept of user by design (to protect their privacy). The same person could use the Android and Windows versions of your app, but the two endpoints would be completely independent of each other.</p>
+
+<p>If your own software has the concept of users and you want to allow your users to use the service seamlessly across devices, you should consider tracking the private address of their endpoint(s). Building on the examples above:</p>
+
+<ul>
+  <li>Twitter could keep a record that Alice is using the endpoint <code class="language-plaintext highlighter-rouge">0deadbeef</code> on <code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.cloud</code> and Bob is using <code class="language-plaintext highlighter-rouge">0deadc0de</code> on <code class="language-plaintext highlighter-rouge">london.relaycorp.cloud</code>.</li>
+  <li>Similarly, Alice’ WhatsApp addressbook could have Bob’s endpoint as <code class="language-plaintext highlighter-rouge">0deadc0de</code>on <code class="language-plaintext highlighter-rouge">london.relaycorp.cloud</code> and Bob’s addressbook could have Alice’ endpoint as <code class="language-plaintext highlighter-rouge">0deadbeef</code> on <code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.cloud</code>.</li>
+</ul>
+
+<p>Finally, Multi-Factor Authentication also requires a special consideration in a DTN environment: One-time passwords can’t be time- (e.g., TOTP) or challenge-response-based (e.g., SMS) because real time connectivity between endpoints is not guaranteed. They can be sequence-based (e.g., HOTP), but you should keep the following in mind:</p>
+
+<ul>
+  <li>Sequence-based tokens never expire and are therefore susceptible to bruteforce attacks.</li>
+  <li>For UX reasons, your desktop/mobile apps should prompt for the token preemptively, before the app at the other end starts refusing incoming messages until a new token is given.</li>
+</ul>
+
+<h2 id="best-practices">Best practices</h2>
+
+<p>Using Relaynet effectively boils down to embracing DTN and asynchronous messaging. As mentioned above, this involves designing components with high cohesion (lots of work locally) and low adhesion (selective work remotely). Consider the following examples:</p>
+
+<ul>
+  <li>If the app has an option to search for information, implement the search locally if possible.</li>
+  <li>If the user is subscribed to a topic or another user, send those updates as they happen, regardless of whether the user should be alerted immediately. This way, the information will be readily available when the user opens the app – even if the Internet is no longer available.</li>
+  <li>If the app has an option to open a dashboard containing data that should be retrieved from a public endpoint, send a single message to the endpoint and let it get back to you with 1+ messages in no particular order (instead of sending many messages – one for each piece of data – as you’d do with RPCs).</li>
+</ul>
+
+
+    
+        <nav class="pagination" role="navigation" aria-label="pagination">
+            
+
+            <a class="pagination-next" href="/service-providers/implementation/coding">
+                    Write a Relaynet app
+                    <span class="icon"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            
+        </nav>
+    
+</article>
+
+</section>
+<footer class="rn-footer">
+    <div class="rn-footer-container">
+        <div class="columns">
+            <div class="column">
+                <p class="has-text-weight-semibold">Relaynet</p>
+                <ul>
+                    <li><a href="/users">Users</a></li>
+                    <li><a href="/service-providers/">Service providers</a></li>
+                    <li><a href="/couriers">Couriers</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/legal/">Legal</a></li>
+                    <li>
+                        <a href="https://github.com/relaynet" title="Relaynet on GitHub" class="icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/relaynet_" title="Relaynet on Twitter" class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.facebook.com/relaynet" title="Relaynet on Facebook" class="icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCo-KmDc5Cem1n-6yxYBRmNw" title="Relaynet on YouTube"
+                           class="icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <p class="has-text-weight-semibold">Community</p>
+                <ul>
+                    <li><a href="https://community.relaynet.network/">Forum</a></li>
+                    <li><a href="/contributions/">How to contribute</a></li>
+                    <li><a href="https://github.com/search?q=topic%3Arelaynet+org%3Arelaycorp">Reference implementations</a></li>
+                    <li><a href="https://specs.relaynet.network/">Protocol suite specs</a></li>
+                    <li><a href="https://github.com/relaycorp/.github/blob/master/CODE_OF_CONDUCT.md">Code of
+                        conduct</a></li>
+                    <li><a href="/way">The Relaynet Way</a></li>
+                </ul>
+            </div>
+
+            <div class="column"></div>
+
+            <div class="column">
+                <p class="has-text-weight-semibold">Relaycorp</p>
+                <ul>
+                    <li><a href="https://relaycorp.tech">Contact us</a></li>
+                    <li><a href="https://github.com/relaycorp/cloud-gateway">Gateway infrastructure</a></li>
+                    <li><a href="https://github.com/relaycorp/.github/blob/master/SECURITY.md">Security policy</a></li>
+                    <li>
+                        <a
+                            href="https://letro.app/en/"
+                            title="Like email, but end-to-end encrypted, spam-free, phishing-free and works without the Internet too"
+                        >Letro</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/relaycorp" title="Relaycorp on GitHub" class="icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/RelaycorpHQ" title="Relaycorp on Twitter" class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content has-text-centered">
+            <p>
+                Copyright 2019-2021 by <a href="https://relaycorp.tech">Relaycorp</a>.
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
