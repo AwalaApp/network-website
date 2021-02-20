@@ -12,7 +12,7 @@ Relaynet's ultimate goal is to become the computer network on which humankind ca
 
 Realising a moonshot like that will require a great deal of effort, funding, collaboration with a wide variety of stakeholders and sustained discipline. It is therefore crucial to lay out the general approach to realise the full potential of the technology.
 
-This approach is described below as a list of principles that the author of Relaynet employed since the early conceptualisation of the technology, although most of them were tacit initially and gradually elicited.
+This approach is described below in the form of principles that the author of Relaynet employed since the early conceptualisation of the technology, although most of them were initially tacit and gradually elicited.
 
 ## Principles
 
@@ -28,5 +28,5 @@ This approach is described below as a list of principles that the author of Rela
 1. **Privacy, security and usability are equally important, but usability has veto power**. When forced to choose, we'll prioritise non-technical people over tech-savvy people.
 1. **Effective solutions are driven by real problems**. We technologists are particularly susceptible to get carried away by the potential of a new technology, but that often leads to projects whose impact doesn't match their hype because the problem was [made-up](http://www.paulgraham.com/startupideas.html) or an afterthought.
 1. **Policy is the underrated sidekick of technology**. Some problems can't be solved with purely technical solutions, and some technical solutions could be made simpler and easier to use when combined with the right legal/contractual requirements.
-1. **Embrace the enormous power of financial incentives where possible**. Let's pool resources and share an ever-growing pie.
+1. **Embrace the enormous power of financial incentives where possible** to accelerate adoption. Pooling resources will help us all share an ever-growing pie.
 1. **No idea is too ambitious** as long as there is a credible plan to realise it in small steps.
