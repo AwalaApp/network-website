@@ -47,7 +47,7 @@ If you're an organisation interested in contributing to Relaynet, please [contac
 
 ## Ancillary projects
 
-We'd love to start the following projects, but they're not within the scope of Relaynet strictly speaking and our resources are extemely limited, so it's unlikely we'll do so soon any time soon. We'd be willing to participate if someone else were to take the lead.
+We'd love to start the following projects, but they're not within the scope of Relaynet strictly speaking and our resources are extemely limited, so it's unlikely we'll do so any time soon. We'd be willing to participate if someone else were to take the lead.
 
 - [Research and document User Experience best practices in Delay-Tolerant Networking](https://github.com/relaycorp/relayverse/issues/26).
 - [Implement service to alert to potential Internet/telecommunications blackouts](https://github.com/relaycorp/relayverse/issues/9).
