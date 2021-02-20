@@ -28,5 +28,5 @@ This approach is described below in the form of principles that the author of Re
 1. **Privacy, security and usability are equally important, but usability has veto power**. When forced to choose, we'll prioritise non-technical people over tech-savvy people.
 1. **Effective solutions are driven by real problems**. We technologists are particularly susceptible to get carried away by the potential of a new technology, but that often leads to projects whose impact doesn't match their hype because the problem was [made-up](http://www.paulgraham.com/startupideas.html) or an afterthought.
 1. **Policy is the underrated sidekick of technology**. Some problems can't be solved with purely technical solutions, and some technical solutions could be made simpler and easier to use when combined with the right legal/contractual requirements.
-1. **Embrace the enormous power of financial incentives** to facilitate or accelerate mass adoption. Pooling resources will help us all share an ever-growing pie too.
+1. **Financial incentives facilitate or accelerate mass adoption**. Pooling resources will help us all share an ever-growing pie too.
 1. **No idea is too ambitious** as long as there is a credible plan to realise it in small steps.
