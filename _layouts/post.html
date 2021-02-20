@@ -1,0 +1,27 @@
+---
+layout: base
+---
+
+{% assign author = site.data.authors[page.author] %}
+
+<article class="rn-blog-post">
+    <p class="date">{{ page.date | date: "%-d %B %Y"}}</p>
+
+    <h1 class="title">{{ page.title }}</h1>
+
+    <p class="authorship">
+        By <a href="{{ author.url }}">{{ author.name }}</a>, {{ author.title }}.
+    </p>
+
+    {{ content }}
+
+    <div class="rn-author-bio">
+        <p class="rn-author-bio-header">About the author</p>
+        <div class="rn-author-bio-content">
+            <figure>
+                <img src="{{ page.author | prepend: '/assets/images/authors/' | append: '.png' | relative_url }}">
+            </figure>
+            <p>{{ author.bio | escape }}</p>
+        </div>
+    </div>
+</article>

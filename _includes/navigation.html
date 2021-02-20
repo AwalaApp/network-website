@@ -1,0 +1,55 @@
+<nav class="navbar is-spaced container is-max-widescreen" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item has-text-weight-medium" href="{{ '/' | relative_url }}">
+            <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Relaynet logo" class="mr-1">
+            Relaynet
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="{% link users.md %}">
+                Users
+            </a>
+
+            <a class="navbar-item" href="{% link service-providers/index.md %}">
+                Service providers
+            </a>
+
+            <a class="navbar-item" href="{% link couriers.md %}">
+                Couriers
+            </a>
+        </div>
+
+        <div class="navbar-end">
+            <a class="navbar-item" href="{% link blog.html %}">
+                Blog
+            </a>
+
+            <a class="navbar-item" href="{% link about.md %}">
+                About
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <div class="navbar-link">
+                    <i class="fas fa-language"></i>
+                </div>
+
+                <div class="navbar-dropdown">
+                    <div class="navbar-item">
+                        English
+                    </div>
+                    <a href="https://relaynet.red" class="navbar-item">
+                        Castellano
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

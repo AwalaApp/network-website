@@ -1,7 +1,6 @@
 ---
 title: Couriers
-layout: page
-permalink: /couriers
+description: Restore connectivity when the Internet has been cut off. Do it for profit, the greater good or both.
 ---
 
 # Keep yourself and those around you connected
@@ -12,15 +11,7 @@ Your job is to _relay_ data between Relaynet users' devices and the Internet dur
 
 This video is a good introduction to the job of a courier and it ends with a demo of [the Android app that couriers will use](https://play.google.com/store/apps/details?id=tech.relaycorp.courier):
 
-<div class="embedded_video">
-    <iframe
-        src="https://www.youtube-nocookie.com/embed/UXuLz3q_6bo"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        >
-    </iframe>
-</div>
+{% include embed_youtube_video.html id="UXuLz3q_6bo" %}
 
 You may collaborate with other couriers to streamline the process and collectively reach every corner of the affected region. For example, like real-world couriers, most of you may do short-distance routes to connect small areas to a sorting facility, and others would be responsible for transporting the data between the sorting facility and an area with access to the Internet.
 

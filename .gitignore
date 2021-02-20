@@ -4,3 +4,5 @@ _site
 .jekyll-metadata
 _vendor/
 vendor
+.jekyll-cache/
+node_modules/

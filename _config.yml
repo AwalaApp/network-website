@@ -1,22 +1,40 @@
 title: "Relaynet"
 description: "The network on which humankind can truly rely"
-author: "Relaycorp, Inc."
+permalink: /blog/:slug
 
-google_analytics: UA-22641273-3
-twitter_username: relaynet_
-facebook_username: relaynet
+defaults:
+  - values:
+      description: null
+      breadcrumbs: null
+      pagination:
+        previous: null
+        next: null
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      breadcrumbs: [blog.html]
+  - scope:
+      path: ""
+      type: drafts
+    values:
+      layout: post
+      breadcrumbs: [blog.html]
 
 markdown: kramdown
-plugins:
-  - jekyll-feed
+liquid:
+  strict_variables: true
+  strict_filters: true
 exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
-
-theme: minima
-header_pages:
-  - users.md
-  - service-providers.md
-  - couriers.md
-  - about.md
+  - node_modules
+  - .idea
+  - README.md

@@ -1,7 +1,6 @@
 ---
 title: Users
-layout: page
-permalink: /users
+description: Use Relaynet apps to remain connected when the Internet is unavailable for days at a time
 ---
 
 # Stay connected with or without the Internet
@@ -14,19 +13,11 @@ You don't need to know or trust couriers at all! It's impossible for couriers --
 
 Watch this video to get a better idea of how Relaynet will work with and without the Internet:
 
-<div class="embedded_video">
-    <iframe
-        src="https://www.youtube-nocookie.com/embed/FfmG24bZJTU"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        >
-    </iframe>
-</div>
+{% include embed_youtube_video.html id="FfmG24bZJTU" %}
 
 Relaynet will be the network on which humankind can truly rely and providing resilient communication is just the beginning. Other short-term benefits include powering a new generation of apps that will be 100% free of spam and phishing, while offering better privacy and security. In the future, Relaynet apps will circumvent online censorship without you having to install Tor or VPNs.
 
-We aim to start testing the first Relaynet app in Q1 2021, so stay tuned!
+We aim to start testing the first Relaynet apps in Q2 2021, so stay tuned!
 
 ## Help us help you
 

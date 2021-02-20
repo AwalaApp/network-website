@@ -1,0 +1,38 @@
+name: Run CI and potentially release
+on:
+  pull_request:
+  push:
+    branches: [master]
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6
+          bundler-cache: true
+      - name: Generate docs
+        run: |
+          npm install
+          bundle exec jekyll build
+
+      - name: Upload static site
+        uses: peaceiris/actions-gh-pages@v2.10.1
+        if: github.ref == 'refs/heads/master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./_site/
+        with:
+          emptyCommits: false
+          commitMessage: "${{ github.event.head_commit.message }} [skip ci]"

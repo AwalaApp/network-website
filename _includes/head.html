@@ -1,36 +1,63 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {%- seo -%}
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  {%- feed_meta -%}
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
-  {%- endif -%}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
 
-  <link rel="stylesheet" href="{{ "/custom-assets/custom.css" | relative_url }}">
+    {% if page.description -%}
+        <meta name="description" content="{{ page.description }}"/>
+    {%- endif %}
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/custom-assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/custom-assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/custom-assets/favicon-16x16.png">
-  <link rel="manifest" href="/custom-assets/site.webmanifest">
-  <link rel="mask-icon" href="/custom-assets/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}"/>
+    <script defer src="https://kit.fontawesome.com/f4f22c795b.js" crossorigin="anonymous"></script>
 
-  <script>
-    <!-- Highlight the current navigation item -->
-    document.addEventListener('DOMContentLoaded', () => {
-      (function () {
-        const currentUrl = location.pathname;
-        const menuItems = document.querySelectorAll('nav a');
-        for (let i = 0, len = menuItems.length; i < len; i++) {
-          if (menuItems[i].getAttribute("href") === currentUrl) {
-            menuItems[i].classList.add("is-active");
-          }
-        }
-      })();
-    })
-  </script>
+    <script>
+        <!-- Highlight the current navigation item -->
+        document.addEventListener('DOMContentLoaded', () => {
+            (function () {
+                const currentUrl = location.pathname;
+                const menuItems = document.querySelectorAll('.navbar-menu a');
+                for (let i = 0, len = menuItems.length; i < len; i++) {
+                    if (menuItems[i].getAttribute("href") === currentUrl) {
+                        menuItems[i].classList.add("is-active");
+                    }
+                }
+            })();
+        })
+
+        // Taken from https://bulma.io/documentation/components/navbar/#navbar-menu
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach( el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 </head>
