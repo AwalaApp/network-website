@@ -18,10 +18,6 @@ $footer-padding: 3rem 1.5rem;
   a.is-active:link, .navbar a.is-active:visited {
     font-weight: 500;
   }
-
-  .navbar-brand .navbar-item {
-    @extend .pl-0;
-  }
 }
 
 // Breadcrumbs
@@ -221,6 +217,16 @@ article.rn-blog-post .authorship {
 }
 section.rn-blog-post {
   @extend .px-0;
+}
+
+// Mailing list subscription
+
+.rn-mailing-list-subscription {
+  @extend .container;
+  @extend .box;
+  @extend .mt-6;
+  @extend .mx-5;
+  @extend .is-size-6;
 }
 
 // Other widgets
