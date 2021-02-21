@@ -68,7 +68,7 @@ That service message will be encapsulated in a parcel made up of the following p
 - The parcel id: A unique identifier for the parcel, used to drop duplicates for the same sender/recipient pair.
 - The creation and expiry dates. Used to purge invalid messages.
 - The ciphertext of the encapsulated service message.
-- The sender's digital signature of the whole parcel, to ensure its integrity. This signature contains the sender's certificate, which must've been issued by the recipient if the recipient is private.
+- The sender's digital signature of the whole parcel, to ensure its integrity. This also contains the sender's certificate, which must've been issued by the recipient if the recipient is private; in this case, the certificate would be called _Parcel Delivery Authorisation_ (PDA). If the recipient is public, no authorisation is needed, so the certificate can be self-issued.
 
 As you can see, from the outside of the parcel, you can't attribute messages to a particular user. Additionally, you could only ever attribute a message to particular service if and only if the message is bound for a public endpoint.
 
@@ -87,6 +87,11 @@ A service is centralised if the sender or the recipient must be an Internet host
 When Alice tweets from her phone, the Twitter app will use its endpoint to wrap the tweet in a parcel and pass it on to Alice' private gateway. Then, the private gateway will send the parcel to the public gateway (e.g., `frankfurt.relaycorp.cloud`) via the Internet or a courier. Finally, the public gateway will send the parcel to `twitter.com`, which will unwrap it and process it.
 
 `twitter.com` now has to notify Bob about Alice' tweet, so it starts by wrapping the tweet in a new parcel (perhaps with additional metadata, like Alice' current profile picture) and posting the parcel to Bob's public gateway (e.g., `london.relaycorp.cloud`). Then, the public gateway will send the parcel to his private gateway via the Internet or a courier. Finally, the private gateway receives the parcel and passes it on to the Twitter app, where it's unwrapped and processed.
+
+To establish the communication channel between the public endpoint (e.g., `twitter.com`) and its private peers, the desktop/mobile apps have to be shipped with an initial set of public keys from the public endpoint:
+
+- **Its long-term identity key**. Private endpoints will use this key to issue the public endpoint with a PDA, unless the public endpoint will never send parcels to the private endpoints.
+- **An ephemeral encryption key**. The private endpoint will use it to encrypt the first parcel to be sent to the public endpoint. Encryption keys are constantly rotated as parcels are exchanged.
 
 The operator of the public endpoint is required to define an SRV record for the public address. For example, if the Relaynet public address of the endpoint is `twitter.com` and the actual host receiving parcels is available on `relaynet-endpoint.twitter.com:443`, then the following SRV record should be defined:
 
@@ -113,12 +118,14 @@ If Alice and Bob shared the same public gateway, the process would be a bit simp
 
 ![](./diagrams/decentralised-service-same-gateway.png)
 
+Note that before either Alice or Bob sends the first parcel, the recipient of that parcel must've provided the sender with a PDA and an encryption key -- and because the channel hasn't been established, these will have to shared out-of-band. The first parcel could then include another PDA to allow the recipient to send messages back.
+
 ### Hybrid services
 
 The services above could benefit from using both centralisation and decentralisation. For example:
 
 - Twitter could keep tweeting as a centralised service, but direct messages could be implemented as a decentralised service.
-- WhatsApp could keep the exchange of messages as a decentralised service, but implement a centralised "user directory" to facilitate the initial introduction between users. Without a centralised service, users would have to use other means to exchange the initial cryptographic keys they need to communicate on a decentralised service, which would hurt UX.
+- WhatsApp could keep the exchange of messages as a decentralised service, but implement a centralised "user directory" to facilitate the initial introduction between users. Without a centralised service, users would have to use other means to exchange the initial PDA and encryption key, which would hurt UX.
 
 ## Adding Relaynet support to existing Internet-based services
 
