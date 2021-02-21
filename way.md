@@ -12,9 +12,9 @@ Relaynet's ultimate goal is to become the computer network on which humankind ca
 
 Realising a moonshot like that will require a great deal of effort, funding, collaboration with a wide variety of stakeholders and sustained discipline. It is therefore crucial to lay out the general approach to realise the full potential of the technology.
 
-This approach is described below in the form of principles that the author of Relaynet employed since the early conceptualisation of the technology, although most of them were initially tacit and gradually elicited.
-
 ## Principles
+
+The principles below have been employed since the early conceptualisation of the technology, although most of them were initially tacit and then gradually elicited.
 
 1. **Wars are won by picking the right battles**. We are surrounded by problems, but resources are always limited and each desideratum involves a series of compromises (including some which we won't anticipate), so we must often say "no" to things we wish we could do.
 
@@ -29,4 +29,5 @@ This approach is described below in the form of principles that the author of Re
 1. **Effective solutions are driven by real problems**. We technologists are particularly susceptible to get carried away by the potential of a new technology, but that often leads to projects whose impact doesn't match their hype because the problem was [made-up](http://www.paulgraham.com/startupideas.html) or an afterthought.
 1. **Policy is the underrated sidekick of technology**. Some problems can't be solved with purely technical solutions, and some technical solutions could be made simpler and easier to use when combined with the right legal/contractual requirements.
 1. **Financial incentives facilitate or accelerate mass adoption**. Pooling resources will help us all share an ever-growing pie too.
+1. **Empowering all humankind is our north star**, and digital colonialism threatens it.
 1. **No idea is too ambitious** as long as there is a credible plan to realise it in small steps.
