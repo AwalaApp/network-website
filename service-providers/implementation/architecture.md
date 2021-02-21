@@ -131,11 +131,11 @@ The services above could benefit from using both centralisation and decentralisa
 
 Third parties will be able to write apps that participate in your service -- just like your own apps -- if you share the specs of the messages exchanged on your service, such as the serialisation format (e.g., JSON) and the structure of each message type (e.g., "a WhatsApp message has a `message` and a `date`, and both are strings"). Doing so will make the service _open_.
 
-Consider this example: If WhatsApp were an open service, Rohingya developers could create apps better suited to them by making voice messages more prominent than text messages in the user interface. After all, [Rohingya is effectively a spoken language with no universally-accepted script](https://translatorswithoutborders.org/blog/the-language-lesson-rohingya/).
+Consider this example: If WhatsApp were an open service, Rohingya developers could create apps better suited to them by making voice messages more prominent than text messages in the user interface ([Rohingya is a spoken language with no universally-accepted script](https://translatorswithoutborders.org/blog/the-language-lesson-rohingya/)).
 
 Just like centralisation, the openness of a service is a spectrum: You can make the service totally open by making the specs publicly available, or you may share them with select third parties only. By default, services are _closed_ -- meaning that no-one else can build apps compatible with it.
 
-Note that the making a service open does not require your apps to be open source, but making at least one of its apps open source will make the service open.
+Note that the making a service open does not require apps to be open source.
 
 ## User authentication and access control
 
