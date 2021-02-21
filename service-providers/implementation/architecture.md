@@ -139,11 +139,11 @@ Note that the making a service open does not require apps to be open source.
 
 ## User authentication and access control
 
-Existing auth protocols like OAuth2 are also problematic in a DTN, since the user could be disconnected from the Internet for months or indefinitely. For example, how do you renew an OAuth2 access token before it expires? You could theoretically make it last a few years, but it wouldn't be advisable. Fortunately, Relaynet offers a DTN-compatible alternative.
+Existing auth protocols like OAuth2 are also problematic in a DTN, since the user could be disconnected from the Internet for months or indefinitely. For example, you won't always be able to renew an OAuth2 access token before it expires. Fortunately, Relaynet offers a DTN-compatible alternative.
 
 Relaynet has built-in authentication and access control for endpoints, but there's no concept of user by design (to protect their privacy). The same person could use the Android and Windows versions of your app, but the two endpoints would be completely independent of each other.
 
-If your own software has the concept of users and you want to allow your users to use the service seamlessly across devices, you should consider tracking the private address of their endpoint(s). Building on the examples above:
+If your software has the concept of users, you should store the private endpoint address(es) of each user after authenticating them. Building on the examples above:
 
 - Twitter could keep a record that Alice is using the endpoint `0deadbeef` on `frankfurt.relaycorp.cloud` and Bob is using `0deadc0de` on `london.relaycorp.cloud`.
 - Similarly, Alice' WhatsApp address book could have Bob's endpoint as `0deadc0de`on `london.relaycorp.cloud` and Bob's address book could have Alice' endpoint as `0deadbeef` on `frankfurt.relaycorp.cloud`.
