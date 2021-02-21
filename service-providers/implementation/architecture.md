@@ -127,6 +127,22 @@ The services above could benefit from using both centralisation and decentralisa
 - Twitter could keep tweeting as a centralised service, but direct messages could be implemented as a decentralised service.
 - WhatsApp could keep the exchange of messages as a decentralised service, but implement a centralised "user directory" to facilitate the initial introduction between users. Without a centralised service, users would have to use other means to exchange the initial PDA and encryption key, which would hurt UX.
 
+## User authentication and access control
+
+Existing auth protocols like OAuth2 are also problematic in a DTN, since the user could be disconnected from the Internet for months or indefinitely. For example, how do you renew an OAuth2 access token before it expires? You could theoretically make it last a few years, but it wouldn't be advisable. Fortunately, Relaynet offers a DTN-compatible alternative.
+
+Relaynet has built-in authentication and access control for endpoints, but there's no concept of user by design (to protect their privacy). The same person could use the Android and Windows versions of your app, but the two endpoints would be completely independent of each other.
+
+If your own software has the concept of users and you want to allow your users to use the service seamlessly across devices, you should consider tracking the private address of their endpoint(s). Building on the examples above:
+
+- Twitter could keep a record that Alice is using the endpoint `0deadbeef` on `frankfurt.relaycorp.cloud` and Bob is using `0deadc0de` on `london.relaycorp.cloud`.
+- Similarly, Alice' WhatsApp addressbook could have Bob's endpoint as `0deadc0de`on `london.relaycorp.cloud` and Bob's addressbook could have Alice' endpoint as `0deadbeef` on `frankfurt.relaycorp.cloud`.
+
+Finally, Multi-Factor Authentication also requires a special consideration in a DTN environment: One-time passwords can't be time- (e.g., TOTP) or challenge-response-based (e.g., SMS) because real time connectivity between endpoints is not guaranteed. They can be sequence-based (e.g., HOTP), but you should keep the following in mind:
+
+- Sequence-based tokens never expire and are therefore susceptible to bruteforce attacks.
+- For UX reasons, your desktop/mobile apps should prompt for the token preemptively, before the app at the other end starts refusing incoming messages until a new token is given.
+
 ## Adding Relaynet support to existing Internet-based services
 
 If you're adding Relaynet support to an existing Internet-based service, you'll have to create a centralised service. You may be able to reuse the existing desktop/mobile apps of the service if you own it, but you'll certainly have to build and operate a public endpoint.
@@ -149,22 +165,6 @@ You will have to build and deploy a new server-side app to act as a public endpo
 The [Relaynet proof of concept with Twitter](https://github.com/relaynet/poc) is an example of this type of integration.
 
 Alternatively, if your organisation already operates an Enterprise Service Bus, you may be able to configure it to act as a public endpoint adapter. In most cases, however, an Enterprise Service Bus will be a major overkill.
-
-## User authentication and access control
-
-Existing auth protocols like OAuth2 are also problematic in a DTN, since the user could be disconnected from the Internet for months or indefinitely. For example, how do you renew an OAuth2 access token before it expires? You could theoretically make it last a few years, but it wouldn't be advisable. Fortunately, Relaynet offers a DTN-compatible alternative.
-
-Relaynet has built-in authentication and access control for endpoints, but there's no concept of user by design (to protect their privacy). The same person could use the Android and Windows versions of your app, but the two endpoints would be completely independent of each other.
-
-If your own software has the concept of users and you want to allow your users to use the service seamlessly across devices, you should consider tracking the private address of their endpoint(s). Building on the examples above:
-
-- Twitter could keep a record that Alice is using the endpoint `0deadbeef` on `frankfurt.relaycorp.cloud` and Bob is using `0deadc0de` on `london.relaycorp.cloud`.
-- Similarly, Alice' WhatsApp addressbook could have Bob's endpoint as `0deadc0de`on `london.relaycorp.cloud` and Bob's addressbook could have Alice' endpoint as `0deadbeef` on `frankfurt.relaycorp.cloud`.
-
-Finally, Multi-Factor Authentication also requires a special consideration in a DTN environment: One-time passwords can't be time- (e.g., TOTP) or challenge-response-based (e.g., SMS) because real time connectivity between endpoints is not guaranteed. They can be sequence-based (e.g., HOTP), but you should keep the following in mind:
-
-- Sequence-based tokens never expire and are therefore susceptible to bruteforce attacks.
-- For UX reasons, your desktop/mobile apps should prompt for the token preemptively, before the app at the other end starts refusing incoming messages until a new token is given.
 
 ## Best practices
 
