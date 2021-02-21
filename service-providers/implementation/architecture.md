@@ -127,6 +127,16 @@ The services above could benefit from using both centralisation and decentralisa
 - Twitter could keep tweeting as a centralised service, but direct messages could be implemented as a decentralised service.
 - WhatsApp could keep the exchange of messages as a decentralised service, but implement a centralised "user directory" to facilitate the initial introduction between users. Without a centralised service, users would have to use other means to exchange the initial PDA and encryption key, which would hurt UX.
 
+## Relaynet services can be open to third party developers
+
+Third parties will be able to write apps that participate in your service -- just like your own apps -- if you share the specs of the messages exchanged on your service, such as the serialisation format (e.g., JSON) and the structure of each message type (e.g., "a WhatsApp message has a `message` and a `date`, and both are strings"). Doing so will make the service _open_.
+
+Consider this example: If WhatsApp were an open service, Rohingya developers could create apps better suited to them by making voice messages more prominent than text messages in the user interface. After all, [Rohingya is effectively a spoken language with no universally-accepted script](https://translatorswithoutborders.org/blog/the-language-lesson-rohingya/).
+
+Just like centralisation, the openness of a service is a spectrum: You can make the service totally open by making the specs publicly available, or you may share them with select third parties only. By default, services are _closed_ -- meaning that no-one else can build apps compatible with it.
+
+Note that the making a service open does not require your apps to be open source, but making at least one of its apps open source will make the service open.
+
 ## User authentication and access control
 
 Existing auth protocols like OAuth2 are also problematic in a DTN, since the user could be disconnected from the Internet for months or indefinitely. For example, how do you renew an OAuth2 access token before it expires? You could theoretically make it last a few years, but it wouldn't be advisable. Fortunately, Relaynet offers a DTN-compatible alternative.
