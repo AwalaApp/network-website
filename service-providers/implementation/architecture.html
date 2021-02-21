@@ -197,7 +197,7 @@
   <li>The parcel id: A unique identifier for the parcel, used to drop duplicates for the same sender/recipient pair.</li>
   <li>The creation and expiry dates. Used to purge invalid messages.</li>
   <li>The ciphertext of the encapsulated service message.</li>
-  <li>The sender’s digital signature of the whole parcel, to ensure its integrity. This signature contains the sender’s certificate, which must’ve been issued by the recipient if the recipient is private.</li>
+  <li>The sender’s digital signature of the whole parcel, to ensure its integrity. This also contains the sender’s certificate, which must’ve been issued by the recipient if the recipient is private; in this case, the certificate would be called <em>Parcel Delivery Authorisation</em> (PDA). If the recipient is public, no authorisation is needed, so the certificate can be self-issued.</li>
 </ul>
 
 <p>As you can see, from the outside of the parcel, you can’t attribute messages to a particular user. Additionally, you could only ever attribute a message to particular service if and only if the message is bound for a public endpoint.</p>
@@ -217,6 +217,13 @@
 <p>When Alice tweets from her phone, the Twitter app will use its endpoint to wrap the tweet in a parcel and pass it on to Alice’ private gateway. Then, the private gateway will send the parcel to the public gateway (e.g., <code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.cloud</code>) via the Internet or a courier. Finally, the public gateway will send the parcel to <code class="language-plaintext highlighter-rouge">twitter.com</code>, which will unwrap it and process it.</p>
 
 <p><code class="language-plaintext highlighter-rouge">twitter.com</code> now has to notify Bob about Alice’ tweet, so it starts by wrapping the tweet in a new parcel (perhaps with additional metadata, like Alice’ current profile picture) and posting the parcel to Bob’s public gateway (e.g., <code class="language-plaintext highlighter-rouge">london.relaycorp.cloud</code>). Then, the public gateway will send the parcel to his private gateway via the Internet or a courier. Finally, the private gateway receives the parcel and passes it on to the Twitter app, where it’s unwrapped and processed.</p>
+
+<p>To establish the communication channel between the public endpoint (e.g., <code class="language-plaintext highlighter-rouge">twitter.com</code>) and its private peers, the desktop/mobile apps have to be shipped with an initial set of public keys from the public endpoint:</p>
+
+<ul>
+  <li><strong>Its long-term identity key</strong>. Private endpoints will use this key to issue the public endpoint with a PDA, unless the public endpoint will never send parcels to the private endpoints.</li>
+  <li><strong>An ephemeral encryption key</strong>. The private endpoint will use it to encrypt the first parcel to be sent to the public endpoint. Encryption keys are constantly rotated as parcels are exchanged.</li>
+</ul>
 
 <p>The operator of the public endpoint is required to define an SRV record for the public address. For example, if the Relaynet public address of the endpoint is <code class="language-plaintext highlighter-rouge">twitter.com</code> and the actual host receiving parcels is available on <code class="language-plaintext highlighter-rouge">relaynet-endpoint.twitter.com:443</code>, then the following SRV record should be defined:</p>
 
@@ -244,13 +251,35 @@
 
 <p><img src="./diagrams/decentralised-service-same-gateway.png" alt="" /></p>
 
+<p>Note that before either Alice or Bob sends the first parcel, the recipient of that parcel must’ve provided the sender with a PDA and an encryption key – and because the channel hasn’t been established, these will have to shared out-of-band. The first parcel could then include another PDA to allow the recipient to send messages back.</p>
+
 <h3 id="hybrid-services">Hybrid services</h3>
 
 <p>The services above could benefit from using both centralisation and decentralisation. For example:</p>
 
 <ul>
   <li>Twitter could keep tweeting as a centralised service, but direct messages could be implemented as a decentralised service.</li>
-  <li>WhatsApp could keep the exchange of messages as a decentralised service, but implement a centralised “user directory” to facilitate the initial introduction between users. Without a centralised service, users would have to use other means to exchange the initial cryptographic keys they need to communicate on a decentralised service, which would hurt UX.</li>
+  <li>WhatsApp could keep the exchange of messages as a decentralised service, but implement a centralised “user directory” to facilitate the initial introduction between users. Without a centralised service, users would have to use other means to exchange the initial PDA and encryption key, which would hurt UX.</li>
+</ul>
+
+<h2 id="user-authentication-and-access-control">User authentication and access control</h2>
+
+<p>Existing auth protocols like OAuth2 are also problematic in a DTN, since the user could be disconnected from the Internet for months or indefinitely. For example, how do you renew an OAuth2 access token before it expires? You could theoretically make it last a few years, but it wouldn’t be advisable. Fortunately, Relaynet offers a DTN-compatible alternative.</p>
+
+<p>Relaynet has built-in authentication and access control for endpoints, but there’s no concept of user by design (to protect their privacy). The same person could use the Android and Windows versions of your app, but the two endpoints would be completely independent of each other.</p>
+
+<p>If your own software has the concept of users and you want to allow your users to use the service seamlessly across devices, you should consider tracking the private address of their endpoint(s). Building on the examples above:</p>
+
+<ul>
+  <li>Twitter could keep a record that Alice is using the endpoint <code class="language-plaintext highlighter-rouge">0deadbeef</code> on <code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.cloud</code> and Bob is using <code class="language-plaintext highlighter-rouge">0deadc0de</code> on <code class="language-plaintext highlighter-rouge">london.relaycorp.cloud</code>.</li>
+  <li>Similarly, Alice’ WhatsApp address book could have Bob’s endpoint as <code class="language-plaintext highlighter-rouge">0deadc0de</code>on <code class="language-plaintext highlighter-rouge">london.relaycorp.cloud</code> and Bob’s address book could have Alice’ endpoint as <code class="language-plaintext highlighter-rouge">0deadbeef</code> on <code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.cloud</code>.</li>
+</ul>
+
+<p>Finally, Multi-Factor Authentication also requires a special consideration in a DTN environment: One-time passwords can’t be time- (e.g., TOTP) or challenge-response-based (e.g., SMS) because real time connectivity between endpoints is not guaranteed. They can be sequence-based (e.g., HOTP), but you should keep the following in mind:</p>
+
+<ul>
+  <li>Sequence-based tokens never expire and are therefore susceptible to bruteforce attacks.</li>
+  <li>For UX reasons, your desktop/mobile apps should prompt for the token preemptively, before the app at the other end starts refusing incoming messages until a new token is given.</li>
 </ul>
 
 <h2 id="adding-relaynet-support-to-existing-internet-based-services">Adding Relaynet support to existing Internet-based services</h2>
@@ -277,26 +306,6 @@
 <p>The <a href="https://github.com/relaynet/poc">Relaynet proof of concept with Twitter</a> is an example of this type of integration.</p>
 
 <p>Alternatively, if your organisation already operates an Enterprise Service Bus, you may be able to configure it to act as a public endpoint adapter. In most cases, however, an Enterprise Service Bus will be a major overkill.</p>
-
-<h2 id="user-authentication-and-access-control">User authentication and access control</h2>
-
-<p>Existing auth protocols like OAuth2 are also problematic in a DTN, since the user could be disconnected from the Internet for months or indefinitely. For example, how do you renew an OAuth2 access token before it expires? You could theoretically make it last a few years, but it wouldn’t be advisable. Fortunately, Relaynet offers a DTN-compatible alternative.</p>
-
-<p>Relaynet has built-in authentication and access control for endpoints, but there’s no concept of user by design (to protect their privacy). The same person could use the Android and Windows versions of your app, but the two endpoints would be completely independent of each other.</p>
-
-<p>If your own software has the concept of users and you want to allow your users to use the service seamlessly across devices, you should consider tracking the private address of their endpoint(s). Building on the examples above:</p>
-
-<ul>
-  <li>Twitter could keep a record that Alice is using the endpoint <code class="language-plaintext highlighter-rouge">0deadbeef</code> on <code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.cloud</code> and Bob is using <code class="language-plaintext highlighter-rouge">0deadc0de</code> on <code class="language-plaintext highlighter-rouge">london.relaycorp.cloud</code>.</li>
-  <li>Similarly, Alice’ WhatsApp addressbook could have Bob’s endpoint as <code class="language-plaintext highlighter-rouge">0deadc0de</code>on <code class="language-plaintext highlighter-rouge">london.relaycorp.cloud</code> and Bob’s addressbook could have Alice’ endpoint as <code class="language-plaintext highlighter-rouge">0deadbeef</code> on <code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.cloud</code>.</li>
-</ul>
-
-<p>Finally, Multi-Factor Authentication also requires a special consideration in a DTN environment: One-time passwords can’t be time- (e.g., TOTP) or challenge-response-based (e.g., SMS) because real time connectivity between endpoints is not guaranteed. They can be sequence-based (e.g., HOTP), but you should keep the following in mind:</p>
-
-<ul>
-  <li>Sequence-based tokens never expire and are therefore susceptible to bruteforce attacks.</li>
-  <li>For UX reasons, your desktop/mobile apps should prompt for the token preemptively, before the app at the other end starts refusing incoming messages until a new token is given.</li>
-</ul>
 
 <h2 id="best-practices">Best practices</h2>
 
@@ -336,9 +345,6 @@
                     <li><a href="/about">About</a></li>
                     <li><a href="/legal/">Legal</a></li>
                     <li>
-                        <a href="https://github.com/relaynet" title="Relaynet on GitHub" class="icon">
-                            <i class="fab fa-github"></i>
-                        </a>
                         <a href="https://twitter.com/relaynet_" title="Relaynet on Twitter" class="icon">
                             <i class="fab fa-twitter"></i>
                         </a>
@@ -348,6 +354,9 @@
                         <a href="https://www.youtube.com/channel/UCo-KmDc5Cem1n-6yxYBRmNw" title="Relaynet on YouTube"
                            class="icon">
                             <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://github.com/relaynet" title="Relaynet on GitHub" class="icon">
+                            <i class="fab fa-github"></i>
                         </a>
                     </li>
                 </ul>
@@ -381,11 +390,11 @@
                         >Letro</a>
                     </li>
                     <li>
-                        <a href="https://github.com/relaycorp" title="Relaycorp on GitHub" class="icon">
-                            <i class="fab fa-github"></i>
-                        </a>
                         <a href="https://twitter.com/RelaycorpHQ" title="Relaycorp on Twitter" class="icon">
                             <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://github.com/relaycorp" title="Relaycorp on GitHub" class="icon">
+                            <i class="fab fa-github"></i>
                         </a>
                     </li>
                 </ul>
