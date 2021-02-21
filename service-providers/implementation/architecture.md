@@ -136,7 +136,7 @@ Relaynet has built-in authentication and access control for endpoints, but there
 If your own software has the concept of users and you want to allow your users to use the service seamlessly across devices, you should consider tracking the private address of their endpoint(s). Building on the examples above:
 
 - Twitter could keep a record that Alice is using the endpoint `0deadbeef` on `frankfurt.relaycorp.cloud` and Bob is using `0deadc0de` on `london.relaycorp.cloud`.
-- Similarly, Alice' WhatsApp addressbook could have Bob's endpoint as `0deadc0de`on `london.relaycorp.cloud` and Bob's addressbook could have Alice' endpoint as `0deadbeef` on `frankfurt.relaycorp.cloud`.
+- Similarly, Alice' WhatsApp address book could have Bob's endpoint as `0deadc0de`on `london.relaycorp.cloud` and Bob's address book could have Alice' endpoint as `0deadbeef` on `frankfurt.relaycorp.cloud`.
 
 Finally, Multi-Factor Authentication also requires a special consideration in a DTN environment: One-time passwords can't be time- (e.g., TOTP) or challenge-response-based (e.g., SMS) because real time connectivity between endpoints is not guaranteed. They can be sequence-based (e.g., HOTP), but you should keep the following in mind:
 
