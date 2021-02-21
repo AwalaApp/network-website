@@ -274,11 +274,11 @@
 
 <h2 id="user-authentication-and-access-control">User authentication and access control</h2>
 
-<p>Existing auth protocols like OAuth2 are also problematic in a DTN, since the user could be disconnected from the Internet for months or indefinitely. For example, how do you renew an OAuth2 access token before it expires? You could theoretically make it last a few years, but it wouldn’t be advisable. Fortunately, Relaynet offers a DTN-compatible alternative.</p>
+<p>Existing auth protocols like OAuth2 are also problematic in a DTN, since the user could be disconnected from the Internet for months or indefinitely. For example, you won’t always be able to renew an OAuth2 access token before it expires. Fortunately, Relaynet offers a DTN-compatible alternative.</p>
 
 <p>Relaynet has built-in authentication and access control for endpoints, but there’s no concept of user by design (to protect their privacy). The same person could use the Android and Windows versions of your app, but the two endpoints would be completely independent of each other.</p>
 
-<p>If your own software has the concept of users and you want to allow your users to use the service seamlessly across devices, you should consider tracking the private address of their endpoint(s). Building on the examples above:</p>
+<p>If your software has the concept of users, you should store the private endpoint address(es) of each user after authenticating them. Building on the examples above:</p>
 
 <ul>
   <li>Twitter could keep a record that Alice is using the endpoint <code class="language-plaintext highlighter-rouge">0deadbeef</code> on <code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.cloud</code> and Bob is using <code class="language-plaintext highlighter-rouge">0deadc0de</code> on <code class="language-plaintext highlighter-rouge">london.relaycorp.cloud</code>.</li>
