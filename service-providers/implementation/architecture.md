@@ -135,7 +135,7 @@ Consider this example: If WhatsApp were an open service, Rohingya developers cou
 
 Just like centralisation, the openness of a service is a spectrum: You can make the service totally open by making the specs publicly available, or you may share them with select third parties only. By default, services are _closed_ -- meaning that no-one else can build apps compatible with it.
 
-Note that the making a service open does not require apps to be open source.
+Note that making a service open does not require apps to be open source.
 
 ## User authentication and access control
 
