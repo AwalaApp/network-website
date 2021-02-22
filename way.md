@@ -21,7 +21,7 @@ The principles below have been employed since the early conceptualisation of the
    Examples of battles worth fighting include:
 
    - Collaborating with parties with whom we share a goal but not necessarily other goals.
-   - Delivering solutions that are [just barely good enough](http://agilemodeling.com/essays/barelyGoodEnough.html). Plausible solutions become effective by partially solving the problem at the earliest opportunity, and then gradually evolving into a more general solution.
+   - Delivering solutions that are [just barely good enough](http://agilemodeling.com/essays/barelyGoodEnough.html).
 
    In other words: Pragmatism is an imperative, but not a licence for unethical action or inaction.
 1. **Necessity and convenience drive large-scale changes; ideology alone doesn't**. The only way to reach mass adoption is to give people and organisations a convenient solution to their problems, not an ideological reason to use a solution.
