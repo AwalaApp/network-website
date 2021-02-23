@@ -16,7 +16,7 @@ If you're looking for inspiration, you could build apps to help people do the fo
 - Get answers to queries like "coronavirus symptoms" using [DuckDuckGo Instant Answers](https://help.duckduckgo.com/duckduckgo-help-pages/features/instant-answers-and-other-features/).
 - Send and receive money -- including cryptocurrencies.
 
-We'll be inviting people to prototype services by early March 2021, and we expect Relaynet to become generally available by mid-2022, as it needs to undergo stringent testing and assessments before it can be deemed safe for at-risk users.
+We'll be inviting people to prototype services in March 2021, and we expect Relaynet to become generally available by mid-2022, as it needs to undergo stringent testing and assessments before it can be deemed safe for at-risk users.
 
 Whether you're an individual or an organisation, we're here to support you in your journey to adopt Relaynet. Select one of the following options to learn more, and don't hesitate to post any questions/feedback on [our forum](https://community.relaynet.network/) -- we'd even love it if you stopped by to say hi!
 
