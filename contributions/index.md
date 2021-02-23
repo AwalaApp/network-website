@@ -6,6 +6,8 @@ title: Contributing to the Relaynet project
 
 We need an enormous amount of help to make Relaynet realise its full potential. Read on to learn how you can help us get there.
 
+We recommend that prospective contributors familiarise themselves with the [code of conduct](https://github.com/relaycorp/.github/blob/master/CODE_OF_CONDUCT.md) and [the Relaynet Way]({% link way.md %}).
+
 ## Current priority areas
 
 1. Spread the word about Relaynet, especially amongst diaspora communities.
