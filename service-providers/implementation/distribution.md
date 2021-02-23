@@ -13,9 +13,9 @@ You can distribute Relaynet apps through traditional channels, such as the Micro
 
 ## Android apps
 
-You have two options to distribute Android apps without access to the Internet:
+In addition to publishing the app on the Google Play Store, we recommend that you use the offline methods below:
 
-- [Use app signing by Google Play](https://support.google.com/googleplay/android-developer/answer/9842756?hl=en) and download the signed, universal APK from the [Google Play Console](https://play.google.com/console/). Then distribute the universal APK file (e.g., using a service like [Knapsack for Hope](https://knapsackforhope.org/)).
+- [Use app signing by Google Play](https://support.google.com/googleplay/android-developer/answer/9842756?hl=en) and distribute the _universal APK_ signed by Google, which can be downloaded from the _app bundle explorer_ on the [Google Play Console](https://play.google.com/console/). Unfortunately, [this method isn't as smooth as it should be](https://issuetracker.google.com/issues/180927886).
 - Publish the app on [F-Droid](https://f-droid.org/en/), which supports [offline installs](https://f-droid.org/en/tutorials/swap/).
 
-**It's important not to distribute self-signed APKs** because that'd require the user to disable Android's built-in protection against untrusted sources, which an adversary could exploit.
+You might also be able to distribute your APKs using satellite services like [Knapsack for Hope](https://knapsackforhope.org/) or sneakernets like [El Paquete Semanal](https://en.wikipedia.org/wiki/El_Paquete_Semanal).
