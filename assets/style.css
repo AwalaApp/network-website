@@ -3037,7 +3037,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus { color: #ee2049 !imp
 
 .mb-3, nav.breadcrumb { margin-bottom: 0.75rem !important; }
 
-.ml-3 { margin-left: 0.75rem !important; }
+.ml-3, .rn-page img.rn-side-image { margin-left: 0.75rem !important; }
 
 .mx-3 { margin-left: 0.75rem !important; margin-right: 0.75rem !important; }
 

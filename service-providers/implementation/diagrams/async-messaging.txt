@@ -1,0 +1,44 @@
+// Use on https://sequencediagram.org/
+
+title Asynchronous messaging
+
+participant Endpoint 1
+participant Broker 1
+participant ...
+participant Broker N
+participant Endpoint 2
+
+linear
+Endpoint 1->Broker 1:message1
+Broker 1->...:message1
+...->Broker N:message1
+Broker N->Endpoint 2:message1
+linear off
+
+linear
+Endpoint 2->Broker N:message2
+Broker N->...:message2
+...->Broker 1:message2
+Broker 1->Endpoint 1:message2
+linear off
+
+linear
+Endpoint 2->Broker N:message3
+Broker N->...:message3
+...->Broker 1:message3
+Broker 1->Endpoint 1:message3
+linear off
+
+linear
+Endpoint 2->Broker N:message4
+Broker N->...:message4
+...->Broker 1:message4
+Broker 1->Endpoint 1:message4
+linear off
+
+linear
+Endpoint 1->Broker 1:message5
+Broker 1->...:message5
+...->Broker N:message5
+Broker N->Endpoint 2:message5
+linear off

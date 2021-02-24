@@ -160,13 +160,13 @@
 
 <h2 id="relaynet-apps-use-asynchronous-messaging">Relaynet apps use asynchronous messaging</h2>
 
-<p><img src="./diagrams/async-messaging.png" alt="" class="rn-side-image" /></p>
-
 <p>By contrast, Relaynet apps don’t communicate with each other directly. They communicate through one or more brokers, which pass the data along and – when necessary – keep a copy of the data until the next node becomes reachable. This pattern is called <em>store-and-forward</em>, and it’s crucial in delay-tolerant networking.</p>
 
 <p>RPCs can work on store-and-forward networks, but only in theory: RPCs still require a small round-trip time. For this reason, Relaynet apps use <em>asynchronous messaging</em> instead of RPCs.</p>
 
 <p>In asynchronous messaging, apps don’t communicate through clients and servers: They communicate through peers known as <em>endpoints</em>. Endpoints send messages to each other and there’s no requirement for messages to be responded to.</p>
+
+<p><img src="./diagrams/async-messaging.png" alt="" /></p>
 
 <p>Relaynet calls the brokers above <em>gateways</em>, and each computer/smartphone using Relaynet requires a so-called <em>private gateway</em> (like <a href="https://play.google.com/store/apps/details?id=tech.relaycorp.gateway">this app in the case of Android</a>). All Relaynet-compatible apps will send and receive data through their local private gateway.</p>
 
@@ -199,10 +199,20 @@
   <li>The parcel id: A unique identifier for the parcel, used to drop duplicates for the same sender/recipient pair.</li>
   <li>The creation and expiry dates. Used to purge invalid messages.</li>
   <li>The ciphertext of the encapsulated service message.</li>
-  <li>The sender’s digital signature of the whole parcel, to ensure its integrity. This also contains the sender’s certificate, which must’ve been issued by the recipient if the recipient is private; in this case, the certificate would be called <em>Parcel Delivery Authorisation</em> (PDA). If the recipient is public, no authorisation is needed, so the certificate can be self-issued.</li>
+  <li>The sender’s digital signature to ensure the integrity of the parcel. It also contains the sender’s certificate, which will be self-issued if the recipient is a public endpoint. If the recipient is private, the sender will have to prove it’s authorised to send messages to the recipient by attaching the following certificate chain (from leaf to root):
+    <ol>
+      <li>The certificate of the sender, known as <em>Parcel Delivery Authorisation</em> (PDA) in this case.</li>
+      <li>The certificate of the recipient.</li>
+      <li>The certificate of the recipient’s private gateway. This is issued by its public gateway, but it isn’t necessary to attach the public gateway’s certificate.</li>
+    </ol>
+  </li>
 </ul>
 
-<p>As you can see, from the outside of the parcel, you can’t attribute messages to a particular user. Additionally, you could only ever attribute a message to particular service if and only if the message is bound for a public endpoint.</p>
+<p>The metadata above doesn’t include any personally-identifiable information, so it isn’t possible to attribute a parcel to a particular person. Additionally, only parcels bound for a public endpoint can be attributed to a specific service.</p>
+
+<p><img src="./diagrams/onion-routing.png" alt="" class="rn-side-image" /></p>
+
+<p>Note that Relaynet employs <em>onion routing</em>: Just like gateways can’t see the contents of service messages because they’re wrapped in parcels, <a href="/couriers">couriers</a> can’t see parcels because they’re wrapped in <em>cargoes</em>. Cargoes have the same structure as parcels, but each cargo encapsulates one or more parcels, and its sender and recipient are gateways. Cargoes are only used with couriers, not when the Internet is available.</p>
 
 <p>If you wish to learn about the cryptographic algorithms used in Relaynet, read <a href="https://specs.relaynet.network/RS-018">RS-018</a>.</p>
 
