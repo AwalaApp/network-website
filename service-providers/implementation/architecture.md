@@ -25,9 +25,9 @@ As the name implies, RPCs resemble a pattern we developers are familiar with: Fu
 
 But the thing with unreliable networks like the Internet is that things going wrong is the rule, not the exception.
 
-RPCs work well in a reliable network: One with a low round-trip time (RTT) and an adequate throughput. But clients become more complicated with the need to implement retries, timeouts and [circuit breakers](https://martinfowler.com/bliki/CircuitBreaker.html) in order to cope with an unusually high RTT or an unusually low throughput. Additionally, TLS handshakes exacerbate this issue by further delaying the transmission of the actual payload.
+RPCs work well in a reliable network: One with a low round-trip time and an adequate throughput. But clients become more complicated with the need to implement retries, timeouts and [circuit breakers](https://martinfowler.com/bliki/CircuitBreaker.html) in order to cope with an unusually high round-trip time or an unusually low throughput. Additionally, TLS handshakes exacerbate this issue by further delaying the transmission of the actual payload.
 
-Most importantly, RPCs do not work at all with RTTs in the order of days or weeks.
+Most importantly, RPCs do not work at all with round-trip times in the order of days or weeks.
 
 ## Relaynet apps use asynchronous messaging
 
