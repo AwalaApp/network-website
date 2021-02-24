@@ -57,7 +57,7 @@ Consider the following JSON-serialised service message:
 
 ```json
 {
-  "message": "Hello world",
+  "content": "Hello world",
   "date": "2014-02-19"
 }
 ```
