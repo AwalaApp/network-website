@@ -10,4 +10,4 @@ Awala was designed by [Gus Narea](https://gustavo.engineer/) at the University o
 
 The [security of the protocol suite was independently assessed](/archives/security-audit-2019-03.pdf) and Relaycorp started to build the foundation of the technology thanks to a contract with the [Open Technology Fund](https://opentech.fund/) in late 2019. Our current focus is on helping Android developers integrate Awala in their apps.
 
-"Awala" means "sibling" in Wayuu (a native South American language), and it symbolises our goal to _empower_ -- not _colonise_ -- all humankind.
+"Awala" means "sibling" in Wayuu (a native South American language), and it symbolises our goal to _empower_ -- not _digitally colonise_ -- all humankind.
