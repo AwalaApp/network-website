@@ -1,8 +1,8 @@
 ---
-title: Relaynet legal policies
+title: Awala legal policies
 ---
 
-# Relaycorp legal policies concerning Relaynet
+# Relaycorp legal policies concerning Awala
 
 We're committed to the principles of freedom of speech, personal privacy, transparency and net neutrality, as codified in our [Terms of use and Privacy Policy]({% link legal/terms.md %}).
 

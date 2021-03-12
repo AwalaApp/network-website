@@ -1,12 +1,12 @@
 ---
-title: Fund your Relaynet service
+title: Fund your Awala service
 breadcrumbs:
 - service-providers/index.md
 ---
 
-# Getting funding for a Relaynet service
+# Getting funding for an Awala service
 
-You may be able to secure funding to build a Relaynet service. There are many funding opportunities to help people subject to severe censorship, and potentially many more for the specific problem you're trying to solve, so our objective here is to give you some general guidance.
+You may be able to secure funding to build an Awala service. There are many funding opportunities to help people subject to severe censorship, and potentially many more for the specific problem you're trying to solve, so our objective here is to give you some general guidance.
 
 The [Ford Foundation](https://www.fordfoundation.org/), [NED](https://www.ned.org/apply-for-grant/en/), [OTF](https://opentech.fund/) and the [US State Department](https://www.state.gov/bureau-of-democracy-human-rights-and-labor/programs-and-grants/) are some funders in the freedom of speech space. Additionally, [OTF maintains a long list of relevant funds](https://guide.opentech.fund/appendix-iv-alternative-sources-of-support).
 
@@ -18,7 +18,7 @@ If you're making a third-party Internet service (e.g., a mainstream social netwo
 
 Some funds will be specific to your country of residence, such as [Horizon 2020](https://ec.europa.eu/programmes/horizon2020/en/) (European Union), the [Prototype Fund](https://prototypefund.de/en/) (Germany) and [Innovate UK](https://www.ukri.org/councils/innovate-uk/) (United Kingdom).
 
-Finally, please note that even though Relaynet itself has received funding from some organisations above, your application wouldn't receive any special treatment -- it will be assessed on its own merits.
+Finally, please note that even though Awala itself has received funding from some organisations above, your application wouldn't receive any special treatment -- it will be assessed on its own merits.
 
 ## Build a proof of concept early on
 
@@ -26,4 +26,4 @@ We recommend that you build a proof of concept for your service before trying to
 
 The proof of concept simply has to be functional. It doesn't have to be intuitive, feature complete or maintainable -- you're going to throw it away when you build the proper service anyway.
 
-[Learn how to build Relaynet apps]({% link service-providers/implementation/index.md %}) and [let us know if you need any help](https://community.relaynet.network/).
+[Learn how to build Awala apps]({% link service-providers/implementation/index.md %}) and [let us know if you need any help](https://community.relaynet.network/).

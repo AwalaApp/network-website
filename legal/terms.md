@@ -1,5 +1,5 @@
 ---
-title: Relaynet Terms of Use and Privacy Policy
+title: Awala Terms of Use and Privacy Policy
 breadcrumbs:
 - legal/index.md
 ---
@@ -8,11 +8,11 @@ breadcrumbs:
     Last updated: 15th February 2021
 </p>
 
-# Terms of Use and Privacy Policy - Relaynet
+# Terms of Use and Privacy Policy - Awala
 
-Relaynet is a decentralized computer network where compatible software can remain connected despite Internet blackouts. The word “Users” refers to end users of Relaynet. We, Relaycorp, provide reference software implementations of the Relaynet protocol suite and the Relaynet-Internet Gateway instances hosted under relaycorp.cloud, such as frankfurt.relaycorp.cloud, to enable you use Relaynet (the “Services”). Other third parties may provide their own servers or applications for use on Relaynet, under their own terms and conditions. Relaycorp does not control those third parties.
+Awala is a decentralized computer network where compatible software can remain connected despite Internet blackouts. The word “Users” refers to end users of Awala. We, Relaycorp, provide reference software implementations of the Awala protocol suite and the Awala-Internet Gateway instances hosted under relaycorp.cloud, such as frankfurt.relaycorp.cloud, to enable you use Awala (the “Services”). Other third parties may provide their own servers or applications for use on Awala, under their own terms and conditions. Relaycorp does not control those third parties.
 
-We will always run and distribute the open source software that's publicly available and unmodified, and we are committed to automating the process to distribute such software and making the automation code open source too. Additionally, we are committed to exploring workable ways in which we could eventually provide reasonable proof that the server-side infrastructure we operate to run Relaynet-Internet Gateway instances matches the open source code and that no backdoors have been introduced.
+We will always run and distribute the open source software that's publicly available and unmodified, and we are committed to automating the process to distribute such software and making the automation code open source too. Additionally, we are committed to exploring workable ways in which we could eventually provide reasonable proof that the server-side infrastructure we operate to run Awala-Internet Gateway instances matches the open source code and that no backdoors have been introduced.
 
 The only exception to this will be for severe security bug fixes that are easy to exploit, in which case we reserve the option to release the fix up to 48 hours before publishing the source code and disclosing the vulnerability. We do this to allow Users to patch their systems before bad actors start exploiting the vulnerability.
 
@@ -22,18 +22,18 @@ We cannot and do not guarantee the availability, bandwidth, performance or relia
 
 ## Your Information
 
-Use of Relaynet is anonymous. We do not collect email addresses, names, phone numbers, or other personal information from users. We will never sell, rent, share, or otherwise distribute user data.
+Use of Awala is anonymous. We do not collect email addresses, names, phone numbers, or other personal information from users. We will never sell, rent, share, or otherwise distribute user data.
 
-Because use of Relaynet is anonymous, we need to obtain and use the following non-personal information for very limited purposes:
+Because use of Awala is anonymous, we need to obtain and use the following non-personal information for very limited purposes:
 
 - We assign a unique identifier to your device (the “Private Gateway Address”); and
 - We may use your IP address.
 
-We process this information for the sole purpose of preventing abuse, malicious use, or unintentional harm to the Relaynet network.
+We process this information for the sole purpose of preventing abuse, malicious use, or unintentional harm to the Awala network.
 
-The Private Gateway Address is a random, cryptographically-generated value which is independent of and not associated with the user, their location and their device. We may use such addresses to automatically enforce system quotas, to analyze the server logs for the purposes of troubleshooting, or to inform future changes to the Relaynet protocol suite or its implementations.
+The Private Gateway Address is a random, cryptographically-generated value which is independent of and not associated with the user, their location and their device. We may use such addresses to automatically enforce system quotas, to analyze the server logs for the purposes of troubleshooting, or to inform future changes to the Awala protocol suite or its implementations.
 
-The Relaynet software does not share or otherwise distribute data regarding the user, the system or its environment, except as strictly necessary to provide and operate the Services.
+The Awala software does not share or otherwise distribute data regarding the user, the system or its environment, except as strictly necessary to provide and operate the Services.
 
 We do not track or perform surveillance on users. We will not run mass surveillance programs, even if requested by law enforcement or public/government authorities. If we are ever subject to a demand from law enforcement or public/government authorities, including censorship actions or requests for user information, we will consult legal counsel and assert the fullest protection of law to deny such requests when legally appropriate. We will publicly disclose such demands and requests. If we are forced to comply, we will publicly disclose that, too, and will limit our compliance to only what is strictly required. In any case, we will only respond to requests from law enforcement in the UK and the US, and any other jurisdiction where we host our server-side applications, and only to the extent that such requests are limited to data located within the requesting authority’s jurisdiction. We will never comply with requests from other jurisdictions.
 
@@ -50,7 +50,7 @@ We do not use your information for marketing or advertising purposes or monetize
 
 We may collect Other Information in a variety of ways, including:
 
-- Through your browser or device: Certain information is collected by most browsers or automatically through your device, such as your computer type (Windows or Macintosh), screen resolution, operating system name and version, device manufacturer and model, language and Internet browser type and version. We may use this information to ensure that the Services functions properly.Note that this information is not collected by the Relaynet service itself, but may be collected through the websites Relaynet uses or where Relaynet is hosted, such as such as https://relaynet.network/ and https://community.relaynet.network/.
+- Through your browser or device: Certain information is collected by most browsers or automatically through your device, such as your computer type (Windows or Macintosh), screen resolution, operating system name and version, device manufacturer and model, language and Internet browser type and version. We may use this information to ensure that the Services functions properly.Note that this information is not collected by the Awala service itself, but may be collected through the websites Awala uses or where Awala is hosted, such as such as https://relaynet.network/ and https://community.relaynet.network/.
 - IP Address: Your "IP Address" is a number that is automatically assigned to the device that you are using by your Internet Service Provider (ISP). An IP Address may be identified and logged automatically in our server log files whenever a User accesses the Services, along with the time of the visit and the page(s) that were visited. We use IP Addresses for purposes such as calculating usage levels of the Service, diagnosing server problems, and administering the Services.
 - When you contact us or provide us with information such as your email address, location, or your preferred means of communication, we collect that information solely for the purpose of responding to your communication and only when you voluntarily provide this information.
 
@@ -65,7 +65,7 @@ We seek to use reasonable organizational, technical and administrative measures 
 
 ## Network Neutrality
 
-We will treat all Relaynet-compatible applications equally, and will never favor or discriminate against any traffic based on the specific application being used, the sender or the recipient of the data, the content, or for any other reason, with the sole exception being applications intended to harm Relaycorp or Relaynet, or that violate these terms and conditions.
+We will treat all Awala-compatible applications equally, and will never favor or discriminate against any traffic based on the specific application being used, the sender or the recipient of the data, the content, or for any other reason, with the sole exception being applications intended to harm Relaycorp or Awala, or that violate these terms and conditions.
 
 ## Use of Services by Minors
 
@@ -81,7 +81,7 @@ All matters related to the Services shall be governed and constructed in accorda
 
 ## Updates to These Terms
 
-We may change these Terms. Please take a look at the "Last Updated" legend at the top of this page to see when these Terms were last revised. Any changes to the Terms will become effective when we post the revised Terms on the Services. When we make material changes to these Terms, we will make an effort to notify Users by posting a notice on social media. Because Relaynet is intended to be anonymous and is designed for use when the Internet is not available, we may not be able to notify you through the Services. Please check our social media for important announcements. You may also sign on to our mailing list for important notices and announcements by submitting an email address to [awala-terms-announcements+subscribe@googlegroups.com](mailto:awala-terms-announcements+subscribe@googlegroups.com). Your use of the Services following these changes means that you accept the revised Terms.
+We may change these Terms. Please take a look at the "Last Updated" legend at the top of this page to see when these Terms were last revised. Any changes to the Terms will become effective when we post the revised Terms on the Services. When we make material changes to these Terms, we will make an effort to notify Users by posting a notice on social media. Because Awala is intended to be anonymous and is designed for use when the Internet is not available, we may not be able to notify you through the Services. Please check our social media for important announcements. You may also sign on to our mailing list for important notices and announcements by submitting an email address to [awala-terms-announcements+subscribe@googlegroups.com](mailto:awala-terms-announcements+subscribe@googlegroups.com). Your use of the Services following these changes means that you accept the revised Terms.
 
 ## Contacting Us
 
