@@ -2,7 +2,7 @@
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Architecture of Relaynet services</title>
+    <title>Architecture of Awala services</title>
 
     
 
@@ -65,8 +65,8 @@
 <body><nav class="navbar is-spaced container is-max-widescreen" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item has-text-weight-medium" href="/">
-            <img src="/assets/images/logo.png" alt="Relaynet logo" class="mr-1">
-            Relaynet
+            <img src="/assets/images/logo.png" alt="Awala logo" class="mr-1">
+            Awala
         </a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
@@ -125,7 +125,7 @@
             <li><a href="/service-providers/">Service providers</a>
             </li>
             
-            <li><a href="/service-providers/implementation/">Implement Relaynet services</a>
+            <li><a href="/service-providers/implementation/">Implement Awala services</a>
             </li>
             
 
@@ -136,11 +136,11 @@
     
 
     <article class="rn-page">
-    <h1 id="architecture-of-relaynet-services">Architecture of Relaynet services</h1>
+    <h1 id="architecture-of-awala-services">Architecture of Awala services</h1>
 
-<p>Relaynet is a <em>Delay-Tolerant Network</em> (DTN), which means that the software running on the network can tolerate latencies lasting anywhere from a few milliseconds to an indefinite amount of time – or, in Relaynet’s case, up to 6 months. The space industry, for example, has used DTNs for decades.</p>
+<p>Awala is a <em>Delay-Tolerant Network</em> (DTN), which means that the software running on the network can tolerate latencies lasting anywhere from a few milliseconds to an indefinite amount of time – or, in Awala’s case, up to 6 months. The space industry, for example, has used DTNs for decades.</p>
 
-<p>We need delay tolerance in Relaynet in order to use alternative transport media when the Internet is not available – especially in regions where it’s never available. That way we get a wide range of transport options at our disposal, including some which may be extremely slow but very robust.</p>
+<p>We need delay tolerance in Awala in order to use alternative transport media when the Internet is not available – especially in regions where it’s never available. That way we get a wide range of transport options at our disposal, including some which may be extremely slow but very robust.</p>
 
 <p>Compared to traditional Internet software, DNT software has very different opportunities and constraints, and these have a significant impact on the overall architecture of the system. Let’s start by looking at the crux of the problem.</p>
 
@@ -158,21 +158,21 @@
 
 <p>Most importantly, RPCs do not work at all with round-trip times in the order of days or weeks.</p>
 
-<h2 id="relaynet-apps-use-asynchronous-messaging">Relaynet apps use asynchronous messaging</h2>
+<h2 id="awala-apps-use-asynchronous-messaging">Awala apps use asynchronous messaging</h2>
 
-<p>By contrast, Relaynet apps don’t communicate with each other directly. They communicate through one or more brokers, which pass the data along and – when necessary – keep a copy of the data until the next node becomes reachable. This pattern is called <em>store-and-forward</em>, and it’s crucial in delay-tolerant networking.</p>
+<p>By contrast, Awala apps don’t communicate with each other directly. They communicate through one or more brokers, which pass the data along and – when necessary – keep a copy of the data until the next node becomes reachable. This pattern is called <em>store-and-forward</em>, and it’s crucial in delay-tolerant networking.</p>
 
-<p>RPCs can work on store-and-forward networks, but only in theory: RPCs still require a small round-trip time. For this reason, Relaynet apps use <em>asynchronous messaging</em> instead of RPCs.</p>
+<p>RPCs can work on store-and-forward networks, but only in theory: RPCs still require a small round-trip time. For this reason, Awala apps use <em>asynchronous messaging</em> instead of RPCs.</p>
 
 <p>In asynchronous messaging, apps don’t communicate through clients and servers: They communicate through peers known as <em>endpoints</em>. Endpoints send messages to each other and there’s no requirement for messages to be responded to.</p>
 
 <p><img src="./diagrams/async-messaging.png" alt="" /></p>
 
-<p>Relaynet calls the brokers above <em>gateways</em>, and each computer/smartphone using Relaynet requires a so-called <em>private gateway</em> (like <a href="https://play.google.com/store/apps/details?id=tech.relaycorp.gateway">this app in the case of Android</a>). All Relaynet-compatible apps will send and receive data through their local private gateway.</p>
+<p>Awala calls the brokers above <em>gateways</em>, and each computer/smartphone using Awala requires a so-called <em>private gateway</em> (like <a href="https://play.google.com/store/apps/details?id=tech.relaycorp.gateway">this app in the case of Android</a>). All Awala-compatible apps will send and receive data through their local private gateway.</p>
 
 <p>Each private gateway is paired to a <em>public gateway</em> on the Internet, and a public gateway may serve many private gateways. By default, all private gateways are paired to <a href="https://github.com/relaycorp/cloud-gateway">public gateways operated by Relaycorp</a>, such as <code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.cloud</code>.</p>
 
-<p>Apart from routing and deduping traffic, gateways are also responsible for refusing malicious traffic: All messages going to an endpoint behind a private gateway must be pre-authorised by the recipient. If a message is not properly authorised, the first gateway to find it will drop it. Indeed, Relaynet has spam protection built-in.</p>
+<p>Apart from routing and deduping traffic, gateways are also responsible for refusing malicious traffic: All messages going to an endpoint behind a private gateway must be pre-authorised by the recipient. If a message is not properly authorised, the first gateway to find it will drop it. Indeed, Awala has spam protection built-in.</p>
 
 <p>It’s important to embrace asynchronous messaging without trying to replicate a request-response pattern. <strong>RPCs could still be emulated to some extent, but they should be generally regarded a code smell</strong>. As Hohpe and Woolf eloquently summarise in <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/Messaging.html">Enterprise Integration Patterns</a>:</p>
 
@@ -212,13 +212,13 @@
 
 <p><img src="./diagrams/onion-routing.png" alt="" class="rn-side-image" /></p>
 
-<p>Note that Relaynet employs <em>onion routing</em>: Just like gateways can’t see the contents of service messages because they’re wrapped in parcels, <a href="/couriers">couriers</a> can’t see parcels because they’re wrapped in <em>cargoes</em>. Cargoes have the same structure as parcels, but each cargo encapsulates one or more parcels, and its sender and recipient are gateways. Cargoes are only used with couriers, not when the Internet is available.</p>
+<p>Note that Awala employs <em>onion routing</em>: Just like gateways can’t see the contents of service messages because they’re wrapped in parcels, <a href="/couriers">couriers</a> can’t see parcels because they’re wrapped in <em>cargoes</em>. Cargoes have the same structure as parcels, but each cargo encapsulates one or more parcels, and its sender and recipient are gateways. Cargoes are only used with couriers, not when the Internet is available.</p>
 
-<p>If you wish to learn about the cryptographic algorithms used in Relaynet, read <a href="https://specs.relaynet.network/RS-018">RS-018</a>.</p>
+<p>If you wish to learn about the cryptographic algorithms used in Awala, read <a href="https://specs.relaynet.network/RS-018">RS-018</a>.</p>
 
-<h2 id="relaynet-makes-centralisation-a-spectrum">Relaynet makes centralisation a spectrum</h2>
+<h2 id="awala-makes-centralisation-a-spectrum">Awala makes centralisation a spectrum</h2>
 
-<p>Relaynet itself is decentralised, but services can be centralised, decentralised or somewhere in between. You get to use the degree of (de)centralisation that makes sense for your service.</p>
+<p>Awala itself is decentralised, but services can be centralised, decentralised or somewhere in between. You get to use the degree of (de)centralisation that makes sense for your service.</p>
 
 <h3 id="centralised-service">Centralised service</h3>
 
@@ -237,7 +237,7 @@
   <li><strong>An ephemeral encryption key</strong>. The private endpoint will use it to encrypt the first parcel to be sent to the public endpoint. Encryption keys are constantly rotated as parcels are exchanged.</li>
 </ul>
 
-<p>The operator of the public endpoint is required to define an SRV record for the public address. For example, if the Relaynet public address of the endpoint is <code class="language-plaintext highlighter-rouge">twitter.com</code> and the actual host receiving parcels is available on <code class="language-plaintext highlighter-rouge">relaynet-endpoint.twitter.com:443</code>, then the following SRV record should be defined:</p>
+<p>The operator of the public endpoint is required to define an SRV record for the public address. For example, if the Awala public address of the endpoint is <code class="language-plaintext highlighter-rouge">twitter.com</code> and the actual host receiving parcels is available on <code class="language-plaintext highlighter-rouge">relaynet-endpoint.twitter.com:443</code>, then the following SRV record should be defined:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_rpdc._tcp.twitter.com. 86400 IN SRV 0 5 443 relaynet-endpoint.twitter.com.
 </code></pre></div></div>
@@ -274,7 +274,7 @@
   <li>WhatsApp could keep the exchange of messages as a decentralised service, but implement a centralised “user directory” to facilitate the initial introduction between users. Without a centralised service, users would have to use other means to exchange the initial PDA and encryption key, which would hurt UX.</li>
 </ul>
 
-<h2 id="relaynet-services-can-be-open-to-third-party-developers">Relaynet services can be open to third party developers</h2>
+<h2 id="awala-services-can-be-open-to-third-party-developers">Awala services can be open to third party developers</h2>
 
 <p>Third parties will be able to write apps that participate in your service – just like your own apps – if you share the specs of the messages exchanged on your service, such as the serialisation format (e.g., JSON) and the structure of each message type (e.g., “a WhatsApp message has a <code class="language-plaintext highlighter-rouge">message</code> and a <code class="language-plaintext highlighter-rouge">date</code>, and both are strings”). Doing so will make the service <em>open</em>.</p>
 
@@ -286,9 +286,9 @@
 
 <h2 id="user-authentication-and-access-control">User authentication and access control</h2>
 
-<p>Existing auth protocols like OAuth2 are also problematic in a DTN, since the user could be disconnected from the Internet for months or indefinitely. For example, you won’t always be able to renew an OAuth2 access token before it expires. Fortunately, Relaynet offers a DTN-compatible alternative.</p>
+<p>Existing auth protocols like OAuth2 are also problematic in a DTN, since the user could be disconnected from the Internet for months or indefinitely. For example, you won’t always be able to renew an OAuth2 access token before it expires. Fortunately, Awala offers a DTN-compatible alternative.</p>
 
-<p>Relaynet has built-in authentication and access control for endpoints, but there’s no concept of user by design (to protect their privacy). The same person could use the Android and Windows versions of your app, but the two endpoints would be completely independent of each other.</p>
+<p>Awala has built-in authentication and access control for endpoints, but there’s no concept of user by design (to protect their privacy). The same person could use the Android and Windows versions of your app, but the two endpoints would be completely independent of each other.</p>
 
 <p>If your software has the concept of users, you should store the private endpoint address(es) of each user after authenticating them. Building on the examples above:</p>
 
@@ -304,17 +304,17 @@
   <li>For UX reasons, your desktop/mobile apps should prompt for the token preemptively, before the app at the other end starts refusing incoming messages until a new token is given.</li>
 </ul>
 
-<h2 id="adding-relaynet-support-to-existing-internet-based-services">Adding Relaynet support to existing Internet-based services</h2>
+<h2 id="adding-awala-support-to-existing-internet-based-services">Adding Awala support to existing Internet-based services</h2>
 
-<p>If you’re adding Relaynet support to an existing Internet-based service, you’ll have to create a centralised service. You may be able to reuse the existing desktop/mobile apps of the service if you own it, but you’ll certainly have to build and operate a public endpoint.</p>
+<p>If you’re adding Awala support to an existing Internet-based service, you’ll have to create a centralised service. You may be able to reuse the existing desktop/mobile apps of the service if you own it, but you’ll certainly have to build and operate a public endpoint.</p>
 
 <h3 id="end-user-applications">End user applications</h3>
 
-<p>In most cases, you will have to build brand-new desktop/mobile apps that are compatible with Relaynet: Putting aside the fact that you have to replace RPCs with asynchronous messaging, the <a href="/service-providers/ux">UX is likely to be different too</a>.</p>
+<p>In most cases, you will have to build brand-new desktop/mobile apps that are compatible with Awala: Putting aside the fact that you have to replace RPCs with asynchronous messaging, the <a href="/service-providers/ux">UX is likely to be different too</a>.</p>
 
 <p>If you own the service and could theoretically change the code so that RPCs are used only when the Internet is available, your codebase is likely to become too hard to maintain. However, this may be manageable in simple apps.</p>
 
-<p>If you don’t own the Internet service but its operator offers an API, you’ll definitely have to build new desktop/mobile apps that use Relaynet.</p>
+<p>If you don’t own the Internet service but its operator offers an API, you’ll definitely have to build new desktop/mobile apps that use Awala.</p>
 
 <h3 id="public-endpoint-adapter">Public endpoint adapter</h3>
 
@@ -325,13 +325,13 @@
   <li>Listen/poll for relevant events on the API of the Internet service and send the corresponding parcels to public gateways.</li>
 </ul>
 
-<p>The <a href="https://github.com/relaynet/poc">Relaynet proof of concept with Twitter</a> is an example of this type of integration.</p>
+<p>The <a href="https://github.com/relaynet/poc">Awala proof of concept with Twitter</a> is an example of this type of integration.</p>
 
 <p>Alternatively, if your organisation already operates an Enterprise Service Bus, you may be able to configure it to act as a public endpoint adapter. In most cases, however, an Enterprise Service Bus will be a major overkill.</p>
 
 <h2 id="best-practices">Best practices</h2>
 
-<p>Using Relaynet effectively boils down to embracing DTN and asynchronous messaging. As mentioned above, this involves designing components with high cohesion (lots of work locally) and low adhesion (selective work remotely). Consider the following examples:</p>
+<p>Using Awala effectively boils down to embracing DTN and asynchronous messaging. As mentioned above, this involves designing components with high cohesion (lots of work locally) and low adhesion (selective work remotely). Consider the following examples:</p>
 
 <ul>
   <li>If the app has an option to search for information, implement the search locally if possible.</li>
@@ -345,7 +345,7 @@
             
 
             <a class="pagination-next" href="/service-providers/implementation/coding">
-                    Write a Relaynet app
+                    Write an Awala app
                     <span class="icon"><i class="fas fa-arrow-right"></i></span>
                 </a>
             
@@ -358,7 +358,7 @@
     <div class="rn-footer-container">
         <div class="columns">
             <div class="column">
-                <p class="has-text-weight-semibold">Relaynet</p>
+                <p class="has-text-weight-semibold">Awala</p>
                 <ul>
                     <li><a href="/users">Users</a></li>
                     <li><a href="/service-providers/">Service providers</a></li>
@@ -367,17 +367,17 @@
                     <li><a href="/about">About</a></li>
                     <li><a href="/legal/">Legal</a></li>
                     <li>
-                        <a href="https://twitter.com/relaynet_" title="Relaynet on Twitter" class="icon">
+                        <a href="https://twitter.com/AwalaNetwork" title="Awala on Twitter" class="icon">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="https://www.facebook.com/relaynet" title="Relaynet on Facebook" class="icon">
+                        <a href="https://www.facebook.com/AwalaNetwork" title="Awala on Facebook" class="icon">
                             <i class="fab fa-facebook"></i>
                         </a>
-                        <a href="https://www.youtube.com/channel/UCo-KmDc5Cem1n-6yxYBRmNw" title="Relaynet on YouTube"
+                        <a href="https://www.youtube.com/channel/UCo-KmDc5Cem1n-6yxYBRmNw" title="Awala on YouTube"
                            class="icon">
                             <i class="fab fa-youtube"></i>
                         </a>
-                        <a href="https://github.com/relaynet" title="Relaynet on GitHub" class="icon">
+                        <a href="https://github.com/relaynet" title="Awala on GitHub" class="icon">
                             <i class="fab fa-github"></i>
                         </a>
                     </li>
@@ -393,7 +393,7 @@
                     <li><a href="https://specs.relaynet.network/">Protocol suite specs</a></li>
                     <li><a href="https://github.com/relaycorp/.github/blob/master/CODE_OF_CONDUCT.md">Code of
                         conduct</a></li>
-                    <li><a href="/way">The Relaynet Way</a></li>
+                    <li><a href="/way">The Awala Way</a></li>
                 </ul>
             </div>
 
