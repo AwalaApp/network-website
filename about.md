@@ -9,3 +9,5 @@ The long-term goal of Awala (formerly known as _Relaynet_) is to complement the 
 Awala was designed by [Gus Narea](https://gustavo.engineer/) at the University of Oxford with the initial goal of circumventing censorship by repressive governments, and he later founded [Relaycorp](https://relaycorp.tech/) to support and scale the project while keeping it as open and inclusive as possible.
 
 The [security of the protocol suite was independently assessed](/archives/security-audit-2019-03.pdf) and Relaycorp started to build the foundation of the technology thanks to a contract with the [Open Technology Fund](https://opentech.fund/) in late 2019. Our current focus is on helping Android developers integrate Awala in their apps.
+
+"Awala" means "sibling" in Wayuu (a native South American language), and it symbolises our goal to _empower_ -- not _colonise_ -- all humankind.
