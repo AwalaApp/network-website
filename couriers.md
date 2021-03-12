@@ -5,7 +5,7 @@ description: Restore connectivity when the Internet has been cut off. Do it for 
 
 # Keep yourself and those around you connected
 
-When the Internet is unavailable, restore connectivity around you by becoming a Awala courier. Do it for profit, the greater good or both. The only equipment you need is a phone, a tablet or a computer.
+When the Internet is unavailable, restore connectivity around you by becoming an Awala courier. Do it for profit, the greater good or both. The only equipment you need is a phone, a tablet or a computer.
 
 Your job is to _relay_ data between Awala users' devices and the Internet during an Internet blackout. You'd have a route, and at each stop you'd deliver and collect data. When you stop at a location with no access to the Internet, you'd be able to exchange data with people around you by having them connect to your device. When you stop at a location with access to the Internet, you'd send all the data you collected and you'd then collect new data that should be delivered to people on your route.
 

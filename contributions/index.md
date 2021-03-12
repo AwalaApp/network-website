@@ -11,7 +11,7 @@ We recommend that prospective contributors familiarise themselves with the [code
 ## Current priority areas
 
 1. Spread the word about Awala, especially amongst diaspora communities.
-1. If you're an Android developer, consider [building or prototyping a Awala-compatible app]({% link service-providers/index.md %}).
+1. If you're an Android developer, consider [building or prototyping an Awala-compatible app]({% link service-providers/index.md %}).
 1. If you're a UX designer and have experience with Offline First / Delay-Tolerant Networking, please give us feedback on our [UX guidelines for service providers]({% link service-providers/ux.md %}).
 
 ## Upcoming priority areas

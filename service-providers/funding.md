@@ -4,9 +4,9 @@ breadcrumbs:
 - service-providers/index.md
 ---
 
-# Getting funding for a Awala service
+# Getting funding for an Awala service
 
-You may be able to secure funding to build a Awala service. There are many funding opportunities to help people subject to severe censorship, and potentially many more for the specific problem you're trying to solve, so our objective here is to give you some general guidance.
+You may be able to secure funding to build an Awala service. There are many funding opportunities to help people subject to severe censorship, and potentially many more for the specific problem you're trying to solve, so our objective here is to give you some general guidance.
 
 The [Ford Foundation](https://www.fordfoundation.org/), [NED](https://www.ned.org/apply-for-grant/en/), [OTF](https://opentech.fund/) and the [US State Department](https://www.state.gov/bureau-of-democracy-human-rights-and-labor/programs-and-grants/) are some funders in the freedom of speech space. Additionally, [OTF maintains a long list of relevant funds](https://guide.opentech.fund/appendix-iv-alternative-sources-of-support).
 

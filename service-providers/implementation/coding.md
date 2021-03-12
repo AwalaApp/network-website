@@ -1,5 +1,5 @@
 ---
-title: Write a Awala app
+title: Write an Awala app
 breadcrumbs:
 - service-providers/index.md
 - service-providers/implementation/index.md
@@ -8,7 +8,7 @@ pagination:
   next: service-providers/implementation/distribution.md
 ---
 
-# Write a Awala app
+# Write an Awala app
 
 Relaycorp offers high-level, open source libraries to make it easy to write desktop, mobile, CLI and server-side apps that communicate with Awala. You'll basically have to pick the appropriate library for your platform, and use it whenever you need to send or receive data.
 
