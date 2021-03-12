@@ -1,14 +1,14 @@
 ---
-title: The Relaynet Way
+title: The Awala Way
 ---
 
-# The Relaynet Way
+# The Awala Way
 
-This document describes the guiding principles of Relaynet since its conception, which will help explain the rationale for many design decisions and future direction of the project, from both technical and non-technical perspectives.
+This document describes the guiding principles of Awala since its conception, which will help explain the rationale for many design decisions and future direction of the project, from both technical and non-technical perspectives.
 
 ## Background
 
-Relaynet's ultimate goal is to become the computer network on which humankind can truly rely. In concrete terms, that means providing all human beings with uncensored and timely communication anywhere in the universe -- without impairing the [fundamental rights](https://www.un.org/en/universal-declaration-human-rights/) of other human beings.
+Awala's ultimate goal is to become the computer network on which humankind can truly rely. In concrete terms, that means providing all human beings with uncensored and timely communication anywhere in the universe -- without impairing the [fundamental rights](https://www.un.org/en/universal-declaration-human-rights/) of other human beings.
 
 Realising a moonshot like that will require a great deal of effort, funding, collaboration with a wide variety of stakeholders and sustained discipline. It is therefore crucial to lay out the general approach to realise the full potential of the technology.
 

@@ -1,5 +1,5 @@
 ---
-title: Distribute Relaynet apps
+title: Distribute Awala apps
 breadcrumbs:
 - service-providers/index.md
 - service-providers/implementation/index.md
@@ -7,9 +7,9 @@ pagination:
   previous: service-providers/implementation/coding.md
 ---
 
-# Distribute Relaynet apps
+# Distribute Awala apps
 
-You can distribute Relaynet apps through traditional channels, such as the Microsoft Store or the Google Play Store. However, you may want to offer additional channels for those users who need to install and start using your app without access to the Internet.
+You can distribute Awala apps through traditional channels, such as the Microsoft Store or the Google Play Store. However, you may want to offer additional channels for those users who need to install and start using your app without access to the Internet.
 
 ## Android apps
 
