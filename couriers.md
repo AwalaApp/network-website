@@ -25,6 +25,6 @@ We're also working on ways to conceal the fact you're a courier in the first pla
 
 ## Help us serve you well
 
-We want to make sure Awala will serve you well as a courier, so please reach out to us if you have any questions, concerns or suggestions. We're particularly keen to hear about your motivation to become a courier, so we can adapt our roadmap accordingly. Feel free to send us a private message on [Facebook](https://www.facebook.com/relaynet/) or [Twitter](https://twitter.com/relaynet_).
+We want to make sure Awala will serve you well as a courier, so please reach out to us if you have any questions, concerns or suggestions. We're particularly keen to hear about your motivation to become a courier, so we can adapt our roadmap accordingly. Feel free to send us a private message on [Facebook](https://www.facebook.com/AwalaNetwork/) or [Twitter](https://twitter.com/AwalaNetwork_).
 
 {% include subscription-cta.html group="couriers" %}

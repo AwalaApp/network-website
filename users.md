@@ -23,10 +23,10 @@ We aim to start testing the first Awala apps in Q2 2021, so stay tuned!
 
 If you like the sound of this and want to help, the best way to do so is by getting the software that you use to add support for Awala. For example, tell [Facebook][cta_facebook], [Twitter][cta_twitter] or [WhatsApp][cta_whatsapp] that you wish they supported Awala.
 
-Also, don't be a stranger! Say hi on [Facebook](https://www.facebook.com/relaynet/) or [Twitter](https://twitter.com/relaynet_), and tell us why you're excited about Awala. Questions and requests are also welcomed. We prefer public discussions but we understand if you'd rather chat in private.
+Also, don't be a stranger! Say hi on [Facebook](https://www.facebook.com/relaynet/) or [Twitter](https://twitter.com/AwalaNetwork), and tell us why you're excited about Awala. Questions and requests are also welcomed. We prefer public discussions but we understand if you'd rather chat in private.
 
 {% include subscription-cta.html group="users" %}
 
-[cta_facebook]: https://twitter.com/intent/tweet?url=https%3A%2F%2Frelaynet.network%2F&via=relaynet_&text=.@Facebook%2C%20please%20add%20support%20for%20Relaynet%20so%20I%20can%20continue%20to%20use%20Facebook%20when%20the%20Internet%20is%20cut%20off&hashtags=KeepItOn
-[cta_twitter]: https://twitter.com/intent/tweet?url=https%3A%2F%2Frelaynet.network%2F&via=relaynet_&text=.@Twitter%2C%20please%20add%20support%20for%20Relaynet%20so%20I%20can%20continue%20to%20use%20Twitter%20when%20the%20Internet%20is%20cut%20off&hashtags=KeepItOn
-[cta_whatsapp]: https://twitter.com/intent/tweet?url=https%3A%2F%2Frelaynet.network%2F&via=relaynet_&text=.@WhatsApp%2C%20please%20add%20support%20for%20Relaynet%20so%20I%20can%20continue%20to%20use%20WhatsApp%20when%20the%20Internet%20is%20cut%20off&hashtags=KeepItOn
+[cta_facebook]: https://twitter.com/intent/tweet?url=https%3A%2F%2Frelaynet.network%2F&via=AwalaNetwork&text=.@Facebook%2C%20please%20add%20support%20for%20Relaynet%20so%20I%20can%20continue%20to%20use%20Facebook%20when%20the%20Internet%20is%20cut%20off&hashtags=KeepItOn
+[cta_twitter]: https://twitter.com/intent/tweet?url=https%3A%2F%2Frelaynet.network%2F&via=AwalaNetwork&text=.@Twitter%2C%20please%20add%20support%20for%20Relaynet%20so%20I%20can%20continue%20to%20use%20Twitter%20when%20the%20Internet%20is%20cut%20off&hashtags=KeepItOn
+[cta_whatsapp]: https://twitter.com/intent/tweet?url=https%3A%2F%2Frelaynet.network%2F&via=AwalaNetwork&text=.@WhatsApp%2C%20please%20add%20support%20for%20Relaynet%20so%20I%20can%20continue%20to%20use%20WhatsApp%20when%20the%20Internet%20is%20cut%20off&hashtags=KeepItOn
