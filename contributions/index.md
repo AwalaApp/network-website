@@ -18,7 +18,7 @@ We recommend that prospective contributors familiarise themselves with the [code
 
 Please bear with us whilst we pave the way for people to contribute to the items below:
 
-- Test the [Awala](https://play.google.com/store/apps/details?id=tech.relaycorp.gateway) and [courier](https://play.google.com/store/apps/details?id=tech.relaycorp.courier) apps on Android, and give us feedback on [the forum](https://community.relaynet.network/). We're particularly keen to hear whether anything breaks on older phones. This is blocked by the release of the [Awala Ping for Android](https://github.com/relaycorp/relaynet-ping-android/) (due by March 2021).
+- Test the [Awala](https://play.google.com/store/apps/details?id=tech.relaycorp.gateway) and [courier](https://play.google.com/store/apps/details?id=tech.relaycorp.courier) apps on Android, and give us feedback on [the forum](https://community.awala.network/). We're particularly keen to hear whether anything breaks on older phones. This is blocked by the release of the [Awala Ping for Android](https://github.com/relaycorp/relaynet-ping-android/) (due by March 2021).
 - Build or prototype Windows/Linux apps once we release the Awala app for desktop.
 - Translate the Android and desktop apps to your native language(s). This is currently blocked by two things:
   - We want to wait until the text has been finalised.
@@ -35,7 +35,7 @@ Please refer to [our documentation for contributors on GitHub](https://github.co
 
 An earlier version of the protocol suite was [independently assessed](../archives/security-audit-2019-03.pdf) and we'll arrange for the initial implementation of Awala to be independently audited too. However, we want Awala to be throughly reviewed before we put it in front of at-risk users, so please:
 
-1. If you have a background in cryptography and/or networking, consider reviewing the [specs](https://specs.relaynet.network/), and the apps and libraries we've built so far -- in particular:
+1. If you have a background in cryptography and/or networking, consider reviewing the [specs](https://specs.awala.network/), and the apps and libraries we've built so far -- in particular:
     - The core Awala libraries for [Node.js](https://github.com/relaycorp/relaynet-core-js) and the [JVM](https://github.com/relaycorp/relaynet-jvm).
     - [Awala Gateway for Android](https://github.com/relaycorp/relaynet-gateway-android).
     - [Awala-Internet Gateway](https://github.com/relaycorp/relaynet-internet-gateway) (Node.js, Kubernetes).

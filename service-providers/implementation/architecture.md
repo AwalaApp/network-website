@@ -79,7 +79,7 @@ The metadata above doesn't include any personally-identifiable information, so i
 
 Note that Awala employs _onion routing_: Just like gateways can't see the contents of service messages because they're wrapped in parcels, [couriers]({% link couriers.md %}) can't see parcels because they're wrapped in _cargoes_. Cargoes have the same structure as parcels, but each cargo encapsulates one or more parcels, and its sender and recipient are gateways. Cargoes are only used with couriers, not when the Internet is available.
 
-If you wish to learn about the cryptographic algorithms used in Awala, read [RS-018](https://specs.relaynet.network/RS-018).
+If you wish to learn about the cryptographic algorithms used in Awala, read [RS-018](https://specs.awala.network/RS-018).
 
 ## Awala makes centralisation a spectrum
 

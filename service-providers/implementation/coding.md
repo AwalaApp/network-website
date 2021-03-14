@@ -12,4 +12,4 @@ pagination:
 
 Relaycorp offers high-level, open source libraries to make it easy to write desktop, mobile, CLI and server-side apps that communicate with Awala. You'll basically have to pick the appropriate library for your platform, and use it whenever you need to send or receive data.
 
-We currently support Android, JVM and Node.js applications. Check out [codelabs.relaynet.network](https://codelabs.relaynet.network) to get started! And don't hesitate to stop by [the forum](https://community.relaynet.network/) if you have any questions.
+We currently support Android, JVM and Node.js applications. Check out [codelabs.awala.network](https://codelabs.awala.network) to get started! And don't hesitate to stop by [the forum](https://community.awala.network/) if you have any questions.
