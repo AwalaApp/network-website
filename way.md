@@ -16,14 +16,12 @@ Realising a moonshot like that will require a great deal of effort, funding, col
 
 The principles below have been employed since the early conceptualisation of the technology, although most of them were initially tacit and then gradually elicited.
 
-1. **Wars are won by picking the right battles**. We are surrounded by problems, but resources are always limited and each desideratum involves a series of compromises (including some which we won't anticipate), so we must often say "no" to things we wish we could do.
+1. **Wars are won by picking the right battles**. We are surrounded by problems, but resources are always limited and each desideratum involves a series of compromises (including some which we won't anticipate), so we must often say "no" to things we wish we could do. For example, we will:
 
-   Examples of battles worth fighting include:
+   - Collaborate with parties with whom we share a goal but not necessarily other goals.
+   - Strive to deliver solutions that are [just barely good enough](http://agilemodeling.com/essays/barelyGoodEnough.html).
 
-   - Collaborating with parties with whom we share a goal but not necessarily other goals.
-   - Delivering solutions that are [just barely good enough](http://agilemodeling.com/essays/barelyGoodEnough.html).
-
-   In other words: Pragmatism is an imperative, but not a licence for unethical action or inaction.
+   Having said this, pragmatism and focus are not licences for unethical action or inaction.
 1. **Necessity and convenience drive large-scale changes; ideology alone doesn't**. The only way to reach mass adoption is to give people and organisations a convenient solution to their problems, not an ideological reason to use a solution.
 1. **Privacy, security and usability are equally important, but usability has veto power**. When forced to choose, we'll prioritise non-technical people over tech-savvy people.
 1. **Effective solutions are driven by real problems**. We technologists are particularly susceptible to get carried away by the potential of a new technology, but that often leads to projects whose impact doesn't match their hype because the problem was [made-up](http://www.paulgraham.com/startupideas.html) or an afterthought.
