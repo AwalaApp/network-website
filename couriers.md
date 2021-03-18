@@ -21,7 +21,7 @@ Naturally, you have the most important job in restoring connectivity in the even
 
 It's impossible for you -- or anyone who intercepts you -- to view or change the data you transport. Only the sender can change it and only the recipient can view it. That means you can't be coerced into revealing or changing anything. All you can do is delete the data, if you so wish.
 
-We're also working on ways to conceal the fact you're a courier in the first place, in case you were intercepted. Such measures may not be ready by the time we start running some early testing by Q1 2021, but they'd certainly be implemented before we make the software generally available.
+We're also working on ways to conceal the fact you're a courier in the first place, in case you were intercepted. Such measures may not be ready by the time we start running some early testing by Q2 2021, but they'd certainly be implemented before we make the software generally available.
 
 ## Help us serve you well
 

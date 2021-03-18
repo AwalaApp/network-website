@@ -18,7 +18,7 @@ We recommend that prospective contributors familiarise themselves with the [code
 
 Please bear with us whilst we pave the way for people to contribute to the items below:
 
-- Test the [Awala](https://play.google.com/store/apps/details?id=tech.relaycorp.gateway) and [courier](https://play.google.com/store/apps/details?id=tech.relaycorp.courier) apps on Android, and give us feedback on [the forum](https://community.awala.network/). We're particularly keen to hear whether anything breaks on older phones. This is blocked by the release of the [Awala Ping for Android](https://github.com/relaycorp/relaynet-ping-android/) (due by March 2021).
+- Test the [Awala](https://play.google.com/store/apps/details?id=tech.relaycorp.gateway) and [courier](https://play.google.com/store/apps/details?id=tech.relaycorp.courier) apps on Android, and give us feedback on [the forum](https://community.awala.network/). We're particularly keen to hear whether anything breaks on older phones. This is blocked by the release of the [Awala Ping for Android](https://github.com/relaycorp/relaynet-ping-android/) (due by early April 2021).
 - Build or prototype Windows/Linux apps once we release the Awala app for desktop.
 - Translate the Android and desktop apps to your native language(s). This is currently blocked by two things:
   - We want to wait until the text has been finalised.
