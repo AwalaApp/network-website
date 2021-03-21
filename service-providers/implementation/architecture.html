@@ -237,16 +237,16 @@
   <li><strong>An ephemeral encryption key</strong>. The private endpoint will use it to encrypt the first parcel to be sent to the public endpoint. Encryption keys are constantly rotated as parcels are exchanged.</li>
 </ul>
 
-<p>The operator of the public endpoint is required to define an SRV record for the public address. For example, if the Awala public address of the endpoint is <code class="language-plaintext highlighter-rouge">twitter.com</code> and the actual host receiving parcels is available on <code class="language-plaintext highlighter-rouge">relaynet-endpoint.twitter.com:443</code>, then the following SRV record should be defined:</p>
+<p>The operator of the public endpoint is required to define an SRV record for the public address. For example, if the Awala public address of the endpoint is <code class="language-plaintext highlighter-rouge">twitter.com</code> and the actual host receiving parcels is available on <code class="language-plaintext highlighter-rouge">awala-endpoint.twitter.com:443</code>, then the following SRV record should be defined:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_awala-pdc._tcp.twitter.com. 86400 IN SRV 0 5 443 relaynet-endpoint.twitter.com.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_awala-pdc._tcp.twitter.com. 86400 IN SRV 0 5 443 awala-endpoint.twitter.com.
 </code></pre></div></div>
 
 <p>Additionally:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">twitter.com</code> is required to use DNSSEC.</li>
-  <li><code class="language-plaintext highlighter-rouge">relaynet-endpoint.twitter.com:443</code> must be a TLS 1.2+ host and use a valid certificate for <code class="language-plaintext highlighter-rouge">relaynet-endpoint.twitter.com</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">awala-endpoint.twitter.com:443</code> must be a TLS 1.2+ host and use a valid certificate for <code class="language-plaintext highlighter-rouge">awala-endpoint.twitter.com</code>.</li>
 </ul>
 
 <h3 id="decentralised-service">Decentralised service</h3>
