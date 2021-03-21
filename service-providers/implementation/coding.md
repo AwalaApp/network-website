@@ -10,6 +10,6 @@ pagination:
 
 # Write an Awala app
 
-Relaycorp offers high-level, open source libraries to make it easy to write desktop, mobile, CLI and server-side apps that communicate with Awala. You'll basically have to pick the appropriate library for your platform, and use it whenever you need to send or receive data.
+Relaycorp offers high-level, open source libraries to make it easy to write desktop, mobile, CLI and server-side apps that communicate with Awala. We currently support Node.js, JVM and Android applications.
 
-We currently support Android, JVM and Node.js applications. Check out [codelabs.awala.network](https://codelabs.awala.network) to get started! And don't hesitate to stop by [the forum](https://community.awala.network/) if you have any questions.
+Check out [codelabs.awala.network](https://codelabs.awala.network) to get started! So far we've documented how to build [Android apps](https://codelabs.awala.network/codelabs/android-centralised/) that communicate with a [Node.js backend](https://codelabs.awala.network/codelabs/nodejs-pong/), but more codelabs are coming soon.
