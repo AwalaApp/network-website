@@ -239,7 +239,7 @@
 
 <p>The operator of the public endpoint is required to define an SRV record for the public address. For example, if the Awala public address of the endpoint is <code class="language-plaintext highlighter-rouge">twitter.com</code> and the actual host receiving parcels is available on <code class="language-plaintext highlighter-rouge">relaynet-endpoint.twitter.com:443</code>, then the following SRV record should be defined:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_rpdc._tcp.twitter.com. 86400 IN SRV 0 5 443 relaynet-endpoint.twitter.com.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_awala-pdc._tcp.twitter.com. 86400 IN SRV 0 5 443 relaynet-endpoint.twitter.com.
 </code></pre></div></div>
 
 <p>Additionally:</p>
