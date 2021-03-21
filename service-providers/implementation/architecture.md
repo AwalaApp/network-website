@@ -103,7 +103,7 @@ To establish the communication channel between the public endpoint (e.g., `twitt
 The operator of the public endpoint is required to define an SRV record for the public address. For example, if the Awala public address of the endpoint is `twitter.com` and the actual host receiving parcels is available on `relaynet-endpoint.twitter.com:443`, then the following SRV record should be defined:
 
 ```
-_rpdc._tcp.twitter.com. 86400 IN SRV 0 5 443 relaynet-endpoint.twitter.com.
+_awala-pdc._tcp.twitter.com. 86400 IN SRV 0 5 443 relaynet-endpoint.twitter.com.
 ```
 
 Additionally:
