@@ -100,16 +100,16 @@ To establish the communication channel between the public endpoint (e.g., `twitt
 - **Its long-term identity key**. Private endpoints will use this key to issue the public endpoint with a PDA, unless the public endpoint will never send parcels to the private endpoints.
 - **An ephemeral encryption key**. The private endpoint will use it to encrypt the first parcel to be sent to the public endpoint. Encryption keys are constantly rotated as parcels are exchanged.
 
-The operator of the public endpoint is required to define an SRV record for the public address. For example, if the Awala public address of the endpoint is `twitter.com` and the actual host receiving parcels is available on `relaynet-endpoint.twitter.com:443`, then the following SRV record should be defined:
+The operator of the public endpoint is required to define an SRV record for the public address. For example, if the Awala public address of the endpoint is `twitter.com` and the actual host receiving parcels is available on `awala-endpoint.twitter.com:443`, then the following SRV record should be defined:
 
 ```
-_awala-pdc._tcp.twitter.com. 86400 IN SRV 0 5 443 relaynet-endpoint.twitter.com.
+_awala-pdc._tcp.twitter.com. 86400 IN SRV 0 5 443 awala-endpoint.twitter.com.
 ```
 
 Additionally:
 
 - `twitter.com` is required to use DNSSEC.
-- `relaynet-endpoint.twitter.com:443` must be a TLS 1.2+ host and use a valid certificate for `relaynet-endpoint.twitter.com`.
+- `awala-endpoint.twitter.com:443` must be a TLS 1.2+ host and use a valid certificate for `awala-endpoint.twitter.com`.
 
 ### Decentralised service
 
