@@ -98,6 +98,12 @@ nav.breadcrumb li {
   @extend .is-max-desktop;
 }
 
+.rn-footer-legal {
+  @extend .content;
+  @extend .has-text-centered;
+  @extend .is-size-7;
+}
+
 // Homepage
 
 .rn-homepage {
