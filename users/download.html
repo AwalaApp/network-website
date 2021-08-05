@@ -2,9 +2,9 @@
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Users</title>
+    <title>Download Awala</title>
 
-    <meta name="description" content="Use Awala apps to remain connected when the Internet is unavailable for days at a time"/>
+    <meta name="description" content="How to download Awala with and without access to the Internet"/>
 
     <link rel="stylesheet" href="/assets/style.css"/>
     <script defer src="https://kit.fontawesome.com/f4f22c795b.js" crossorigin="anonymous"></script>
@@ -52,6 +52,22 @@
         });
     </script>
 
+    
+        <script
+            src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"
+            integrity="sha256-1/0GA1EkYejtvYFoa+rSq4LfM4m5zKI13Z1bQIhI4Co="
+            crossorigin="anonymous"
+            defer
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/cash-dom@8.1.0/dist/cash.min.js"
+            integrity="sha256-xb3jchN35UY4gwqlR0mSg/dtv25q4yWmXmIg/WscJYo="
+            crossorigin="anonymous"
+            defer
+        ></script>
+
+    <script src="/assets/js/private_gateway_download.js" defer></script>
+
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
@@ -78,7 +94,7 @@
 
     <div id="navbarMenu" class="navbar-menu">
         <div class="navbar-start">
-            <a class="navbar-item" href="/users">
+            <a class="navbar-item" href="/users/">
                 Users
             </a>
 
@@ -119,103 +135,44 @@
 </nav>
 <section class="rn-main is-max-desktop">
     
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            
+            <li><a href="/users/">Users</a>
+            </li>
+            
+
+            <!-- Add a trailing, empty item to get Bulma to add a separator at the end -->
+            <li class="is-active"></li>
+        </ul>
+    </nav>
+    
 
     <article class="rn-page">
-    <h1 id="stay-connected-with-or-without-the-internet">Stay connected with or without the Internet</h1>
+    <h1 id="download-awala">Download Awala</h1>
 
-<p>As amazing and ubiquitous as the Internet is, we can’t count on it when we need it most – it just wasn’t built to withstand repressive regimes, natural disasters, terrorist attacks or wars. By contrast, Awala was expressly conceived for those scenarios.</p>
+<p>Please keep in mind that <strong>there are no Awala-compatible apps for the general public yet</strong>. Most people downloading Awala today are software developers who want to build apps on top of it.</p>
 
-<p>When you’re connected to the Internet, Awala-compatible apps will simply use it and you won’t notice a difference. But when you’re disconnected from the Internet, you can get <a href="./couriers">couriers</a> to securely transport your apps’ data to and from the Internet – without ever handing over your device to anyone.</p>
+<p>Note that by downloading, distributing and using Awala, you agree to abide by <a href="/legal/terms">our terms of service</a>.</p>
 
-<p>You don’t need to know or trust couriers at all! It’s impossible for couriers – or anyone who intercepts them – to see or change your apps’ data. They can’t even see which apps you’re using or link that data to you. The worst damage that a courier can cause is to drop your data along the way, and even then Awala will seamlessly detect it and correct it.</p>
+<div class="rn-gw-download">
+    <p class="pending">
+        Downloading data about latest releases...
+        <progress class="progress is-small is-info" max="100"></progress>
+    </p>
+</div>
 
-<p>Watch this video to get a better idea of how Awala will work with and without the Internet:</p>
+<h2 id="we-work-hard-not-to-let-you-down">We work hard not to let you down!</h2>
 
-<figure class="rl-youtube-video">
-    <iframe src="https://www.youtube-nocookie.com/embed/FfmG24bZJTU?cc_load_policy=1" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-    </iframe>
-</figure>
+<p>We’re committed to the principles of freedom of speech, personal privacy, transparency and net neutrality. When you use the Awala app, you can be certain that it’s only going to be transmitting the data that’s strictly necessary for it work. So there’s no <em>phoning home</em>, pesky ads or analytics!</p>
 
-<p>Awala will be the network on which humankind can truly rely and providing resilient communication is just the beginning. Other short-term benefits include powering a new generation of apps that will be 100% free of spam and phishing, while offering better privacy and security. In the future, Awala apps will circumvent online censorship without you having to install Tor or VPNs.</p>
+<p>The best thing is that you don’t have to take our word for it:</p>
 
-<p>We aim to start testing the first Awala apps in Q2 2021, so stay tuned!</p>
-
-<h2 id="help-us-help-you">Help us help you</h2>
-
-<p>If you like the sound of this and want to help, the best way to do so is by getting the software that you use to add support for Awala. For example, tell <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fawala.network%2F&amp;via=AwalaNetwork&amp;text=.@Facebook%2C%20please%20add%20support%20for%20Relaynet%20so%20I%20can%20continue%20to%20use%20Facebook%20when%20the%20Internet%20is%20cut%20off&amp;hashtags=KeepItOn">Facebook</a>, <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fawala.network%2F&amp;via=AwalaNetwork&amp;text=.@Twitter%2C%20please%20add%20support%20for%20Relaynet%20so%20I%20can%20continue%20to%20use%20Twitter%20when%20the%20Internet%20is%20cut%20off&amp;hashtags=KeepItOn">Twitter</a> or <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fawala.network%2F&amp;via=AwalaNetwork&amp;text=.@WhatsApp%2C%20please%20add%20support%20for%20Relaynet%20so%20I%20can%20continue%20to%20use%20WhatsApp%20when%20the%20Internet%20is%20cut%20off&amp;hashtags=KeepItOn">WhatsApp</a> that you wish they supported Awala.</p>
-
-<p>Also, don’t be a stranger! Say hi on <a href="https://www.facebook.com/relaynet/">Facebook</a> or <a href="https://twitter.com/AwalaNetwork">Twitter</a>, and tell us why you’re excited about Awala. Questions and requests are also welcomed. We prefer public discussions but we understand if you’d rather chat in private.</p>
-
-<section class="rn-mailing-list-subscription">
-    <h2>Get important updates in your inbox</h2>
-
-    <div>
-        <form action="https://tech.us18.list-manage.com/subscribe/post?u=64c7889aa5e76799fa98a8175&amp;id=1a4de7a050" class="validate" method="post" name="mc-embedded-subscribe-form" target="_blank">
-            <div class="field">
-                <label class="label" for="mce-EMAIL">What's your email address?</label>
-                <div class="control has-icons-left">
-                    <input class="input" id="mce-EMAIL" name="EMAIL" type="email" placeholder="you@example.com" required="" />
-                    <span class="icon is-left">
-                        <i class="fas fa-envelope"></i>
-                    </span>
-                </div>
-            </div>
-
-            <div class="field">
-                <p class="label">What do you want to hear about?</p>
-
-                <div class="control columns">
-                    <label class="checkbox column" for="mce-group[7424]-7424-0">
-                        <input id="mce-group[7424]-7424-0" name="group[7424][1]" type="checkbox" value="1" checked="checked" />
-                        Using Awala
-                    </label>
-                    <label class="checkbox column" for="mce-group[7424]-7424-1">
-                        <input id="mce-group[7424]-7424-1" name="group[7424][2]" type="checkbox" value="2" />
-                        Building Awala-compatible apps
-                    </label>
-                    <label class="checkbox column" for="mce-group[7424]-7424-2">
-                        <input id="mce-group[7424]-7424-2" name="group[7424][4]" type="checkbox" value="4" />
-                        Becoming a courier
-                    </label>
-                    <label class="checkbox column" for="mce-group[7424]-7424-3">
-                        <input id="mce-group[7424]-7424-3" name="group[7424][8]" type="checkbox" value="8" />
-                        Contributing to the project
-                    </label>
-                </div>
-            </div>
-
-            <div class="field">
-                <p class="label">Do you agree to receive emails from Relaycorp?</p>
-
-                <label for="gdpr_88524">
-                    <input class="av-checkbox gdpr" id="gdpr_88524" name="gdpr[88524]" type="checkbox" value="Y" required="" />
-                    I understand <a href="/legal/">Relaycorp's policies</a> and authorize them to send
-                    me emails about Awala.
-                </label>
-                <div class="help">
-                    <p>
-                        You can unsubscribe at any time. We won't share your data with third parties other than Mailchimp,
-                        which we use as our marketing platform. By subscribing, you also acknowledge that your information
-                        will be transferred to Mailchimp for processing, where it will be subject to
-                        <a href="https://mailchimp.com/legal/" target="_blank">their policies</a>.
-                    </p>
-                </div>
-            </div>
-
-            <div class="clear" id="mce-responses">
-                <div class="response" id="mce-error-response" style="display:none"></div>
-                <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>
-
-            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div aria-hidden="true" style="position: absolute; left: -5000px;"><input name="b_64c7889aa5e76799fa98a8175_1a4de7a050" tabindex="-1" type="text" value="" /></div>
-            <div class="buttons is-centered">
-                <input class="button is-primary" name="subscribe" type="submit" value="Subscribe" />
-            </div>
-        </form>
-    </div>
-</section>
-
+<ul>
+  <li>All the software components that make up the network are open source. If you can’t find it on <a href="https://github.com/relaycorp">GitHub</a>, it doesn’t exist.</li>
+  <li>The process to distribute the software is fully automated and – yes, you guessed it! – also open source.</li>
+  <li>Our commitments are actually codified in our <a href="/legal/terms">Terms of use and Privacy Policy</a>.</li>
+</ul>
 
 
     
@@ -228,7 +185,7 @@
             <div class="column">
                 <p class="has-text-weight-semibold">Awala</p>
                 <ul>
-                    <li><a href="/users">Users</a></li>
+                    <li><a href="/users/">Users</a></li>
                     <li><a href="/service-providers/">Service providers</a></li>
                     <li><a href="/couriers">Couriers</a></li>
                     <li><a href="/blog/">Blog</a></li>
