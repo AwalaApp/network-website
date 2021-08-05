@@ -26,5 +26,5 @@ We're committed to the principles of freedom of speech, personal privacy, transp
 The best thing is that you don't have to take our word for it:
 
 - All the software components that make up the network are open source. If you can't find it on [GitHub](https://github.com/relaycorp), it doesn't exist.
-- The process to package and distribute the software is fully automated and also open source.
+- The process to package and distribute the software is fully automated, and also open source.
 - Our commitments are actually codified in our [Terms of use and Privacy Policy]({% link legal/terms.md %}).
