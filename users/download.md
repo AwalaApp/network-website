@@ -21,7 +21,7 @@ Note that by downloading, distributing and using Awala, you agree to abide by [o
 
 ## We work hard not to let you down!
 
-We're committed to the principles of freedom of speech, personal privacy, transparency and net neutrality. When you use the Awala app, you can be certain that it's only going to be transmitting the data that's strictly necessary for it work. So there's no _phoning home_, pesky ads or analytics!
+We're committed to the principles of freedom of speech, personal privacy, transparency and net neutrality. When you use the Awala app, you can be certain that it's only going to be transmitting the data that's strictly necessary. So there's no _phoning home_, pesky ads or analytics!
 
 The best thing is that you don't have to take our word for it:
 
