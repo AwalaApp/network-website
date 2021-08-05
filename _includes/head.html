@@ -53,6 +53,20 @@
         });
     </script>
 
+    {% for library_name in page.js.libraries -%}
+        {% assign library = site.javascript_libraries[library_name] %}
+        <script
+            src="https://cdn.jsdelivr.net/npm/{{ library_name }}@{{ library.version }}/{{ library.path }}"
+            integrity="{{ library.digest }}"
+            crossorigin="anonymous"
+            defer
+        ></script>
+    {%- endfor %}
+
+    {% for script_name in page.js.scripts -%}
+        <script src="{{ '/assets/js/' | relative_url | append: script_name }}" defer></script>
+    {%- endfor %}
+
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">

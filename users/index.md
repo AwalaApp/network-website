@@ -11,13 +11,22 @@ When you're connected to the Internet, Awala-compatible apps will simply use it 
 
 You don't need to know or trust couriers at all! It's impossible for couriers -- or anyone who intercepts them -- to see or change your apps' data. They can't even see which apps you're using or link that data to you. The worst damage that a courier can cause is to drop your data along the way, and even then Awala will seamlessly detect it and correct it.
 
-Watch this video to get a better idea of how Awala will work with and without the Internet:
+Watch this video to get a better idea of how Awala works with and without the Internet:
 
 {% include embed_youtube_video.html id="FfmG24bZJTU" %}
 
 Awala will be the network on which humankind can truly rely and providing resilient communication is just the beginning. Other short-term benefits include powering a new generation of apps that will be 100% free of spam and phishing, while offering better privacy and security. In the future, Awala apps will circumvent online censorship without you having to install Tor or VPNs.
 
-We aim to start testing the first Awala apps in Q2 2021, so stay tuned!
+## Download Awala
+
+**There are no general purpose, Awala-compatible apps just yet**. Most people downloading Awala today are software developers who want to build apps on top of it, but you're most welcome to download it and play with it -- just bear in mind you won't get very far.
+
+<div class="buttons is-centered">
+  <a class="button is-link" href="{% link users/download.md %}">
+    <i class="fas fa-download"></i>
+    Download Awala
+  </a>
+</div>
 
 ## Help us help you
 

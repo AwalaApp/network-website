@@ -9,6 +9,9 @@ defaults:
       pagination:
         previous: null
         next: null
+      js:
+        libraries: []
+        scripts: []
   - scope:
       path: ""
       type: pages
@@ -38,3 +41,17 @@ exclude:
   - node_modules
   - .idea
   - README.md
+
+# Custom variables
+
+javascript_libraries:
+  cash-dom:
+    # https://www.jsdelivr.com/package/npm/cash-dom
+    version: 8.1.0
+    digest: "sha256-xb3jchN35UY4gwqlR0mSg/dtv25q4yWmXmIg/WscJYo="
+    path: "dist/cash.min.js"
+  mustache:
+    # https://www.jsdelivr.com/package/npm/mustache
+    version: 4.2.0
+    digest: "sha256-1/0GA1EkYejtvYFoa+rSq4LfM4m5zKI13Z1bQIhI4Co="
+    path: "mustache.min.js"

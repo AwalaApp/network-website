@@ -1,0 +1,113 @@
+<div class="os-selector">
+    <ul>
+        <li class="android">
+            <a onclick="setActiveOS('android')">
+                <span class="icon is-small"><i class="fab fa-android" aria-hidden="true"></i></span>
+                <span>Android</span>
+            </a>
+        </li>
+        <li class="linux">
+            <a onclick="setActiveOS('linux')">
+                <span class="icon is-small"><i class="fab fa-linux" aria-hidden="true"></i></span>
+                <span>Linux</span>
+            </a>
+        </li>
+        <li class="macos">
+            <a onclick="setActiveOS('macos')">
+                <span class="icon is-small"><i class="fab fa-apple" aria-hidden="true"></i></span>
+                <span>macOS</span>
+            </a>
+        </li>
+        <li class="windows">
+            <a onclick="setActiveOS('windows')">
+                <span class="icon is-small"><i class="fab fa-windows" aria-hidden="true"></i></span>
+                <span>Windows</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="os-body">
+    <div class="android is-hidden">
+        <div class="buttons is-centered">
+            <a class="button is-link" href="https://play.google.com/store/apps/details?id=tech.relaycorp.gateway">
+                <i class="fas fa-download"></i>
+                Install Awala from the Google Play Store
+            </a>
+        </div>
+
+        <p>
+            We're planning to publish Awala on F-Droid too to facilitate offline distribution.
+            Stay tuned!
+        </p>
+
+        <p>
+            Please considering <a href="https://support.google.com/googleplay/answer/7003180">joining the beta
+            testing programme</a> if you have a reliable Internet connection and are happy to give us feedback
+            ahead of an eventual release to all users.
+        </p>
+    </div>
+
+    <div class="linux">
+        <div class="buttons is-centered">
+            <a class="button is-link" href="{{ desktop.linuxDownloadURL }}">
+                <i class="fas fa-download"></i>
+                Download Awala for Linux
+            </a>
+        </div>
+
+        <p>
+            Awala is currently distributed as an <a href="https://appimage.org/">AppImage</a>, which
+            means you have to edit the permissions of the file to make it executable
+            before you use it for the first time.
+        </p>
+
+        <p>We're planning to publish Awala on <a href="https://snapcraft.io/">Snapcraft</a>. Stay tuned!</p>
+
+        <p>
+            If you're a technical person looking for the source code, you'll find it on
+            <a href="{{ desktop.githubRepoURL }}"><i class="fab fa-github"></i> {{ desktop.githubRepoName }}</a>.
+        </p>
+    </div>
+
+    <div class="macos">
+        <div class="buttons is-centered">
+            <a class="button is-link" href="{{ desktop.windowsDownloadURL }}">
+                <i class="fas fa-download"></i>
+                Download Awala for macOS
+            </a>
+        </div>
+
+        <p>
+            macOS support is currently experimental and its installer is not signed by Relaycorp.
+        </p>
+
+        <p>We're planning to publish Awala on the App Store eventually. Stay tuned!</p>
+
+        <p>
+            If you're a technical person looking for the source code, you'll find it on
+            <a href="{{ desktop.githubRepoURL }}"><i class="fab fa-github"></i> {{ desktop.githubRepoName }}</a>.
+        </p>
+    </div>
+
+    <div class="windows">
+        <div class="buttons is-centered">
+            <a class="button is-link" href="{{ desktop.windowsDownloadURL }}">
+                <i class="fas fa-download"></i>
+                Download Awala for Windows
+            </a>
+        </div>
+
+        <p>
+            Windows should report <em>Relaycorp, Inc.</em> as the publisher of the installer. Do not
+            proceed with the installation if Windows reports a different publisher.
+        </p>
+
+        <p>We're planning to publish Awala on the Microsoft Store eventually. Stay tuned!</p>
+
+        <p>
+            If you're a technical person looking for the source code, you'll find it on
+            <a href="{{ desktop.githubRepoURL }}"><i class="fab fa-github"></i> {{ desktop.githubRepoName }}</a>.
+        </p>
+    </div>
+</div>

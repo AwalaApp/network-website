@@ -226,6 +226,33 @@ section.rn-blog-post {
   @extend .px-0;
 }
 
+// Page: Private gateway download
+.rn-gw-download {
+  @extend .container;
+  @extend .box;
+  @extend .mx-6;
+
+  .pending {
+    @extend .mx-5;
+    @extend .is-size-6;
+  }
+
+  .os-selector {
+    @extend .tabs;
+    @extend .is-centered;
+
+    ul {
+      @extend .mx-0;
+    }
+  }
+
+  .os-body {
+    p {
+      @extend .is-size-6;
+    }
+  }
+}
+
 // Mailing list subscription
 
 .rn-mailing-list-subscription {
