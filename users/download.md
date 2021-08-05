@@ -15,7 +15,7 @@ js:
 
 Please keep in mind that **there are no Awala-compatible apps for the general public yet**. Most people downloading Awala today are software developers who want to build apps on top of it.
 
-Note that by downloading, distributing and using Awala, you agree to abide by [our terms of service]({% link legal/terms.md %}).
+By downloading, distributing and using Awala, you agree to abide by [our terms of service]({% link legal/terms.md %}).
 
 {% include awala_download.html %}
 
