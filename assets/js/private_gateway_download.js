@@ -26,11 +26,14 @@ async function getReleaseData() {
         `${DESKTOP_GW_RELEASE_ASSET_PREFIX}/v${desktopVersion}/Awala-${desktopVersion}.dmg`;
     const windowsDownloadURL =
         `${DESKTOP_GW_RELEASE_ASSET_PREFIX}/v${desktopVersion}/Awala.Setup.${desktopVersion}.exe`;
-    const githubRepoName = `${ORG_NAME}/${DESKTOP_GW_REPO}`;
     return {
+        android: {
+            githubRepoName: `${ORG_NAME}/${ANDROID_GW_REPO}`,
+            githubRepoURL: `https://github.com/${ORG_NAME}/${ANDROID_GW_REPO}`,
+        },
         desktop: {
-            githubRepoName,
-            githubRepoURL: `https://github.com/${githubRepoName}`,
+            githubRepoName: `${ORG_NAME}/${DESKTOP_GW_REPO}`,
+            githubRepoURL: `https://github.com/${ORG_NAME}/${DESKTOP_GW_REPO}`,
             linuxDownloadURL,
             macosDownloadURL,
             windowsDownloadURL,
