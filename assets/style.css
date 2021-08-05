@@ -3067,7 +3067,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus { color: #ee2049 !imp
 
 .ml-5 { margin-left: 1.5rem !important; }
 
-.mx-5, .rn-mailing-list-subscription, .rn-gw-download .pending { margin-left: 1.5rem !important; margin-right: 1.5rem !important; }
+.mx-5, .rn-mailing-list-subscription, .rn-gw-download .pending, .rn-gw-download { margin-left: 1.5rem !important; margin-right: 1.5rem !important; }
 
 .my-5 { margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
 
@@ -3081,7 +3081,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus { color: #ee2049 !imp
 
 .ml-6 { margin-left: 3rem !important; }
 
-.mx-6, .rn-gw-download { margin-left: 3rem !important; margin-right: 3rem !important; }
+.mx-6 { margin-left: 3rem !important; margin-right: 3rem !important; }
 
 .my-6 { margin-top: 3rem !important; margin-bottom: 3rem !important; }
 
