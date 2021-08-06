@@ -15,13 +15,13 @@ js:
 
 Please keep in mind that **there are no Awala-compatible apps for the general public yet**. Most people downloading Awala today are software developers who want to build apps on top of it.
 
-By downloading, distributing and using Awala, you agree to abide by [our terms of service]({% link legal/terms.md %}).
+By downloading, distributing or using Awala, you agree to abide by [our terms of service]({% link legal/terms.md %}).
 
 {% include awala_download.html %}
 
-## We work hard not to let you down!
+## We work hard not to let you down
 
-We're committed to the principles of freedom of speech, personal privacy, transparency and net neutrality. When you use the Awala app, you can be certain that it's only going to be transmitting the data that's strictly necessary. So there's no _phoning home_, pesky ads or analytics!
+We're committed to the principles of freedom of speech, personal privacy, transparency and net neutrality. When you use the Awala app, you can be certain that there's nothing dodgy going on behind the scenes: there's no _phoning home_, pesky ads or analytics.
 
 The best thing is that you don't have to take our word for it:
 
