@@ -13,7 +13,7 @@ You don't need to know or trust couriers at all! It's impossible for couriers --
 
 Watch this video to get a better idea of how Awala works with and without the Internet:
 
-{% include embed_youtube_video.html id="FfmG24bZJTU" %}
+{% include embed_youtube_video.html id="LL1Z9EGiMVc" %}
 
 Awala will be the network on which humankind can truly rely and providing resilient communication is just the beginning. Other short-term benefits include powering a new generation of apps that will be 100% free of spam and phishing, while offering better privacy and security. In the future, Awala apps will circumvent online censorship without you having to install Tor or VPNs separately.
 
