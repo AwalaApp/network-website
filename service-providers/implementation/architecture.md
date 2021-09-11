@@ -13,7 +13,7 @@ Awala is a _Delay-Tolerant Network_ (DTN), which means that the software running
 
 We need delay tolerance in Awala in order to use alternative transport media when the Internet is not available -- especially in regions where it's never available. That way we get a wide range of transport options at our disposal, including some which may be extremely slow but very robust.
 
-Compared to traditional Internet software, DNT software has very different opportunities and constraints, and these have a significant impact on the overall architecture of the system. Let's start by looking at the crux of the problem.
+Compared to traditional Internet software, DTN software has very different opportunities and constraints, and these have a significant impact on the overall architecture of the system. Let's start by looking at the crux of the problem.
 
 ## Internet apps use remote procedure calls
 
