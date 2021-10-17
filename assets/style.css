@@ -114,13 +114,13 @@ a.box:active, a.rn-mailing-list-subscription:active, a.rn-gw-download:active { b
 
 .button strong, .rn-main .buttons a strong { color: inherit; }
 
-.button .icon, .button .rn-blog-post .rn-author-bio .rn-author-bio-content div ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .button ul, .rn-main .buttons a .icon, .rn-main .buttons a .rn-blog-post .rn-author-bio .rn-author-bio-content div ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .rn-main .buttons a ul, .button .icon.is-small, .button .icon.is-medium, .button .icon.is-large { height: 1.5em; width: 1.5em; }
+.button .icon, .button .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .button a, .rn-main .buttons a .icon, .rn-main .buttons a .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .rn-main .buttons a a, .button .icon.is-small, .button .icon.is-medium, .button .icon.is-large { height: 1.5em; width: 1.5em; }
 
-.button .icon:first-child:not(:last-child), .button .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:first-child:not(:last-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div .button ul:first-child:not(:last-child), .rn-main .buttons a .icon:first-child:not(:last-child), .rn-main .buttons a .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:first-child:not(:last-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div .rn-main .buttons a ul:first-child:not(:last-child) { margin-left: calc(-0.5em - 1px); margin-right: 0.25em; }
+.button .icon:first-child:not(:last-child), .button .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:first-child:not(:last-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .button a:first-child:not(:last-child), .rn-main .buttons a .icon:first-child:not(:last-child), .rn-main .buttons a .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:first-child:not(:last-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .rn-main .buttons a a:first-child:not(:last-child) { margin-left: calc(-0.5em - 1px); margin-right: 0.25em; }
 
-.button .icon:last-child:not(:first-child), .button .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:last-child:not(:first-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div .button ul:last-child:not(:first-child), .rn-main .buttons a .icon:last-child:not(:first-child), .rn-main .buttons a .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:last-child:not(:first-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div .rn-main .buttons a ul:last-child:not(:first-child) { margin-left: 0.25em; margin-right: calc(-0.5em - 1px); }
+.button .icon:last-child:not(:first-child), .button .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:last-child:not(:first-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .button a:last-child:not(:first-child), .rn-main .buttons a .icon:last-child:not(:first-child), .rn-main .buttons a .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:last-child:not(:first-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .rn-main .buttons a a:last-child:not(:first-child) { margin-left: 0.25em; margin-right: calc(-0.5em - 1px); }
 
-.button .icon:first-child:last-child, .button .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:first-child:last-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div .button ul:first-child:last-child, .rn-main .buttons a .icon:first-child:last-child, .rn-main .buttons a .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:first-child:last-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div .rn-main .buttons a ul:first-child:last-child { margin-left: calc(-0.5em - 1px); margin-right: calc(-0.5em - 1px); }
+.button .icon:first-child:last-child, .button .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:first-child:last-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .button a:first-child:last-child, .rn-main .buttons a .icon:first-child:last-child, .rn-main .buttons a .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:first-child:last-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .rn-main .buttons a a:first-child:last-child { margin-left: calc(-0.5em - 1px); margin-right: calc(-0.5em - 1px); }
 
 .button:hover, .rn-main .buttons a:hover, .button.is-hovered, .rn-main .buttons a.is-hovered { border-color: #b5b5b5; color: #363636; }
 
@@ -716,21 +716,21 @@ a.box:active, a.rn-mailing-list-subscription:active, a.rn-gw-download:active { b
 
 .content.is-large, .is-large.rn-blog-post, .rn-homepage section.is-large, .is-large.rn-footer-legal, .is-large.rn-main { font-size: 1.5rem; }
 
-.icon, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul { align-items: center; display: inline-flex; justify-content: center; height: 1.5rem; width: 1.5rem; }
+.icon, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a { align-items: center; display: inline-flex; justify-content: center; height: 1.5rem; width: 1.5rem; }
 
-.icon.is-small, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul.is-small { height: 1rem; width: 1rem; }
+.icon.is-small, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a.is-small { height: 1rem; width: 1rem; }
 
-.icon.is-medium, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul.is-medium { height: 2rem; width: 2rem; }
+.icon.is-medium, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a.is-medium { height: 2rem; width: 2rem; }
 
-.icon.is-large, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul.is-large { height: 3rem; width: 3rem; }
+.icon.is-large, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a.is-large { height: 3rem; width: 3rem; }
 
 .icon-text, .rn-homepage .rn-homepage-hero ul li { align-items: flex-start; color: inherit; display: inline-flex; flex-wrap: wrap; line-height: 1.5rem; vertical-align: top; }
 
-.icon-text .icon, .icon-text .rn-blog-post .rn-author-bio .rn-author-bio-content div ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .icon-text ul, .rn-homepage .rn-homepage-hero ul li .icon, .rn-homepage .rn-homepage-hero ul li .rn-blog-post .rn-author-bio .rn-author-bio-content div ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .rn-homepage .rn-homepage-hero ul li ul { flex-grow: 0; flex-shrink: 0; }
+.icon-text .icon, .icon-text .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .icon-text a, .rn-homepage .rn-homepage-hero ul li .icon, .rn-homepage .rn-homepage-hero .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a, .rn-blog-post .rn-author-bio .rn-author-bio-content div .rn-homepage .rn-homepage-hero ul li a { flex-grow: 0; flex-shrink: 0; }
 
-.icon-text .icon:not(:last-child), .icon-text .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:not(:last-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div .icon-text ul:not(:last-child), .rn-homepage .rn-homepage-hero ul li .icon:not(:last-child), .rn-homepage .rn-homepage-hero ul li .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:not(:last-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div .rn-homepage .rn-homepage-hero ul li ul:not(:last-child) { margin-right: 0.25em; }
+.icon-text .icon:not(:last-child), .icon-text .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:not(:last-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .icon-text a:not(:last-child), .rn-homepage .rn-homepage-hero ul li .icon:not(:last-child), .rn-homepage .rn-homepage-hero .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:not(:last-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div .rn-homepage .rn-homepage-hero ul li a:not(:last-child) { margin-right: 0.25em; }
 
-.icon-text .icon:not(:first-child), .icon-text .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:not(:first-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div .icon-text ul:not(:first-child), .rn-homepage .rn-homepage-hero ul li .icon:not(:first-child), .rn-homepage .rn-homepage-hero ul li .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:not(:first-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div .rn-homepage .rn-homepage-hero ul li ul:not(:first-child) { margin-left: 0.25em; }
+.icon-text .icon:not(:first-child), .icon-text .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:not(:first-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .icon-text a:not(:first-child), .rn-homepage .rn-homepage-hero ul li .icon:not(:first-child), .rn-homepage .rn-homepage-hero .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:not(:first-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div .rn-homepage .rn-homepage-hero ul li a:not(:first-child) { margin-left: 0.25em; }
 
 div.icon-text { display: flex; }
 
@@ -1085,11 +1085,11 @@ div.icon-text { display: flex; }
 
 .tag.is-large:not(body) { font-size: 1.25rem; }
 
-.tag:not(body) .icon:first-child:not(:last-child), .tag:not(body) .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:first-child:not(:last-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div .tag:not(body) ul:first-child:not(:last-child) { margin-left: -0.375em; margin-right: 0.1875em; }
+.tag:not(body) .icon:first-child:not(:last-child), .tag:not(body) .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:first-child:not(:last-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .tag:not(body) a:first-child:not(:last-child) { margin-left: -0.375em; margin-right: 0.1875em; }
 
-.tag:not(body) .icon:last-child:not(:first-child), .tag:not(body) .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:last-child:not(:first-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div .tag:not(body) ul:last-child:not(:first-child) { margin-left: 0.1875em; margin-right: -0.375em; }
+.tag:not(body) .icon:last-child:not(:first-child), .tag:not(body) .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:last-child:not(:first-child), .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .tag:not(body) a:last-child:not(:first-child) { margin-left: 0.1875em; margin-right: -0.375em; }
 
-.tag:not(body) .icon:first-child:last-child, .tag:not(body) .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:first-child:last-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div .tag:not(body) ul:first-child:last-child { margin-left: -0.375em; margin-right: -0.375em; }
+.tag:not(body) .icon:first-child:last-child, .tag:not(body) .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:first-child:last-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .tag:not(body) a:first-child:last-child { margin-left: -0.375em; margin-right: -0.375em; }
 
 .tag.is-delete:not(body) { margin-left: 1px; padding: 0; position: relative; width: 2em; }
 
@@ -1636,23 +1636,23 @@ a.tag:hover { text-decoration: underline; }
 
 .control { box-sizing: border-box; clear: both; font-size: 1rem; position: relative; text-align: inherit; }
 
-.control.has-icons-left .input:focus ~ .icon, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div .input:focus ~ ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-left .input:focus ~ ul, .control.has-icons-left .select:focus ~ .icon, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div .select:focus ~ ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-left .select:focus ~ ul, .control.has-icons-right .input:focus ~ .icon, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div .input:focus ~ ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-right .input:focus ~ ul, .control.has-icons-right .select:focus ~ .icon, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div .select:focus ~ ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-right .select:focus ~ ul { color: #4a4a4a; }
+.control.has-icons-left .input:focus ~ .icon, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .input:focus ~ a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-left .input:focus ~ a, .control.has-icons-left .select:focus ~ .icon, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .select:focus ~ a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-left .select:focus ~ a, .control.has-icons-right .input:focus ~ .icon, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .input:focus ~ a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-right .input:focus ~ a, .control.has-icons-right .select:focus ~ .icon, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .select:focus ~ a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-right .select:focus ~ a { color: #4a4a4a; }
 
-.control.has-icons-left .input.is-small ~ .icon, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div .input.is-small ~ ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-left .input.is-small ~ ul, .control.has-icons-left .select.is-small ~ .icon, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div .select.is-small ~ ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-left .select.is-small ~ ul, .control.has-icons-right .input.is-small ~ .icon, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div .input.is-small ~ ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-right .input.is-small ~ ul, .control.has-icons-right .select.is-small ~ .icon, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div .select.is-small ~ ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-right .select.is-small ~ ul { font-size: 0.75rem; }
+.control.has-icons-left .input.is-small ~ .icon, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .input.is-small ~ a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-left .input.is-small ~ a, .control.has-icons-left .select.is-small ~ .icon, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .select.is-small ~ a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-left .select.is-small ~ a, .control.has-icons-right .input.is-small ~ .icon, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .input.is-small ~ a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-right .input.is-small ~ a, .control.has-icons-right .select.is-small ~ .icon, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .select.is-small ~ a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-right .select.is-small ~ a { font-size: 0.75rem; }
 
-.control.has-icons-left .input.is-medium ~ .icon, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div .input.is-medium ~ ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-left .input.is-medium ~ ul, .control.has-icons-left .select.is-medium ~ .icon, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div .select.is-medium ~ ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-left .select.is-medium ~ ul, .control.has-icons-right .input.is-medium ~ .icon, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div .input.is-medium ~ ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-right .input.is-medium ~ ul, .control.has-icons-right .select.is-medium ~ .icon, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div .select.is-medium ~ ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-right .select.is-medium ~ ul { font-size: 1.25rem; }
+.control.has-icons-left .input.is-medium ~ .icon, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .input.is-medium ~ a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-left .input.is-medium ~ a, .control.has-icons-left .select.is-medium ~ .icon, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .select.is-medium ~ a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-left .select.is-medium ~ a, .control.has-icons-right .input.is-medium ~ .icon, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .input.is-medium ~ a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-right .input.is-medium ~ a, .control.has-icons-right .select.is-medium ~ .icon, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .select.is-medium ~ a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-right .select.is-medium ~ a { font-size: 1.25rem; }
 
-.control.has-icons-left .input.is-large ~ .icon, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div .input.is-large ~ ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-left .input.is-large ~ ul, .control.has-icons-left .select.is-large ~ .icon, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div .select.is-large ~ ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-left .select.is-large ~ ul, .control.has-icons-right .input.is-large ~ .icon, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div .input.is-large ~ ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-right .input.is-large ~ ul, .control.has-icons-right .select.is-large ~ .icon, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div .select.is-large ~ ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-right .select.is-large ~ ul { font-size: 1.5rem; }
+.control.has-icons-left .input.is-large ~ .icon, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .input.is-large ~ a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-left .input.is-large ~ a, .control.has-icons-left .select.is-large ~ .icon, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .select.is-large ~ a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-left .select.is-large ~ a, .control.has-icons-right .input.is-large ~ .icon, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .input.is-large ~ a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-right .input.is-large ~ a, .control.has-icons-right .select.is-large ~ .icon, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .select.is-large ~ a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-right .select.is-large ~ a { font-size: 1.5rem; }
 
-.control.has-icons-left .icon, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-left ul, .control.has-icons-right .icon, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-right ul { color: #dbdbdb; height: 2.5em; pointer-events: none; position: absolute; top: 0; width: 2.5em; z-index: 4; }
+.control.has-icons-left .icon, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-left a, .control.has-icons-right .icon, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-right a { color: #dbdbdb; height: 2.5em; pointer-events: none; position: absolute; top: 0; width: 2.5em; z-index: 4; }
 
 .control.has-icons-left .input, .control.has-icons-left .select select { padding-left: 2.5em; }
 
-.control.has-icons-left .icon.is-left, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div ul.is-left, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-left ul.is-left { left: 0; }
+.control.has-icons-left .icon.is-left, .control.has-icons-left .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a.is-left, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-left a.is-left { left: 0; }
 
 .control.has-icons-right .input, .control.has-icons-right .select select { padding-right: 2.5em; }
 
-.control.has-icons-right .icon.is-right, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div ul.is-right, .rn-blog-post .rn-author-bio .rn-author-bio-content div .control.has-icons-right ul.is-right { right: 0; }
+.control.has-icons-right .icon.is-right, .control.has-icons-right .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a.is-right, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .control.has-icons-right a.is-right { right: 0; }
 
 .control.is-loading::after { position: absolute !important; right: 0.625em; top: 0.625em; z-index: 4; }
 
@@ -1679,9 +1679,9 @@ a.tag:hover { text-decoration: underline; }
 
 .breadcrumb ul, .breadcrumb ol { align-items: flex-start; display: flex; flex-wrap: wrap; justify-content: flex-start; }
 
-.breadcrumb .icon:first-child, .breadcrumb .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:first-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div .breadcrumb ul:first-child { margin-right: 0.5em; }
+.breadcrumb .icon:first-child, .breadcrumb .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:first-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .breadcrumb a:first-child { margin-right: 0.5em; }
 
-.breadcrumb .icon:last-child, .breadcrumb .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:last-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div .breadcrumb ul:last-child { margin-left: 0.5em; }
+.breadcrumb .icon:last-child, .breadcrumb .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:last-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .breadcrumb a:last-child { margin-left: 0.5em; }
 
 .breadcrumb.is-centered ol, .rn-gw-download .breadcrumb.os-selector ol, .rn-main .breadcrumb.buttons ol, .breadcrumb.is-centered ul, .rn-gw-download .breadcrumb.os-selector ul, .rn-main .breadcrumb.buttons ul { justify-content: center; }
 
@@ -2119,7 +2119,7 @@ html.has-navbar-fixed-bottom, body.has-navbar-fixed-bottom { padding-bottom: 3.2
 
 .navbar-item, .navbar-link { color: #4a4a4a; display: block; line-height: 1.5; padding: 0.5rem 0.75rem; position: relative; }
 
-.navbar-item .icon:only-child, .navbar-item .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:only-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div .navbar-item ul:only-child, .navbar-link .icon:only-child, .navbar-link .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:only-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div .navbar-link ul:only-child { margin-left: -0.25rem; margin-right: -0.25rem; }
+.navbar-item .icon:only-child, .navbar-item .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:only-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .navbar-item a:only-child, .navbar-link .icon:only-child, .navbar-link .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:only-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .navbar-link a:only-child { margin-left: -0.25rem; margin-right: -0.25rem; }
 
 a.navbar-item, .navbar-link { cursor: pointer; }
 
@@ -2315,9 +2315,9 @@ a.panel-block:hover, label.panel-block:hover { background-color: whitesmoke; }
 
 .tabs ul.is-right, .rn-gw-download .os-selector ul.is-right { justify-content: flex-end; padding-left: 0.75em; }
 
-.tabs .icon:first-child, .rn-gw-download .os-selector .icon:first-child, .tabs .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:first-child, .rn-gw-download .os-selector .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:first-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div .tabs ul:first-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div .rn-gw-download .os-selector ul:first-child, .rn-gw-download .rn-blog-post .rn-author-bio .rn-author-bio-content div .os-selector ul:first-child { margin-right: 0.5em; }
+.tabs .icon:first-child, .rn-gw-download .os-selector .icon:first-child, .tabs .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:first-child, .rn-gw-download .os-selector .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:first-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .tabs a:first-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .rn-gw-download .os-selector a:first-child, .rn-gw-download .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .os-selector a:first-child { margin-right: 0.5em; }
 
-.tabs .icon:last-child, .rn-gw-download .os-selector .icon:last-child, .tabs .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:last-child, .rn-gw-download .os-selector .rn-blog-post .rn-author-bio .rn-author-bio-content div ul:last-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div .tabs ul:last-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div .rn-gw-download .os-selector ul:last-child, .rn-gw-download .rn-blog-post .rn-author-bio .rn-author-bio-content div .os-selector ul:last-child { margin-left: 0.5em; }
+.tabs .icon:last-child, .rn-gw-download .os-selector .icon:last-child, .tabs .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:last-child, .rn-gw-download .os-selector .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:last-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .tabs a:last-child, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .rn-gw-download .os-selector a:last-child, .rn-gw-download .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li .os-selector a:last-child { margin-left: 0.5em; }
 
 .tabs.is-centered ul, .rn-gw-download .os-selector ul, .rn-main .tabs.buttons ul { justify-content: center; }
 
@@ -2769,9 +2769,9 @@ a.has-text-info-dark:hover, a.has-text-info-dark:focus { color: #248fd6 !importa
 
 .has-background-info-dark { background-color: #1d72aa !important; }
 
-.has-text-success, .rn-homepage .rn-homepage-hero ul li .icon, .rn-homepage .rn-homepage-hero ul li .rn-blog-post .rn-author-bio .rn-author-bio-content div ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .rn-homepage .rn-homepage-hero ul li ul { color: #48c774 !important; }
+.has-text-success, .rn-homepage .rn-homepage-hero ul li .icon, .rn-homepage .rn-homepage-hero .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a, .rn-blog-post .rn-author-bio .rn-author-bio-content div .rn-homepage .rn-homepage-hero ul li a { color: #48c774 !important; }
 
-a.has-text-success:hover, .rn-homepage .rn-homepage-hero ul li a.icon:hover, a.has-text-success:focus, .rn-homepage .rn-homepage-hero ul li a.icon:focus { color: #34a85c !important; }
+a.has-text-success:hover, .rn-homepage .rn-homepage-hero ul li a.icon:hover, .rn-homepage .rn-homepage-hero .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:hover, .rn-blog-post .rn-author-bio .rn-author-bio-content div .rn-homepage .rn-homepage-hero ul li a:hover, a.has-text-success:focus, .rn-homepage .rn-homepage-hero ul li a.icon:focus, .rn-homepage .rn-homepage-hero .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a:focus, .rn-blog-post .rn-author-bio .rn-author-bio-content div .rn-homepage .rn-homepage-hero ul li a:focus { color: #34a85c !important; }
 
 .has-background-success { background-color: #48c774 !important; }
 
@@ -3005,7 +3005,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus { color: #ee2049 !imp
 
 .mt-1 { margin-top: 0.25rem !important; }
 
-.mr-1, .rn-homepage .rn-homepage-hero ul li .icon, .rn-homepage .rn-homepage-hero ul li .rn-blog-post .rn-author-bio .rn-author-bio-content div ul, .rn-blog-post .rn-author-bio .rn-author-bio-content div .rn-homepage .rn-homepage-hero ul li ul { margin-right: 0.25rem !important; }
+.mr-1, .rn-homepage .rn-homepage-hero ul li .icon, .rn-homepage .rn-homepage-hero .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li a, .rn-blog-post .rn-author-bio .rn-author-bio-content div .rn-homepage .rn-homepage-hero ul li a { margin-right: 0.25rem !important; }
 
 .mb-1 { margin-bottom: 0.25rem !important; }
 
@@ -3037,7 +3037,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus { color: #ee2049 !imp
 
 .mb-3, nav.breadcrumb { margin-bottom: 0.75rem !important; }
 
-.ml-3, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul, .rn-page img.rn-side-image { margin-left: 0.75rem !important; }
+.ml-3, .rn-page img.rn-side-image { margin-left: 0.75rem !important; }
 
 .mx-3 { margin-left: 0.75rem !important; margin-right: 0.75rem !important; }
 
@@ -3065,7 +3065,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus { color: #ee2049 !imp
 
 .mb-5 { margin-bottom: 1.5rem !important; }
 
-.ml-5 { margin-left: 1.5rem !important; }
+.ml-5, .rn-blog-post .rn-author-bio .rn-author-bio-content div ul { margin-left: 1.5rem !important; }
 
 .mx-5, .rn-mailing-list-subscription, .rn-gw-download .pending, .rn-gw-download { margin-left: 1.5rem !important; margin-right: 1.5rem !important; }
 
@@ -3832,8 +3832,6 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus { color: #ee2049 !imp
 
 .rn-page p > img:not(.rn-side-image) { display: block; margin: auto; }
 
-.rn-blog-post .rn-author-bio .rn-author-bio-content div ul { list-style-type: none; }
-
-.rn-blog-post .rn-author-bio .rn-author-bio-content div ul li { display: inline-flex; }
+.rn-blog-post .rn-author-bio .rn-author-bio-content div ul li { list-style-type: none; }
 
 /*# sourceMappingURL=style.css.map */
