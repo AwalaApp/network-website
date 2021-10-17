@@ -10,7 +10,7 @@ layout: base
     <h1 class="title">{{ page.title }}</h1>
 
     <p class="authorship">
-        By <a href="{{ author.url }}">{{ author.name }}</a>, {{ author.title }}.
+        By {{ author.name }} ({{ author.title }}).
     </p>
 
     {{ content }}
@@ -21,7 +21,31 @@ layout: base
             <figure>
                 <img src="{{ page.author | prepend: '/assets/images/authors/' | append: '.png' | relative_url }}">
             </figure>
-            <p>{{ author.bio | escape }}</p>
+            <div>
+                <p>{{ author.bio | escape }}</p>
+                <ul class="icon">
+                    <li>
+                        {% if author.externalUrls.twitterHandle -%}
+                            <a
+                                href="https://twitter.com/{{ author.externalUrls.twitterHandle }}"
+                                title="{{ author.name }} on Twitter"
+                                class="icon"
+                            >
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        {% endif %}
+                        {% if author.externalUrls.linkedinHandle -%}
+                            <a
+                                href="https://www.linkedin.com/in/{{ author.externalUrls.linkedinHandle }}/"
+                                title="{{ author.name }} on LinkedIn"
+                                class="icon"
+                            >
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        {% endif %}
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </article>

@@ -207,13 +207,29 @@ nav.breadcrumb li {
 
     .rn-author-bio-content {
       figure {
-        @extend .image;
-        @extend .is-64x64;
         @extend .is-pulled-left;
         @extend .is-hidden-mobile;
 
         img {
+          @extend .image;
+          @extend .is-96x96;
           @extend .is-rounded;
+        }
+      }
+
+      div {
+        p {
+          @extend .mb-0;
+        }
+
+        ul {
+          @extend .icon;
+          @extend .ml-3;
+          list-style-type: none;
+
+          li {
+            display: inline-flex;
+          }
         }
       }
     }

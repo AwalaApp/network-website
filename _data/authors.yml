@@ -1,5 +1,7 @@
 gnarea:
   name: Gus Narea
   title: Awala architect and Relaycorp CEO
-  url: https://twitter.com/gustavonarea
-  bio: Gus designed and prototyped Awala project at the University of Oxford, and later founded Relaycorp to lead the project. Before working full-time on Awala, he worked in the core engineering team at Auth0.
+  bio: Gus designed and prototyped Awala project at the University of Oxford, and later founded Relaycorp to lead the project. Before Awala, he worked in the core engineering team at Auth0.
+  externalUrls:
+    twitterHandle: gustavonarea
+    linkedinHandle: gustavonarea
