@@ -223,12 +223,14 @@ nav.breadcrumb li {
         }
 
         ul {
-          @extend .icon;
-          @extend .ml-3;
-          list-style-type: none;
+          @extend .ml-5;
 
           li {
-            display: inline-flex;
+            list-style-type: none;
+
+            a {
+              @extend .icon;
+            }
           }
         }
       }
