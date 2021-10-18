@@ -3,9 +3,9 @@ title: "Lowering the barrier to adopt Awala"
 author: gnarea
 ---
 
-I'm very pleased to announce that we've recently started a new contract with the [Open Technology Fund](https://www.opentech.fund/), which will allow us to make it considerably easier for the general public and third-party app developers to adopt Awala.
+I'm very pleased to announce that we've recently started a new contract with the [Open Technology Fund](https://www.opentech.fund/), which will allow us to make it considerably easier for third-party app developers and the general public to adopt Awala.
 
-Let's do a quick recap on where we are today before looking at the new contract.
+Let's start by doing a quick recap on where we are today before looking at the new contract.
 
 ## Current status of the technology
 
