@@ -43,7 +43,7 @@ In case you're wondering: We could've certainly made email work on Awala, but im
 
 ### Documentation for technical and non-technical stakeholders
 
-We want to the most of Awala being an open, decentralised protocol with open source implementations by making it easy for third parties to contribute to the project and scrutinise our work, which is why we'll be adding documentation aimed at two separate audiences:
+We want to make the most of Awala being an open, decentralised protocol with open source implementations by making it easy for third parties to contribute to the project and scrutinise our work, which is why we'll be adding documentation aimed at two separate audiences:
 
 - Technical stakeholders (e.g., prospective contributors). Similar to the [architectural overview for service providers](/service-providers/implementation/architecture), but for anyone who wants a technically-accurate explanation of how Awala works and its limitations. This will cover the [main specs](https://specs.awala.network/), as well as key information concerning the [reference implementations](https://github.com/search?q=topic%3Aawala+org%3Arelaycorp).
 - Non-technical stakeholders (e.g., policy analysts at CSOs, journalists, activists). A jargon-free overview of Awala, its governance, [security threats](https://specs.awala.network/RS-019), [policies](https://awala.network/legal/), [guiding principles](/way), etc.
