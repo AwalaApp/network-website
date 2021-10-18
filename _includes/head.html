@@ -3,9 +3,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title }}</title>
 
-    {% if page.description -%}
-        <meta name="description" content="{{ page.description }}"/>
-    {%- endif %}
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:image" content="{{ '/assets/images/logo-with-text.png' | absolute_url }}" />
+
+    {% capture description -%}
+        {%- if page.description && page.description!= "" -%}
+            {{ page.description }}
+        {%- else -%}
+            {{ page.excerpt }}
+        {%- endif -%}
+    {%- endcapture -%}
+    {% if description != "" -%}
+        <meta name="description" content="{{ description | strip_html }}"/>
+        <meta name="og:description" content="{{ description | strip_html }}"/>
+    {% endif %}
 
     <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}"/>
     <script defer src="https://kit.fontawesome.com/f4f22c795b.js" crossorigin="anonymous"></script>
