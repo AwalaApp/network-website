@@ -24,7 +24,7 @@ jobs:
       - name: Generate docs
         run: |
           npm install
-          bundle exec jekyll build
+          JEKYLL_ENV=production bundle exec jekyll build
 
       - name: Upload static site
         uses: peaceiris/actions-gh-pages@v2.10.1
