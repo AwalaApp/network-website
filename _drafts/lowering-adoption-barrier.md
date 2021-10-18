@@ -19,7 +19,7 @@ Despite the limitations above, **developers can still use Awala today** to make 
 
 ## Scope of the new contract
 
-In addition to fixing several issues in the current version of the technology, as well as maintaining all the software we've built so far, we'll be implementing the following:
+In addition to fixing known and future issues in the software we've built so far, we'll be implementing the following:
 
 ### Libraries for desktop apps
 
