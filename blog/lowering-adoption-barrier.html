@@ -2,7 +2,7 @@
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog</title>
+    <title>Lowering the barrier to adopt Awala</title>
 
     
 
@@ -145,25 +145,125 @@
 </nav>
 <section class="rn-main is-max-desktop">
     
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            
+            <li><a href="/blog/">Blog</a>
+            </li>
+            
 
-    <article class="rn-page">
-    <h1 class="title">Blog</h1>
-
-
-
-
-    <section class="rn-blog-post">
-        <p class="date">18 October 2021</p>
-
-        <h2><a href="/blog/lowering-adoption-barrier">Lowering the barrier to adopt Awala</a></h2>
-
-        <p>I’m very pleased to announce that we’ve recently started a new contract with the <a href="https://www.opentech.fund/">Open Technology Fund</a>, which will allow us to make it considerably easier for third-party app developers and the general public to adopt Awala.</p>
-
-    </section>
-
-
+            <!-- Add a trailing, empty item to get Bulma to add a separator at the end -->
+            <li class="is-active"></li>
+        </ul>
+    </nav>
+    
 
     
+
+<article class="rn-blog-post">
+    <p class="date">18 October 2021</p>
+
+    <h1 class="title">Lowering the barrier to adopt Awala</h1>
+
+    <p class="authorship">
+        By Gus Narea (Awala architect and Relaycorp CEO).
+    </p>
+
+    <p>I’m very pleased to announce that we’ve recently started a new contract with the <a href="https://www.opentech.fund/">Open Technology Fund</a>, which will allow us to make it considerably easier for third-party app developers and the general public to adopt Awala.</p>
+
+<p>Let’s start by doing a quick recap on where we are today before looking at the new contract.</p>
+
+<h2 id="current-status-of-the-technology">Current status of the technology</h2>
+
+<p>Awala is a new network where compatible apps use the Internet when it’s available, but they can also switch to a secure <a href="https://en.wikipedia.org/wiki/Sneakernet">sneakernet</a> when the Internet has been cut off.</p>
+
+<p>As of this writing, the network is fully operational on Android, Linux, macOS and Windows, but there are no compatible apps that the general public can use yet – we only have the <em>Awala Ping</em> app (<a href="https://play.google.com/store/apps/details?id=tech.relaycorp.ping">Android</a>, <a href="https://www.npmjs.com/package/@relaycorp/awala-ping">desktop</a>), which we use for testing purposes internally.</p>
+
+<p>We’ve also published all the tooling and <a href="/service-providers/implementation/">documentation</a> necessary to build Android apps and Node.js-powered, server-side apps. Android developers have a high-level library that abstracts away the low-level details, but Node.js developers don’t have this high-level tooling yet. Additionally, it isn’t currently possible to build server-side apps on a platform other than Node.js.</p>
+
+<p>Despite the limitations above, <strong>developers can still use Awala today</strong> to make Internet-based services (<a href="https://github.com/AwalaNetwork/poc">like Twitter</a>) resilient to Internet blackouts, or build Awala-native services to unlock additional benefits (e.g., <a href="/service-providers/implementation/architecture#awala-makes-centralisation-a-spectrum">decentralisation</a>, spam protection).</p>
+
+<h2 id="scope-of-the-new-contract">Scope of the new contract</h2>
+
+<p>In addition to fixing known and future issues in the software we’ve built so far, we’ll be implementing the following:</p>
+
+<h3 id="libraries-for-desktop-apps">Libraries for desktop apps</h3>
+
+<p>We’ll be implementing high-level libraries for Node.js and JVM desktop apps, analogous to the <a href="https://github.com/relaycorp/awala-endpoint-android">high-level library for Android developers</a>. We’ll also be publishing <a href="https://codelabs.awala.network/">codelabs</a> on how to use such libraries.</p>
+
+<p>These libraries abstract away all the cryptography and networking required by Awala, so that developers can focus on the unique features of their apps.</p>
+
+<h3 id="middleware-for-server-side-apps">Middleware for server-side apps</h3>
+
+<p>Awala’s extensive use of cryptography provides significant privacy and security benefits, but it can make it very hard to build and operate server-side apps, where libraries wouldn’t be able to abstract away much of the complexity.</p>
+
+<p>For this reason, we’ll be implementing a <a href="https://github.com/relaycorp/relayverse/issues/28">middleware</a>, which will sit between the Awala network and a server-side app. This will enable developers to build server-side apps in any language, whilst offloading all the Awala-specific cryptography and networking to the middleware.</p>
+
+<p>This middleware is roughly comparable to a reverse proxy with TLS termination in the Internet world.</p>
+
+<h3 id="letro">Letro</h3>
+
+<p>We’ll be building a basic version of <a href="https://letro.app/en/">Letro</a>, an app that will let people message each with and without access to the Internet. It’ll be analogous to email, but unlike email, and thanks to Awala: all messages will be end-to-end encrypted, and spamming and phishing will be virtually impossible.</p>
+
+<p>In case you’re wondering: We could’ve certainly made email work on Awala, but implementing and maintaining an Awala-native service costs a fraction of <a href="/service-providers/implementation/architecture#adding-awala-support-to-existing-internet-based-services">adding Awala support to an existing Internet-based service</a>. Additionally, since email doesn’t provide an authorisation mechanism, censors could easily prevent specific people from getting legitimate data via <a href="/couriers">couriers</a> by emailing them junk mail.</p>
+
+<h3 id="documentation-for-technical-and-non-technical-stakeholders">Documentation for technical and non-technical stakeholders</h3>
+
+<p>We want to make the most of Awala being an open, decentralised protocol with open source implementations by making it easy for third parties to contribute to the project and scrutinise our work, which is why we’ll be adding documentation aimed at two separate audiences:</p>
+
+<ul>
+  <li>Technical stakeholders (e.g., prospective contributors). Similar to the <a href="/service-providers/implementation/architecture">architectural overview for service providers</a>, but for anyone who wants a technically-accurate explanation of how Awala works and its limitations. This will cover the <a href="https://specs.awala.network/">main specs</a>, as well as key information concerning the <a href="https://github.com/search?q=topic%3Aawala+org%3Arelaycorp">reference implementations</a>.</li>
+  <li>Non-technical stakeholders (e.g., policy analysts at CSOs, journalists, activists). A jargon-free overview of Awala, its governance, <a href="https://specs.awala.network/RS-019">security threats</a>, <a href="https://awala.network/legal/">policies</a>, <a href="/way">guiding principles</a>, etc.</li>
+</ul>
+
+<h2 id="stay-tuned">Stay tuned!</h2>
+
+<p>Follow us on <a href="https://twitter.com/AwalaNetwork">Twitter</a> or <a href="https://www.facebook.com/AwalaNetwork">Facebook</a> to learn more about our progress, and to be notified about contracting opportunities.</p>
+
+<p>If you want to reach out to us, please use <a href="https://community.awala.network/">our forum</a> or <a href="https://relaycorp.tech/">contact Relaycorp</a>.</p>
+
+
+    <div class="rn-author-bio">
+        <p class="rn-author-bio-header">About the author</p>
+        <div class="rn-author-bio-content">
+            <figure>
+                <img src="/assets/images/authors/gnarea.png">
+            </figure>
+            <div>
+                <p>Gus designed and prototyped Awala project at the University of Oxford, and later founded Relaycorp to lead the project. Before Awala, he worked in the core engineering team at Auth0.</p>
+                <ul class="icon">
+                        <li>
+                              <a
+                                  href="https://twitter.com/gustavonarea"
+                                  title="Gus Narea on Twitter"
+                              >
+                                  <i class="fab fa-twitter"></i>
+                              </a>
+                          </li>
+                        
+                        <li>
+                                <a
+                                    href="https://www.linkedin.com/in/gustavonarea/"
+                                    title="Gus Narea on LinkedIn"
+                                >
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                        
+                        <li>
+                            <a
+                                href="https://github.com/gnarea"
+                                title="Gus Narea on GitHub"
+                            >
+                                <i class="fab fa-github"></i>
+                            </a>
+                            </li>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </article>
 
 </section>
