@@ -6,8 +6,19 @@ title: About Awala
 
 The long-term goal of Awala (formerly known as _Relaynet_) is to complement the Internet by providing all human beings with uncensored and timely communication anywhere in the universe -- without impairing the [fundamental rights](https://www.un.org/en/universal-declaration-human-rights/) of other human beings. The first order of business is to establish connectivity in regions where the Internet is unavailable due to natural or human causes.
 
-Awala was designed by [Gus Narea](https://gustavo.engineer/) at the University of Oxford with the initial goal of circumventing censorship by repressive governments, and he later founded [Relaycorp](https://relaycorp.tech/) to support and scale the project while keeping it as open and inclusive as possible.
-
-The [security of the protocol suite was independently assessed](/archives/security-audit-2019-03.pdf) and Relaycorp started to build the foundation of the technology thanks to a contract with the [Open Technology Fund](https://opentech.fund/) in late 2019. Our current focus is on helping Android developers integrate Awala in their apps.
-
 "Awala" means "sibling" in Wayuu (a native South American language), and it symbolises our goal to _empower_ -- not _digitally colonise_ -- all humankind.
+
+## Current status
+
+The project is being incubated by [Relaycorp](https://relaycorp.tech) -- a mission-driven, open source company founded by the author of Awala, [Gus Narea](https://gustavo.engineer) -- for the sole purpose of supporting the network.
+
+As of December 2021, Awala is fully operational on Android, Linux, macOS and Windows, but there are no compatible apps for the general public. [We're actively working to lower the barrier to adopt Awala]({% link _posts/2021-10-18-lowering-adoption-barrier.md %}), which includes building the first version of [Letro](https://letro.app/en/).
+
+## Independent assessments
+
+The [Open Technology Fund](https://www.opentech.fund/) has commissioned the following independent assessments:
+
+- [Security audit of the protocol suite (2019)](/archives/security-audit-2019-03.pdf). All issues were addressed before starting the implementation of the protocol suite.
+- [User Experience (2021)](/archives/ux-assessment-2021.pdf). [The issues raised are tracked on GitHub](https://github.com/relaycorp/relayverse/issues/32).
+
+We're currently aiming to request a security audit of the implementation of Awala by Q2 2022.
