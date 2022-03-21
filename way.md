@@ -22,12 +22,12 @@ The principles below have been employed since the early conceptualisation of the
    - Strive to deliver solutions that are [just barely good enough](http://agilemodeling.com/essays/barelyGoodEnough.html).
 
    Having said this, pragmatism and focus are not licences for unethical action or inaction.
+1. **Effective solutions are driven by real problems**. We technologists are particularly susceptible to get carried away by the potential of a new technology, but that often leads to projects whose impact doesn't match their hype because the problem was [made-up](http://www.paulgraham.com/startupideas.html) or an afterthought.
 1. **Necessity and convenience drive large-scale changes; ideology alone doesn't**. The only way to reach mass adoption is to give people and organisations a convenient solution to their problems, not an ideological reason to use a solution.
 
    If we have to bring up our commitments to open source or decentralisation (for example) to win over users, that'd be a sign that we're failing to deliver convenient solutions to real problems.
-1. **Privacy, security and usability are equally important, but usability has veto power**. When forced to choose, we'll prioritise non-technical people over tech-savvy people.
-1. **Effective solutions are driven by real problems**. We technologists are particularly susceptible to get carried away by the potential of a new technology, but that often leads to projects whose impact doesn't match their hype because the problem was [made-up](http://www.paulgraham.com/startupideas.html) or an afterthought.
 1. **Policy is the underrated sidekick of technology**. Some problems can't be solved with purely technical solutions, and some technical solutions could be made simpler and easier to use when combined with the right legal/contractual requirements.
+1. **Privacy, security and usability are equally important, but usability has veto power**. When forced to choose, we'll prioritise non-technical people over tech-savvy people.
 1. **Financial incentives facilitate or accelerate mass adoption**, so we must actively foster an open market where new and existing participants can thrive ethically.
 1. **Empowering all humankind is our north star**, and economic inequality threatens it.
 1. **No idea is too ambitious** as long as there is a credible plan to realise it in small steps.
