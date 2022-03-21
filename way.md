@@ -23,6 +23,8 @@ The principles below have been employed since the early conceptualisation of the
 
    Having said this, pragmatism and focus are not licences for unethical action or inaction.
 1. **Necessity and convenience drive large-scale changes; ideology alone doesn't**. The only way to reach mass adoption is to give people and organisations a convenient solution to their problems, not an ideological reason to use a solution.
+
+   If we have to bring up our commitments to open source or decentralisation (for example) to win over users, that'd be a sign that we're failing to deliver convenient solutions to real problems.
 1. **Privacy, security and usability are equally important, but usability has veto power**. When forced to choose, we'll prioritise non-technical people over tech-savvy people.
 1. **Effective solutions are driven by real problems**. We technologists are particularly susceptible to get carried away by the potential of a new technology, but that often leads to projects whose impact doesn't match their hype because the problem was [made-up](http://www.paulgraham.com/startupideas.html) or an afterthought.
 1. **Policy is the underrated sidekick of technology**. Some problems can't be solved with purely technical solutions, and some technical solutions could be made simpler and easier to use when combined with the right legal/contractual requirements.
