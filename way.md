@@ -29,5 +29,5 @@ The principles below have been employed since the early conceptualisation of the
 1. **Effective solutions are driven by real problems**. We technologists are particularly susceptible to get carried away by the potential of a new technology, but that often leads to projects whose impact doesn't match their hype because the problem was [made-up](http://www.paulgraham.com/startupideas.html) or an afterthought.
 1. **Policy is the underrated sidekick of technology**. Some problems can't be solved with purely technical solutions, and some technical solutions could be made simpler and easier to use when combined with the right legal/contractual requirements.
 1. **Financial incentives facilitate or accelerate mass adoption**, so we must actively foster an open market where new and existing participants can thrive ethically.
-1. **Empowering all humankind is our north star**, and digital colonialism threatens it.
+1. **Empowering all humankind is our north star**, and economic inequality threatens it.
 1. **No idea is too ambitious** as long as there is a credible plan to realise it in small steps.
