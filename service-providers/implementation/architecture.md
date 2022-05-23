@@ -155,6 +155,8 @@ If your software has the concept of users, you should store the private endpoint
 - Twitter could keep a record that Alice is using the endpoint `0deadbeef` on `frankfurt.relaycorp.cloud` and Bob is using `0deadc0de` on `london.relaycorp.cloud`.
 - Similarly, Alice' WhatsApp address book could have Bob's endpoint as `0deadc0de`on `london.relaycorp.cloud` and Bob's address book could have Alice' endpoint as `0deadbeef` on `frankfurt.relaycorp.cloud`.
 
+Alternatively, if you're building a decentralised service, you may want to leverage [Vera](https://vera.domains) to authenticate users and organisations amongst themselves. Vera-related data would be transported inside Awala service messages, so they'd be end-to-end encrypted and therefore no eavesdropper would be able to access the real identity of users.
+
 Finally, Multi-Factor Authentication also requires a special consideration in a DTN environment: One-time passwords can't be time- (e.g., TOTP) or challenge-response-based (e.g., SMS) because real time connectivity between endpoints is not guaranteed. They can be sequence-based (e.g., HOTP), but you should keep the following in mind:
 
 - Sequence-based tokens never expire and are therefore susceptible to bruteforce attacks.
