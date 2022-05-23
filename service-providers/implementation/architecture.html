@@ -326,6 +326,8 @@
   <li>Similarly, Alice’ WhatsApp address book could have Bob’s endpoint as <code class="language-plaintext highlighter-rouge">0deadc0de</code>on <code class="language-plaintext highlighter-rouge">london.relaycorp.cloud</code> and Bob’s address book could have Alice’ endpoint as <code class="language-plaintext highlighter-rouge">0deadbeef</code> on <code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.cloud</code>.</li>
 </ul>
 
+<p>Alternatively, if you’re building a decentralised service, you may want to leverage <a href="https://vera.domains">Vera</a> to authenticate users and organisations amongst themselves. Vera-related data would be transported inside Awala service messages, so they’d be end-to-end encrypted and therefore no eavesdropper would be able to access the real identity of users.</p>
+
 <p>Finally, Multi-Factor Authentication also requires a special consideration in a DTN environment: One-time passwords can’t be time- (e.g., TOTP) or challenge-response-based (e.g., SMS) because real time connectivity between endpoints is not guaranteed. They can be sequence-based (e.g., HOTP), but you should keep the following in mind:</p>
 
 <ul>
