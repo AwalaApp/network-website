@@ -23,7 +23,7 @@ _Remote Procedure Call_ (RPC) is the de facto communication pattern of the Inter
 
 As the name implies, RPCs resemble a pattern we developers are familiar with: Function calls. You pass some input and get some output back -- unless something goes wrong, in which case an exception is thrown.
 
-But the thing with unreliable networks like the Internet is that things going wrong is the rule, not the exception.
+But the thing with networking in the real world is that things going wrong is the rule, not the exception.
 
 RPCs work well in a reliable network: One with a low round-trip time and an adequate throughput. But clients become more complicated with the need to implement retries, timeouts and [circuit breakers](https://martinfowler.com/bliki/CircuitBreaker.html) in order to cope with an unusually high round-trip time or an unusually low throughput. Additionally, TLS handshakes exacerbate this issue by further delaying the transmission of the actual payload.
 
