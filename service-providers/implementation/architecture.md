@@ -146,7 +146,7 @@ Note that making a service open does not require apps to be open source.
 
 ## User authentication and access control
 
-Existing auth protocols like OAuth2 are also problematic in a DTN, since the user could be disconnected from the Internet for months or indefinitely. For example, you won't always be able to renew an OAuth2 access token before it expires. Fortunately, Awala offers a DTN-compatible alternative.
+Existing auth protocols like OAuth2 are also problematic in a DTN, since the user could be disconnected from the Internet for months or indefinitely. For example, you won't always be able to renew an OAuth2 access token before it expires. Fortunately, there are DTN-compatible alternatives.
 
 Awala has built-in authentication and access control for endpoints, but there's no concept of user by design (to protect their privacy). The same person could use the Android and Windows versions of your app, but the two endpoints would be completely independent of each other.
 
