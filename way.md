@@ -31,4 +31,4 @@ The principles below have been employed since the early conceptualisation of the
 1. **Financial incentives facilitate or accelerate mass adoption**, so we must actively foster an open market where new and existing participants can thrive ethically.
 1. **Empowering all humankind is our north star**, and economic inequality threatens it.
 1. **No idea is too ambitious** as long as there is a credible plan to realise it in small steps.
-1. **Experimentation beats consensus** in the early days of a protocol, but it gradually reverses as adoption grows.
+1. **Experimentation beats consensus** in the early days, but it gradually reverses as adoption grows.
