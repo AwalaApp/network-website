@@ -5,7 +5,7 @@ breadcrumbs:
 ---
 
 <p class="has-text-right">
-    Last updated: 15th February 2021
+    Last updated: 18th August 2022
 </p>
 
 # Terms of Use and Privacy Policy - Awala
@@ -26,12 +26,12 @@ Use of Awala is anonymous. We do not collect email addresses, names, phone numbe
 
 Because use of Awala is anonymous, we need to obtain and use the following non-personal information for very limited purposes:
 
-- We assign a unique identifier to your device (the “Private Gateway Address”); and
+- We assign a unique identifier to your device (the “Private Gateway Id”); and
 - We may use your IP address.
 
 We process this information for the sole purpose of preventing abuse, malicious use, or unintentional harm to the Awala network.
 
-The Private Gateway Address is a random, cryptographically-generated value which is independent of and not associated with the user, their location and their device. We may use such addresses to automatically enforce system quotas, to analyze the server logs for the purposes of troubleshooting, or to inform future changes to the Awala protocol suite or its implementations.
+The Private Gateway Id is a random, cryptographically-generated value which is independent of and not associated with the user, their location and their device. We may use such addresses to automatically enforce system quotas, to analyze the server logs for the purposes of troubleshooting, or to inform future changes to the Awala protocol suite or its implementations.
 
 The Awala software does not share or otherwise distribute data regarding the user, the system or its environment, except as strictly necessary to provide and operate the Services.
 
