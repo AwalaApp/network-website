@@ -5,7 +5,7 @@ breadcrumbs:
 ---
 
 <p class="has-text-right">
-    Last updated: 18th August 2022
+    Last updated: 9th September 2022
 </p>
 
 # Terms of Use and Privacy Policy - Awala
