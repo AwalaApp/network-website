@@ -26,4 +26,4 @@ We recommend that you build a proof of concept for your service before trying to
 
 The proof of concept simply has to be functional. It doesn't have to be intuitive, feature complete or maintainable -- you're going to throw it away when you build the proper service anyway.
 
-[Learn how to build Awala apps]({% link service-providers/implementation/index.md %}) and [let us know if you need any help](https://community.awala.network/).
+[Learn how to build Awala apps]({% link service-providers/implementation/index.md %}) and [let us know if you need any help]({% link community.md %}).

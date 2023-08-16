@@ -13,7 +13,7 @@ We recommend that prospective contributors familiarise themselves with the [code
 1. Spread the word about Awala, especially amongst diaspora communities.
 1. If you're an Android developer, consider [building or prototyping an Awala-compatible app]({% link service-providers/index.md %}).
 1. If you're a UX designer and have experience with Offline First / Delay-Tolerant Networking, please give us feedback on our [UX guidelines for service providers]({% link service-providers/ux.md %}).
-1. Test the [Awala](https://play.google.com/store/apps/details?id=tech.relaycorp.gateway), [Awala Ping](https://play.google.com/store/apps/details?id=tech.relaycorp.ping) and [Awala Courier](https://play.google.com/store/apps/details?id=tech.relaycorp.courier) apps on Android, and give us feedback on [the forum](https://community.awala.network/).
+1. Test the [Awala](https://play.google.com/store/apps/details?id=tech.relaycorp.gateway), [Awala Ping](https://play.google.com/store/apps/details?id=tech.relaycorp.ping) and [Awala Courier](https://play.google.com/store/apps/details?id=tech.relaycorp.courier) apps on Android, and give us feedback on [the forum](https://www.reddit.com/r/Awala).
 
 ## Upcoming priority areas
 
