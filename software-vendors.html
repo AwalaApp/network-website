@@ -2,11 +2,13 @@
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Write an Awala app</title>
+    <title>Software vendors</title>
 
     <meta property="og:site_name" content="Awala" />
     <meta property="og:image" content="/assets/images/logo-with-text.png" />
 
+    <meta name="description" content="Make your apps resilient to Internet blackouts"/>
+        <meta name="og:description" content="Make your apps resilient to Internet blackouts"/>
     
 
     <link rel="stylesheet" href="/assets/style.css"/>
@@ -97,23 +99,9 @@
                 </div>
             </div>
 
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link" href="/service-providers/">
-                    Service providers
-                </a>
-
-                <div class="navbar-dropdown">
-                    <a class="navbar-item" href="/service-providers/ux">
-                        UX Design
-                    </a>
-                    <a class="navbar-item" href="/service-providers/implementation/">
-                        Implementation
-                    </a>
-                    <a class="navbar-item" href="/service-providers/funding">
-                        Funding
-                    </a>
-                </div>
-            </div>
+            <a class="navbar-item" href="/software-vendors">
+                Software vendors
+            </a>
 
             <a class="navbar-item" href="/couriers">
                 Couriers
@@ -148,44 +136,104 @@
 </nav>
 <section class="rn-main is-max-desktop">
     
-    <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            
-            <li><a href="/service-providers/">Service providers</a>
-            </li>
-            
-            <li><a href="/service-providers/implementation/">Implement Awala services</a>
-            </li>
-            
-
-            <!-- Add a trailing, empty item to get Bulma to add a separator at the end -->
-            <li class="is-active"></li>
-        </ul>
-    </nav>
-    
 
     <article class="rn-page">
-    <h1 id="write-an-awala-app">Write an Awala app</h1>
+    <h1 id="make-your-software-work-with-and-without-the-internet">Make your software work with and without the Internet</h1>
 
-<p>Relaycorp offers high-level, open source libraries to make it easy to write desktop, mobile, CLI and server-side apps that communicate via Awala. We currently support Node.js, JVM and Android applications.</p>
+<p>With <a href="https://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx">a third of the world population disconnected from the Internet</a> and <a href="https://www.accessnow.org/keepiton/">much of the rest subject to severe censorship</a>, <strong>the Internet can hardly be taken for granted</strong>. Make your apps compatible with Awala, and they’ll continue to send and receive data even if the Internet is unavailable.</p>
 
-<p>Check out <a href="https://codelabs.awala.network">codelabs.awala.network</a> to get started! So far we’ve documented how to build <a href="https://codelabs.awala.network/codelabs/android-centralised/">Android apps</a> that communicate with a <a href="https://codelabs.awala.network/codelabs/nodejs-pong/">Node.js backend</a>, but more codelabs are coming soon.</p>
+<p>Awala apps use the Internet when it’s available, but they can switch to a backup medium when the Internet is unavailable. The only backup medium at the moment are <a href="/couriers">couriers</a> who relay data between the region disconnected from the Internet and a location with access to the Internet, but we plan to support additional backup media in the future.</p>
+
+<p>If you’re looking for inspiration, you could build apps to help people do the following:</p>
+
+<ul>
+  <li>Send and receive emails.</li>
+  <li>Post and get updates from social networks like <a href="https://twitter.com/AwalaNetwork/status/1089211336171679745">Twitter</a> or <a href="https://github.com/tootsuite/mastodon/issues/10267">Mastodon</a>.</li>
+  <li>Get answers to queries like “coronavirus symptoms” using <a href="https://help.duckduckgo.com/duckduckgo-help-pages/features/instant-answers-and-other-features/">DuckDuckGo Instant Answers</a>.</li>
+  <li>Send and receive money – including cryptocurrencies.</li>
+</ul>
+
+<p>Whether you’re an individual or an organisation, we’re here to support you in your journey to adopt Awala. Select one of the following options to learn more, and don’t hesitate to <a href="/community">share any questions/feedback</a> – we’d even love it if you stopped by to say hi!</p>
+
+<div class="buttons is-centered">
+  <a class="button is-link" href="https://awala.dev">
+    <i class="fas fa-code"></i>
+    Go to awala.dev
+  </a>
+</div>
+
+<section class="rn-mailing-list-subscription">
+    <h2>Get important updates in your inbox</h2>
+
+    <div>
+        <form action="https://tech.us18.list-manage.com/subscribe/post?u=64c7889aa5e76799fa98a8175&amp;id=1a4de7a050" class="validate" method="post" name="mc-embedded-subscribe-form" target="_blank">
+            <div class="field">
+                <label class="label" for="mce-EMAIL">What's your email address?</label>
+                <div class="control has-icons-left">
+                    <input class="input" id="mce-EMAIL" name="EMAIL" type="email" placeholder="you@example.com" required="" />
+                    <span class="icon is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="field">
+                <p class="label">What do you want to hear about?</p>
+
+                <div class="control columns">
+                    <label class="checkbox column" for="mce-group[7424]-7424-0">
+                        <input id="mce-group[7424]-7424-0" name="group[7424][1]" type="checkbox" value="1" />
+                        Using Awala
+                    </label>
+                    <label class="checkbox column" for="mce-group[7424]-7424-1">
+                        <input id="mce-group[7424]-7424-1" name="group[7424][2]" type="checkbox" value="2" checked="checked" />
+                        Building Awala-compatible apps
+                    </label>
+                    <label class="checkbox column" for="mce-group[7424]-7424-2">
+                        <input id="mce-group[7424]-7424-2" name="group[7424][4]" type="checkbox" value="4" />
+                        Becoming a courier
+                    </label>
+                    <label class="checkbox column" for="mce-group[7424]-7424-3">
+                        <input id="mce-group[7424]-7424-3" name="group[7424][8]" type="checkbox" value="8" />
+                        Contributing to the project
+                    </label>
+                </div>
+            </div>
+
+            <div class="field">
+                <p class="label">Do you agree to receive emails from Relaycorp?</p>
+
+                <label for="gdpr_88524">
+                    <input class="av-checkbox gdpr" id="gdpr_88524" name="gdpr[88524]" type="checkbox" value="Y" required="" />
+                    I understand <a href="/legal/">Relaycorp's policies</a> and authorize them to send
+                    me emails about Awala.
+                </label>
+                <div class="help">
+                    <p>
+                        You can unsubscribe at any time. We won't share your data with third parties other than Mailchimp,
+                        which we use as our marketing platform. By subscribing, you also acknowledge that your information
+                        will be transferred to Mailchimp for processing, where it will be subject to
+                        <a href="https://mailchimp.com/legal/" target="_blank">their policies</a>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="clear" id="mce-responses">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div aria-hidden="true" style="position: absolute; left: -5000px;"><input name="b_64c7889aa5e76799fa98a8175_1a4de7a050" tabindex="-1" type="text" value="" /></div>
+            <div class="buttons is-centered">
+                <input class="button is-primary" name="subscribe" type="submit" value="Subscribe" />
+            </div>
+        </form>
+    </div>
+</section>
 
 
-    
-        <nav class="pagination" role="navigation" aria-label="pagination">
-            <a class="pagination-previous" href="/service-providers/implementation/architecture">
-                    <span class="icon"><i class="fas fa-arrow-left"></i></span>
-                    Architecture of Awala services
-                </a>
-            
 
-            <a class="pagination-next" href="/service-providers/implementation/distribution">
-                    Distribute Awala apps
-                    <span class="icon"><i class="fas fa-arrow-right"></i></span>
-                </a>
-            
-        </nav>
     
 </article>
 
@@ -197,7 +245,7 @@
                 <p class="has-text-weight-semibold">Awala</p>
                 <ul>
                     <li><a href="/users/">Users</a></li>
-                    <li><a href="/service-providers/">Service providers</a></li>
+                    <li><a href="/software-vendors">Software vendors</a></li>
                     <li><a href="/couriers">Couriers</a></li>
                     <li><a href="/blog/">Blog</a></li>
                     <li><a href="/about">About</a></li>
@@ -205,6 +253,9 @@
                     <li>
                         <a href="https://twitter.com/AwalaNetwork" title="Awala on Twitter" class="icon">
                             <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.reddit.com/r/Awala/" title="Awala on Reddit" class="icon">
+                            <i class="fab fa-reddit"></i>
                         </a>
                         <a href="https://www.facebook.com/AwalaNetwork" title="Awala on Facebook" class="icon">
                             <i class="fab fa-facebook"></i>
@@ -259,6 +310,9 @@
                         </a>
                         <a href="https://github.com/relaycorp" title="Relaycorp on GitHub" class="icon">
                             <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/relaycorp" title="Relaycorp on LinkedIn" class="icon">
+                            <i class="fab fa-linkedin"></i>
                         </a>
                     </li>
                 </ul>
