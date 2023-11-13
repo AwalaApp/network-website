@@ -1,5 +1,5 @@
 ---
-title: Service providers
+title: Software vendors
 description: Make your apps resilient to Internet blackouts
 ---
 
@@ -19,17 +19,9 @@ If you're looking for inspiration, you could build apps to help people do the fo
 Whether you're an individual or an organisation, we're here to support you in your journey to adopt Awala. Select one of the following options to learn more, and don't hesitate to [share any questions/feedback]({% link community.md %}) -- we'd even love it if you stopped by to say hi!
 
 <div class="buttons is-centered">
-  <a class="button is-link" href="{% link service-providers/ux.md %}">
-    <i class="fas fa-object-group"></i>
-    UX Design
-  </a>
-  <a class="button is-link" href="{% link service-providers/implementation/index.md %}">
+  <a class="button is-link" href="https://awala.dev">
     <i class="fas fa-code"></i>
-    Implementation
-  </a>
-  <a class="button is-link" href="{% link service-providers/funding.md %}">
-    <i class="fas fa-dollar-sign"></i>
-    Funding
+    Go to awala.dev
   </a>
 </div>
 
