@@ -3862,12 +3862,20 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus { color: #ee2049 !imp
 
 .navbar a.is-active:link, .navbar .navbar a.is-active:visited { font-weight: 500; }
 
+.rn-main .buttons a { text-decoration-line: none; }
+
 .rn-main .buttons a .fas { margin-right: 0.5rem; }
+
+.rn-main a { text-decoration-line: underline; }
+
+.rn-footer-legal a { text-decoration-line: underline; }
 
 .rn-homepage .rn-homepage-hero ul li { display: block; }
 
 .rn-page p > img:not(.rn-side-image) { display: block; margin: auto; }
 
 .rn-blog-post .rn-author-bio .rn-author-bio-content div ul li { list-style-type: none; }
+
+video { display: block; margin: 1em auto; }
 
 /*# sourceMappingURL=style.css.map */

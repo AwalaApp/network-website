@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Technical overview of Awala</title>
+
+    <meta property="og:site_name" content="Awala" />
+    <meta property="og:image" content="/assets/images/logo-with-text.png" />
+
+    <meta name="description" content="Overview of the Awala protocol suite and its reference implementations, aimed at people with a basic understanding of networking and cryptography"/>
+        <meta name="og:description" content="Overview of the Awala protocol suite and its reference implementations, aimed at people with a basic understanding of networking and cryptography"/>
+    
+
+    <link rel="stylesheet" href="/assets/style.css"/>
+    <script defer src="https://kit.fontawesome.com/f4f22c795b.js" crossorigin="anonymous"></script>
+
+    <script src="https://aardwolf.relaycorp.tech/script.js" data-site="UGOKVLPZ" defer></script>
+
+    <script>
+        <!-- Highlight the current navigation item -->
+        document.addEventListener('DOMContentLoaded', () => {
+            (function () {
+                const currentUrl = location.pathname;
+                const menuItems = document.querySelectorAll('.navbar-menu a');
+                for (let i = 0, len = menuItems.length; i < len; i++) {
+                    if (menuItems[i].getAttribute("href") === currentUrl) {
+                        menuItems[i].classList.add("is-active");
+                    }
+                }
+            })();
+        })
+
+        // Taken from https://bulma.io/documentation/components/navbar/#navbar-menu
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach( el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+
+    
+
+    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body><nav class="navbar is-spaced container is-max-widescreen" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item has-text-weight-medium" href="/">
+            <img src="/assets/images/logo.png" alt="Awala logo" class="mr-1">
+            Awala
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-start">
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" href="/users/">
+                    Users
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" href="/users/download">
+                        Download
+                    </a>
+                </div>
+            </div>
+
+            <a class="navbar-item" href="/software-vendors">
+                Software vendors
+            </a>
+
+            <a class="navbar-item" href="/couriers">
+                Couriers
+            </a>
+        </div>
+
+        <div class="navbar-end">
+            <a class="navbar-item" href="/blog/">
+                Blog
+            </a>
+
+            <a class="navbar-item" href="/about">
+                About
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <div class="navbar-link">
+                    <i class="fas fa-language"></i>
+                </div>
+
+                <div class="navbar-dropdown">
+                    <div class="navbar-item">
+                        English
+                    </div>
+                    <a href="https://awala.red" class="navbar-item">
+                        Castellano
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<section class="rn-main is-max-desktop">
+    
+
+    <article class="rn-page">
+    <h1 id="technical-overview-of-awala">Technical overview of Awala</h1>
+
+<p>This is an introduction to Awala aimed at a diverse audience with at least a basic understanding of networking and cryptography, such as:</p>
+
+<ul>
+  <li>Human rights organisations or <a href="/software-vendors">software vendors</a> assessing the security of Awala.</li>
+  <li>Security auditors starting an assessment of the network.</li>
+  <li>Developers contributing to the <a href="https://github.com/search?q=topic%3Aawala+org%3Arelaycorp">reference implementations</a>.</li>
+</ul>
+
+<p>We highly recommend familiarising yourself with the way Awala works from the end user’s perspective before reading this document. If you haven’t done so already, try it out with <a href="https://letro.app/en/">Letro</a> or <a href="https://play.google.com/store/apps/details?id=tech.relaycorp.ping">Awala Ping</a>, or watch the <a href="https://youtu.be/LL1Z9EGiMVc">demo video</a>.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Awala is a <a href="https://en.wikipedia.org/wiki/Delay-tolerant_networking">delay-tolerant</a>, <a href="https://en.wikipedia.org/wiki/Overlay_network">overlay</a> network: It runs on top of the Internet when it’s available, but it can switch to a secure <a href="https://en.wikipedia.org/wiki/Sneakernet">sneakernet</a> when the Internet is unavailable. With and without the Internet, Awala provides end-to-end encryption and <a href="https://www.techtarget.com/whatis/definition/pseudonymity">pseudonymity</a>.</p>
+
+<p>App developers can make existing Internet-based services (e.g., social networks) work on Awala, or build Awala-native apps that unlock additional benefits (e.g., spam protection, decentralisation).</p>
+
+<p>The network itself is decentralised – or, more precisely, it’s <em>federated</em>: End user devices must be paired with an <a href="https://docs.relaycorp.tech/awala-gateway-internet/"><em>Awala-Internet Gateway</em></a>, which is a server that relays messages between its users and other Awala-compatible Internet hosts. By default, users are paired with a <a href="https://github.com/relaycorp/cloud-gateway/">gateway operated by Relaycorp</a> (e.g., <code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.cloud</code>), but this can be changed.</p>
+
+<p>For example, the following video illustrates how Alice would post the message “Hi!” on Facebook via Awala whilst she’s connected to the Internet – assuming that Meta or a third party has built an Awala-compatible Facebook app for Android:</p>
+
+<video muted="" controls="">
+    <source src="/assets/diagrams/centralised-user_to_server.mp4" type="video/mp4" />
+</video>
+
+<p>In the hypothetical scenario above, the Facebook Android app would produce a JSON document containing Alice’ post, and it’d send it to the <a href="https://play.google.com/store/apps/details?id=tech.relaycorp.gateway">Awala Gateway for Android</a> using the <a href="https://github.com/relaycorp/awala-endpoint-android">Awala endpoint library</a>. Internally, this library wraps that JSON document in an Awala <em>parcel</em>, which is encrypted with the public key of Facebook’s <a href="https://docs.relaycorp.tech/awala-endpoint-internet/">Awala endpoint middleware</a>. Next, Alice’ Awala Gateway for Android sends the parcel to its Internet peer (<code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.cloud</code> in this case), which then passes the parcel on to Facebook’s Internet endpoint (e.g., <code class="language-plaintext highlighter-rouge">awala.facebook.com</code>). Finally, Facebook’s endpoint middleware verifies and decrypts the parcel, and forwards the encapsulated JSON document to the Facebook app server.</p>
+
+<p>Conversely, when the Facebook app server wants to send a message to a user, it first sends the message to its middleware, which wraps it into a parcel and then sends it to the user’s Internet gateway. The Internet gateway then forwards the parcel to the user’s gateway, which forwards the parcel to the Facebook app. Finally, the Facebook app verifies and decrypts the parcel using the endpoint library, and processes the encapsulated data. The following video builds on the previous example to illustrate this scenario:</p>
+
+<video muted="" controls="">
+    <source src="/assets/diagrams/centralised-server_to_user.mp4" type="video/mp4" />
+</video>
+
+<p>Note that in the animation above, Bob is using a different Internet gateway (<code class="language-plaintext highlighter-rouge">london.relaycorp.cloud</code>) than Alice (<code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.tech</code>). As a federated network, users can choose their own Internet gateway independently of the service they use and the people they communicate with – Think of it as the Awala equivalent of an ISP.</p>
+
+<h2 id="sneakernet">Sneakernet</h2>
+
+<p>When the Internet is unavailable, users can have their data physically transported by <a href="/couriers">couriers</a>, who effectively form a secure sneakernet.</p>
+
+<p>Most of the protocol remains the same as when the Internet is available, but gateways don’t exchange parcels: instead, they exchange <em>cargo</em>, which is also encrypted and contains one or more parcels. This way, an eavesdropper wouldn’t be able to see which services are being used (e.g., <code class="language-plaintext highlighter-rouge">awala.facebook.com</code>). The following video illustrates this when transporting data to the Internet:</p>
+
+<video muted="" controls="">
+    <source src="/assets/diagrams/centralised-couriers.mp4" type="video/mp4" />
+</video>
+
+<p>Collecting cargo from the Internet gateway is almost the same process in reverse, except that the courier must start by providing a <em>Cargo Collection Authorisation</em> (CCA), which the user’s private gateway would’ve issued to the courier when they synchronised. The CCA is encrypted with the Internet gateway’s public key, and it contains the <em>Cargo Delivery Authorisation</em> (see <a href="#delivery-authorisations">delivery authorisations</a> below) that the Internet gateway must use to sign the cargo.</p>
+
+<h2 id="messaging">Messaging</h2>
+
+<p>Both parcels and cargoes are serialised using the <a href="https://specs.awala.network/RS-001">Awala Abstract Message Format</a> (<em>RAMF</em> for historic reasons), which is a binary format based on <a href="https://www.itu.int/rec/T-REC-X.680-X.693-201508-I/en">ASN.1 Distinguished Encoding Rules</a> (DER) and the <a href="https://tools.ietf.org/html/rfc5652">Cryptographic Message Syntax</a> (CMS). The protocol suite defines additional RAMF types.</p>
+
+<p>A RAMF message is a <a href="https://datatracker.ietf.org/doc/html/rfc5652#section-5">CMS <code class="language-plaintext highlighter-rouge">SignedData</code></a> message that encapsulates the following in a DER-encoded structure:</p>
+
+<ul>
+  <li>The recipient’s <a href="https://specs.awala.network/RS-000#addressing">address</a>, which has two fields:
+    <ul>
+      <li>Its <a href="#node-ids"><em>node id</em></a>.</li>
+      <li>The <em>Internet address</em> of its Internet gateway (e.g., <code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.cloud</code>; if the recipient is a private endpoint or an Internet gateway) or its Internet endpoint (e.g., <code class="language-plaintext highlighter-rouge">facebook.com</code> as a pointer to <code class="language-plaintext highlighter-rouge">awala.facebook.com</code>). This field is absent in cargo bound for a private gateway.</li>
+    </ul>
+  </li>
+  <li>The parcel id: A unique identifier for the parcel, used to drop duplicates for the same sender/recipient pair.</li>
+  <li>The creation and expiry dates. Used to purge invalid messages.</li>
+  <li>The ciphertext of the encapsulated content, using a <a href="https://datatracker.ietf.org/doc/html/rfc5652#section-6">CMS <code class="language-plaintext highlighter-rouge">EnvelopedData</code></a> structure.</li>
+</ul>
+
+<p>Additionally, the <code class="language-plaintext highlighter-rouge">SignedData</code> structure contains the sender’s certificate, which will be self-issued if the recipient is an <a href="#internet-nodes">Internet node</a>. If the recipient is <a href="#private-nodes">private</a>, the sender will have to sign the message with the appropriate <a href="#delivery-authorisations">Delivery Authorisation</a>, or else the network will drop the message.</p>
+
+<p>Note that the unencrypted metadata above doesn’t include any personally-identifiable information. Additionally, only parcels bound for an Internet endpoint can be attributed to a specific service (e.g., <code class="language-plaintext highlighter-rouge">awala.facebook.com</code>), which is something that only the gateways that relay the parcels can see – couriers can’t see that because parcels are encapsulated in cargo.</p>
+
+<h3 id="messaging-protocols">Messaging protocols</h3>
+
+<p>Awala involves three layers of <a href="https://specs.awala.network/RS-000#messaging-protocols">messaging protocols</a>:</p>
+
+<ul>
+  <li><strong>Service Messaging Protocol</strong>: This is entirely defined by the Awala service provider. The service provider is free to define the types of messages it supports, and how they’re serialised (e.g., JSON, Protocol Buffers). The service provider will also be responsible for their validation. Building on the examples above, one of the messages that Facebook could define is a <code class="language-plaintext highlighter-rouge">Post</code>, which could be a JSON document containing the fields <code class="language-plaintext highlighter-rouge">date</code> and <code class="language-plaintext highlighter-rouge">text</code>.</li>
+  <li><strong>Endpoint Messaging Protocol</strong>: This protocol is part of the Awala suite, and is implemented in the endpoint libraries (e.g., <a href="https://github.com/relaycorp/awala-endpoint-android">Android</a>) and the <a href="https://docs.relaycorp.tech/awala-endpoint-internet/">endpoint middleware</a>. This is the layer where service messages are encapsulated in parcels.</li>
+  <li><strong>Gateway Messaging Protocol</strong>: This protocol is also part of the Awala suite, and is implemented by all Awala gateways (<a href="https://docs.relaycorp.tech/awala-gateway-internet/">Internet</a>, <a href="https://github.com/relaycorp/awala-gateway-desktop">desktop</a> and <a href="https://github.com/relaycorp/relaynet-gateway-android">Android</a>). This is the layer where parcels are encapsulated in cargoes.</li>
+</ul>
+
+<p>The following diagram illustrates the relationship between the three layers when the sneakernet is used:</p>
+
+<p><img src="assets/diagrams/protocol-layers.svg" alt="protocol-layers.svg" /></p>
+
+<h3 id="message-transport-bindings">Message transport bindings</h3>
+
+<p>The messaging protocols don’t actually specify <em>how</em> endpoints, gateways and couriers exchange messages: That’s deferred to the <a href="https://specs.awala.network/RS-000#message-transport-bindings"><em>message transport bindings</em></a>. Awala defines three bindings:</p>
+
+<ul>
+  <li><strong>Gateway Synchronisation Binding</strong>: It defines how a private gateway communicates with its Internet gateway when the Internet is available, and how private endpoints communicate with their private gateway. The primary objective is to exchange parcels, but other operations are also defined here (e.g., registration).</li>
+  <li><strong>Cargo Relay Binding</strong>: It defines how gateways and couriers exchange cargo when the sneakernet is used.</li>
+  <li><strong>Parcel Delivery Binding</strong>: It defines how Internet gateways and Internet endpoints exchange parcels.</li>
+</ul>
+
+<p>Bindings are <em>abstract</em>, in the sense that the protocol is agnostic of the underlying Layer 7 protocol. As of this writing, we support one concrete binding for each abstract binding:</p>
+
+<ul>
+  <li><strong>Gateway synchronisation</strong>: <a href="https://specs.awala.network/RS-016">Parcel Delivery over HTTP and WebSockets (PoWeb)</a>, which is mostly implemented in <a href="https://github.com/relaycorp/awala-poweb-jvm">Kotlin</a> and <a href="https://github.com/relaycorp/relaynet-poweb-js">JS</a> libraries that gateways and private endpoints integrate.</li>
+  <li><strong>Cargo relay</strong>: <a href="https://specs.awala.network/RS-008">Cargo Relay over gRPC (CogRPC)</a>, which is mostly implemented in <a href="https://github.com/relaycorp/awala-cogrpc-jvm">Kotlin</a> and <a href="https://github.com/relaycorp/relaynet-cogrpc-js">JS</a> libraries that the gateways and courier apps integrate.</li>
+  <li><strong>Parcel delivery</strong>: <a href="https://specs.awala.network/RS-007">Parcel Delivery over HTTP (PoHTTP)</a>, which is mostly implemented in a <a href="https://github.com/relaycorp/relaynet-pohttp-js">JS library</a> that Internet gateways and Internet endpoints integrate.</li>
+</ul>
+
+<p>When a client connects to a remote server (i.e., not on <code class="language-plaintext highlighter-rouge">127.0.0.1</code>), Awala requires TLS 1.2+ to be used. Cleartext HTTP or SSL connections must be rejected. DTLS 1.2+ is allowed in case a future binding uses UDP.</p>
+
+<h2 id="nodes">Nodes</h2>
+
+<p><em>Nodes</em> are entities that produce and consume messages. Endpoints and gateways are nodes, but couriers are not.</p>
+
+<p>Nodes can currently be private or Internet, depending on whether they’re Internet hosts. Future versions of the network may introduce additional node types as new underlying networks (e.g., <a href="https://en.wikipedia.org/wiki/Scatternet">scatternets</a>) are supported.</p>
+
+<h3 id="private-nodes">Private nodes</h3>
+
+<p>Private endpoints and private gateways, collectively known as <em>private nodes</em>, run on end user devices (e.g., smartphones, laptops) and implement a subset of the bindings:</p>
+
+<ul>
+  <li>Private endpoints implement the gateway synchronisation binding (as a client).</li>
+  <li>Private gateways implement the gateway synchronisation binding (as a client and a server) and the cargo relay binding (as a client). The gateway synchronisation server must not be reachable from other devices, so it must listen on <code class="language-plaintext highlighter-rouge">127.0.0.1</code> or use UNIX sockets; the reference implementations use <code class="language-plaintext highlighter-rouge">127.0.0.1</code>.</li>
+</ul>
+
+<p>Awala requires every message bound for a private node to be signed with an appropriate <a href="#delivery-authorisations">Delivery Authorisation</a>.</p>
+
+<h3 id="internet-nodes">Internet nodes</h3>
+
+<p>Internet gateways and Internet endpoints, collectively known as <em>Internet nodes</em>, are Internet hosts that implement one or more bindings:</p>
+
+<ul>
+  <li>Internet endpoints implement the parcel delivery binding (as a client and a server).</li>
+  <li>Internet gateways implement the gateway synchronisation binding (as a client and a server), the parcel delivery binding (as a client and a server) and the cargo relay binding (as a server). However, an operator may decide to disable the cargo relay binding if they don’t want to support the sneakernet.</li>
+</ul>
+
+<p>Awala requires that such hosts have an <code class="language-plaintext highlighter-rouge">SRV</code> record to “advertise” its role as an Internet node. For example, building on the example above, Facebook could deploy its endpoint middleware at <code class="language-plaintext highlighter-rouge">awala.facebook.com</code> (using an <code class="language-plaintext highlighter-rouge">A</code> or <code class="language-plaintext highlighter-rouge">CNAME</code> record), and then have an <code class="language-plaintext highlighter-rouge">SRV</code> record pointing to it from <code class="language-plaintext highlighter-rouge">facebook.com</code> (in which case, <code class="language-plaintext highlighter-rouge">facebook.com</code> would be its Internet address). This <code class="language-plaintext highlighter-rouge">SRV</code> record must be in an DNSSEC-signed zone.</p>
+
+<p>Additionally, clients connecting to Awala Internet nodes must use DNS-over-HTTPS (DoH) or DNS-over-TLS (DoT) to resolve the both records for privacy and censorship-circumvention reasons. As of this writing, the reference implementations use <a href="https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/">Cloudflare’s DoH service</a>.</p>
+
+<p>Unlike private nodes, Internet nodes do not benefit from any type of access control like <a href="#delivery-authorisations">Delivery Authorisations</a>.</p>
+
+<h2 id="authentication-and-access-control">Authentication and access control</h2>
+
+<p>Awala deploys its own <a href="https://specs.awala.network/RS-002">Public Key Infrastructure</a> (PKI) to completely protect private nodes from spam and minimise illegitimate traffic on the sneakernet (where the storage capacity may be limited). The PKI is based on <a href="https://en.wikipedia.org/wiki/X.509">X.509</a> certificates, and it’s used to authenticate all nodes.</p>
+
+<h3 id="identity-keys">Identity keys</h3>
+
+<p>Every node has a long-term, <em>identity key pair</em> that’s used to issue certificates (e.g., <a href="#delivery-authorisations">delivery authorisations</a>) and sign <a href="#messaging">RAMF messages</a>.</p>
+
+<p>Nodes use 2028-bit RSA keys by default, but 3072- and 4096-bit keys are also supported. Digital signatures are produced with the <a href="https://en.wikipedia.org/wiki/Probabilistic_signature_scheme">Probabilistic Signature Scheme</a> (RSA-PSS), and SHA-256 by default (SHA-384 and SHA-512 are also supported).</p>
+
+<p><a href="https://github.com/AwalaNetwork/specs/issues/21">We plan to migrate to Curve25519/Curve448 keys and EdDSA in the future</a>.</p>
+
+<h3 id="node-ids">Node ids</h3>
+
+<p>The id of a node is the SHA-256 hash of its public key, hex-encoded, and prefixed with a zero (<code class="language-plaintext highlighter-rouge">0</code>; denoting the first version of this format). For example, <code class="language-plaintext highlighter-rouge">0b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c</code> would be the id of a node whose identity public key has the SHA-256 digest <code class="language-plaintext highlighter-rouge">b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c</code>.</p>
+
+<h3 id="delivery-authorisations">Delivery Authorisations</h3>
+
+<p>A delivery authorisation is a certificate whereby a private node authorises another node (private or Internet) to send messages to it. There are two types of authorisations:</p>
+
+<ul>
+  <li><strong>Parcel Delivery Authorisation</strong> (PDA): It’s granted by a private endpoint to another endpoint (private or Internet). Parcels signed with a PDA must also include the following intermediate certificates:
+    <ol>
+      <li>The recipient of the parcel, which issued the PDA.</li>
+      <li>The recipient’s private gateway.</li>
+    </ol>
+  </li>
+  <li><strong>Cargo Delivery Authorisation</strong> (CDA): It’s granted by a private gateway to its Internet gateway. Cargoes signed with a CDA must also include the certificate for the recipient of the cargo, which issued the CDA.</li>
+</ul>
+
+<p>With the appropriate certificate chain attached to each message, the gateways and couriers transporting the message can verify whether the sender is authorised to communicate with the recipient.</p>
+
+<h2 id="end-to-end-encryption">End-to-end encryption</h2>
+
+<p>The end-to-end encryption scheme – known as the <a href="https://specs.awala.network/RS-003">Awala Channel Session Protocol</a> – is used to encrypt the content of <a href="#messaging">RAMF messages</a> with perfect forward secrecy, <a href="https://signal.org/blog/advanced-ratcheting/">future secrecy</a> and replay attack mitigation. It’s mostly a delay-tolerant, decentralised version of the <a href="https://signal.org/docs/specifications/x3dh/">X3DH</a> and <a href="https://signal.org/docs/specifications/doubleratchet/">Double Ratchet</a> protocols from the Signal project.</p>
+
+<p>Another key difference is that X3DH requires X25519 or X448 keys, whereas Awala uses NIST curves (P-256 by default) due to the fact that one of our third-party dependencies doesn’t support X25519 or X448. However, <a href="https://github.com/AwalaNetwork/specs/issues/21">we plan to migrate to X25519/X448 in the future</a>. The following algorithms are also used:</p>
+
+<ul>
+  <li><strong>Symmetric ciphers</strong>: AES-128 by default, but AES-192 and AES-256 are also supported. AES-KW is used when encrypting cryptographic key material in CMS <code class="language-plaintext highlighter-rouge">EnvelopedData</code> structures, and AES-GCM for the payload.</li>
+  <li><strong>Key derivation functions</strong>: Key Derivation Function (KDF) from ANSI X9.63. We plan to migrate to the HMAC-based Extract-and-Expand Key Derivation Function (HKDF), but <a href="https://github.com/PeculiarVentures/PKI.js/issues/254">this is currently unsupported by a dependency</a>.</li>
+</ul>
+
+<p>Internet nodes have an initial ECDH key pair, whose public key is made available to prospective peers via the <a href="#connection-parameters">connection parameters</a>. Because the Channel Session Protocol uses a ratchet mechanism, the initial key pair is only used by private nodes to encrypt the first message sent to an Internet peer, and subsequent messages will use different key pairs. The initial key pair is rotated periodically.</p>
+
+<h2 id="connection-parameters">Connection parameters</h2>
+
+<p>Since establishing a channel between two nodes requires two public keys (a long-term identity key and a short-term encryption key) and an Internet address from each peer, Awala facilitates this process by having nodes exchange their <em>connection parameters</em> (a binary blob) with prospective peers.</p>
+
+<h3 id="internet-node-connection-parameters">Internet node connection parameters</h3>
+
+<p>Internet endpoints and Internet gateways expose their connection parameters via their parcel delivery and gateway synchronisation <a href="#message-transport-bindings">bindings</a>, respectively. Such parameters are:</p>
+
+<ul>
+  <li>The Internet address of the node (e.g., <code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.tech</code>).</li>
+  <li>The identity public key of the node.</li>
+  <li>The initial ECDH public key of the node.</li>
+</ul>
+
+<p>These connections parameters are safe to distribute publicly. In fact, we at Relaycorp distribute our private nodes with their pubic peers’ connection parameters embedded in the software so that they won’t need to be fetched from the Internet. For example:</p>
+
+<ul>
+  <li>The Awala Gateway for Android has the <a href="https://github.com/relaycorp/relaynet-gateway-android/blob/9ed06f48008aa2be56d42b8ab4f34e7764d2ae81/app/src/main/res/raw/public_gateway_cert.der">connection parameters for the gateway <code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.cloud</code></a>.</li>
+  <li>The Awala Ping for Android has the <a href="https://github.com/relaycorp/awala-ping-android/blob/4ab494bde91ec0a86d6c7b2afa323a02b7543b92/app/src/main/res/raw/default_public_peer_connection_params.der">connection parameters for the endpoint <code class="language-plaintext highlighter-rouge">ping.awala.services</code></a>.</li>
+  <li>Letro has the <a href="https://github.com/relaycorp/letro-android/blob/4933156fd112d984e8874f55dfb86aab10efd194/app/src/main/res/raw/server_connection_params.der">connection parameters for the endpoint <code class="language-plaintext highlighter-rouge">letro.app</code></a>.</li>
+</ul>
+
+<h3 id="private-node-connection-parameters">Private node connection parameters</h3>
+
+<p>In the case of private endpoints, the connection parameters is known as <em>connection authorisation</em>, since its primary purpose is to authorise peers. This binary blob extends the Internet node connection parameters with the PDA for the grantee and the relevant intermediate certificates. Consequently, each authorisation is unique to a particular endpoint.</p>
+
+<p>Private gateways do not have connection parameters. Instead, they use Cargo Delivery Authorisations to authorise their Internet gateways, and the private gateway’s latest ECDH public key is already shared with the Internet gateway in the CMS <code class="language-plaintext highlighter-rouge">EnvelopedData</code> structure encapsulated in the cargo.</p>
+
+<h2 id="key-management">Key management</h2>
+
+<p>Internet nodes use <a href="https://www.npmjs.com/package/@relaycorp/webcrypto-kms">Key Management Services (KMSs) via a provider-agnostic library</a>. In Relaycorp’s case, all of our keys are backed by Hardware Security Modules (HSMs) in <a href="https://cloud.google.com/kms">Google Cloud KMS</a>. Unfortunately, for encryption keys, we have to protect them with envelope encryption because <a href="https://issuetracker.google.com/issues/231334600">ECDH keys are not natively supported yet</a>.</p>
+
+<p>Private nodes on Android use the <a href="https://developer.android.com/training/articles/keystore">Android Keystore</a>, whilst <a href="https://github.com/relaycorp/awala-gateway-desktop/issues/441">desktop nodes currently store the keys in cleartext</a>.</p>
+
+<h2 id="certificate-management">Certificate management</h2>
+
+<p>Certificates in the Awala PKI are relatively short-lived as they can last for a maximum of 6 months, and for this reason we do not support certificate revocation.</p>
+
+<p>Certificate renewal is fully automated:</p>
+
+<ul>
+  <li>Internet gateways renew their certificates every 3 months, and are valid for 6 months.</li>
+  <li>Internet endpoints always use self-issued certificates, so they’re ephemeral.</li>
+  <li>Private gateways and private endpoints renew their certificates 3 months before they expire.</li>
+  <li>PDAs are renewed and sent automatically before the old ones expire, as long as the granting endpoint has not revoked the PDA.</li>
+  <li>CDAs are always issued on each courier synchronisation.</li>
+</ul>
+
+<h2 id="service-decentralisation">Service (de)centralisation</h2>
+
+<p>Awala services can be centralised, decentralised or hybrid. The examples so far illustrate a centralised service, where Facebook (the service provider) operates an Internet endpoint middleware, which processes all the communication between users. However, it’s also possible to build decentralised services where Awala gateways transport parcels between users, with no involvement from a server operated by the service provider.</p>
+
+<p>For example, the following video illustrates how Alice could post the message “Hi!” to Bob on WhatsApp via Awala whilst she’s connected to the Internet – assuming that Meta or a third party has built an Awala-compatible WhatsApp app for Android:</p>
+
+<video muted="" controls="">
+    <source src="/assets/diagrams/service-decentralised.mp4" type="video/mp4" />
+</video>
+
+<p>In this example, Alice and Bob are using different Internet gateways, but if they were using the same gateway, the process would be a bit simpler as there would be one fewer hop as shown in the following video:</p>
+
+<video muted="" controls="">
+    <source src="/assets/diagrams/service-decentralised-same-gateway.mp4" type="video/mp4" />
+</video>
+
+<h2 id="ping-service">Ping service</h2>
+
+<p>Awala defines a trivial service called <a href="https://specs.awala.network/RS-014">Ping</a>, which is used to test the network itself. The service has private endpoint apps on <a href="https://github.com/relaycorp/awala-ping-android">Android</a> and <a href="https://github.com/relaycorp/awala-ping-desktop">desktop</a>, and <a href="https://github.com/relaycorp/awala-pong">a backend app for the Internet endpoint middleware</a>.</p>
+
+<h2 id="learn-more">Learn more</h2>
+
+<p>If you wish to learn more, you can read the <a href="https://specs.awala.network/">Awala specs</a>, browse the <a href="https://github.com/search?q=topic%3Aawala+org%3Arelaycorp">reference implementations</a> or <a href="https://github.com/orgs/AwalaNetwork/discussions">ask us questions</a>.</p>
+
+
+    
+</article>
+
+</section>
+<footer class="rn-footer">
+    <div class="rn-footer-container">
+        <div class="columns">
+            <div class="column">
+                <p class="has-text-weight-semibold">Awala</p>
+                <ul>
+                    <li><a href="/users/">Users</a></li>
+                    <li><a href="/software-vendors">Software vendors</a></li>
+                    <li><a href="/couriers">Couriers</a></li>
+                    <li><a href="/tech-overview">Technical overview</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/legal/">Legal</a></li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <p class="has-text-weight-semibold">Get involved</p>
+                <ul>
+                    <li><a href="/community">Community</a></li>
+                    <li><a href="/contributions/">How to contribute</a></li>
+                    <li><a href="https://github.com/search?q=topic%3Aawala+org%3Arelaycorp">Reference implementations</a></li>
+                    <li><a href="https://specs.awala.network/">Protocol suite specs</a></li>
+                    <li><a href="https://github.com/relaycorp/.github/blob/master/CODE_OF_CONDUCT.md">Code of
+                        conduct</a></li>
+                    <li><a href="/way">The Awala Way</a></li>
+                    <li>
+                        <a href="https://twitter.com/AwalaNetwork" title="Awala on Twitter" class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.reddit.com/r/Awala/" title="Awala on Reddit" class="icon">
+                            <i class="fab fa-reddit"></i>
+                        </a>
+                        <a href="https://www.facebook.com/AwalaNetwork" title="Awala on Facebook" class="icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCo-KmDc5Cem1n-6yxYBRmNw" title="Awala on YouTube"
+                           class="icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://github.com/AwalaNetwork" title="Awala on GitHub" class="icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="column"></div>
+
+            <div class="column">
+                <p class="has-text-weight-semibold">Relaycorp</p>
+                <ul>
+                    <li><a href="https://relaycorp.tech">Contact us</a></li>
+                    <li><a href="https://github.com/relaycorp/cloud-gateway">Gateway infrastructure</a></li>
+                    <li><a href="https://github.com/relaycorp/.github/blob/master/SECURITY.md">Security policy</a></li>
+                    <li>
+                        <a
+                            href="https://letro.app/en/"
+                            title="Like email, but end-to-end encrypted, spam-free, phishing-free and works without the Internet too"
+                        >Letro</a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://veraid.net"
+                            title="Offline authentication based on DNS"
+                        >VeraId</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/RelaycorpHQ" title="Relaycorp on Twitter" class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://github.com/relaycorp" title="Relaycorp on GitHub" class="icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/relaycorp" title="Relaycorp on LinkedIn" class="icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rn-footer-legal">
+            <p>
+                Copyright 2019-2023 by <a href="https://relaycorp.tech">Relaycorp</a>.
+                Awala® is a registered trademark of Relaycorp.
+                <a href="/legal/">Read legal policies</a>.
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
