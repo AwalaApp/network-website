@@ -73,10 +73,16 @@ nav.breadcrumb li {
       @extend .button;
       @extend .is-link;
 
+      text-decoration-line: none;
+
       .fas {
         margin-right: 0.5rem;
       }
     }
+  }
+
+  a {
+    text-decoration-line: underline;
   }
 
   .pagination {
@@ -102,6 +108,10 @@ nav.breadcrumb li {
   @extend .content;
   @extend .has-text-centered;
   @extend .is-size-7;
+
+  a {
+    text-decoration-line: underline;
+  }
 }
 
 // Homepage
@@ -289,4 +299,9 @@ section.rn-blog-post {
 }
 .rl-youtube-video iframe {
   @extend .has-ratio;
+}
+
+video {
+  display: block;
+  margin: 1em auto;
 }
