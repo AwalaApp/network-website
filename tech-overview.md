@@ -166,7 +166,7 @@ Internet endpoints and Internet gateways expose their connection parameters via 
 - The identity public key of the node.
 - The initial ECDH public key of the node.
 
-These connections parameters are safe to distribute publicly. In fact, we at Relaycorp distribute our private nodes with their pubic peers' connection parameters embedded in the software so that they won't need to be fetched from the Internet. For example:
+These connections parameters are safe to distribute publicly. In fact, we at Relaycorp distribute our private nodes with their public peers' connection parameters embedded in the software so that they won't need to be fetched from the Internet. For example:
 
 - The Awala Gateway for Android has the [connection parameters for the gateway `frankfurt.relaycorp.cloud`](https://github.com/relaycorp/relaynet-gateway-android/blob/9ed06f48008aa2be56d42b8ab4f34e7764d2ae81/app/src/main/res/raw/public_gateway_cert.der).
 - The Awala Ping for Android has the [connection parameters for the endpoint `ping.awala.services`](https://github.com/relaycorp/awala-ping-android/blob/4ab494bde91ec0a86d6c7b2afa323a02b7543b92/app/src/main/res/raw/default_public_peer_connection_params.der).
