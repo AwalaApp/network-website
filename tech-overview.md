@@ -31,7 +31,7 @@ Conversely, when the Facebook app server wants to send a message to a user, it f
 
 {% include embed_mp4_video.html path="/assets/diagrams/centralised-server_to_user.mp4" %}
 
-Note that in the animation above, Bob is using a different Internet gateway (`london.relaycorp.cloud`) than Alice (`frankfurt.relaycorp.tech`). As a federated network, users can choose their own Internet gateway independently of the service they use and the people they communicate with -- Think of it as the Awala equivalent of an ISP.
+Note that in the animation above, Bob is using a different Internet gateway (`london.relaycorp.cloud`) than Alice (`frankfurt.relaycorp.cloud`). As a federated network, users can choose their own Internet gateway independently of the service they use and the people they communicate with -- Think of it as the Awala equivalent of an ISP.
 
 ## Sneakernet
 
@@ -162,7 +162,7 @@ Since establishing a channel between two nodes requires two public keys (a long-
 
 Internet endpoints and Internet gateways expose their connection parameters via their parcel delivery and gateway synchronisation [bindings](#message-transport-bindings), respectively. Such parameters are:
 
-- The Internet address of the node (e.g., `frankfurt.relaycorp.tech`).
+- The Internet address of the node (e.g., `frankfurt.relaycorp.cloud`).
 - The identity public key of the node.
 - The initial ECDH public key of the node.
 
