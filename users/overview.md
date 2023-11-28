@@ -7,7 +7,7 @@ breadcrumbs:
 
 # How Awala works in simple terms
 
-If you're privacy-conscious or just curious, this document should help you understand how it Awala works with minimal technical jargon. If you're looking for an accurate explanation, you may prefer to read the [technical overview]({% link tech-overview.md %}).
+If you're privacy-conscious or just curious, this document should help you understand how Awala works with minimal technical jargon. If you're looking for an accurate explanation, you may prefer to read the [technical overview]({% link tech-overview.md %}).
 
 We assume that you've already used Awala, or have at least watched [the demo](https://youtu.be/LL1Z9EGiMVc).
 
@@ -17,7 +17,7 @@ All the mainstream apps on your phone or computer, such as Facebook and Google C
 
 By contrast, Awala-compatible apps delegate that responsibility to other components, like the [Awala app on your phone or computer]({% link users/download.md %}). This way, your favourite apps can let Awala use the best transport available to you at any point, and they can focus on what they do best.
 
-Behind the scenes, your Awala app connects to an _Internet gateway_, which is a server that acts as a bridge between your device and the rest of Awala on the Internet. All your data is routed through this server, so it can hold incoming data for you whilst you're disconnected. By default, you're paired to an Internet gateway operated by Relaycorp, but you can change this from the settings.
+Behind the scenes, your Awala app connects to an _Internet gateway_, which is a server that acts as a bridge between your device and the rest of Awala on the Internet. All your data is routed through this server, so it can hold incoming data for you whilst you're disconnected. By default, you're paired to an Internet gateway operated by Relaycorp, but you could in principle run your own.
 
 ## Your data is always end-to-end encrypted
 
