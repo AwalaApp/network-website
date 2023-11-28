@@ -21,4 +21,4 @@ The [Open Technology Fund](https://www.opentech.fund/) has commissioned the foll
 - [Security audit of the protocol suite (2019)](/archives/security-audit-2019-03.pdf). All issues were addressed before starting the implementation of the protocol suite.
 - [User Experience (2021)](/archives/ux-assessment-2021.pdf). [The issues raised are tracked on GitHub](https://github.com/relaycorp/relayverse/issues/32).
 
-We're currently aiming to request a security audit of the implementation of Awala by Q4 2023.
+As of Q4 2023, we're requesting a security audit of the reference implementations, and we're hoping to make the results available by mid 2024.
