@@ -21,7 +21,7 @@ Behind the scenes, your Awala app connects to an _Internet gateway_, which is a 
 
 ## Your data is always end-to-end encrypted
 
-Just like your WhatsApp conversations are end-to-end encrypted so that only you and your contacts can see them, all data exchanged via Awala is end-to-end encrypted. Consequently, neither [couriers]({% link couriers.md %}) nor Internet gateways can read or change your data when they transport it.
+Just like your WhatsApp conversations are [end-to-end encrypted](https://www.kaspersky.com/blog/what-is-end-to-end-encryption/37011/) so that only you and your contacts can see them, all data exchanged via Awala is end-to-end encrypted. Consequently, neither [couriers]({% link couriers.md %}) nor Internet gateways can read or change your data when they transport it.
 
 Awala also enables bypassing third-party servers (like those operated by social networks), directly delivering data to recipients without the third party developer knowing about the communication. Effectively, this means that Awala apps can be more decentralised than their Internet counterparts.
 
