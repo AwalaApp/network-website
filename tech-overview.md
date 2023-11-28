@@ -7,15 +7,17 @@ description: Overview of the Awala protocol suite and its reference implementati
 
 This is an introduction to Awala aimed at a diverse audience with at least a basic understanding of networking and cryptography, such as:
 
-- Human rights organisations or [software vendors]({% link software-vendors.md %}) assessing the security of Awala.
-- Security auditors starting an assessment of the network.
-- Developers contributing to the [reference implementations](https://github.com/search?q=topic%3Aawala+org%3Arelaycorp).
+- Human rights organisations or [software vendors]({% link software-vendors.md %}) assessing the security of the network.
+- Security auditors starting an assessment of the specs or the reference implementations.
+- Developers contributing to the reference implementations.
+
+If you're looking for a less technical introduction, you may prefer to read [how Awala works in simple terms]({% link users/overview.md %}) instead.
 
 We highly recommend familiarising yourself with the way Awala works from the end user's perspective before reading this document. If you haven't done so already, try it out with [Letro](https://letro.app/en/) or [Awala Ping](https://play.google.com/store/apps/details?id=tech.relaycorp.ping), or watch the [demo video](https://youtu.be/LL1Z9EGiMVc).
 
 ## Introduction
 
-Awala is a [delay-tolerant](https://en.wikipedia.org/wiki/Delay-tolerant_networking), [overlay](https://en.wikipedia.org/wiki/Overlay_network) network: It runs on top of the Internet when it's available, but it can switch to a secure [sneakernet](https://en.wikipedia.org/wiki/Sneakernet) when the Internet is unavailable. With and without the Internet, Awala provides end-to-end encryption and [pseudonymity](https://www.techtarget.com/whatis/definition/pseudonymity).
+Awala is a [delay-tolerant](https://en.wikipedia.org/wiki/Delay-tolerant_networking), [overlay](https://en.wikipedia.org/wiki/Overlay_network) network: It runs on top of the Internet when it's available, but it can switch to a secure [sneakernet](https://en.wikipedia.org/wiki/Sneakernet) when the Internet is unavailable. With and without the Internet, users get end-to-end encryption and [pseudonymity](https://www.techtarget.com/whatis/definition/pseudonymity).
 
 App developers can make existing Internet-based services (e.g., social networks) work on Awala, or build Awala-native apps that unlock additional benefits (e.g., spam protection, decentralisation).
 
@@ -37,7 +39,7 @@ Note that in the animation above, Bob is using a different Internet gateway (`lo
 
 When the Internet is unavailable, users can have their data physically transported by [couriers]({% link couriers.md %}), who effectively form a secure sneakernet.
 
-Most of the protocol remains the same as when the Internet is available, but gateways don't exchange parcels: instead, they exchange _cargo_, which is also encrypted and contains one or more parcels. This way, an eavesdropper wouldn't be able to see which services are being used (e.g., `awala.facebook.com`). The following video illustrates this when transporting data to the Internet:
+Most of the protocol remains the same as when the Internet is available, but gateways don't exchange parcels: instead, they exchange _cargo_, which is also encrypted and contains one or more parcels. This way, an eavesdropper wouldn't be able to see which services are being used (e.g., `awala.facebook.com`). The following video illustrates the transport of cargo to the Internet:
 
 {% include embed_mp4_video.html path="/assets/diagrams/centralised-couriers.mp4" %}
 
@@ -136,10 +138,10 @@ The id of a node is the SHA-256 hash of its public key, hex-encoded, and prefixe
 
 A delivery authorisation is a certificate whereby a private node authorises another node (private or Internet) to send messages to it. There are two types of authorisations:
 
-- **Parcel Delivery Authorisation** (PDA): It's granted by a private endpoint to another endpoint (private or Internet). Parcels signed with a PDA must also include the following intermediate certificates:
+- **Parcel Delivery Authorisation** (PDA): It's granted by a private endpoint to another endpoint (private or Internet). A parcel signed with a PDA must also include the following intermediate certificates:
   1. The recipient of the parcel, which issued the PDA.
   2. The recipient's private gateway.
-- **Cargo Delivery Authorisation** (CDA): It's granted by a private gateway to its Internet gateway. Cargoes signed with a CDA must also include the certificate for the recipient of the cargo, which issued the CDA.
+- **Cargo Delivery Authorisation** (CDA): It's granted by a private gateway to its Internet gateway. A cargo signed with a CDA must also include the certificate for the recipient, which issued the CDA.
 
 With the appropriate certificate chain attached to each message, the gateways and couriers transporting the message can verify whether the sender is authorised to communicate with the recipient.
 
@@ -166,7 +168,7 @@ Internet endpoints and Internet gateways expose their connection parameters via 
 - The identity public key of the node.
 - The initial ECDH public key of the node.
 
-These connections parameters are safe to distribute publicly. In fact, we at Relaycorp distribute our private nodes with their public peers' connection parameters embedded in the software so that they won't need to be fetched from the Internet. For example:
+Connections parameters are safe to distribute publicly. In fact, we at Relaycorp distribute our private nodes with their public peers' connection parameters embedded in the software so that they won't need to be fetched from the Internet. For example:
 
 - The Awala Gateway for Android has the [connection parameters for the gateway `frankfurt.relaycorp.cloud`](https://github.com/relaycorp/relaynet-gateway-android/blob/9ed06f48008aa2be56d42b8ab4f34e7764d2ae81/app/src/main/res/raw/public_gateway_cert.der).
 - The Awala Ping for Android has the [connection parameters for the endpoint `ping.awala.services`](https://github.com/relaycorp/awala-ping-android/blob/4ab494bde91ec0a86d6c7b2afa323a02b7543b92/app/src/main/res/raw/default_public_peer_connection_params.der).
@@ -186,7 +188,7 @@ Private nodes on Android use the [Android Keystore](https://developer.android.co
 
 ## Certificate management
 
-Certificates in the Awala PKI are relatively short-lived as they can last for a maximum of 6 months, and for this reason we do not support certificate revocation.
+The Awala PKI requires certificates to be valid for no more than 6 months to compensate for the lack of a revocation mechanism (which wouldn't work when the Internet is unavailable).
 
 Certificate renewal is fully automated:
 
@@ -198,9 +200,9 @@ Certificate renewal is fully automated:
 
 ## Service (de)centralisation
 
-Awala services can be centralised, decentralised or hybrid. The examples so far illustrate a centralised service, where Facebook (the service provider) operates an Internet endpoint middleware, which processes all the communication between users. However, it's also possible to build decentralised services where Awala gateways transport parcels between users, with no involvement from a server operated by the service provider.
+Awala services can be centralised, decentralised or hybrid. The examples so far illustrate a centralised service, where Facebook (the service provider) operates an Internet endpoint, which processes all the communication between users. However, it's also possible to build decentralised services where Awala gateways transport parcels between users, with no involvement from a server operated by the service provider.
 
-For example, the following video illustrates how Alice could post the message “Hi!” to Bob on WhatsApp via Awala whilst she’s connected to the Internet – assuming that Meta or a third party has built an Awala-compatible WhatsApp app for Android:
+For example, the following video illustrates how Alice could send the message “Hi!” to Bob on WhatsApp via Awala whilst she’s connected to the Internet – assuming that Meta or a third party has built an Awala-compatible WhatsApp app for Android:
 
 {% include embed_mp4_video.html path="/assets/diagrams/service-decentralised.mp4" %}
 

@@ -17,6 +17,8 @@ Watch this video to get a better idea of how Awala works with and without the In
 
 Awala will be the network on which humankind can truly rely and providing resilient communication is just the beginning. Other short-term benefits include powering a new generation of apps that will be 100% free of spam and phishing, while offering better privacy and security. In the future, Awala apps will circumvent online censorship without you having to install Tor or VPNs separately.
 
+You may also want to read a more thorough explanation of [how Awala works]({% link users/overview.md %}).
+
 ## Download Awala
 
 **There are no general purpose, Awala-compatible apps just yet**. Most people downloading Awala today are software developers who want to build apps on top of it, but you're most welcome to download it and play with it -- just bear in mind you won't get very far.
