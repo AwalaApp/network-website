@@ -96,6 +96,10 @@
                     <a class="navbar-item" href="/users/download">
                         Download
                     </a>
+
+                    <a class="navbar-item" href="/users/overview">
+                        How it works
+                    </a>
                 </div>
             </div>
 
@@ -143,16 +147,18 @@
 <p>This is an introduction to Awala aimed at a diverse audience with at least a basic understanding of networking and cryptography, such as:</p>
 
 <ul>
-  <li>Human rights organisations or <a href="/software-vendors">software vendors</a> assessing the security of Awala.</li>
-  <li>Security auditors starting an assessment of the network.</li>
-  <li>Developers contributing to the <a href="https://github.com/search?q=topic%3Aawala+org%3Arelaycorp">reference implementations</a>.</li>
+  <li>Human rights organisations or <a href="/software-vendors">software vendors</a> assessing the security of the network.</li>
+  <li>Security auditors starting an assessment of the specs or the reference implementations.</li>
+  <li>Developers contributing to the reference implementations.</li>
 </ul>
+
+<p>If you’re looking for a less technical introduction, you may prefer to read <a href="/users/overview">how Awala works in simple terms</a> instead.</p>
 
 <p>We highly recommend familiarising yourself with the way Awala works from the end user’s perspective before reading this document. If you haven’t done so already, try it out with <a href="https://letro.app/en/">Letro</a> or <a href="https://play.google.com/store/apps/details?id=tech.relaycorp.ping">Awala Ping</a>, or watch the <a href="https://youtu.be/LL1Z9EGiMVc">demo video</a>.</p>
 
 <h2 id="introduction">Introduction</h2>
 
-<p>Awala is a <a href="https://en.wikipedia.org/wiki/Delay-tolerant_networking">delay-tolerant</a>, <a href="https://en.wikipedia.org/wiki/Overlay_network">overlay</a> network: It runs on top of the Internet when it’s available, but it can switch to a secure <a href="https://en.wikipedia.org/wiki/Sneakernet">sneakernet</a> when the Internet is unavailable. With and without the Internet, Awala provides end-to-end encryption and <a href="https://www.techtarget.com/whatis/definition/pseudonymity">pseudonymity</a>.</p>
+<p>Awala is a <a href="https://en.wikipedia.org/wiki/Delay-tolerant_networking">delay-tolerant</a>, <a href="https://en.wikipedia.org/wiki/Overlay_network">overlay</a> network: It runs on top of the Internet when it’s available, but it can switch to a secure <a href="https://en.wikipedia.org/wiki/Sneakernet">sneakernet</a> when the Internet is unavailable. With and without the Internet, users get end-to-end encryption and <a href="https://www.techtarget.com/whatis/definition/pseudonymity">pseudonymity</a>.</p>
 
 <p>App developers can make existing Internet-based services (e.g., social networks) work on Awala, or build Awala-native apps that unlock additional benefits (e.g., spam protection, decentralisation).</p>
 
@@ -178,7 +184,7 @@
 
 <p>When the Internet is unavailable, users can have their data physically transported by <a href="/couriers">couriers</a>, who effectively form a secure sneakernet.</p>
 
-<p>Most of the protocol remains the same as when the Internet is available, but gateways don’t exchange parcels: instead, they exchange <em>cargo</em>, which is also encrypted and contains one or more parcels. This way, an eavesdropper wouldn’t be able to see which services are being used (e.g., <code class="language-plaintext highlighter-rouge">awala.facebook.com</code>). The following video illustrates this when transporting data to the Internet:</p>
+<p>Most of the protocol remains the same as when the Internet is available, but gateways don’t exchange parcels: instead, they exchange <em>cargo</em>, which is also encrypted and contains one or more parcels. This way, an eavesdropper wouldn’t be able to see which services are being used (e.g., <code class="language-plaintext highlighter-rouge">awala.facebook.com</code>). The following video illustrates the transport of cargo to the Internet:</p>
 
 <video muted="" controls="">
     <source src="/assets/diagrams/centralised-couriers.mp4" type="video/mp4" />
@@ -295,13 +301,13 @@
 <p>A delivery authorisation is a certificate whereby a private node authorises another node (private or Internet) to send messages to it. There are two types of authorisations:</p>
 
 <ul>
-  <li><strong>Parcel Delivery Authorisation</strong> (PDA): It’s granted by a private endpoint to another endpoint (private or Internet). Parcels signed with a PDA must also include the following intermediate certificates:
+  <li><strong>Parcel Delivery Authorisation</strong> (PDA): It’s granted by a private endpoint to another endpoint (private or Internet). A parcel signed with a PDA must also include the following intermediate certificates:
     <ol>
       <li>The recipient of the parcel, which issued the PDA.</li>
       <li>The recipient’s private gateway.</li>
     </ol>
   </li>
-  <li><strong>Cargo Delivery Authorisation</strong> (CDA): It’s granted by a private gateway to its Internet gateway. Cargoes signed with a CDA must also include the certificate for the recipient of the cargo, which issued the CDA.</li>
+  <li><strong>Cargo Delivery Authorisation</strong> (CDA): It’s granted by a private gateway to its Internet gateway. A cargo signed with a CDA must also include the certificate for the recipient, which issued the CDA.</li>
 </ul>
 
 <p>With the appropriate certificate chain attached to each message, the gateways and couriers transporting the message can verify whether the sender is authorised to communicate with the recipient.</p>
@@ -333,7 +339,7 @@
   <li>The initial ECDH public key of the node.</li>
 </ul>
 
-<p>These connections parameters are safe to distribute publicly. In fact, we at Relaycorp distribute our private nodes with their public peers’ connection parameters embedded in the software so that they won’t need to be fetched from the Internet. For example:</p>
+<p>Connections parameters are safe to distribute publicly. In fact, we at Relaycorp distribute our private nodes with their public peers’ connection parameters embedded in the software so that they won’t need to be fetched from the Internet. For example:</p>
 
 <ul>
   <li>The Awala Gateway for Android has the <a href="https://github.com/relaycorp/relaynet-gateway-android/blob/9ed06f48008aa2be56d42b8ab4f34e7764d2ae81/app/src/main/res/raw/public_gateway_cert.der">connection parameters for the gateway <code class="language-plaintext highlighter-rouge">frankfurt.relaycorp.cloud</code></a>.</li>
@@ -355,7 +361,7 @@
 
 <h2 id="certificate-management">Certificate management</h2>
 
-<p>Certificates in the Awala PKI are relatively short-lived as they can last for a maximum of 6 months, and for this reason we do not support certificate revocation.</p>
+<p>The Awala PKI requires certificates to be valid for no more than 6 months to compensate for the lack of a revocation mechanism (which wouldn’t work when the Internet is unavailable).</p>
 
 <p>Certificate renewal is fully automated:</p>
 
@@ -369,9 +375,9 @@
 
 <h2 id="service-decentralisation">Service (de)centralisation</h2>
 
-<p>Awala services can be centralised, decentralised or hybrid. The examples so far illustrate a centralised service, where Facebook (the service provider) operates an Internet endpoint middleware, which processes all the communication between users. However, it’s also possible to build decentralised services where Awala gateways transport parcels between users, with no involvement from a server operated by the service provider.</p>
+<p>Awala services can be centralised, decentralised or hybrid. The examples so far illustrate a centralised service, where Facebook (the service provider) operates an Internet endpoint, which processes all the communication between users. However, it’s also possible to build decentralised services where Awala gateways transport parcels between users, with no involvement from a server operated by the service provider.</p>
 
-<p>For example, the following video illustrates how Alice could post the message “Hi!” to Bob on WhatsApp via Awala whilst she’s connected to the Internet – assuming that Meta or a third party has built an Awala-compatible WhatsApp app for Android:</p>
+<p>For example, the following video illustrates how Alice could send the message “Hi!” to Bob on WhatsApp via Awala whilst she’s connected to the Internet – assuming that Meta or a third party has built an Awala-compatible WhatsApp app for Android:</p>
 
 <video muted="" controls="">
     <source src="/assets/diagrams/service-decentralised.mp4" type="video/mp4" />
