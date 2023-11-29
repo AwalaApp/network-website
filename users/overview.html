@@ -160,19 +160,27 @@
 
 <p>We assume you’ve either used Awala or at least watched <a href="https://youtu.be/LL1Z9EGiMVc">the demo</a>.</p>
 
-<h2 id="internet-apps-vs-awala-apps">Internet apps vs. Awala apps</h2>
+<h2 id="why-internet-apps-need-an-internet-connection-and-awala-apps-dont">Why Internet apps need an Internet connection and Awala apps don’t</h2>
 
-<p>Mainstream apps on your phone or computer, such as Facebook and Google Chrome, require an Internet connection to send and receive data from a server. This is because the app itself establishes the connection with the remote server.</p>
+<p>Mainstream apps on your phone or computer, such as Facebook and Google Chrome, require an Internet connection to send and receive data from a server because the app itself establishes the connection with the remote server.</p>
 
 <p>In contrast, Awala-compatible apps delegate that responsibility to other components, like the <a href="/users/download">Awala app on your phone or computer</a>. This way, your favourite apps can let Awala use the best transport available to you at any point, and they can focus on what they do best.</p>
 
 <p>Behind the scenes, your Awala app connects to an <em>Internet gateway</em>, which is a server that acts as a bridge between your device and the rest of Awala on the Internet. All your data is routed through this server, so it can hold incoming data for you whilst you’re disconnected. By default, you’re paired with an Internet gateway operated by Relaycorp, but you can, in principle, run your own.</p>
 
+<p>The animation below shows how the Facebook app for Android could allow a user to send data via Awala couriers when the Internet is unavailable:</p>
+
+<video muted="" controls="">
+    <source src="/assets/diagrams/non-tech-overview.mp4" type="video/mp4" />
+</video>
+
+<p>If the Internet were available, the Awala app would just send the message to the Internet gateway without involving couriers.</p>
+
 <h2 id="end-to-end-encryption">End-to-end encryption</h2>
 
 <p>Similar to how your WhatsApp conversations are <a href="https://www.kaspersky.com/blog/what-is-end-to-end-encryption/37011/">end-to-end encrypted</a>, ensuring that only you and your contacts can access them, all data exchanged via Awala is also end-to-end encrypted. As a result, neither <a href="/couriers">couriers</a> nor Internet gateways can read or change your data during transit.</p>
 
-<p>Awala enables bypassing third-party servers, like those operated by social networks, delivering data directly to recipients without the third-party developer being aware of the communication. This means that Awala apps can be more decentralised than their Internet counterparts.</p>
+<p>Awala also enables bypassing third-party servers, like those operated by social networks, delivering data directly to recipients without the third-party developer being aware of the communication. This means that Awala apps can be more decentralised than their Internet counterparts.</p>
 
 <p>However, it’s up to the app developer to decide how decentralised their app will be. Some may not be fully decentralised if a server is essential for certain functions. <a href="https://letro.app/en/">Letro</a>, for example, skips its server to deliver conversations, but still uses the server to create accounts and connect users with each other.</p>
 
@@ -184,13 +192,13 @@
 
 <p>Relaycorp is committed to protecting your privacy, so we only keep the minimum amount of data necessary to operate our Internet gateways. We do log IP addresses for the purposes of troubleshooting and abuse prevention, but we don’t track users or share the little we know with third parties. For more information, refer to <a href="/legal/terms">our privacy policy</a>.</p>
 
-<p>We also make the entire source code for Awala publicly available — including the systems we use to automatically publish the software you use. This means that anyone with the appropriate technical skill set can independently verify our claims, so you don’t have to take our word for it.</p>
+<p>We also make the entire source code for Awala publicly available — including the systems we use to automatically publish the software you use. This means that anyone with the relevant technical skills can independently verify our claims, so you don’t have to take our word for it.</p>
 
 <h2 id="the-limitations-you-should-be-aware-of">The limitations you should be aware of</h2>
 
-<p><strong>Awala should still be considered experimental</strong>. Not only should you expect things to break occasionally, but you should also be mindful that there may be security issues that we are not aware of yet. However, as of this writing, we’re commissioning a thorough security audit and expect to publish the results by mid 2024.</p>
+<p><strong>Awala should be considered experimental</strong>. Not only should you expect things to break occasionally, but you should also be mindful that there may be security issues that we are not aware of yet. However, as of this writing, we’re requesting a thorough security audit and expect to publish the results by mid 2024.</p>
 
-<p>Regardless of any security bugs present in Awala, you should still be aware that the following limitations that apply to Awala and anything else on your device:</p>
+<p>Regardless of any security issues present in Awala, you should still be aware that the following limitations that apply to Awala and anything else on your device:</p>
 
 <ul>
   <li>If the device is compromised, the attacker could compromise your apps’ data, including Awala’s.</li>
