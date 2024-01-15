@@ -10,7 +10,7 @@ breadcrumbs:
 
 # Terms of Use and Privacy Policy - Awala
 
-Awala is a decentralized computer network where compatible software can remain connected despite Internet blackouts. The word “Users” refers to end users of Awala. We, Relaycorp, provide reference software implementations of the Awala protocol suite and the Awala-Internet Gateway instances hosted under relaycorp.cloud, such as frankfurt.relaycorp.cloud, to enable you use Awala (the “Services”). Other third parties may provide their own servers or applications for use on Awala, under their own terms and conditions. Relaycorp does not control those third parties.
+Awala is a decentralized computer network where compatible software can remain connected despite Internet blackouts. The word “Users” refers to end users of Awala. We, Relaycorp, provide reference software implementations of the Awala protocol suite and the Awala-Internet Gateway instances hosted under relaycorp.cloud or relaycorp.services, such as frankfurt.relaycorp.cloud, to enable you use Awala (the “Services”). Other third parties may provide their own servers or applications for use on Awala, under their own terms and conditions. Relaycorp does not control those third parties.
 
 We will always run and distribute the open source software that's publicly available and unmodified, and we are committed to automating the process to distribute such software and making the automation code open source too. Additionally, we are committed to exploring workable ways in which we could eventually provide reasonable proof that the server-side infrastructure we operate to run Awala-Internet Gateway instances matches the open source code and that no backdoors have been introduced.
 
