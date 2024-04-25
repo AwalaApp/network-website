@@ -12,7 +12,8 @@ The long-term goal of Awala (formerly known as _Relaynet_) is to complement the 
 
 The project is being incubated by [Relaycorp](https://relaycorp.tech) -- a mission-driven, open source company founded by the author of Awala, [Gus Narea](https://gustavo.engineer) -- for the sole purpose of supporting the network.
 
-Awala has been fully operational on Android, Linux, macOS and Windows since 2021, but there are no compatible apps for the general public. [We're actively working to lower the barrier to adopt Awala]({% link _posts/2021-10-18-lowering-adoption-barrier.md %}), which includes building the first version of [Letro](https://letro.app/en/).
+Awala has been fully operational on Android, Linux, macOS and Windows since 2021, 
+and we completed the implementation of the first compatible app ([Letro](https://letro.app/en/)) at the end of 2023.
 
 ## Independent assessments
 
@@ -21,4 +22,5 @@ The [Open Technology Fund](https://www.opentech.fund/) has commissioned the foll
 - [Security audit of the protocol suite (2019)](/archives/security-audit-2019-03.pdf). All issues were addressed before starting the implementation of the protocol suite.
 - [User Experience (2021)](/archives/ux-assessment-2021.pdf). [The issues raised are tracked on GitHub](https://github.com/relaycorp/relayverse/issues/32).
 
-As of Q4 2023, we're requesting a security audit of the reference implementations, and we're hoping to make the results available by mid 2024.
+As of April 2024, we're requesting a security audit of the reference implementations.
+We expect the report to be available by the end of Q3 2024.

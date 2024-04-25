@@ -7,21 +7,19 @@ description: Use Awala apps to remain connected when the Internet is unavailable
 
 As amazing and ubiquitous as the Internet is, we can't count on it when we need it most -- it just wasn't built to withstand repressive regimes, natural disasters, terrorist attacks or wars. By contrast, Awala was expressly conceived for those scenarios.
 
-When you're connected to the Internet, Awala-compatible apps will simply use it and you won't notice a difference. But when you're disconnected from the Internet, you can get [couriers]({% link couriers.md %}) to securely transport your apps' data to and from the Internet -- without ever handing over your device to anyone.
+When you're connected to the Internet, Awala-compatible apps like [Letro](https://letro.app/en/) will simply use it, and you won't notice a difference.
+When you're disconnected from the Internet, [couriers]({% link couriers.md %}) can securely transport your apps' data to and from the Internet -- without ever handing over your device to anyone.
 
 You don't need to know or trust couriers at all! It's impossible for couriers -- or anyone who intercepts them -- to see or change your apps' data. They can't even see which apps you're using or link that data to you. The worst damage that a courier can cause is to drop your data along the way, and even then Awala will seamlessly detect it and correct it.
 
-Watch this video to get a better idea of how Awala works with and without the Internet:
+Watch the following video to get a better idea of how Awala works with and without the Internet.
 
 {% include embed_youtube_video.html id="LL1Z9EGiMVc" %}
 
-Awala will be the network on which humankind can truly rely and providing resilient communication is just the beginning. Other short-term benefits include powering a new generation of apps that will be 100% free of spam and phishing, while offering better privacy and security. In the future, Awala apps will circumvent online censorship without you having to install Tor or VPNs separately.
+You can also [read the overview of how Awala works]({% link users/overview.md %}) if you want to learn more.
 
-You may also want to read a more thorough explanation of [how Awala works]({% link users/overview.md %}).
-
-## Download Awala
-
-**There are no general purpose, Awala-compatible apps just yet**. Most people downloading Awala today are software developers who want to build apps on top of it, but you're most welcome to download it and play with it -- just bear in mind you won't get very far.
+Awala will be the network on which humankind can truly rely,
+and providing resilient communication is just the beginning. Other short-term benefits include powering a new generation of apps that will be 100% free of spam and phishing, while offering better privacy and security. In the future, Awala apps will circumvent online censorship without you having to install Tor or VPNs separately.
 
 <div class="buttons is-centered">
   <a class="button is-link" href="{% link users/download.md %}">

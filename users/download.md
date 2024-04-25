@@ -13,7 +13,8 @@ js:
 
 # Download Awala
 
-Please keep in mind that **there are no Awala-compatible apps for the general public yet**. Most people downloading Awala today are software developers who want to build apps on top of it.
+**Awala itself is just a platform to run other apps**,
+so you still need other apps like [Letro](https://letro.app/en/) to make the most of it.
 
 By downloading, distributing or using Awala, you agree to abide by [our terms of service]({% link legal/terms.md %}).
 
