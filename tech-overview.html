@@ -216,12 +216,13 @@
 
 <h3 id="messaging-protocols">Messaging protocols</h3>
 
-<p>Awala involves three layers of <a href="https://specs.awala.network/RS-000#messaging-protocols">messaging protocols</a>:</p>
+<p>Awala involves three layers of <a href="https://specs.awala.network/RS-000#messaging-protocols">messaging protocols</a>,
+with each powering a different <em>channel</em>:</p>
 
 <ul>
-  <li><strong>Service Messaging Protocol</strong>: This is entirely defined by the Awala service provider. The service provider is free to define the types of messages it supports, and how they’re serialised (e.g., JSON, Protocol Buffers). The service provider will also be responsible for their validation. Building on the examples above, one of the messages that Facebook could define is a <code class="language-plaintext highlighter-rouge">Post</code>, which could be a JSON document containing the fields <code class="language-plaintext highlighter-rouge">date</code> and <code class="language-plaintext highlighter-rouge">text</code>.</li>
-  <li><strong>Endpoint Messaging Protocol</strong>: This protocol is part of the Awala suite, and is implemented in the endpoint libraries (e.g., <a href="https://github.com/relaycorp/awala-endpoint-android">Android</a>) and the <a href="https://docs.relaycorp.tech/awala-endpoint-internet/">endpoint middleware</a>. This is the layer where service messages are encapsulated in parcels.</li>
-  <li><strong>Gateway Messaging Protocol</strong>: This protocol is also part of the Awala suite, and is implemented by all Awala gateways (<a href="https://docs.relaycorp.tech/awala-gateway-internet/">Internet</a>, <a href="https://github.com/relaycorp/awala-gateway-desktop">desktop</a> and <a href="https://github.com/relaycorp/relaynet-gateway-android">Android</a>). This is the layer where parcels are encapsulated in cargoes.</li>
+  <li><strong>Service Messaging Protocol</strong> (<em>service channel</em>): This is entirely defined by the Awala service provider. The service provider is free to define the types of messages it supports, and how they’re serialised (e.g., JSON, Protocol Buffers). The service provider will also be responsible for their validation. Building on the examples above, one of the messages that Facebook could define is a <code class="language-plaintext highlighter-rouge">Post</code>, which could be a JSON document containing the fields <code class="language-plaintext highlighter-rouge">date</code> and <code class="language-plaintext highlighter-rouge">text</code>.</li>
+  <li><strong>Endpoint Messaging Protocol</strong> (<em>endpoint channel</em>): This protocol is part of the Awala suite, and is implemented in the endpoint libraries (e.g., <a href="https://github.com/relaycorp/awala-endpoint-android">Android</a>) and the <a href="https://docs.relaycorp.tech/awala-endpoint-internet/">endpoint middleware</a>. This is the layer where service messages are encapsulated in parcels.</li>
+  <li><strong>Gateway Messaging Protocol</strong> (<em>gateway channel</em>): This protocol is also part of the Awala suite, and is implemented by all Awala gateways (<a href="https://docs.relaycorp.tech/awala-gateway-internet/">Internet</a>, <a href="https://github.com/relaycorp/awala-gateway-desktop">desktop</a> and <a href="https://github.com/relaycorp/relaynet-gateway-android">Android</a>). This is the layer where parcels are encapsulated in cargoes.</li>
 </ul>
 
 <p>The following diagram illustrates the relationship between the three layers when the sneakernet is used:</p>
