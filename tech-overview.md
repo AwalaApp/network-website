@@ -64,11 +64,12 @@ Note that the unencrypted metadata above doesn't include any personally-identifi
 
 ### Messaging protocols
 
-Awala involves three layers of [messaging protocols](https://specs.awala.network/RS-000#messaging-protocols):
+Awala involves three layers of [messaging protocols](https://specs.awala.network/RS-000#messaging-protocols),
+with each powering a different _channel_:
 
-- **Service Messaging Protocol**: This is entirely defined by the Awala service provider. The service provider is free to define the types of messages it supports, and how they're serialised (e.g., JSON, Protocol Buffers). The service provider will also be responsible for their validation. Building on the examples above, one of the messages that Facebook could define is a `Post`, which could be a JSON document containing the fields `date` and `text`. 
-- **Endpoint Messaging Protocol**: This protocol is part of the Awala suite, and is implemented in the endpoint libraries (e.g., [Android](https://github.com/relaycorp/awala-endpoint-android)) and the [endpoint middleware](https://docs.relaycorp.tech/awala-endpoint-internet/). This is the layer where service messages are encapsulated in parcels.
-- **Gateway Messaging Protocol**: This protocol is also part of the Awala suite, and is implemented by all Awala gateways ([Internet](https://docs.relaycorp.tech/awala-gateway-internet/), [desktop](https://github.com/relaycorp/awala-gateway-desktop) and [Android](https://github.com/relaycorp/relaynet-gateway-android)). This is the layer where parcels are encapsulated in cargoes.
+- **Service Messaging Protocol** (_service channel_): This is entirely defined by the Awala service provider. The service provider is free to define the types of messages it supports, and how they're serialised (e.g., JSON, Protocol Buffers). The service provider will also be responsible for their validation. Building on the examples above, one of the messages that Facebook could define is a `Post`, which could be a JSON document containing the fields `date` and `text`. 
+- **Endpoint Messaging Protocol** (_endpoint channel_): This protocol is part of the Awala suite, and is implemented in the endpoint libraries (e.g., [Android](https://github.com/relaycorp/awala-endpoint-android)) and the [endpoint middleware](https://docs.relaycorp.tech/awala-endpoint-internet/). This is the layer where service messages are encapsulated in parcels.
+- **Gateway Messaging Protocol** (_gateway channel_): This protocol is also part of the Awala suite, and is implemented by all Awala gateways ([Internet](https://docs.relaycorp.tech/awala-gateway-internet/), [desktop](https://github.com/relaycorp/awala-gateway-desktop) and [Android](https://github.com/relaycorp/relaynet-gateway-android)). This is the layer where parcels are encapsulated in cargoes.
 
 The following diagram illustrates the relationship between the three layers when the sneakernet is used:
 
