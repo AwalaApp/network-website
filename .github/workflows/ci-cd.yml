@@ -7,16 +7,11 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18
-      - uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: 20
+          cache: npm
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
@@ -27,12 +22,9 @@ jobs:
           JEKYLL_ENV=production bundle exec jekyll build
 
       - name: Upload static site
-        uses: peaceiris/actions-gh-pages@v2.10.1
+        uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/master'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ./_site/
         with:
-          emptyCommits: false
-          commitMessage: "${{ github.event.head_commit.message }} [skip ci]"
+          commit_message: "${{ github.event.head_commit.message }} [skip ci]"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site/

@@ -50,8 +50,8 @@ exclude:
 javascript_libraries:
   cash-dom:
     # https://www.jsdelivr.com/package/npm/cash-dom
-    version: 8.1.0
-    digest: "sha256-xb3jchN35UY4gwqlR0mSg/dtv25q4yWmXmIg/WscJYo="
+    version: 8.1.5
+    digest: "sha256-mgRBiO/bYlxeBNEiBpjAmZJ/8Wv7Q0w3zX8E3V7hrh8="
     path: "dist/cash.min.js"
   mustache:
     # https://www.jsdelivr.com/package/npm/mustache
