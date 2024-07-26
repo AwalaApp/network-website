@@ -34,6 +34,9 @@ markdown: kramdown
 liquid:
   strict_variables: true
   strict_filters: true
+sass:
+  load_paths:
+    - node_modules
 exclude:
   - Gemfile
   - Gemfile.lock
