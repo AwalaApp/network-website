@@ -19,7 +19,7 @@ jobs:
             ${{ runner.os }}-node-
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6
+          ruby-version: '3.3'
           bundler-cache: true
       - name: Generate docs
         run: |
