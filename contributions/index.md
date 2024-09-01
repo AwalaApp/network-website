@@ -51,7 +51,7 @@ If you're an organisation interested in contributing to Awala, please [contact R
 
 We'd love to start the following projects, but they're not within the scope of Awala strictly speaking and our resources are extremely limited, so it's unlikely we'll do so any time soon. We'd be willing to participate if someone else were to take the lead.
 
-- [Add 25519/448 support to PKI.js](https://github.com/PeculiarVentures/PKI.js/issues/89) -- at least X25519/X448 ([RFC 8418](https://datatracker.ietf.org/doc/html/rfc8418)) -- [so that we can use it](https://github.com/AwalaNetwork/specs/issues/21).
+- [Add 25519/448 support to PKI.js](https://github.com/PeculiarVentures/PKI.js/issues/89) -- at least X25519/X448 ([RFC 8418](https://datatracker.ietf.org/doc/html/rfc8418)) -- [so that we can use it](https://github.com/AwalaApp/specs/issues/21).
 - [Research and document User Experience best practices in Delay-Tolerant Networking](https://github.com/relaycorp/relayverse/issues/26).
 - [Implement a service to alert to potential Internet/telecommunications blackouts](https://github.com/relaycorp/relayverse/issues/9).
 - Research and document practical implementations of steganography at scale, [so that we can eventually use them](https://github.com/relaynet/specs/issues/44). We're particularly interested in approaches that wouldn't turn into a whack-a-mole game with censors.

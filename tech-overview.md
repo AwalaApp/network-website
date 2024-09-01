@@ -129,7 +129,7 @@ Every node has a long-term, _identity key pair_ that's used to issue certificate
 
 Nodes use 2028-bit RSA keys by default, but 3072- and 4096-bit keys are also supported. Digital signatures are produced with the [Probabilistic Signature Scheme](https://en.wikipedia.org/wiki/Probabilistic_signature_scheme) (RSA-PSS), and SHA-256 by default (SHA-384 and SHA-512 are also supported).
 
-[We plan to migrate to Curve25519/Curve448 keys and EdDSA in the future](https://github.com/AwalaNetwork/specs/issues/21).
+[We plan to migrate to Curve25519/Curve448 keys and EdDSA in the future](https://github.com/AwalaApp/specs/issues/21).
 
 ### Node ids
 
@@ -150,7 +150,7 @@ With the appropriate certificate chain attached to each message, the gateways an
 
 The end-to-end encryption scheme -- known as the [Awala Channel Session Protocol](https://specs.awala.network/RS-003) -- is used to encrypt the content of [RAMF messages](#messaging) with perfect forward secrecy, [future secrecy](https://signal.org/blog/advanced-ratcheting/) and replay attack mitigation. It's mostly a delay-tolerant, decentralised version of the [X3DH](https://signal.org/docs/specifications/x3dh/) and [Double Ratchet](https://signal.org/docs/specifications/doubleratchet/) protocols from the Signal project.
 
-Another key difference is that X3DH requires X25519 or X448 keys, whereas Awala uses NIST curves (P-256 by default) due to the fact that one of our third-party dependencies doesn't support X25519 or X448. However, [we plan to migrate to X25519/X448 in the future](https://github.com/AwalaNetwork/specs/issues/21). The following algorithms are also used:
+Another key difference is that X3DH requires X25519 or X448 keys, whereas Awala uses NIST curves (P-256 by default) due to the fact that one of our third-party dependencies doesn't support X25519 or X448. However, [we plan to migrate to X25519/X448 in the future](https://github.com/AwalaApp/specs/issues/21). The following algorithms are also used:
 
 - **Symmetric ciphers**: AES-128 by default, but AES-192 and AES-256 are also supported. AES-KW is used when encrypting cryptographic key material in CMS `EnvelopedData` structures, and AES-GCM for the payload.
 - **Key derivation functions**: Key Derivation Function (KDF) from ANSI X9.63. We plan to migrate to the HMAC-based Extract-and-Expand Key Derivation Function (HKDF), but [this is currently unsupported by a dependency](https://github.com/PeculiarVentures/PKI.js/issues/254).

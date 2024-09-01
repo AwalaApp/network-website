@@ -15,7 +15,7 @@ As of this writing, the network is fully operational on Android, Linux, macOS an
 
 We've also published all the tooling and [documentation](/service-providers/implementation/) necessary to build Android apps and Node.js-powered, server-side apps. Android developers have a high-level library that abstracts away the low-level details, but Node.js developers don't have this high-level tooling yet. Additionally, it isn't currently possible to build server-side apps on a platform other than Node.js.
 
-Despite the limitations above, **developers can still use Awala today** to make Internet-based services ([like Twitter](https://github.com/AwalaNetwork/poc)) resilient to Internet blackouts, or build Awala-native services to unlock additional benefits (e.g., [decentralisation](/service-providers/implementation/architecture#awala-makes-centralisation-a-spectrum), spam protection).
+Despite the limitations above, **developers can still use Awala today** to make Internet-based services ([like Twitter](https://github.com/AwalaApp/poc)) resilient to Internet blackouts, or build Awala-native services to unlock additional benefits (e.g., [decentralisation](/service-providers/implementation/architecture#awala-makes-centralisation-a-spectrum), spam protection).
 
 ## Scope of the new contract
 
