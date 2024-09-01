@@ -291,7 +291,7 @@ with each powering a different <em>channel</em>:</p>
 
 <p>Nodes use 2028-bit RSA keys by default, but 3072- and 4096-bit keys are also supported. Digital signatures are produced with the <a href="https://en.wikipedia.org/wiki/Probabilistic_signature_scheme">Probabilistic Signature Scheme</a> (RSA-PSS), and SHA-256 by default (SHA-384 and SHA-512 are also supported).</p>
 
-<p><a href="https://github.com/AwalaNetwork/specs/issues/21">We plan to migrate to Curve25519/Curve448 keys and EdDSA in the future</a>.</p>
+<p><a href="https://github.com/AwalaApp/specs/issues/21">We plan to migrate to Curve25519/Curve448 keys and EdDSA in the future</a>.</p>
 
 <h3 id="node-ids">Node ids</h3>
 
@@ -317,7 +317,7 @@ with each powering a different <em>channel</em>:</p>
 
 <p>The end-to-end encryption scheme – known as the <a href="https://specs.awala.network/RS-003">Awala Channel Session Protocol</a> – is used to encrypt the content of <a href="#messaging">RAMF messages</a> with perfect forward secrecy, <a href="https://signal.org/blog/advanced-ratcheting/">future secrecy</a> and replay attack mitigation. It’s mostly a delay-tolerant, decentralised version of the <a href="https://signal.org/docs/specifications/x3dh/">X3DH</a> and <a href="https://signal.org/docs/specifications/doubleratchet/">Double Ratchet</a> protocols from the Signal project.</p>
 
-<p>Another key difference is that X3DH requires X25519 or X448 keys, whereas Awala uses NIST curves (P-256 by default) due to the fact that one of our third-party dependencies doesn’t support X25519 or X448. However, <a href="https://github.com/AwalaNetwork/specs/issues/21">we plan to migrate to X25519/X448 in the future</a>. The following algorithms are also used:</p>
+<p>Another key difference is that X3DH requires X25519 or X448 keys, whereas Awala uses NIST curves (P-256 by default) due to the fact that one of our third-party dependencies doesn’t support X25519 or X448. However, <a href="https://github.com/AwalaApp/specs/issues/21">we plan to migrate to X25519/X448 in the future</a>. The following algorithms are also used:</p>
 
 <ul>
   <li><strong>Symmetric ciphers</strong>: AES-128 by default, but AES-192 and AES-256 are also supported. AES-KW is used when encrypting cryptographic key material in CMS <code class="language-plaintext highlighter-rouge">EnvelopedData</code> structures, and AES-GCM for the payload.</li>
@@ -443,7 +443,7 @@ with each powering a different <em>channel</em>:</p>
                            class="icon">
                             <i class="fab fa-youtube"></i>
                         </a>
-                        <a href="https://github.com/AwalaNetwork" title="Awala on GitHub" class="icon">
+                        <a href="https://github.com/AwalaApp" title="Awala on GitHub" class="icon">
                             <i class="fab fa-github"></i>
                         </a>
                     </li>
