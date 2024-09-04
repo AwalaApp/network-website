@@ -5,3 +5,6 @@ description: Awala is the all-in-one tool to circumvent Internet censorship; fro
 ---
 
 # Welcome to Awala!
+
+- [Awala Network](./network).
+- [Awala VPN](./vpn).
