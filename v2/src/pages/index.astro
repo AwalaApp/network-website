@@ -1,38 +1,41 @@
 ---
-import Layout from '../layouts/Skeleton.astro';
-import Card from '../components/HomepageLanguageCard.astro';
+import Layout from "../layouts/Skeleton.astro";
+import Card from "../components/HomepageLanguageCard.astro";
 ---
 
-<Layout title="Awala" description="Awala is the all-in-one tool to circumvent Internet censorship; from service-specific blocking to Internet blackouts.">
-	<main>
-		<h1><span class="text-gradient">Awala</span></h1>
-		<ul role="list" class="link-card-grid">
-			<Card
-				locale="en"
-				title="Go to the English website"
-				body="Learn how Awala can keep you connected — no matter what."
-			/>
-			<Card
-				locale="zh-cn"
-				title="前往中文版网站"
-				body="了解Awala如何确保您始终保持连接，无论发生什么"
-			/>
-		</ul>
-	</main>
+<Layout
+  title="Awala"
+  description="Awala is the all-in-one tool to circumvent Internet censorship; from service-specific blocking to Internet blackouts."
+>
+  <main>
+    <h1><span class="text-gradient">Awala</span></h1>
+    <ul role="list" class="link-card-grid">
+      <Card
+        locale="en"
+        title="Go to the English website"
+        body="Learn how Awala can keep you connected — no matter what."
+      />
+      <Card
+        locale="zh-cn"
+        title="前往中文版网站"
+        body="了解Awala如何确保您始终保持连接，无论发生什么"
+      />
+    </ul>
+  </main>
 </Layout>
 
 <style>
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
 </style>

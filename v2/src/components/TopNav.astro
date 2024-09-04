@@ -1,18 +1,19 @@
 ---
-import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 const locale = Astro.currentLocale!;
 ---
+
 <nav>
-    <ul>
-        <li>
-            <a href={getRelativeLocaleUrl(locale, '/')}>Home</a>
-        </li>
-        <li>
-            <a href={getRelativeLocaleUrl(locale, '/network')}>Network</a>
-        </li>
-        <li>
-            <a href={getRelativeLocaleUrl(locale, '/vpn')}>VPN</a>
-        </li>
-    </ul>
+  <ul>
+    <li>
+      <a href={getRelativeLocaleUrl(locale, "/")}>Home</a>
+    </li>
+    <li>
+      <a href={getRelativeLocaleUrl(locale, "/network")}>Network</a>
+    </li>
+    <li>
+      <a href={getRelativeLocaleUrl(locale, "/vpn")}>VPN</a>
+    </li>
+  </ul>
 </nav>
