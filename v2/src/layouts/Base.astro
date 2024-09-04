@@ -1,6 +1,9 @@
 ---
-import Skeleton from './Skeleton.astro';
 import { z } from 'astro:content';
+
+import Skeleton from './Skeleton.astro';
+import Footer from '../components/Footer.astro';
+import TopNav from '../components/TopNav.astro';
 
 const schema = z.object({
   title: z.string(),
@@ -11,7 +14,9 @@ const { title, description } = schema.parse(Astro.props.frontmatter);
 ---
 
 <Skeleton title={title} description={description}>
+    <TopNav />
 	<main>
 		<slot />
 	</main>
+    <Footer />
 </Skeleton>
