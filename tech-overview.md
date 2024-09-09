@@ -217,4 +217,4 @@ Awala defines a trivial service called [Ping](https://specs.awala.network/RS-014
 
 ## Learn more
 
-If you wish to learn more, you can read the [Awala specs](https://specs.awala.network/), browse the [reference implementations](https://github.com/search?q=topic%3Aawala+org%3Arelaycorp) or [ask us questions](https://github.com/orgs/AwalaNetwork/discussions).
+If you wish to learn more, you can read the [Awala specs](https://specs.awala.network/), browse the [reference implementations](https://github.com/search?q=topic%3Aawala+org%3Arelaycorp) or [ask us questions](https://github.com/orgs/AwalaApp/discussions).
