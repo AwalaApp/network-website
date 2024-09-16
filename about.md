@@ -10,7 +10,7 @@ The long-term goal of Awala (formerly known as _Relaynet_) is to complement the 
 
 ## Current status
 
-The project is being incubated by [Relaycorp](https://relaycorp.tech) -- a mission-driven, open source company founded by the author of Awala, [Gus Narea](https://gustavo.engineer) -- for the sole purpose of supporting the network.
+The project is being incubated by [Relaycorp](https://relaycorp.tech) -- a mission-driven, open source company founded by the author of Awala, [Gus Narea](https://gus.engineer) -- for the sole purpose of supporting the network.
 
 Awala has been fully operational on Android, Linux, macOS and Windows since 2021, 
 and we completed the implementation of the first compatible app ([Letro](https://letro.app/en/)) at the end of 2023.
