@@ -50,6 +50,6 @@ We want to make the most of Awala being an open, decentralised protocol with ope
 
 ## Stay tuned!
 
-Follow us on [Twitter](https://twitter.com/AwalaNetwork) or [Facebook](https://www.facebook.com/AwalaNetwork) to learn more about our progress, and to be notified about contracting opportunities.
+Follow us on [Twitter](https://twitter.com/AwalaApp) or [Facebook](https://www.facebook.com/AwalaApp) to learn more about our progress, and to be notified about contracting opportunities.
 
 If you want to reach out to us, please [contact Relaycorp](https://relaycorp.tech/).

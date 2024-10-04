@@ -12,7 +12,7 @@ Awala apps use the Internet when it's available, but they can switch to a backup
 If you're looking for inspiration, you could build apps to help people do the following:
 
 - Send and receive emails.
-- Post and get updates from social networks like [Twitter](https://twitter.com/AwalaNetwork/status/1089211336171679745) or [Mastodon](https://github.com/tootsuite/mastodon/issues/10267).
+- Post and get updates from social networks like [Twitter](https://twitter.com/AwalaApp/status/1089211336171679745) or [Mastodon](https://github.com/tootsuite/mastodon/issues/10267).
 - Get answers to queries like "coronavirus symptoms" using [DuckDuckGo Instant Answers](https://help.duckduckgo.com/duckduckgo-help-pages/features/instant-answers-and-other-features/).
 - Send and receive money -- including cryptocurrencies.
 
